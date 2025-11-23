@@ -1,6 +1,6 @@
 {
     "anvil_cost": 8,
-    "description": "跃斩",
+    "description": "星月斩",
     "effects": {
         "minecraft:tick": [
             {
@@ -27,13 +27,23 @@
                     "function": "kards:enchantment/yuezhan/tick"
                 }
             }
+        ],
+        "minecraft:post_attack": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "kards:enchantment/yuezhan/xingyuezhanji/1"
+                },
+                "enchanted": "attacker",
+                "affected": "victim"
+            }
         ]
     },
     "max_cost": {
         "base": 15,
         "per_level_above_first": 8
     },
-    "max_level": 2,
+    "max_level": 3,
     "min_cost": {
         "base": 8,
         "per_level_above_first": 5

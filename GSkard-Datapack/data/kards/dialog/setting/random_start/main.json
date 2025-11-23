@@ -285,28 +285,7 @@
                 "text": "电表倒转",
                 "color": "light_purple"
             },
-            "tooltip": [
-                {
-                    "text": "每使用1张牌 都有概率额外获得",
-                    "color": "gray",
-                    "bold": true
-                },
-                {
-                    "text": "[春暖花开]",
-                    "color": "light_purple",
-                    "bold": true
-                },
-                {
-                    "text": "[好高骛远]",
-                    "color": "white",
-                    "bold": true
-                },
-                {
-                    "text": "6K",
-                    "color": "gold",
-                    "bold": true
-                }
-            ],
+            "tooltip": ["",{"color":"gray","text":"每使用1张","extra":[{"underlined":true,"text":"非衍生牌"}]},"\n",{"color":"gray","text":"分别有"},{"color":"dark_aqua","text":"[30%/10%/5%]"},{"color":"gray","text":"的概率"},"\n",{"color":"gray","text":"获得"},{"color":"gold","text":"6K"},{"color":"gray","text":"/"},{"color":"light_purple","text":"[春暖花开]"},{"color":"gray","text":"/"},{"color":"white","text":"[好高骛远]"}],
             "action": {
                 "type": "minecraft:run_command",
                 "command": "trigger dialog set 213"
@@ -338,28 +317,10 @@
         }
     ],
     "exit_action": {
-        "label": {
-            "text": "点击以",
-            "color": "gray",
-            "extra": [
-                {
-                    "text": "禁用",
-                    "color": "red"
-                },
-                {
-                    "text": "或",
-                    "color": "gray"
-                },
-                {
-                    "text": "启用",
-                    "color": "green"
-                }
-            ]
-        },
         "action": {
-            "type": "minecraft:run_command",
-            "command": "trigger dialog set 200"
+            "type": "run_command",
+            "command": "trigger dialog set 300"
         },
-        "width": 75
+        "label": "返回"
     }
 }

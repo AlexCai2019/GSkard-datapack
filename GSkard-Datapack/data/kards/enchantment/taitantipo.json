@@ -19,8 +19,8 @@
         "id": "enchantment",
         "amount": {
           "type": "minecraft:linear",
-          "base": 0.2,
-          "per_level_above_first": 0.2
+          "base": 0.1,
+          "per_level_above_first": 0.1
         },
         "operation": "add_value"
       },
@@ -36,7 +36,7 @@
     "base": 30,
     "per_level_above_first": 15
   },
-  "max_level": 5,
+  "max_level": 30,
   "min_cost": {
     "base": 15,
     "per_level_above_first": 10

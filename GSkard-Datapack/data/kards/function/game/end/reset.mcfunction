@@ -46,7 +46,7 @@ gamerule naturalRegeneration false
 clear @a
 #隐藏倒计时
 bossbar set minecraft:roundtime visible false
-bossbar set pvptime visible false
+bossbar set pvp_start_countdown visible false
 #改模式
 gamemode adventure @a
 #时间
@@ -67,7 +67,7 @@ tp @a 59 226 -26 -90 0
 tag @a remove Ready
 tag @a add Un_Ready
 tag @a remove jishengnianye
-tag @a remove TouXiang
+tag @a remove Surrenderer
 tag @a remove linghunshouge
 tag @a remove jinzijue
 tag @a remove zuzhouhujia
@@ -120,27 +120,11 @@ execute as @a run attribute @s attack_speed modifier remove talent
 execute as @a run attribute @s attack_damage base reset
 execute as @a run attribute @s armor base reset
 #重置分数
-scoreboard players set * fengbaozhanchui_1 0
-scoreboard players set * sishenzhilian 0
-scoreboard players set * yanhua 0
-scoreboard players set * yanhuanu 0
 scoreboard players set * jinzijue 0
-scoreboard players set * lairichanghuan 0
-scoreboard players set * changhuan 0
-scoreboard players set * shengji_mujian 0
-scoreboard players set * shengji_jinjian 0
-scoreboard players set * shengji_tiejian 0
-scoreboard players set * shengji_zuanshijian 0
-scoreboard players set * shengji_xiajiehejinjian 0
-scoreboard players set 人数 r_touxiang 0
-scoreboard players set 人数 b_touxiang 0
+
 scoreboard players reset red
 scoreboard players reset blue
 scoreboard players reset @a
-scoreboard players reset * r_death
-scoreboard players reset * b_death
-scoreboard players reset * r_number
-scoreboard players reset * b_number
 
 # Bossbar
 execute as @a run function kards:game/end/bossbar_reset/1

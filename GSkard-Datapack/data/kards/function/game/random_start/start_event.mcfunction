@@ -1,4 +1,4 @@
-execute if score #system random_start matches 1 as @a[gamemode=adventure] run function kards:game/yongpaiku/shenji/wangzhibaoku/random2
+execute if score #system random_start matches 1 as @a[gamemode=adventure] run function kards:game/yongpaiku/shenji/wangzhibaoku/default_random
 execute if score #system random_start matches 2 run scoreboard players add @a shenjicishu 3
 execute if score #system random_start matches 5 run scoreboard players set @a kardCountmax 9999
 execute if score #system random_start matches 5 run scoreboard players add @a cishu 3

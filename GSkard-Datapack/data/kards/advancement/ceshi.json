@@ -4,15 +4,12 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "items": "minecraft:goat_horn",
-          "predicates": {
-            "custom_data": "{life_staff:1}"
-          }
+          "items": "feather"
         }
       }
     }
   },
   "rewards": {
-    "function": "kards:ceshi/1"
+    "function": "kards:ceshi/2"
   }
 }

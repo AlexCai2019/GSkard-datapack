@@ -11,9 +11,8 @@ execute if score @s dialog matches 116 run return run function kards:game/xp/sho
 execute if score @s dialog matches 117 run return run function kards:game/xp/shop/enchantment/yuhuozhe
 execute if score @s dialog matches 118 run return run function kards:game/xp/shop/enchantment/zhicaizhe
 execute if score @s dialog matches 119 run return run function kards:game/xp/shop/enchantment/shenpanzhe
+execute if score @s dialog matches 120 run return run function kards:game/xp/shop/enchantment/liansuo
 
-execute if score @s dialog matches 200 if score #system random_start matches -1 run return run function kards:lobby/setting/random_gamerule/kai
-execute if score @s dialog matches 200 if score #system random_start matches 0.. run return run function kards:lobby/setting/random_gamerule/guan
 execute if score @s dialog matches 201 run return run function kards:lobby/setting/random_gamerule/event/baokuxianshi
 execute if score @s dialog matches 202 run return run function kards:lobby/setting/random_gamerule/event/cangbaoku
 execute if score @s dialog matches 203 run return run function kards:lobby/setting/random_gamerule/event/mofazhanzheng
@@ -28,8 +27,23 @@ execute if score @s dialog matches 211 run return run function kards:lobby/setti
 execute if score @s dialog matches 212 run return run function kards:lobby/setting/random_gamerule/event/wuhui
 execute if score @s dialog matches 213 run return run function kards:lobby/setting/random_gamerule/event/dianbiaodaozhuan
 execute if score @s dialog matches 214 run return run function kards:lobby/setting/random_gamerule/event/wujintanlan
+execute if score @s dialog matches 220 run return run function kards:lobby/setting/random_gamerule/event/wujintanlan
+
+execute if score @s dialog matches 299 run return run function kards:lobby/setting/reset
+execute if score @s dialog matches 300 run return run function kards:dialog/setting/show
+
+execute if score @s dialog matches 301 run return run function kards:lobby/setting/enter_pvp/false
+execute if score @s dialog matches 302 run return run function kards:lobby/setting/enter_pvp/true
+execute if score @s dialog matches 303 run return run function kards:lobby/setting/infinite_round/false
+execute if score @s dialog matches 304 run return run function kards:lobby/setting/infinite_round/true
+execute if score @s dialog matches 305 run return run function kards:lobby/setting/random_gamerule/false
+execute if score @s dialog matches 306 run return run function kards:lobby/setting/random_gamerule/true
+execute if score @s dialog matches 307 run return run function kards:lobby/setting/random_gamerule/random/false
+execute if score @s dialog matches 308 run return run function kards:lobby/setting/random_gamerule/random/true
+execute if score @s dialog matches 309 run return run function kards:dialog/setting/random_gamerule/show
 
 #execute if score @s dialog matches 1000 run return run function kards:dialog/talent/show
+execute if score @s dialog matches 1001..1024 run tag @s remove talent_dialog_show
 execute if score @s dialog matches 1001 run return run function kards:game/player/talent/set/xukongcunzhe
 execute if score @s dialog matches 1002 run return run function kards:game/player/talent/set/bujingtanyu
 execute if score @s dialog matches 1003 run return run function kards:game/player/talent/set/muyuankuanghuan

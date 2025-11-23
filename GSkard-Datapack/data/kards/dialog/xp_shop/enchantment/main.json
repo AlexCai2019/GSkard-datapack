@@ -20,7 +20,7 @@
     {
       "type": "minecraft:plain_message",
       "contents": {
-        "text": "使用方法：将附魔书放置在副手然后按shift为主手武器添加附魔\n",
+        "text": "使用方法：将附魔书放置在副手然后按shift为主手武器或对应穿着的护甲添加附魔\n",
         "extra": [
           {
             "text": "使用后附魔等级加算\n\n",
@@ -50,13 +50,26 @@
       "tooltip": {
         "text": "消耗70级",
         "extra": [
+          [{
+            "text": "\n\n附魔后:\n",
+            "color": "gray"
+          },{"color":"gray","text":"受到攻击时 对攻击者造成以下二个效果\n"}],[{"color":"aqua","text":"永寒"},{"color":"dark_aqua","text":"(2*附魔等级)"},{"color":"gray","text":"层\n"}],[{"color":"aqua","text":"冰霜伤害"},{"color":"dark_aqua","text":"(1*附魔等级)"},{"color":"gray","text":"点\n\n"}
+          ],
           {
-            "text": "\n\n附魔后:",
+            "text": "等级生效上限:\n",
             "color": "gray"
           },
           {
-            "text": "\n对攻击者造成冰霜伤害\n同时令其降低移速与攻速",
-            "color": "aqua"
+            "text": "5\n\n",
+            "color": "gray"
+          },
+          {
+            "text": "适用于:\n",
+            "color": "gray"
+          },
+          {
+            "text": "胸甲",
+            "color": "gray"
           }
         ],
         "color": "gray"
@@ -82,13 +95,10 @@
         "text": "消耗80级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          {
-            "text": "\n对目标造成缓慢与挖掘疲劳\n攻击有概率令玩家冻结2.5s\n对非玩家生物概率提高",
-            "color": "blue"
-          }
+          [{"color":"gray","text":"攻击时 对目标造成以下二个效果\n"}],[{"color":"dark_gray","text":"挖掘疲劳"},{"color":"gray","text":"与"},{"color":"dark_gray","text":"缓慢"},{"color":"dark_aqua","text":"(1*附魔等级)"},{"color":"gray","text":"秒\n"}],[{"color":"gray","text":"有"},{"color":"dark_aqua","text":"15%/33%"},{"color":"gray","text":"的概率"},{"color":"aqua","text":"冻结"},{"color":"gray","underlined":true,"text":"玩家/非玩家"},{"color":"dark_aqua","text":"(1+0.2*附魔等级)"},{"color":"gray","text":"秒\n\n"}],{"text":"","color":"gray"},{"text":"等级生效上限:\n","color":"gray"},{"text":"10\n\n","color":"gray"},{"text":""},{"text":"适用于:\n","color":"gray"},{"text":"近战武器","color":"gray"}
         ],
         "color": "gray"
       },
@@ -110,15 +120,31 @@
         ]
       },
       "tooltip": {
-        "text": "消耗70级",
+        "text": "消耗70级\n\n",
         "extra": [
+          [{"color":"gray","text":"当你"},{"color":"gold","text":"处于地面上"},{"color":"gray","text":"时 获得以下两个效果\n"},{"color":"gray","text":"获得","extra":[{"underlined":true,"text":"随时间增加而提升"},"但",{"underlined":true,"text":"最大不超过附魔等级"},"的"]},{"color":"gold","text":"抗性提升"},{"color":"gray","text":"效果\n"},{"color":"gray","text":"魔咒等级为"},{"color":"dark_purple","text":"2级/4级"},{"color":"gray","text":"时 使你每隔一段时间回复"},{"color":"green","text":"0.5♥/1♥"},{"color":"gray","text":"生命值\n\n"}],
           {
-            "text": "\n\n附魔后:",
+            "text": "",
             "color": "gray"
           },
           {
-            "text": "\n着地1.25s后获得抗性提升",
-            "color": "green"
+            "text": "等级生效上限:\n",
+            "color": "gray"
+          },
+          {
+            "text": "4\n\n",
+            "color": "gray"
+          },
+          {
+            "text": ""
+          },
+          {
+            "text": "适用于:\n",
+            "color": "gray"
+          },
+          {
+            "text": "靴子",
+            "color": "gray"
           }
         ],
         "color": "gray"
@@ -144,13 +170,10 @@
         "text": "消耗75级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          {
-            "text": "\n增加体积、最大生命与击退抗性",
-            "color": "green"
-          }
+          [{"color":"gray","text":"体积变为原来的"},{"color":"gold","text":"1.2倍"},{"color":"gray","text":"[仅一次]\n"}],[{"color":"gray","text":"增加"},{"color":"dark_aqua","text":"(10*附魔等级)"},{"color":"gray","text":"心"},{"color":"gold","text":"最大生命值"},{"color":"gray","text":"和"},{"color":"dark_aqua","text":"(10%*附魔等级)"},{"color":"gray","text":"的"},{"color":"gold","text":"击退抗性\n\n"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"30\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"胸甲","color":"gray"}
         ],
         "color": "gray"
       },
@@ -162,7 +185,7 @@
     },
     {
       "label": {
-        "text": "风行者",
+        "text": "风佑者",
         "color": "white",
         "extra": [
           {
@@ -175,12 +198,56 @@
         "text": "消耗85级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
+            "color": "gray"
+          },
+          [
+            {
+              "text": "疾跑时",
+              "color": "gold"
+            },
+            {
+              "text": "根据疾跑时长[0s/1.5s/3s]获得",
+              "color": "gray"
+            },
+            {
+              "text": "速度效果[1/2/3]\n",
+              "color": "gold"
+            }
+          ],
+          [
+            {
+              "text": "受到攻击时有",
+              "color": "gray"
+            },
+            {
+              "text": "18.5%的概率",
+              "color": "gold"
+            },
+            {
+              "text": "击飞目标及其周围小范围生物\n",
+              "color": "aqua"
+            }
+          ],
+          {
+            "text": "+2.5安全摔落高度\n\n",
+            "color": "gold"
+          },
+          {
+            "text": "等级生效上限:\n",
             "color": "gray"
           },
           {
-            "text": "\n疾跑时会越跑越快",
-            "color": "white"
+            "text": "1\n\n",
+            "color": "gray"
+          },
+          {
+            "text": "适用于:\n",
+            "color": "gray"
+          },
+          {
+            "text": "靴子",
+            "color": "gray"
           }
         ],
         "color": "gray"
@@ -193,7 +260,7 @@
     },
     {
       "label": {
-        "text": "跃斩",
+        "text": "星月斩",
         "color": "white",
         "extra": [
           {
@@ -203,16 +270,13 @@
         ]
       },
       "tooltip": {
-        "text": "消耗95级",
+        "text": "消耗85级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          {
-            "text": "\n跳跃后获得力量",
-            "color": "white"
-          }
+          [{"text":"跳跃后获得","color":"gray"},{"text":"(1级*附魔等级)","color":"dark_aqua"},{"text":"力量效果2s\n","color":"gold"}],{"text":"处于该附魔获得的力量效果下攻击时\n","color":"gray"},[{"text":"对目标","color":"gray"},{"text":"(2.5*附魔等级)","color":"dark_aqua"},{"text":"格内的最近的同阵营","color":"gray"},{"text":"(3*附魔等级-1)","color":"dark_aqua"},{"text":"个目标造成","color":"gray"},{"text":"等同于这次伤害35%的物理伤害\n\n","color":"gold"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"3\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"近战武器","color":"gray"}
         ],
         "color": "gray"
       },
@@ -234,16 +298,13 @@
         ]
       },
       "tooltip": {
-        "text": "消耗75级",
+        "text": "消耗65级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          {
-            "text": "\n攻击会点燃目标\n且有概率点燃其周围目标",
-            "color": "red"
-          }
+          [{"text":"攻击会","color":"gray"},{"text":"点燃目标3s","color":"gold"},{"text":" 且有","color":"gray"},{"text":"12.5%","color":"aqua"},{"text":"的概率","color":"gray"},{"text":"点燃其周围目标3s\n\n","color":"gold"}],{"text":"适用于:\n","color":"gray"},{"text":"近战武器","color":"gray"}
         ],
         "color": "gray"
       },
@@ -268,13 +329,10 @@
         "text": "消耗80级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          {
-            "text": "\n受到伤害会点燃攻击者与自己\n但是每次受到燃烧伤害回复生命",
-            "color": "dark_red"
-          }
+          [{"text":"你每次受伤后被","color":"gray"},{"text":"点燃0.75s","color":"red"}],[{"text":"但是","color":"gray"},{"text":"随着你的燃烧时长提升 获得逐渐增强的增益\n","color":"gold"}],[{"text":"2.5s后","color":"gray"},{"text":" 速度1\n","color":"gold"}],[{"text":"5s后","color":"gray"},{"text":" 抗性提升1\n","color":"gold"}],[{"text":"6s后 ","color":"gray"},{"text":"力量1\n","color":"gold"}],[{"text":"7.5s后 ","color":"gray"},{"text":"速度3\n","color":"gold"}],[{"text":"10s后 ","color":"gray"},{"text":"力量4\n","color":"gold"}],[{"text":"30s后 ","color":"gray"},{"text":"获得4♥治疗","color":"gold"},{"text":"(无视重伤)","color":"gray"},{"text":"并重置燃烧时长为20s\n\n","color":"gold"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"1\n\n","color":"gray"},{"text":""},{"text":"适用于:\n","color":"gray"},{"text":"头盔","color":"gray"}
         ],
         "color": "gray"
       },
@@ -299,17 +357,10 @@
         "text": "消耗80级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          {
-            "text": "\n每级效果加强\n",
-            "color": "gold"
-          },
-          {
-            "text": "\n箭矢不会受到重力影响\n箭矢可以暴击\n箭矢能够处决生命低于5♥的目标",
-            "color": "dark_aqua"
-          }
+          [{"text":"使你的弩获得增强 ","color":"gray"},{"text":"箭矢基础伤害","color":"gold"},{"text":"增加","color":"gray"},{"text":"(2.5*附魔等级)","color":"dark_aqua"},{"text":"点\n","color":"gray"}],[{"text":"附魔等级为1级时 ","color":"gray"},{"text":"箭矢不会受到重力影响\n","color":"gold"}],[{"text":"附魔等级为2级时 ","color":"gray"},{"text":"箭矢可以暴击\n","color":"gold"}],[{"text":"附魔等级为3级时 ","color":"gray"},{"text":"箭矢能够处决生命低于5♥的目标并使其破甲2.5s\n\n","color":"gold"}],{"text":"","color":"gray"},{"text":"等级生效上限:\n","color":"gray"},{"text":"3\n\n","color":"gray"},{"text":""},{"text":"适用于:\n","color":"gray"},{"text":"弩","color":"gray"}
         ],
         "color": "gray"
       },
@@ -331,16 +382,13 @@
         ]
       },
       "tooltip": {
-        "text": "消耗55级",
+        "text": "消耗65级",
         "extra": [
           {
-            "text": "\n\n附魔后:",
+            "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          {
-            "text": "\n受到攻击时有几率向目标发射箭矢",
-            "color": "dark_aqua"
-          }
+          [{"color":"gray","text":"","extra":[{"underlined":true,"text":"受击时"},"有"]},{"color":"dark_aqua","text":"(15%*附魔等级)"},{"color":"gray","text":"的概率使","extra":[{"underlined":true,"text":"攻击者"},"受到"]},{"color":"red","text":"雷击"},{"color":"gray","text":"并"},{"color":"red","text":"眩晕"},{"color":"dark_aqua","text":"(0.5*附魔等级)"},{"color":"gray","text":"秒\n\n"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"5\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"头盔","color":"gray"}
         ],
         "color": "gray"
       },
@@ -348,6 +396,34 @@
       "action": {
         "type": "run_command",
         "command": "/trigger dialog set 119"
+      }
+    },
+    {
+      "label": {
+        "text": "连锁打击",
+        "color": "dark_aqua",
+        "extra": [
+          {
+            "text": " I",
+            "color": "gray"
+          }
+        ]
+      },
+      "tooltip": {
+        "text": "消耗120级",
+        "extra": [
+          {
+            "text": "\n\n附魔后:\n",
+            "color": "gray"
+          },
+          [{"text":"攻击目标时对目标最近的","color":"gray"},{"text":"另一个目标同阵营的目标","color":"gold"},{"text":"造成","color":"gray"},{"text":"等同于此次伤害25%的物理伤害\n","color":"gold"}],[{"text":"连锁目标数量随附魔等级提升\n","color":"gray"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"10\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"近战武器","color":"gray"}
+        ],
+        "color": "gray"
+      },
+      "width": 75,
+      "action": {
+        "type": "run_command",
+        "command": "/trigger dialog set 120"
       }
     }
   ]

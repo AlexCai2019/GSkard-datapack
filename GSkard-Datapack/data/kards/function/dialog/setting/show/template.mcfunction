@@ -1,0 +1,10 @@
+execute if data storage kards:setting {enter_pvp:1} if data storage kards:setting {infinite_round:1} run scoreboard players set #system enter_pvp 0
+execute if data storage kards:setting {enter_pvp:1} if data storage kards:setting {infinite_round:1} run data modify storage kards:setting enter_pvp set value 0
+
+execute if data storage kards:setting {enter_pvp:0} if data storage kards:setting {infinite_round:0} run data modify storage kards:setting dialog._.exit_action.action."template" set value "function kards:dialog/setting/enable_dialog_ {roundcount:$(roundcount),diffcult_round:$(diffcult_round),shenqi:$(shenqi), pvp_worldborder_countdown:$(pvp_worldborder_countdown),round_countdown:$(round_countdown),pvp_start_countdown:$(pvp_start_countdown),kmax:$(kmax),6and10:$(6and10),16and20:$(16and20),11and15:$(11and15),21last:$(21last),1and5:$(1and5)}"
+
+execute if data storage kards:setting {enter_pvp:1} if data storage kards:setting {infinite_round:0} run data modify storage kards:setting dialog._.exit_action.action."template" set value "function kards:dialog/setting/enable_dialog_ {roundcount:20,diffcult_round:11,shenqi:$(shenqi), pvp_worldborder_countdown:$(pvp_worldborder_countdown),round_countdown:60,pvp_start_countdown:$(pvp_start_countdown),kmax:2,6and10:3,16and20:5,11and15:4,21last:6,1and5:2}"
+
+execute if data storage kards:setting {enter_pvp:0} if data storage kards:setting {infinite_round:1} run data modify storage kards:setting dialog._.exit_action.action."template" set value "function kards:dialog/setting/enable_dialog_ {roundcount:20,diffcult_round:$(diffcult_round),shenqi:$(shenqi), pvp_worldborder_countdown:5,round_countdown:$(round_countdown),pvp_start_countdown:30,kmax:$(kmax),6and10:$(6and10),16and20:$(16and20),11and15:$(11and15),21last:$(21last),1and5:$(1and5)}"
+
+#data merge storage kards:setting {roundcount:20,diffcult_round:11,random_gamerule:0,enter_pvp:0,infinite_round:0, pvp_worldborder_countdown:5,shenqi:0,round_countdown:60,pvp_start_countdown:30,kmax:2,6and10:3,16and20:5,11and15:4, 21last:6,1and5:2}

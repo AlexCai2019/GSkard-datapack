@@ -7,3 +7,4 @@ tellraw @a [{"text":"两方场地中央生成一只移速增加的嘎吱怪","co
 tellraw @a [{"text":"\n======——-——======\n","color":"gray"}]
 
 execute as @a at @s run playsound minecraft:block.amethyst_block.hit player @s ~ ~ ~ 100 2
+function kards:dialog/setting/show

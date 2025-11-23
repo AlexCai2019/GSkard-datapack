@@ -37,8 +37,8 @@ execute if score #system random_start matches 11 run title @a subtitle [{"text":
 execute if score #system random_start matches 12 run title @a title {text:"舞会",color:"gold",bold:true}
 execute if score #system random_start matches 12 run title @a subtitle [{text:"所有人只能抽取到",color:"gray",bold:true},{text:"[舞王僵尸]",color:"dark_green",bold:true}]
 
-execute if score #system random_start matches 13 run title @a title {text:"电表倒转",color:"gold",bold:true}
-execute if score #system random_start matches 13 run title @a subtitle [{text:"每使用1张牌 都有概率额外获得",color:"gray",bold:true},{text:"[春暖花开]",color:"light_purple",bold:true},{text:"[好高骛远]",color:"white",bold:true},{text:"6K",color:"gold",bold:true}]
-
+execute if score #system random_start matches 13 run title @a title {text:"电表倒转",color:"light_purple",bold:true}
+execute if score #system random_start matches 13 run title @a subtitle [{"color":"gray","text":"每使用1张","extra":[{"underlined":true,"text":"非衍生牌"}]},{"color":"gray","text":" 分别有"},{"color":"dark_aqua","text":"[30%/10%/5%]"},{"color":"gray","text":"的概率 "},{"color":"gray","text":"获得"},{"color":"gold","text":"6K"},{"color":"gray","text":"/"},{"color":"light_purple","text":"[春暖花开]"},{"color":"gray","text":"/"},{"color":"white","text":"[好高骛远]"}]
+ 
 execute if score #system random_start matches 14 run title @a title {text:"无尽贪婪",color:"gold",bold:true}
 execute if score #system random_start matches 14 run title @a subtitle [{text:"所有人默认使用",color:"gray",bold:true},{text:"[贪欲魔盒]",color:"white",bold:true}]

@@ -7,3 +7,4 @@ tellraw @a [{"text":"所有玩家抽取","color":"gray"},{"text":"[王之宝库]
 tellraw @a [{"text":"\n======——-——======\n","color":"gray"}]
 
 execute as @a at @s run playsound minecraft:block.amethyst_block.hit player @s ~ ~ ~ 100 2
+function kards:dialog/setting/show

@@ -1,3 +1,6 @@
+#让所有没选的玩家强制打开)
+execute as @a[gamemode=adventure,tag=talent_dialog_show] run function kards:dialog/talent/show
+
 #燃己为光
 execute as @a[tag=Talent_ranjiweiguang,gamemode=spectator] run function kards:game/player/talent/enable/ranjiweiguang/bossbar/1
 execute as @a[tag=Talent_ranjiweiguang,gamemode=spectator] store result score @s Spectator_Pos.Y run data get entity @s Pos[1]
@@ -18,4 +21,5 @@ execute if entity @e[tag=yongyuanzhongcheng_Marker,team=red] as @e[tag=yongyuanz
 execute if entity @e[tag=yongyuanzhongcheng_Marker,team=blue] as @e[tag=yongyuanzhongcheng_Marker,team=blue] unless entity @a[team=blue,gamemode=!spectator] run kill @s
 
 #扎扎师
-scoreboard players set @a[scores={Talent_zhazhashi=1}] Talent_zhazhashi 0
+execute as @a[scores={Talent_zhazhashi=20..},tag=Talent_zhanshudaji] run function kards:game/player/talent/enable/zhazhashi/1
+scoreboard players reset @a[tag=!Talent_zhazhashi] Talent_zhazhashi

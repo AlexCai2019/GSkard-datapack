@@ -4,6 +4,7 @@
         "#swords",
         "#axes",
         "minecraft:mace",
-        "minecraft:trident"
+        "minecraft:trident",
+        "#hoes"
     ]
 }

@@ -11,7 +11,7 @@ execute if entity @e[dy=2,tag=!G36K_Ex_Shoot,type=!#kards:display] run tag @e[dy
 execute if score @s G36K_Ex_Ray matches 0 as @e[tag=G36K_Ex_Damage] run damage @s 5 arrow by @p[tag=G36K_Ex_Shoot]
 execute if score @s G36K_Ex_Ray matches 0 if entity @e[tag=G36K_Ex_Damage] run playsound entity.arrow.hit_player player @a[tag=G36K_Ex_Shoot] ~ ~ ~ 100 2
 execute if score @s G36K_Ex_Ray matches 0 at @e[tag=G36K_Ex_Damage] run particle mycelium ~ ~2 ~ 0 0 0 1 20 force @a
-execute if score @s G36K_Ex_Ray matches 0 run tag @p remove G36K_Ex_Shoot
+execute if score @s G36K_Ex_Ray matches 0 run tag @p[tag=G36K_Ex_Shoot] remove G36K_Ex_Shoot
 execute if score @s G36K_Ex_Ray matches 0 run tag @e[tag=G36K_Ex_Damage] remove G36K_Ex_Damage
 execute if score @s G36K_Ex_Ray matches 0 run kill @s
 

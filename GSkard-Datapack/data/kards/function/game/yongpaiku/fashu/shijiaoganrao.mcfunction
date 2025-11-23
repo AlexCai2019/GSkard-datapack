@@ -1,8 +1,5 @@
 function kards:game/yongpaiku/use_general/kard_general
 
-
-
-
 function kards:game/yongpaiku/xianjing/jiance/fashujiance
 
 scoreboard players operation @s kardCount -= #kard_shijiaoganrao kardCount

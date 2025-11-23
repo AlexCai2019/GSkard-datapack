@@ -4,10 +4,11 @@ execute if score red FriendlyFire matches 0 run team modify red friendlyFire fal
 execute if score blue FriendlyFire matches 0 run team modify blue friendlyFire false
 
 scoreboard players operation time roundtime = #system roundtime
-scoreboard players set @a[scores={CanuseKard=1}] lairichanghuan 0
-scoreboard players set @a changhuan_times 0
+
 scoreboard players set @a[scores={CanuseKard=0}] use_kard 0
-function kards:game/ingame/round/take_turns/kmax
+
+execute as @a[scores={CanuseKard=0},tag=!Talent_fushengzuzhou_end,tag=!Talent_touzhiweilai] run scoreboard players operation @s kardCountmax += #system kardCountmax
+
 scoreboard players reset red
 scoreboard players reset blue
 execute if score 红队 xianjin_youdi matches 1 run scoreboard players set 红队 xianjin_youdi 2

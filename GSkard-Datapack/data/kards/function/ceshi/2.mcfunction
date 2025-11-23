@@ -1,30 +1,15 @@
-execute store result score @s Mob_Health store result score @s Mob_Health_temp1 store result score @s Mob_Health_temp2 run data get entity @s Health 1000
+advancement revoke @s only kards:ceshi
+scoreboard players set @s[gamemode=adventure] GameMode 1
+scoreboard players set @s[gamemode=creative] GameMode 2
 
-#计算受伤量
-scoreboard players operation @s Mob_Health_last -= @s Mob_Health
+execute at @s run tp @s ~ ~1000 ~
+gamemode creative @s
+execute at @s rotated ~ -15 positioned ^ ^-0.5 ^-3 anchored eyes summon minecraft:end_crystal run damage @s 1
+execute at @s rotated ~ ~ positioned ^ ^-0.5 ^-3 anchored eyes summon minecraft:end_crystal run damage @s 1
 
-scoreboard players operation @s Mob_Health_temp1_ = @s Mob_Health_last
-scoreboard players operation @s Mob_Health_temp2_ = @s Mob_Health_last
+gamemode adventure @s[scores={GameMode=1}]
+gamemode creative @s[scores={GameMode=2}]
 
-#存当前血量至下一刻
-scoreboard players operation @s Mob_Health_last = @s Mob_Health
-
-#将数值/2以代表♥
-scoreboard players set #system Mob_Health 2
-
-scoreboard players operation @s Mob_Health_temp1 /= #system Mob_Health
-scoreboard players operation @s Mob_Health_temp2 /= #system Mob_Health
-
-scoreboard players operation @s Mob_Health_temp1_ /= #system Mob_Health
-scoreboard players operation @s Mob_Health_temp2_ /= #system Mob_Health
-
-#截位
-scoreboard players set #system Mob_Health 1000
-
-scoreboard players operation @s Mob_Health_temp1 %= #system Mob_Health
-scoreboard players operation @s Mob_Health_temp2 /= #system Mob_Health
-
-scoreboard players operation @s Mob_Health_temp1_ %= #system Mob_Health
-scoreboard players operation @s Mob_Health_temp2_ /= #system Mob_Health
-
-tellraw @a [{"selector":"@s"},{text:"正在受到",color:"gold",bold:false},{score:{name:"@s",objective:"Mob_Health_temp2_"},color:"red",bold:false},{text:".",color:"red",bold:false},{score:{name:"@s",objective:"Mob_Health_temp1_"},color:"red",bold:false},{text:"♥",color:"red",bold:false},{text:"伤害! 当前血量",color:"gold",bold:false},{score:{name:"@s",objective:"Mob_Health_temp2"},color:"green",bold:false},{text:".",color:"green",bold:false},{score:{name:"@s",objective:"Mob_Health_temp1"},color:"green",bold:false},{text:"♥",color:"green",bold:false}]
+execute at @s run tp @s ~ ~-1000 ~
+particle cloud ~ ~ ~ 0.25 0 0.25 0 25 force
+playsound entity.wind_charge.wind_burst block @s ~ ~ ~ 100 1

@@ -9,4 +9,3 @@ $execute if score $(UUID).XuanYun.Max_New temp > $(UUID).XuanYun.Max temp store 
 $execute as @s[tag=!bossbar_max_XuanYun] store result storage kards $(UUID).Max int 1 run scoreboard players get @s XuanYun
 
 $function kards:game/ingame/custom_buff/xuanyun/bossbar/3 with storage kards $(UUID)
-

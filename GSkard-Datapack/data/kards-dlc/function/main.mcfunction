@@ -7,8 +7,6 @@ scoreboard objectives add random5 dummy
 scoreboard objectives add random6 dummy
 scoreboard objectives add random7 dummy
 scoreboard objectives add random8 dummy
-scoreboard objectives add r_alive dummy
-scoreboard objectives add b_alive dummy
 
 # 抽牌
 # kards:game/ingame/choupai/cishu

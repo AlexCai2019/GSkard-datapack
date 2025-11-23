@@ -1,9 +1,34 @@
 
 advancement revoke @s only kards:shenqi/fengbaozhanchui
-clear @s mace[custom_name={italic:false,color:"white",text: "风暴战锤"},lore=[{text: "雷击 I",color:"gray",italic:false,bold:true},[{color:"gray",text: "右键召唤一道",italic:false},{color:"gold",text: "闪电",italic:false},{color:"gray",text: "劈向指定位置",italic:false}],[{color:"gray",text: "对附近",italic:false},{color:"gold",text: "2.8格",italic:false},{color:"gray",text: "敌对生物造成",italic:false},{color:"red",text: "6♥闪电伤害",italic:false}],{color:"gray",text: "CD15s",italic:false},{text: "-",color:"gray",italic:false},{text: "蓄能重击",color:"gray",italic:false,bold:true},{color:"gray",text: "长按shift1s后跃起 期间免疫击退与摔落伤害",italic:false},[{color:"gray",text: "落地之后对周围",italic:false},{color:"gold",text: "5格",italic:false},{color:"gray",text: "内所有敌对生物造成",italic:false},{color:"red",text: "10♥的重击伤害",italic:false},{color:"gold",text: "并使其眩晕2.5s",italic:false}],{color:"gray",text: "25s补充一次",italic:false},{text: ""},{color:"gray",text: "在主手时：",italic:false},{color:"dark_green",text: " 16 攻击伤害",italic:false},{color:"dark_green",text: " 0.8 攻击速度",italic:false}],attribute_modifiers=[{type:"attack_damage",amount:15.0d,slot:"mainhand",operation:"add_value",id:"1"},{type:"attack_speed",amount:-3.2d,slot:"mainhand",operation:"add_value",id:"1"}],tooltip_display={hidden_components:["unbreakable","attribute_modifiers"]},unbreakable={},custom_data={kards:'风暴战锤'},custom_model_data={strings:["fengbaozhanchui"]},consumable={animation:bow,consume_seconds:0.1,has_consume_particles:0b,sound:entity.lightning_bolt.thunder},use_cooldown={cooldown_group:fengbaozhanchui,seconds:0.5},tooltip_style="kards:kard/shenqi"]
 
+execute if items entity @s weapon.mainhand mace[custom_data={kards:'风暴战锤'}] run scoreboard players set @s fengbaozhanchui_replace_main 1
 
-item replace entity @s weapon.mainhand with mace[custom_name={italic:false,color:"white",text: "风暴战锤"},lore=[{text: "雷击 I",color:"gray",italic:false,bold:true},[{color:"gray",text: "右键召唤一道",italic:false},{color:"gold",text: "闪电",italic:false},{color:"gray",text: "劈向指定位置",italic:false}],[{color:"gray",text: "对附近",italic:false},{color:"gold",text: "2.8格",italic:false},{color:"gray",text: "敌对生物造成",italic:false},{color:"red",text: "6♥闪电伤害",italic:false}],{color:"gray",text: "CD15s",italic:false},{text: "-",color:"gray",italic:false},{text: "蓄能重击",color:"gray",italic:false,bold:true},{color:"gray",text: "长按shift1s后跃起 期间免疫击退与摔落伤害",italic:false},[{color:"gray",text: "落地之后对周围",italic:false},{color:"gold",text: "5格",italic:false},{color:"gray",text: "内所有敌对生物造成",italic:false},{color:"red",text: "10♥的重击伤害",italic:false},{color:"gold",text: "并使其眩晕2.5s",italic:false}],{color:"gray",text: "25s补充一次",italic:false},{text: ""},{color:"gray",text: "在主手时：",italic:false},{color:"dark_green",text: " 16 攻击伤害",italic:false},{color:"dark_green",text: " 0.8 攻击速度",italic:false}],attribute_modifiers=[{type:"attack_damage",amount:15.0d,slot:"mainhand",operation:"add_value",id:"1"},{type:"attack_speed",amount:-3.2d,slot:"mainhand",operation:"add_value",id:"1"}],tooltip_display={hidden_components:["unbreakable","attribute_modifiers"]},unbreakable={},custom_data={kards:'风暴战锤'},custom_model_data={strings:["fengbaozhanchui"]},consumable={animation:bow,consume_seconds:0.1,has_consume_particles:0b,sound:entity.lightning_bolt.thunder},use_cooldown={cooldown_group:fengbaozhanchui,seconds:0.5},tooltip_style="kards:kard/shenqi"]
+execute if items entity @s weapon.offhand mace[custom_data={kards:'风暴战锤'}] run scoreboard players set @s fengbaozhanchui_replace_off 1
 
+item replace block 0 -60 -48 container.0 from entity @s weapon.mainhand
 
-execute unless score @s fengbaozhanchui_lightning_bolt matches 1.. anchored eyes positioned ^ ^0.2 ^0.25 run function kards:game/yongpaiku/shenji/wangzhibaoku/fengbaozhanchui/2
+item replace block 0 -60 -48 container.1 from entity @s weapon.offhand
+
+execute as @s[scores={fengbaozhanchui_replace_main=1}] run item replace entity @s weapon.mainhand with air
+execute as @s[scores={fengbaozhanchui_replace_off=1}] run item replace entity @s weapon.offhand with air
+
+item replace entity @s weapon.mainhand from block 0 -60 -48 container.0
+item replace entity @s weapon.offhand from block 0 -60 -48 container.1
+
+scoreboard players set @s fengbaozhanchui_replace_main 0
+scoreboard players set @s fengbaozhanchui_replace_off 0
+
+scoreboard players set @s[gamemode=adventure] GameMode 1
+scoreboard players set @s[gamemode=creative] GameMode 2
+
+execute at @s run tp @s ~ ~1000 ~
+gamemode creative @s
+execute at @s rotated ~ -35 positioned ^ ^-0.5 ^-1.5 anchored eyes summon minecraft:end_crystal run damage @s 1
+#execute at @s rotated ~ ~ positioned ^ ^-0.5 ^-1.5 anchored eyes summon minecraft:end_crystal run damage @s 1
+
+gamemode adventure @s[scores={GameMode=1}]
+gamemode creative @s[scores={GameMode=2}]
+
+execute at @s run tp @s ~ ~-1000 ~
+particle cloud ~ ~ ~ 0.25 0 0.25 0 25 force
+playsound entity.wind_charge.wind_burst block @s ~ ~ ~ 100 1

@@ -1,13 +1,13 @@
 #大厅buff
-execute if score #system GameStatus matches 0 run effect give @a[team=!111,team=!222] minecraft:resistance 1 4 true
-execute if score #system GameStatus matches 0 run effect give @a[team=!111,team=!222] instant_health 1 200 true
+execute if score #system GameStatus matches 0 run effect give @a minecraft:resistance 1 4 true
+execute if score #system GameStatus matches 0 run effect give @a instant_health 1 200 true
 #视奸buff
 execute if score #system GameStatus matches 1 run effect give @a[tag=spectator] minecraft:resistance 1 4 true
 execute if score #system GameStatus matches 1 run effect give @a[tag=spectator] minecraft:instant_health 1 4 true
 #准备
 execute if score #system GameStatus matches 0 run function kards:lobby/ready/general
 #大厅小游戏
-execute if score #system GameStatus matches 0 run function kards:lobby/game/general
+#execute if score #system GameStatus matches 0 run function kards:lobby/game/general
 #设置
 function kards:lobby/setting/map/general
 #队伍
@@ -25,6 +25,7 @@ execute positioned 105.5 227 -14.0 as @a[gamemode=!spectator,dx=0.5,dy=4,dz=4] r
 execute positioned 105.5 239 -50.0 as @a[gamemode=!spectator,dx=0.5,dy=4,dz=4] run advancement grant @s only kards:advancement/lobby/bushizhe
 execute positioned 105.5 239 -50.0 as @a[gamemode=!spectator,dx=0.5,dy=4,dz=4] at @s run playsound entity.enderman.teleport player @s ~ ~ ~ 100 2
 execute positioned 105.5 239 -50.0 as @a[gamemode=!spectator,dx=0.5,dy=4,dz=4] run tp @s 104.0 227 -12.0 90 ~
-
+#speed
+execute positioned 66.0 225 -27.0 as @a[dx=1,dz=3,dy=0.5] at @s if block ~ ~-1 ~ magenta_glazed_terracotta run function kards:lobby/speed
 #跑酷
 function kards:lobby/run/general

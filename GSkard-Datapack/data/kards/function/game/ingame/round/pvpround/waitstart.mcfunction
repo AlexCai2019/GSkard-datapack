@@ -4,7 +4,7 @@ scoreboard players set @a Skip_Round 0
 scoreboard players set @a kardCountmax 100
 scoreboard players set @a kardCount 100
 scoreboard players set @a CanuseKard 1
-scoreboard players set 回合数 GameRound 0
+scoreboard players set 回合数 GameRound -1
 scoreboard players set #system GameStatus 2
 team modify red friendlyFire false
 team modify blue friendlyFire false
@@ -20,9 +20,9 @@ tp @a[team=red] -179 -9 -164
 tp @a[team=blue] -242 -9 -164
 kill @e[type=!player,type=!marker,type=!#kards:display]
 gamemode spectator @a[tag=spectator]
-bossbar set pvptime players @a
-bossbar set pvptime visible true
-scoreboard players set time pvptime 600
+bossbar set pvp_start_countdown players @a
+bossbar set pvp_start_countdown visible true
+scoreboard players operation #pvp pvp_start_countdown = #system pvp_start_countdown
 fill -188 -9 -137 -188 0 -191 minecraft:barrier replace air
 fill -233 -9 -191 -233 0 -137 minecraft:barrier replace air
 worldborder set 80

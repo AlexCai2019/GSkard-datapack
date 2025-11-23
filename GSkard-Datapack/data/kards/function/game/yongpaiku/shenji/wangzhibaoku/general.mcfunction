@@ -1,6 +1,11 @@
-
+#抽神器
+execute as @a[scores={shenqicishu=1..}] if score #system GameStatus matches 2 run function kards:game/yongpaiku/shenji/wangzhibaoku/pvp_random
+execute as @a[scores={shenqicishu=1..}] unless score #system GameStatus matches 2 run function kards:game/yongpaiku/shenji/wangzhibaoku/default_random
 #森林之护
 execute as @a if items entity @s armor.chest *[custom_data={kards:'森林之护'}] run tag @s add senlinzhihu
+
+execute as @a[tag=senlinzhihu] run function kards:game/yongpaiku/shenji/wangzhibaoku/senlinzhihu/particle
+
 scoreboard players add @a[tag=senlinzhihu] senlinzhihu_HealBack 1
 execute as @a[tag=senlinzhihu] if score @s senlinzhihu_HealBack matches 90 at @s run scoreboard players add @s HealBack 1
 execute as @a[tag=senlinzhihu] if entity @s[team=red] if score @s senlinzhihu_HealBack matches 90 at @s run scoreboard players add @e[distance=..5,team=red,tag=!tuteng] HealBack 1
@@ -42,8 +47,6 @@ execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] r
 execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] at @s run function kards:game/yongpaiku/shenji/wangzhibaoku/tianshenshibanjia/damage
 execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] at @s summon marker run function kards:game/yongpaiku/shenji/wangzhibaoku/tianshenshibanjia/particle/1
 execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] run scoreboard players set @s tianshenshibanjia_attack_time 0
-
-#scoreboard players set @a[tag=!tianshenshibanjia] tianshenshibanjia_xiansheng 0
 
 execute as @a[tag=tianshenshibanjia] unless items entity @s armor.chest *[custom_data={kards:'天神石板甲'}] run tag @s remove tianshenshibanjia
 #凛冬之铠
@@ -167,6 +170,9 @@ execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom
 execute as @a[tag=wuxiuzhihuo] unless items entity @s container.* *[custom_data={kards:'无休之火'}] run scoreboard players set @s wuxiuzhihuo_shengji 0
 execute as @a[tag=wuxiuzhihuo] unless items entity @s container.* *[custom_data={kards:'无休之火'}] run scoreboard players set @s wuxiuzhihuo 0
 execute as @a[tag=wuxiuzhihuo] unless items entity @s container.* *[custom_data={kards:'无休之火'}] run tag @s remove wuxiuzhihuo
+#轻灵之语
+execute as @e[type=arrow,distance=0.01..,tag=enchantment_fengzhiyin_arrow] at @s run function kards:enchantment/fengzhiyin/2
+
 #石中剑
 execute as @a if items entity @s weapon.mainhand stone_sword[custom_data={kards:'石中剑'}] run tag @s add shizhongjian
 
@@ -177,11 +183,12 @@ execute as @a[tag=shizhongjian_true] unless items entity @s container.* stone_sw
 
 #风暴战锤
 execute as @a if items entity @s container.* mace[custom_data={kards:'风暴战锤'}] run tag @s add fengbaozhanchui
+execute as @a if items entity @s weapon.offhand mace[custom_data={kards:'风暴战锤'}] run tag @s add fengbaozhanchui
 execute as @a[tag=fengbaozhanchui] if score @s fengbaozhanchui_lightning_bolt matches 1.. run scoreboard players remove @s fengbaozhanchui_lightning_bolt 1
 execute as @a[tag=fengbaozhanchui] if score @s fengbaozhanchui_lightning_bolt matches 0 run tellraw @s [{text:"[风暴战锤]",color:"white"},{text:"雷击已补充!",color:"gold"}]
 execute as @a[tag=fengbaozhanchui] if score @s fengbaozhanchui_lightning_bolt matches 0 run playsound minecraft:entity.lightning_bolt.impact player @s ~ ~ ~ 100 2
 execute as @a[tag=fengbaozhanchui] if score @s fengbaozhanchui_lightning_bolt matches 0 run scoreboard players reset @s fengbaozhanchui_lightning_bolt
-execute as @a[tag=fengbaozhanchui] unless items entity @s container.* mace[custom_data={kards:'风暴战锤'}] run tag @s remove fengbaozhanchui
+execute as @a[tag=fengbaozhanchui] unless items entity @s container.* mace[custom_data={kards:'风暴战锤'}] unless items entity @s weapon.offhand mace[custom_data={kards:'风暴战锤'}] run tag @s remove fengbaozhanchui
 
 execute as @a[tag=fengbaozhanchui] if items entity @s weapon.mainhand mace[custom_data={kards:'风暴战锤'}] unless score @s fengbaozhanchui_xuneng_Time matches 1.. if predicate kards:sneak run scoreboard players add @s fengbaozhanchui_xuneng 1
 execute as @a[tag=fengbaozhanchui] unless predicate kards:sneak run scoreboard players reset @s fengbaozhanchui_xuneng

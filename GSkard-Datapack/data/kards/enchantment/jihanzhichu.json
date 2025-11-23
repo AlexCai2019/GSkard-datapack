@@ -2,7 +2,7 @@
     "description": "§b极寒之触",
     "supported_items": "#kards:melee_weapon",
     "weight": 1,
-    "max_level": 1,
+    "max_level": 10,
     "min_cost": {
         "base": 0,
         "per_level_above_first": 0
@@ -20,7 +20,7 @@
             {
                 "effect": {
                     "type": "minecraft:run_function",
-                    "function": "kards:enchantment/jihanzhichu"
+                    "function": "kards:enchantment/jihanzhichu/1"
                 },
                 "enchanted": "attacker",
                 "affected": "victim"

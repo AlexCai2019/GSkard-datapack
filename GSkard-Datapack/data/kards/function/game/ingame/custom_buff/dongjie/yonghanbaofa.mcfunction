@@ -1,5 +1,5 @@
 
-scoreboard players remove @s YongHan 18
+scoreboard players remove @s YongHan 180
 scoreboard players add @s DongJie 50
 execute if entity @s[team=red] at @s run damage @s 9 kards:yonghan by @p[tag=lindongzhikai,team=blue]
 execute if entity @s[team=blue] at @s run damage @s 9 kards:yonghan by @p[tag=lindongzhikai,team=red]

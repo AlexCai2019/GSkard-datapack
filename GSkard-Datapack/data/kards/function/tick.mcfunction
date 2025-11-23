@@ -13,14 +13,14 @@ function kards:lobby/general
 function kards:game/general
 #检测人数
 execute as @a if score @s Leave_Game matches 1.. run function kards:leave_game/all
-execute store result score 人数 p if entity @a
-execute store result score 人数 r_alive if entity @a[team=red,gamemode=adventure]
-execute store result score 人数 r_dp if entity @a[team=red,gamemode=spectator]
-execute store result score 人数 b_dp if entity @a[team=blue,gamemode=spectator]
-execute store result score 人数 b_alive if entity @a[team=blue,gamemode=adventure]
+execute store result score #红队 Team_number if entity @a[team=red]
+execute store result score #蓝队 Team_number if entity @a[team=blue]
+execute store result score #红队 Team_alive if entity @a[team=red,gamemode=adventure]
+execute store result score #蓝队 Team_alive if entity @a[team=blue,gamemode=adventure]
+execute store result score #system Number if entity @a
 #启用trigger
 scoreboard players enable @a reset
-execute if score #system GameStatus matches 1..2 run scoreboard players enable @a[scores={touxiang=0}] touxiang
+
 execute as @a[scores={Scale=1..}] run function kards:lobby/other/narrow_reset
 
 scoreboard players enable @a stopsound

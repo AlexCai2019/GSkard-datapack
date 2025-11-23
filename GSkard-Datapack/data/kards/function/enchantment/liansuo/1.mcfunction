@@ -1,1 +1,1 @@
-$damage @s $(damage) minecraft:player_attack by @n[tag=enchantment_liansuo]
+$damage @s $(damage) minecraft:player_attack by @p[tag=enchantment_liansuo_temp]

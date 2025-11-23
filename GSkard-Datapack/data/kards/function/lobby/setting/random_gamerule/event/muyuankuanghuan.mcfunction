@@ -7,3 +7,4 @@ tellraw @a [{"text":"所有人默认使用[墓园狂欢]","color":"green",bold:t
 tellraw @a [{"text":"\n======——-——======\n","color":"gray"}]
 
 execute as @a at @s run playsound minecraft:block.amethyst_block.hit player @s ~ ~ ~ 100 2
+function kards:dialog/setting/show

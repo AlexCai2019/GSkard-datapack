@@ -3,7 +3,8 @@ tellraw @a [{text: "\"盛极必衰 其势自溃\"",color: "gray"}]
 execute as @s[team=red] run tellraw @a [{text: "统计",color: "gold"},{text:"蓝队",color:"blue"},{text: "队伍上回合使用K之和取一半\n",color: "gold"},{text: "造成等额伤害随机分配至蓝队所有玩家",color: "red"}]
 execute as @s[team=blue] run tellraw @a [{text: "统计",color: "gold"},{text:"红队",color:"red"},{text: "队伍上回合使用K之和取一半\n",color: "gold"},{text: "造成等额伤害随机分配至蓝队所有玩家",color: "red"}]
 
-scoreboard players reset * jiangshuzhe_xiuhuai_Kmax
+scoreboard players reset blue jiangshuzhe_xiuhuai_Kmax
+scoreboard players reset red jiangshuzhe_xiuhuai_Kmax
 
 execute as @s[team=red] as @a[team=blue,gamemode=adventure] run scoreboard players operation blue jiangshuzhe_xiuhuai_Kmax += @s Use_K_Round
 execute as @s[team=blue] as @a[team=red,gamemode=adventure] run scoreboard players operation red jiangshuzhe_xiuhuai_Kmax += @s Use_K_Round

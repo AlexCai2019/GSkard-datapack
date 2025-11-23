@@ -7,3 +7,4 @@ tellraw @a [{text:"每使用1张牌 都有概率额外获得",color:"gray",bold:
 tellraw @a [{"text":"\n======——-——======\n","color":"gray"}]
 
 execute as @a at @s run playsound minecraft:block.amethyst_block.hit player @s ~ ~ ~ 100 2
+function kards:dialog/setting/show

@@ -7,3 +7,4 @@ tellraw @a [{"text":"11回合后 每回合杀死一个生命最低的玩家","co
 tellraw @a [{"text":"\n======——-——======\n","color":"gray"}]
 
 execute as @a at @s run playsound minecraft:block.amethyst_block.hit player @s ~ ~ ~ 100 2
+function kards:dialog/setting/show

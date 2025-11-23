@@ -3,7 +3,7 @@ bossbar set minecraft:roundtime color white
 scoreboard players set @a CanuseKard 0
 scoreboard players set @a Skip_Round 0
 scoreboard players set @a[gamemode=adventure] cishu 5
-scoreboard players operation time roundtime = #system roundtime
+scoreboard players set time roundtime 300
 scoreboard players set #system GameRound 2
 scoreboard players set 回合数 GameRound 0
 scoreboard players set #system Relax_Round 0

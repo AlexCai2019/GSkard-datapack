@@ -6,10 +6,18 @@
             {
                 "effect": {
                     "type": "minecraft:run_function",
-                    "function": "kards:enchantment/yuhuozhe"
+                    "function": "kards:enchantment/yuhuozhe/hurt"
                 },
                 "enchanted": "victim",
                 "affected": "victim"
+            }
+        ],
+        "minecraft:tick": [
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "kards:enchantment/yuhuozhe/tick"
+                }
             }
         ]
     },

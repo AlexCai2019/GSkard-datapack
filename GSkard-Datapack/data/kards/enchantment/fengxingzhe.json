@@ -1,6 +1,6 @@
 {
     "anvil_cost": 8,
-    "description": "风行者",
+    "description": "风佑者",
     "effects": {
         "minecraft:tick": [
             {
@@ -33,7 +33,25 @@
                     }
                 }
             }
-        ]
+        ],
+        "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "kards:enchantment/fengxingzhe/attacker"
+        },
+        "enchanted": "victim",
+        "affected": "attacker"
+      }
+    ],
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:safe_fall_distance",
+        "id": "enchantment",
+        "amount": 2.5,
+        "operation": "add_value"
+      }
+    ]
     },
     "max_cost": {
         "base": 15,

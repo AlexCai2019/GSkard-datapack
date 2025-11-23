@@ -19,8 +19,8 @@ gamemode spectator @s
 execute as @s[team=red,tag=!Talent_ranjiweiguang] as @a[tag=Talent_gongsheng,team=red,gamemode=adventure] run damage @s 1024 kards:gongsheng
 execute as @s[team=blue,tag=!Talent_ranjiweiguang] as @a[tag=Talent_gongsheng,team=blue,gamemode=adventure] run damage @s 1024 kards:gongsheng
 
-execute if entity @s[team=red] run scoreboard players add #system r_death 1
-execute if entity @s[team=blue] run scoreboard players add #system b_death 1
+execute if entity @s[team=red] run scoreboard players add #红队 Team_dead 1
+execute if entity @s[team=blue] run scoreboard players add #蓝队 Team_dead 1
 tp @s @r[gamemode=adventure]
 
 execute if score @s jinzijue matches 5..9 run advancement grant @s only kards:advancement/jinzijue/zhongdaobengcu

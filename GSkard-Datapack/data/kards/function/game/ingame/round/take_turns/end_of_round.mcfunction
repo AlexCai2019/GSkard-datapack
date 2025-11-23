@@ -1,11 +1,5 @@
 #陷阱
 function kards:game/yongpaiku/xianjing/jiance/roundjiance
-#天赋
-execute as @a[scores={CanuseKard=1},tag=Talent_muyuankuanghuan] run function kards:game/player/talent/enable/muyuankuanghuan/1
-execute as @a[scores={CanuseKard=1},tag=Talent_emoqiyue] run function kards:game/player/talent/enable/emoqiyue/1
-execute as @a[scores={CanuseKard=1},tag=Talent_duichongjijin] run function kards:game/player/talent/enable/duichongjijin/1
-execute as @a[scores={CanuseKard=1},tag=Talent_dianbiaodaozhuan] run function kards:game/player/talent/enable/dianbiaodaozhuan/1
-execute as @a[scores={CanuseKard=1},tag=Talent_gongsheng] run function kards:game/player/talent/enable/gongsheng/healback
 #回合规则
 function kards:game/random_start/round_event
 #检测回合 事件通知
@@ -20,36 +14,46 @@ execute as @a[scores={CanuseKard=1},tag=Talent_xukongcunzhe] run scoreboard play
 execute as @a[scores={CanuseKard=1},tag=Talent_xukongcunzhe] run scoreboard players operation @s kardCount += @s temp
 
 
-function kards:game/ingame/round/take_turns/choupai with storage minecraft:system choupai
+function kards:game/ingame/round/take_turns/choupai with storage kards:setting
 function kards:game/ingame/round/fashu with storage minecraft:changdidaxiao
 #人数补偿
-execute if score #system b_number > #system r_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 5
-execute if score #system b_number > #system r_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 1
+execute if score #蓝队 Team_number > #红队 Team_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 5
+execute if score #蓝队 Team_number > #红队 Team_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 1
 
-execute if score #system b_death matches 1 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 3
-execute if score #system b_death matches 1 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 1
-execute if score #system b_death matches 2 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 6
-execute if score #system b_death matches 2 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 2
-execute if score #system b_death matches 3 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 10
-execute if score #system b_death matches 3 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 3
-execute if score #system b_death matches 4 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 15
-execute if score #system b_death matches 4 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 4
-execute if score #system b_death matches 5.. run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 20
-execute if score #system b_death matches 5.. run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 5
+execute if score #蓝队 Team_dead matches 1 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 3
+execute if score #蓝队 Team_dead matches 1 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 1
+execute if score #蓝队 Team_dead matches 2 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 6
+execute if score #蓝队 Team_dead matches 2 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 2
+execute if score #蓝队 Team_dead matches 3 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 10
+execute if score #蓝队 Team_dead matches 3 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 3
+execute if score #蓝队 Team_dead matches 4 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 15
+execute if score #蓝队 Team_dead matches 4 run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 4
+execute if score #蓝队 Team_dead matches 5.. run scoreboard players add @a[team=blue,scores={CanuseKard=1}] kardCount 20
+execute if score #蓝队 Team_dead matches 5.. run scoreboard players add @a[team=blue,scores={CanuseKard=1}] cishu 5
 
-execute if score #system r_death matches 1 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 3
-execute if score #system r_death matches 1 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 1
-execute if score #system r_death matches 2 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 6
-execute if score #system r_death matches 2 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 2
-execute if score #system r_death matches 3 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 10
-execute if score #system r_death matches 3 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 3
-execute if score #system r_death matches 4 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 15
-execute if score #system r_death matches 4 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 4
-execute if score #system r_death matches 5.. run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 20
-execute if score #system r_death matches 5.. run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 5
+execute if score #红队 Team_dead matches 1 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 3
+execute if score #红队 Team_dead matches 1 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 1
+execute if score #红队 Team_dead matches 2 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 6
+execute if score #红队 Team_dead matches 2 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 2
+execute if score #红队 Team_dead matches 3 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 10
+execute if score #红队 Team_dead matches 3 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 3
+execute if score #红队 Team_dead matches 4 run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 15
+execute if score #红队 Team_dead matches 4 run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 4
+execute if score #红队 Team_dead matches 5.. run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 20
+execute if score #红队 Team_dead matches 5.. run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 5
 
 execute as @a[tag=Talent_yaoyezhuhuo] run function kards:game/player/talent/enable/yaoyezhuhuo/1
+#天赋
+execute as @a[scores={CanuseKard=1},tag=Talent_muyuankuanghuan] run function kards:game/player/talent/enable/muyuankuanghuan/1
+execute as @a[scores={CanuseKard=1},tag=Talent_emoqiyue] run function kards:game/player/talent/enable/emoqiyue/1
+execute as @a[scores={CanuseKard=1},tag=Talent_duichongjijin] run function kards:game/player/talent/enable/duichongjijin/1
+execute as @a[scores={CanuseKard=1},tag=Talent_dianbiaodaozhuan] run function kards:game/player/talent/enable/dianbiaodaozhuan/1
+execute as @a[scores={CanuseKard=1},tag=Talent_gongsheng] run function kards:game/player/talent/enable/gongsheng/healback
 
+#来日偿还
+execute as @a[scores={lairichanghuan_times=1}] run scoreboard players operation @s lairichanghuan_old = @s lairichanghuan_new
+execute as @a[scores={lairichanghuan_times=1}] run scoreboard players reset @s lairichanghuan_new
+execute as @a[scores={lairichanghuan_times=1}] run scoreboard players set @s lairichanghuan_times 0
 
 #墓园狂欢
 scoreboard players add @a[scores={muyuankuanghuan=1,CanuseKard=1}] cishu 2
@@ -73,7 +77,7 @@ execute if entity @a[scores={ZhongShang_Round=0}] unless entity @a[scores={Zhong
 execute unless entity @a[scores={ZhongShang_Round=0}] if entity @a[scores={ZhongShang_Round=1..}] run tellraw @a [{text: "-",color:"gray"}]
 execute if entity @a[scores={ZhongShang_Round=0}] if entity @a[scores={ZhongShang_Round=1..}] run tellraw @a [{text: "-",color:"gray"}]
 #沉默
-scoreboard players remove @a[scores={chengmo=1..}] chengmo 1
+scoreboard players remove @a[scores={ChengMo=1..}] ChengMo 1
 #狼群战术
 execute if entity @a[scores={langqunzhanshu=1..}] run tellraw @a [{text: "[狼群战术]",color:"light_purple",bold:true},{text:"生效至\n",color:"gray"},{selector:"@a[scores={langqunzhanshu=1}]",bold:true},{text: "\n他们本回合不抽卡",color:"gray",bold:true}]
 execute if entity @a[scores={langqunzhanshu=1..}] run tellraw @a [{text: "-",color:"gray"}]

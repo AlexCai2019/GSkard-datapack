@@ -7,8 +7,6 @@ execute if score #system GameStatus matches 1 run function kards:game/ingame/rou
 execute as @a[gamemode=adventure,tag=Ready] if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data={kards:"wuxiuzhihuo"}] run title @s actionbar [{text: "K/Kmax  ",color:"dark_green"},{score:{objective:"kardCount",name:"@s"},color:"red"},{text: "/",color: "red"},{score:{objective:"kardCountmax",name:"@s"},color:"red",bold: true}]
 #赋值
 scoreboard players add @a touxiang 0
-scoreboard players add 红队 touxiang 0
-scoreboard players add 蓝队 touxiang 0
 scoreboard players add @a kardCount 0
 scoreboard players add @a jinziqifeng 0
 #图腾
@@ -43,7 +41,14 @@ execute if entity @e[scores={DuanTui=0..}] run function kards:game/ingame/custom
 #火焰
 execute if entity @e[scores={Fire=0..}] run function kards:game/ingame/custom_buff/huoyan/1
 #沉默
-execute if entity @a[scores={chengmo=0..}] run function kards:game/ingame/custom_buff/chengmo/1
+execute if entity @a[scores={ChengMo=0..}] run function kards:game/ingame/custom_buff/chengmo/1
+
+#附魔伤害累计
+execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:yuezhan"}]] run scoreboard players set @s enchantment_yuezhan_damage 0
+execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:liansuo"}]] run scoreboard players set @s enchantment_liansuo_damage 0
+
+#场景效果
+execute if score #system GameStatus matches 1..2 run function kards:game/ingame/map_buff
 
 #> 不死图腾
 #-生命图腾-#
@@ -114,7 +119,9 @@ execute as @a[scores={muyuankuanghuan=1}] if score @s muyuankuanghuan3 matches 1
 
 execute as @a[scores={muyuankuanghuan=1}] if score @s newzombie matches 1.. run function kards:game/paiku/yansheng/kuanghuanzombie
 #来日偿还
-execute as @a[scores={changhuan=1,damage_jilu=1..}] run function kards:game/yongpaiku/shenji/lairichanghuan/2
+execute as @a[scores={lairichanghuan_hurt=20..}] run function kards:game/yongpaiku/shenji/lairichanghuan/oper
+execute as @a[scores={lairichanghuan_all=1..}] run function kards:game/yongpaiku/shenji/lairichanghuan/2
+
 #防止踩田
 execute as @a at @s if block ~ ~ ~ minecraft:farmland run effect give @s minecraft:slow_falling 1 0 false
 execute as @a at @s if block ~ ~-1 ~ minecraft:farmland run effect give @s minecraft:slow_falling 1 0 false
@@ -192,15 +199,14 @@ kill @e[nbt={Item:{id:"minecraft:arrow"}}]
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 kill @e[type=minecraft:trident,nbt={inGround:1b},nbt=!{item:{components:{"minecraft:custom_data":{kards:"正义长戟"}}}}]
 #投降
-scoreboard players enable @a[scores={touxiang=0}] touxiang
-execute as @a[team=red] if score @s touxiang matches 1.. run function kards:game/ingame/touxiang/r_touxiang
-execute as @a[team=blue] if score @s touxiang matches 1.. run function kards:game/ingame/touxiang/b_touxiang
-execute store result score 红队 touxiang if entity @a[team=red,tag=TouXiang]
-execute store result score 蓝队 touxiang if entity @a[team=blue,tag=TouXiang]
-execute store result score 人数 r_p if entity @a[team=red]
-execute store result score 人数 b_p if entity @a[team=blue]
-execute if score 红队 touxiang = 人数 r_p run gamemode spectator @a[team=red]
-execute if score 蓝队 touxiang = 人数 b_p run gamemode spectator @a[team=blue]
+execute if score #system GameStatus matches 1..2 run scoreboard players enable @a[gamemode=adventure] touxiang
+execute as @a[scores={touxiang=1..}] run function kards:game/ingame/touxiang/1
+
+execute store result score #红队 Team_surrenderer if entity @a[team=red,tag=Surrenderer]
+execute store result score #蓝队 Team_surrenderer if entity @a[team=blue,tag=Surrenderer]
+
+execute if score #system GameStatus matches 1..2 if score #红队 Team_surrenderer = #红队 Team_number run gamemode spectator @a[team=red]
+execute if score #system GameStatus matches 1..2 if score #蓝队 Team_surrenderer = #蓝队 Team_number run gamemode spectator @a[team=blue]
 
 #地狱
 execute if score 红队 diyu matches 1 run effect give @e[type=!player,team=blue,tag=!tuteng] fire_resistance 1 0 false

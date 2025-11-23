@@ -2,7 +2,7 @@
   "description": "审判者",
   "supported_items": "#minecraft:head_armor",
   "weight": 1,
-  "max_level": 3,
+  "max_level": 5,
   "min_cost": {
     "base": 0,
     "per_level_above_first": 0
@@ -33,6 +33,14 @@
         "enchanted": "victim",
         "affected": "victim"
       }
-    ]
+    ],
+        "minecraft:tick": [
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "kards:enchantment/shenpanzhe/tick"
+                }
+            }
+        ]
   }
 }

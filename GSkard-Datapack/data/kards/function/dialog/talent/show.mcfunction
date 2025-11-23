@@ -1,3 +1,5 @@
+execute if score #system roundtime matches 0 run return fail
+tag @s add talent_dialog_show
 #default
 data modify storage kards dialog set value {\
     _:{\

@@ -1,3 +1,5 @@
+#Load
+forceload add 0 0
 #注册队伍
 team add red
 team add blue
@@ -17,11 +19,42 @@ function kards:lobby/bossbar/color/1
 
 bossbar add minecraft:worldborder {text:"边界收缩倒计时",color:"green"}
 bossbar add minecraft:roundtime ""
-bossbar add minecraft:pvptime {text:"等待开放",color:"green"}
+bossbar add minecraft:pvp_start_countdown {text:"等待开放",color:"green"}
 
 bossbar set minecraft:roundtime color white
-bossbar set minecraft:pvptime color green
+bossbar set minecraft:pvp_start_countdown color green
 #注册计分项目
+scoreboard objectives add pvp_start_countdown dummy
+scoreboard objectives add worldborder dummy
+scoreboard objectives add setting trigger
+scoreboard objectives add enter_pvp dummy
+scoreboard objectives add infinite_round dummy
+scoreboard objectives add random_gamerule_enable dummy
+
+scoreboard objectives add death deathCount
+
+scoreboard objectives add text_damage custom:damage_dealt
+scoreboard objectives add enchantment_yuezhan_damage custom:damage_dealt
+scoreboard objectives add enchantment_liansuo_damage custom:damage_dealt
+scoreboard objectives add enchantment_liansuo dummy
+scoreboard objectives add enchantment_shenpanzhe_particle dummy
+
+scoreboard objectives add Check_UnReady trigger
+scoreboard objectives add touxiang trigger [{text:"我投降辣🏳",color:"white"}]
+
+scoreboard objectives add Team_alive dummy
+scoreboard objectives add Team_dead dummy
+scoreboard objectives add Team_number dummy
+scoreboard objectives add Team_surrenderer dummy
+
+scoreboard objectives add lairichanghuan_hurt minecraft.custom:damage_taken
+scoreboard objectives add lairichanghuan_old dummy
+scoreboard objectives add lairichanghuan_new dummy
+scoreboard objectives add lairichanghuan_all dummy
+scoreboard objectives add lairichanghuan_times dummy
+scoreboard objectives add lairichanghuan_damage_temp1 dummy
+scoreboard objectives add lairichanghuan_damage_temp2 dummy
+
 scoreboard objectives add Mob_Health dummy
 scoreboard objectives add Spectator_lifeNum dummy
 scoreboard objectives add Spectator_Pos.Y dummy
@@ -57,7 +90,7 @@ scoreboard objectives add Talent_qiongbingduwu_Damage dummy
 scoreboard objectives add Talent_qiongbingduwu_Damage_temp1 dummy
 scoreboard objectives add Talent_qiongbingduwu_Damage_temp2 dummy
 scoreboard objectives add Talent_zhanshudaji dummy
-scoreboard objectives add Talent_zhazhashi dummy
+scoreboard objectives add Talent_zhazhashi minecraft.custom:damage_taken
 
 scoreboard objectives add Crossbow_RS dummy
 scoreboard objectives add Talent_Random_Mode dummy
@@ -73,7 +106,6 @@ scoreboard objectives add Rotation_0 dummy
 scoreboard objectives add Rotation_1 dummy
 scoreboard objectives add jinzijue dummy
 scoreboard objectives add jinzijue_1 dummy
-scoreboard objectives add changhuan dummy
 scoreboard objectives add xukonghuixiang dummy
 scoreboard objectives add time dummy
 scoreboard objectives add G36K_Ex_Use used:carrot_on_a_stick
@@ -91,7 +123,6 @@ scoreboard objectives add Talent_Main dummy
 scoreboard objectives add enchantment_yuezhan_temp dummy
 scoreboard objectives add enchantment_fengxingzhe_temp dummy
 scoreboard objectives add enchantment_dadishenyou_temp dummy
-scoreboard objectives add enchantment_chance_temp dummy
 scoreboard objectives add open_wiki dropped:bookshelf
 scoreboard objectives add UseItem.Crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add Xp_Temp1 dummy
@@ -160,7 +191,7 @@ scoreboard objectives add tanyu_zhuangbei dummy
 scoreboard objectives add tanyumohe dummy
 scoreboard objectives add tanyu dummy
 scoreboard objectives add newzombie dummy
-scoreboard objectives add chengmo dummy
+scoreboard objectives add ChengMo dummy
 scoreboard objectives add muyuankuanghuan dummy
 scoreboard objectives add yinnicangku dummy
 scoreboard objectives add langqunzhanshu dummy
@@ -194,12 +225,13 @@ scoreboard objectives add shizhongjian_template_2 dummy
 scoreboard objectives add shizhongjian_template_3 dummy
 scoreboard objectives add enchantment_zhiming_UUID dummy
 scoreboard objectives add enchantment_zhiming_cishu dummy
+scoreboard objectives add fengbaozhanchui_replace_main dummy
+scoreboard objectives add fengbaozhanchui_replace_off dummy
 scoreboard objectives add fengbaozhanchui_xuneng_Time dummy
 scoreboard objectives add fengbaozhanchui_xuneng dummy
 scoreboard objectives add fengbaozhanchui_lightning_bolt dummy
 scoreboard objectives add Damage minecraft.custom:damage_dealt
 scoreboard objectives add HealBack_Wait dummy
-scoreboard objectives add enchantment_chance_shixue dummy
 scoreboard objectives add MaxHealth dummy
 scoreboard objectives add Health health
 scoreboard objectives add XuanZhuan dummy
@@ -233,12 +265,8 @@ scoreboard objectives add jishengnianyeHealback dummy
 scoreboard objectives add enchantment_chance_huanman dummy
 scoreboard objectives add enchantment_chance_xuruo dummy
 scoreboard objectives add enchantment_level dummy
-scoreboard objectives add enchantment_chance_diaoling dummy
-scoreboard objectives add enchantment_chance_piaofu dummy
-scoreboard objectives add enchantment_chance_zhongdu dummy
-scoreboard objectives add enchantment_chance_shiming dummy
-scoreboard objectives add enchantment_liansuo dummy
-scoreboard objectives add enchantment_liansuo_damage dummy
+scoreboard objectives add enchantment_chance_temp dummy
+
 scoreboard objectives add haogaowuyuan dummy
 scoreboard objectives add diyu dummy
 scoreboard objectives add roundtimeOper dummy
@@ -280,11 +308,6 @@ scoreboard objectives add jiangshuzhe_shiting dummy
 scoreboard objectives add jiangshuzhe_shiting_time dummy
 scoreboard objectives add jiangshuzhe_yiming dummy
 
-scoreboard objectives add damage_jilu dummy
-scoreboard objectives add r_death dummy
-scoreboard objectives add b_death dummy
-scoreboard objectives add r_number dummy
-scoreboard objectives add b_number dummy
 scoreboard objectives add xianjin_shifaxiaogui dummy
 scoreboard objectives add xianjin_jingxiahezi dummy
 scoreboard objectives add xianjin_molifushi dummy
@@ -298,10 +321,7 @@ scoreboard objectives add xianjin_laizishenchu dummy
 scoreboard objectives add xianjin_qinglvqianmou dummy
 scoreboard objectives add xianjin_youdi dummy
 scoreboard objectives add xianjin_qianjunyifa dummy
-scoreboard objectives add chuanci minecraft.used:minecraft.trident
-scoreboard objectives add chuancichangjiCount dummy
 scoreboard objectives add hurt_chuanci dummy
-scoreboard objectives add arrow minecraft.dropped:minecraft.arrow
 scoreboard objectives add youchangjiedai dummy
 scoreboard objectives add random_clear dummy
 scoreboard objectives add fashucishu dummy
@@ -312,7 +332,7 @@ scoreboard objectives add shenjicishu dummy
 scoreboard objectives add xianjincishu dummy
 scoreboard objectives add zuzhoucishu dummy
 scoreboard objectives add tutengcishu dummy
-scoreboard objectives add changhuan_times dummy
+scoreboard objectives add shenqicishu dummy
 scoreboard objectives add xiajiehejinhujia dummy
 scoreboard objectives add XuanYun dummy
 scoreboard objectives add DuanTui dummy
@@ -365,7 +385,6 @@ scoreboard objectives add muyuankuanghuan2 dummy
 scoreboard objectives add muyuankuanghuan3 dummy
 scoreboard objectives add join_red minecraft.dropped:minecraft.red_banner
 scoreboard objectives add join_blue minecraft.dropped:minecraft.blue_banner
-scoreboard objectives add banner_count dummy
 scoreboard objectives add wiki minecraft.dropped:minecraft.cartography_table
 scoreboard objectives add wiki_count dummy
 scoreboard objectives add wait_start dummy
@@ -425,7 +444,7 @@ scoreboard objectives add RunningTime_Sec dummy
 scoreboard objectives add RunningTime_Min dummy
 scoreboard objectives add RunningTimeOper_Sec dummy
 scoreboard objectives add RunningTimeOper_Min dummy
-scoreboard objectives add touxiang dummy
+
 scoreboard objectives add reset trigger
 scoreboard objectives add dituxuanze dummy
 scoreboard objectives add roundtime dummy
@@ -445,7 +464,7 @@ scoreboard objectives add xixue_lx_temp2 dummy
 scoreboard objectives add FriendlyFire dummy
 
 # 注册卡牌数量
-data modify storage settings kard_count set value \
+data modify storage kards:setting kard_count set value \
 {\
     jiben:26,\
     juntuan:265,\
@@ -458,5 +477,5 @@ data modify storage settings kard_count set value \
     shipin:105\
 }
 
-# GSkard-1.55
-tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.55"},"\n=========================="]
+# GSkard-1.56
+tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.56"},"\n=========================="]

@@ -4,7 +4,6 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
-        {"text":"但你每回合只能获得","color":"gray"},{"text":"等同于80%Kmax的K\n","color":"red"},{"text":"该计算结果向下取整","color":"dark_gray"}\
         ],\
         "action": {\
             "type": "run_command",\
@@ -61,7 +60,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"火力支援","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每使用弩击杀生物 增加3%弩填装速度\n","color":"gold"},\
+        {"text":"你每使用弩击杀生物 增加4%弩填装速度\n","color":"gold"},\
         {"text":"该效果可无限叠加","color":"dark_gray"}\
         ],\
         "action": {\
@@ -75,10 +74,9 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"扎扎师。","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每次受到伤害","color":"red"},\
+        {"text":"你每次受到1♥伤害","color":"red"},\
         {"text":"有","color":"gray"},\
-        {"text":"12%的概率抽一张牌","color":"gold"},\
-        {"text":"每秒最多触发20次","color":"dark_gray"}\
+        {"text":"25%的概率抽一张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -195,10 +193,12 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"电表倒转","color":"aqua"}],\
         "tooltip": [\
-        {"text":"在本局游戏内","color":"gray"},\
-        {"text":"你每消耗2Kmax\n","color":"gold"},\
-        {"text":"友方回合开始时","color":"gray"},\
-        {"text":"你额外获得4K并抽1张牌","color":"gold"},\
+        {"text":"在本局游戏内 当你使用1张","color":"gray"},\
+        {"text":"非衍生卡","color":"gray"},\
+        {"text":"时\n","color":"gold"},\
+        {"text":"有20%的概率+6K","color":"gold"},\
+        {"text":"或","color":"gray"},\
+        {"text":"有5%的概率+2Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -379,7 +379,6 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
-        {"text":"但你每回合只能获得","color":"gray"},{"text":"等同于80%Kmax的K\n","color":"red"},{"text":"该计算结果向下取整","color":"dark_gray"}\
         ],\
         "action": {\
             "type": "run_command",\
@@ -436,7 +435,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"火力支援","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每使用弩击杀生物 增加3%弩填装速度\n","color":"gold"},\
+        {"text":"你每使用弩击杀生物 增加4%弩填装速度\n","color":"gold"},\
         {"text":"该效果可无限叠加","color":"dark_gray"}\
         ],\
         "action": {\
@@ -450,10 +449,9 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"扎扎师。","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每次受到伤害","color":"red"},\
+        {"text":"你每次受到1♥伤害","color":"red"},\
         {"text":"有","color":"gray"},\
-        {"text":"12%的概率抽一张牌","color":"gold"},\
-        {"text":"每秒最多触发20次","color":"dark_gray"}\
+        {"text":"25%的概率抽一张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -570,10 +568,12 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"电表倒转","color":"aqua"}],\
         "tooltip": [\
-        {"text":"在本局游戏内","color":"gray"},\
-        {"text":"你每消耗2Kmax\n","color":"gold"},\
-        {"text":"友方回合开始时","color":"gray"},\
-        {"text":"你额外获得4K并抽1张牌","color":"gold"},\
+        {"text":"在本局游戏内 当你使用1张","color":"gray"},\
+        {"text":"非衍生卡","color":"gray"},\
+        {"text":"时\n","color":"gold"},\
+        {"text":"有20%的概率+6K","color":"gold"},\
+        {"text":"或","color":"gray"},\
+        {"text":"有5%的概率+2Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -754,7 +754,6 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
-        {"text":"但你每回合只能获得","color":"gray"},{"text":"等同于80%Kmax的K\n","color":"red"},{"text":"该计算结果向下取整","color":"dark_gray"}\
         ],\
         "action": {\
             "type": "run_command",\
@@ -811,7 +810,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"火力支援","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每使用弩击杀生物 增加3%弩填装速度\n","color":"gold"},\
+        {"text":"你每使用弩击杀生物 增加4%弩填装速度\n","color":"gold"},\
         {"text":"该效果可无限叠加","color":"dark_gray"}\
         ],\
         "action": {\
@@ -825,10 +824,9 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"扎扎师。","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每次受到伤害","color":"red"},\
+        {"text":"你每次受到1♥伤害","color":"red"},\
         {"text":"有","color":"gray"},\
-        {"text":"12%的概率抽一张牌","color":"gold"},\
-        {"text":"每秒最多触发20次","color":"dark_gray"}\
+        {"text":"25%的概率抽一张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -945,10 +943,12 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"电表倒转","color":"aqua"}],\
         "tooltip": [\
-        {"text":"在本局游戏内","color":"gray"},\
-        {"text":"你每消耗2Kmax\n","color":"gold"},\
-        {"text":"友方回合开始时","color":"gray"},\
-        {"text":"你额外获得4K并抽1张牌","color":"gold"},\
+        {"text":"在本局游戏内 当你使用1张","color":"gray"},\
+        {"text":"非衍生卡","color":"gray"},\
+        {"text":"时\n","color":"gold"},\
+        {"text":"有20%的概率+6K","color":"gold"},\
+        {"text":"或","color":"gray"},\
+        {"text":"有5%的概率+2Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1129,7 +1129,6 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
-        {"text":"但你每回合只能获得","color":"gray"},{"text":"等同于80%Kmax的K\n","color":"red"},{"text":"该计算结果向下取整","color":"dark_gray"}\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1186,7 +1185,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"火力支援","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每使用弩击杀生物 增加3%弩填装速度\n","color":"gold"},\
+        {"text":"你每使用弩击杀生物 增加4%弩填装速度\n","color":"gold"},\
         {"text":"该效果可无限叠加","color":"dark_gray"}\
         ],\
         "action": {\
@@ -1200,10 +1199,9 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"扎扎师。","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每次受到伤害","color":"red"},\
+        {"text":"你每次受到1♥伤害","color":"red"},\
         {"text":"有","color":"gray"},\
-        {"text":"12%的概率抽一张牌","color":"gold"},\
-        {"text":"每秒最多触发20次","color":"dark_gray"}\
+        {"text":"25%的概率抽一张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1320,10 +1318,12 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"电表倒转","color":"aqua"}],\
         "tooltip": [\
-        {"text":"在本局游戏内","color":"gray"},\
-        {"text":"你每消耗2Kmax\n","color":"gold"},\
-        {"text":"友方回合开始时","color":"gray"},\
-        {"text":"你额外获得4K并抽1张牌","color":"gold"},\
+        {"text":"在本局游戏内 当你使用1张","color":"gray"},\
+        {"text":"非衍生卡","color":"gray"},\
+        {"text":"时\n","color":"gold"},\
+        {"text":"有20%的概率+6K","color":"gold"},\
+        {"text":"或","color":"gray"},\
+        {"text":"有5%的概率+2Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1504,7 +1504,6 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
-        {"text":"但你每回合只能获得","color":"gray"},{"text":"等同于80%Kmax的K\n","color":"red"},{"text":"该计算结果向下取整","color":"dark_gray"}\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1561,7 +1560,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"火力支援","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每使用弩击杀生物 增加3%弩填装速度\n","color":"gold"},\
+        {"text":"你每使用弩击杀生物 增加4%弩填装速度\n","color":"gold"},\
         {"text":"该效果可无限叠加","color":"dark_gray"}\
         ],\
         "action": {\
@@ -1575,10 +1574,9 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"扎扎师。","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每次受到伤害","color":"red"},\
+        {"text":"你每次受到1♥伤害","color":"red"},\
         {"text":"有","color":"gray"},\
-        {"text":"12%的概率抽一张牌","color":"gold"},\
-        {"text":"每秒最多触发20次","color":"dark_gray"}\
+        {"text":"25%的概率抽一张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1695,10 +1693,12 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"电表倒转","color":"aqua"}],\
         "tooltip": [\
-        {"text":"在本局游戏内","color":"gray"},\
-        {"text":"你每消耗2Kmax\n","color":"gold"},\
-        {"text":"友方回合开始时","color":"gray"},\
-        {"text":"你额外获得4K并抽1张牌","color":"gold"},\
+        {"text":"在本局游戏内 当你使用1张","color":"gray"},\
+        {"text":"非衍生卡","color":"gray"},\
+        {"text":"时\n","color":"gold"},\
+        {"text":"有20%的概率+6K","color":"gold"},\
+        {"text":"或","color":"gray"},\
+        {"text":"有5%的概率+2Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1879,7 +1879,6 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
-        {"text":"但你每回合只能获得","color":"gray"},{"text":"等同于80%Kmax的K\n","color":"red"},{"text":"该计算结果向下取整","color":"dark_gray"}\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1936,7 +1935,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"火力支援","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每使用弩击杀生物 增加3%弩填装速度\n","color":"gold"},\
+        {"text":"你每使用弩击杀生物 增加4%弩填装速度\n","color":"gold"},\
         {"text":"该效果可无限叠加","color":"dark_gray"}\
         ],\
         "action": {\
@@ -1950,10 +1949,9 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"扎扎师。","color":"gold"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"你每次受到伤害","color":"red"},\
+        {"text":"你每次受到1♥伤害","color":"red"},\
         {"text":"有","color":"gray"},\
-        {"text":"12%的概率抽一张牌","color":"gold"},\
-        {"text":"每秒最多触发20次","color":"dark_gray"}\
+        {"text":"25%的概率抽一张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -2068,10 +2066,12 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"电表倒转","color":"aqua"}],\
         "tooltip": [\
-        {"text":"在本局游戏内","color":"gray"},\
-        {"text":"你每消耗2Kmax\n","color":"gold"},\
-        {"text":"友方回合开始时","color":"gray"},\
-        {"text":"你额外获得4K并抽1张牌","color":"gold"},\
+        {"text":"在本局游戏内 当你使用1张","color":"gray"},\
+        {"text":"非衍生卡","color":"gray"},\
+        {"text":"时\n","color":"gold"},\
+        {"text":"有20%的概率+6K","color":"gold"},\
+        {"text":"或","color":"gray"},\
+        {"text":"有5%的概率+2Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\

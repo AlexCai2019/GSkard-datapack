@@ -13,7 +13,7 @@ execute if score @s random3 matches 186..195 run function kards:game/paiku/zhuan
 execute if score @s random3 matches 196..205 run function kards:game/paiku/zhuangbei/busituteng
 execute if score @s random3 matches 206..225 run function kards:game/paiku/zhuangbei/weihu
 execute if score @s random3 matches 226..250 run function kards:game/paiku/zhuangbei/longxi
-execute if score @s random3 matches 251..350 run function kards:game/ingame/choupai/9 with storage settings kard_count
+execute if score @s random3 matches 251..350 run function kards:game/ingame/choupai/9 with storage kards:setting kard_count
 execute if score @s random3 matches 350..370 run function kards:game/paiku/zhuangbei/zhongchui
 execute if score @s random3 matches 371..375 run function kards:game/paiku/zhuangbei/quanxidunpai
 execute if score @s random3 matches 376..385 run function kards:game/paiku/zhuangbei/jianduandunpai

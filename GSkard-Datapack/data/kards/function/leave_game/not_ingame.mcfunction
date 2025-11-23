@@ -4,10 +4,12 @@ tp @s 59 226 -26 -90 0
 tag @s remove Ready
 tag @s add Un_Ready
 tag @s remove jishengnianye
-tag @s remove TouXiang
+tag @s remove Surrenderer
 clear @s
 scoreboard players reset @s
 function kards:game/end/bossbar_reset/1
+function kards:game/player/talent/reset
+
 attribute @s minecraft:max_health modifier remove 0-0-1
 attribute @s minecraft:max_health modifier remove 0-0-2
 attribute @s minecraft:max_health modifier remove 0-0-3

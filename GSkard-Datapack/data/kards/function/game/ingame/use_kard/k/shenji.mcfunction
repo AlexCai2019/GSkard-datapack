@@ -7,10 +7,10 @@ execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'虚空
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'时空崩塌'}] if score @s kardCount >= #kard_shikongbengta kardCount run function kards:game/yongpaiku/shenji/shikongbengta
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'灵魂割舍'}] if score @s kardCount >= #kard_linghungeshe kardCount run function kards:game/yongpaiku/shenji/linghungeshe
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'禁法结界'}] if score @s kardCount >= #kard_jinfajiejie kardCount run function kards:game/yongpaiku/shenji/jinfajiejie/1
-execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'王之宝库'}] if score @s kardCount >= #kard_wangzhibaoku kardCount run function kards:game/yongpaiku/shenji/wangzhibaoku/random1
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'王之宝库'}] if score @s kardCount >= #kard_wangzhibaoku kardCount run function kards:game/yongpaiku/shenji/wangzhibaoku/used_random
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'幽谙降临'}] if score @s kardCount >= #kard_youanjianglin kardCount run function kards:game/yongpaiku/shenji/youanjianglin/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'凌驾'}] if score @s kardCount >= #kard_lingjia kardCount run function kards:game/yongpaiku/shenji/lingjia
-execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'复制'}] unless items entity @s container.0 air if score @s kardCount >= #kard_fuzhi kardCount at @s run function kards:game/yongpaiku/shenji/fuzhi
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'复制'}] unless items entity @s container.0 air unless items entity @s container.0 #kards:kard[custom_data~{kards:'复制'}] if score @s kardCount >= #kard_fuzhi kardCount at @s run function kards:game/yongpaiku/shenji/fuzhi
 execute if score #system GameStatus matches 1 if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'飞雷神•反'}] if score @s kardCount >= #kard_fanxiangfeileishen kardCount run function kards:game/yongpaiku/shenji/feileishenfan/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'神之一手'}] if score @s kardCount >= #kard_shenzhiyishou kardCount run function kards:game/yongpaiku/shenji/shenzhiyishou/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'贪欲魔盒'}] if score @s kardCount >= #kard_tanyumohe kardCount run function kards:game/yongpaiku/shenji/tanyumohe

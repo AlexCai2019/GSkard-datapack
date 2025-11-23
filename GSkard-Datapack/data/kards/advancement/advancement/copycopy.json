@@ -1,0 +1,64 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:music_disc_strad",
+            "count": 1
+        },
+        "title": {
+            "text": "干嘛?"
+        },
+        "description": {
+            "text": "尝试使用\"复制\" 复制 \"复制\""
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "kards:advancement/jiaocheng",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "all_of",
+                        "terms": [
+                            {
+                                "condition": "entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    "CanuseKard": 1
+                                }
+                            },
+                            {
+                                "condition": "entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "slots": {
+                                        "container.0": {
+                                            "items": "music_disc_strad",
+                                            "predicates": {
+                                                "custom_data": {
+                                                    "kards":"复制"
+                                                }
+                                            }
+                                        },
+                                        "weapon.offhand": {
+                                            "items": "music_disc_strad",
+                                            "predicates": {
+                                                "custom_data": {
+                                                    "kards":"复制"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

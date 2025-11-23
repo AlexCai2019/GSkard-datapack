@@ -5,6 +5,7 @@ scoreboard players set @a Skip_Round 0
 scoreboard players set #system Relax_Round 1
 scoreboard players remove 回合数 GameRound 1
 scoreboard players set #system GameRound 2
+scoreboard players set time roundtime 300
 
 tellraw @a [{text: "当前游戏难度：困难",color:"gold",bold:true},{text: "\n怪物造成的伤害提升至1.5倍 玩家受到的部分伤害提升",color:"gold",bold:true}]
 difficulty hard

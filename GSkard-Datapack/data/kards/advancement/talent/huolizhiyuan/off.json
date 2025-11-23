@@ -1,7 +1,7 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "minecraft:killed_by_arrow",
       "conditions": {
         "entity": [
           {
@@ -36,7 +36,15 @@
                   }
                 }
               }
-            ]
+            ],
+            "killing_blow": {
+          "tags": [
+            {
+              "expected": true,
+              "id": "minecraft:is_projectile"
+            }
+          ]
+        }
           }
         ],
         "player": {
@@ -52,6 +60,6 @@
     }
   },
   "rewards": {
-    "function": "kards:game/player/talent/enable/huolizhiyuan/killed_entity"
+    "function": "kards:game/player/talent/enable/huolizhiyuan/off"
   }
 }

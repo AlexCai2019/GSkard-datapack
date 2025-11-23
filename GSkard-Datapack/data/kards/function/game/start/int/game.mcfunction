@@ -10,8 +10,8 @@ scoreboard objectives add health health [{text:"生命",color:"green"}]
 scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay below_name kardCount
 
-execute store result score #system r_number if entity @a[team=red]
-execute store result score #system b_number if entity @a[team=blue]
+execute store result score #红队 Team_number if entity @a[team=red]
+execute store result score #蓝队 Team_number if entity @a[team=blue]
 
 # Reset entity
 kill @e[type=!player,type=!marker,type=!#kards:display]
