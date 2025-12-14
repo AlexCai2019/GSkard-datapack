@@ -7,5 +7,5 @@ $execute as @s[tag=!bossbar_max_XuanYun] run bossbar set kards:xuanyun_$(UUID) m
 tag @s add bossbar_max_XuanYun
 $execute store result bossbar kards:xuanyun_$(UUID) value run scoreboard players get @s XuanYun
 
-$execute if score @s XuanYun matches 1 run bossbar remove kards:xuanyun_$(UUID)
-execute if score @s XuanYun matches 1 run tag @s remove bossbar_max_XuanYun
+$execute if score @s XuanYun matches ..1 run bossbar remove kards:xuanyun_$(UUID)
+execute if score @s XuanYun matches ..1 run tag @s remove bossbar_max_XuanYun

@@ -1,0 +1,58 @@
+{
+    "description": ["",{"color":"gold","bold":true,"text":"「绝唱」"}],
+    "supported_items": "shield",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+        "hand"
+    ],
+    "effects": {
+        "attributes": [
+            {
+                "amount": 5,
+                "attribute": "minecraft:armor",
+                "id": "0-0-1",
+                "operation": "add_value"
+            },
+            {
+                "amount": 1,
+                "attribute": "minecraft:armor_toughness",
+                "id": "0-0-1",
+                "operation": "add_value"
+            },
+            {
+                "amount": 0.3,
+                "attribute": "minecraft:attack_speed",
+                "id": "0-0-1",
+                "operation": "add_multiplied_base"
+            },
+            {
+                "amount": 0.2,
+                "attribute": "minecraft:knockback_resistance",
+                "id": "0-0-1",
+                "operation": "add_value"
+            },
+            {
+                "amount": 1,
+                "attribute": "minecraft:attack_knockback",
+                "id": "0-0-2",
+                "operation": "add_value"
+            },
+            {
+                "amount": 0.2,
+                "attribute": "minecraft:movement_speed",
+                "id": "0-0-5",
+                "operation": "add_multiplied_base"
+            }
+        ]
+    }
+}

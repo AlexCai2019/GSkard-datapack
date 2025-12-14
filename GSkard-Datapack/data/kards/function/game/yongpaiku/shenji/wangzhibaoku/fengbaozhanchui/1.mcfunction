@@ -1,9 +1,8 @@
-
 advancement revoke @s only kards:shenqi/fengbaozhanchui
 
-execute if items entity @s weapon.mainhand mace[custom_data={kards:'风暴战锤'}] run scoreboard players set @s fengbaozhanchui_replace_main 1
+execute if items entity @s weapon.mainhand mace[custom_data~{kards:'风暴战锤'}] run scoreboard players set @s fengbaozhanchui_replace_main 1
 
-execute if items entity @s weapon.offhand mace[custom_data={kards:'风暴战锤'}] run scoreboard players set @s fengbaozhanchui_replace_off 1
+execute if items entity @s weapon.offhand mace[custom_data~{kards:'风暴战锤'}] run scoreboard players set @s fengbaozhanchui_replace_off 1
 
 item replace block 0 -60 -48 container.0 from entity @s weapon.mainhand
 
@@ -14,6 +13,16 @@ execute as @s[scores={fengbaozhanchui_replace_off=1}] run item replace entity @s
 
 item replace entity @s weapon.mainhand from block 0 -60 -48 container.0
 item replace entity @s weapon.offhand from block 0 -60 -48 container.1
+
+gamerule drowning_damage false
+
+execute if items entity @s[scores={fengbaozhanchui_replace_main=1}] weapon.mainhand mace[custom_data~{feishenghufu:'绝唱'}] run summon minecraft:lightning_bolt ~ ~ ~
+execute if items entity @s[scores={fengbaozhanchui_replace_off=1}] weapon.offhand mace[custom_data~{feishenghufu:'绝唱'}] run summon minecraft:lightning_bolt ~ ~ ~
+
+execute as @s[team=red,scores={fengbaozhanchui_replace_main=1}] if items entity @s weapon.mainhand mace[custom_data~{feishenghufu:'绝唱'}] run scoreboard players add @e[distance=..4.5,team=blue,tag=!spectator] XuanYun 20
+execute as @s[team=blue,scores={fengbaozhanchui_replace_main=1}] if items entity @s weapon.mainhand mace[custom_data~{feishenghufu:'绝唱'}] run scoreboard players add @e[distance=..4.5,team=red,tag=!spectator] XuanYun 20
+execute as @s[team=red,scores={fengbaozhanchui_replace_off=1}] if items entity @s weapon.offhand mace[custom_data~{feishenghufu:'绝唱'}] run scoreboard players add @e[distance=..4.5,team=blue,tag=!spectator] XuanYun 20
+execute as @s[team=blue,scores={fengbaozhanchui_replace_off=1}] if items entity @s weapon.offhand mace[custom_data~{feishenghufu:'绝唱'}] run scoreboard players add @e[distance=..4.5,team=red,tag=!spectator] XuanYun 20
 
 scoreboard players set @s fengbaozhanchui_replace_main 0
 scoreboard players set @s fengbaozhanchui_replace_off 0
@@ -32,3 +41,5 @@ gamemode creative @s[scores={GameMode=2}]
 execute at @s run tp @s ~ ~-1000 ~
 particle cloud ~ ~ ~ 0.25 0 0.25 0 25 force
 playsound entity.wind_charge.wind_burst block @s ~ ~ ~ 100 1
+
+schedule function kards:game/yongpaiku/shenji/wangzhibaoku/fengbaozhanchui/2 1.5s replace

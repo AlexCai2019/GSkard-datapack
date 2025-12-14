@@ -1,0 +1,3 @@
+
+give @s music_disc_13[item_name=[{text: "10K",color:"aqua"},{text:" "},{text: "钻石矛",color:"gold"}],lore=[{text: "装备牌",color:"gold",italic:false},{text: "获得一把钻石矛",color:"gray",italic:false},{text: "自带突进2",color:"gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'钻石矛',K:10},tooltip_style="kards:kard/equipment"]
+scoreboard players set #kard_zuanshimao kardCount 10

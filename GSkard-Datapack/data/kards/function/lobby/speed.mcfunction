@@ -1,3 +1,5 @@
+execute as @s[scores={Lobby_speed_countdown=1..}] run return fail
+scoreboard players set @s Lobby_speed_countdown 10
 scoreboard players set @s[gamemode=adventure] GameMode 1
 scoreboard players set @s[gamemode=creative] GameMode 2
 

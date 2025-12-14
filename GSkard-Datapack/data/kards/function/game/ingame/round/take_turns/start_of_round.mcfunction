@@ -30,3 +30,7 @@ tag @e remove JiangShuZhe_yiming_rided
 execute as @a[tag=Talent_zhongyanzhixing,scores={CanuseKard=1}] run function kards:game/player/talent/enable/zhongyanzhixing/1
 #穷兵黩武
 execute as @a[tag=Talent_qiongbingduwu] run function kards:game/player/talent/enable/qiongbingduwu/1
+#禁忌之始
+scoreboard players add @a[tag=Talent_jinjizhishi] Talent_jinjizhishi_round 1
+execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=5}] run function kards:game/paiku/fashu/jinziqifeng
+execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=10}] run function kards:game/paiku/fashu/jinziqifeng

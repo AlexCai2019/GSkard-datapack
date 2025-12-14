@@ -16,4 +16,4 @@ execute if score @s random8 matches 13 run function kards:game/paiku/xianjing/to
 execute if score @s random8 matches 14.. run function kards-dlc:kard/type/xianjing/ganeral
 
 scoreboard players set @s random8 0
-scoreboard players remove @s xianjincishu 1
+scoreboard players remove @s xianjingcishu 1

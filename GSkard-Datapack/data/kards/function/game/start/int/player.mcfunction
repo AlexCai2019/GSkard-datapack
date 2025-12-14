@@ -7,7 +7,7 @@ scoreboard players reset @a
 scoreboard players set @a[tag=Ready] kardCountmax 10
 scoreboard players add @a Talent_Count 1
 scoreboard players add @a lairichanghuan_times 0
-scoreboard players operation @a shenqicishu = #system shenqicishu
+execute as @a[gamemode=adventure] run scoreboard players operation @s shenqicishu = #system shenqicishu
 
 # Attribute
 execute as @a run attribute @s scale base reset

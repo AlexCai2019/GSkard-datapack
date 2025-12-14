@@ -11,8 +11,9 @@ execute if entity @s[team=red] at @e[tag=blue_marker_10] run summon wither_skele
 
 execute if items entity @s container.* music_disc_mall[custom_data~{kards:'恶魂'}] at @e[tag=blue_marker_7] run function kards:game/yongpaiku/juntuan/wanglingdajun/2
 
-tag @e[tag=Mob_Start] remove Mob_Start
-
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
+function kards:game/yongpaiku/use_general/talent
+function kards:game/yongpaiku/use_general/attribute/
+tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_wanglingdajun kardCount

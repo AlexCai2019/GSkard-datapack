@@ -1,0 +1,50 @@
+{
+    "description": ["",{"color":"gold","bold":true,"text":"「绝唱」"}],
+    "supported_items": "#kards:melee_weapon",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+        "mainhand"
+    ],
+    "effects": {
+        "minecraft:post_attack": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "kards:enchantment/feishenghufu/mace/1"
+                },
+                "enchanted": "attacker",
+                "affected": "victim"
+            }
+        ],
+        "attributes": [
+            {
+                "amount": 10,
+                "attribute": "minecraft:safe_fall_distance",
+                "id": "feishenghufu-1",
+                "operation": "add_value"
+            },
+            {
+                "amount": 0.3,
+                "attribute": "minecraft:jump_strength",
+                "id": "feishenghufu-1",
+                "operation": "add_value"
+            },
+            {
+                "amount": 0.15,
+                "attribute": "minecraft:attack_speed",
+                "id": "feishenghufu-1",
+                "operation": "add_multiplied_total"
+            }
+        ]
+    }
+}

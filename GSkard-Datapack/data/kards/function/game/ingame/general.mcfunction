@@ -33,7 +33,7 @@ execute if entity @e[scores={HealBack=0..}] run function kards:game/ingame/custo
 #破甲
 execute if entity @e[scores={PoJia=0..}] run function kards:game/ingame/custom_buff/pojia/1
 #眩晕
-execute if entity @e[tag=XuanYun,scores={XuanYun=0..}] run function kards:game/ingame/custom_buff/xuanyun/1
+execute if entity @e[scores={XuanYun=0..}] run function kards:game/ingame/custom_buff/xuanyun/1
 #旋转
 execute if entity @e[scores={XuanZhuan=0..}] run function kards:game/ingame/custom_buff/xuanzhuan
 #断腿
@@ -46,7 +46,7 @@ execute if entity @a[scores={ChengMo=0..}] run function kards:game/ingame/custom
 #附魔伤害累计
 execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:yuezhan"}]] run scoreboard players set @s enchantment_yuezhan_damage 0
 execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:liansuo"}]] run scoreboard players set @s enchantment_liansuo_damage 0
-
+execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:feishenghufu/fu"}]] run scoreboard players set @s enchantment_feishenghufu_fu_damage 0
 #场景效果
 execute if score #system GameStatus matches 1..2 run function kards:game/ingame/map_buff
 
@@ -140,8 +140,6 @@ execute as @a if score @s qinglvqianmou matches 1 if score @s use_kard matches 0
 #旁观玩家限制
 execute as @a[gamemode=spectator] unless score #system GameStatus matches 0 at @s store result score @s Spectator_lifeNum if entity @a[gamemode=adventure,distance=..40]
 execute as @a[gamemode=spectator] unless score #system GameStatus matches 0 unless score @s Spectator_lifeNum matches 1.. run tp @s @r[gamemode=adventure]
-execute as @a[gamemode=spectator] unless score #system GameStatus matches 0 store result score @s Spectator_Pos.Y run data get entity @s Pos[1]
-execute as @a[gamemode=spectator] unless score #system GameStatus matches 0 unless score @s Spectator_Pos.Y matches 1..30 at @s run tp @s ~ 9 ~ ~ ~
 #玩家死亡
 function kards:game/player/death/1
 
@@ -212,6 +210,10 @@ execute if score #system GameStatus matches 1..2 if score #蓝队 Team_surrender
 execute if score 红队 diyu matches 1 run effect give @e[type=!player,team=blue,tag=!tuteng] fire_resistance 1 0 false
 execute if score 蓝队 diyu matches 1 run effect give @e[type=!player,team=red,tag=!tuteng] fire_resistance 1 0 false
 
+#凛冬将至
+execute if score 红队 fashu_lindongjiangzhi matches 1.. run function kards:game/yongpaiku/fashu/lindongjiangzhi/2
+execute if score 蓝队 fashu_lindongjiangzhi matches 1.. run function kards:game/yongpaiku/fashu/lindongjiangzhi/2
+
 #贪欲魔盒
 execute if score 红队 tanyu_temp_1 matches 3..5 if predicate kards:random0.0001 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4
 execute if score 蓝队 tanyu_temp_1 matches 3..5 if predicate kards:random0.0001 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/5
@@ -229,4 +231,4 @@ execute if score 蓝队 tanyu_temp_1 matches 18.. if predicate kards:random0.08 
 scoreboard players enable @a[scores={reset=0}] reset
 execute as @a if score @s reset matches 1 run function kards:game/end/reset
 #---生物相关---#
-function kards:game/ingame/mob/general
+execute as @e[type=#kards:mob] run function kards:game/ingame/mob/general

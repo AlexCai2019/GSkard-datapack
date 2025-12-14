@@ -1,21 +1,15 @@
 #陷阱
 function kards:game/yongpaiku/xianjing/jiance/roundjiance
 #回合规则
-function kards:game/random_start/round_event
+execute if score #system random_gamerule_start matches 1 run function kards:game/random_start/round_event
 #检测回合 事件通知
 execute if score 回合数 GameRound = #system RoundCount run tellraw @a [{text: "Final GameRound 最后回合",color:"gold",bold:true}]
 
 #基础生效
 execute as @a[scores={CanuseKard=1},tag=!Talent_xukongcunzhe] run scoreboard players operation @s kardCount = @s kardCountmax
 
-execute as @a[scores={CanuseKard=1},tag=Talent_xukongcunzhe] run scoreboard players operation @s temp = @s kardCountmax
-scoreboard players set #system temp 2
-execute as @a[scores={CanuseKard=1},tag=Talent_xukongcunzhe] run scoreboard players operation @s temp /= #system temp
-execute as @a[scores={CanuseKard=1},tag=Talent_xukongcunzhe] run scoreboard players operation @s kardCount += @s temp
-
-
 function kards:game/ingame/round/take_turns/choupai with storage kards:setting
-function kards:game/ingame/round/fashu with storage minecraft:changdidaxiao
+
 #人数补偿
 execute if score #蓝队 Team_number > #红队 Team_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 5
 execute if score #蓝队 Team_number > #红队 Team_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 1
@@ -49,6 +43,7 @@ execute as @a[scores={CanuseKard=1},tag=Talent_emoqiyue] run function kards:game
 execute as @a[scores={CanuseKard=1},tag=Talent_duichongjijin] run function kards:game/player/talent/enable/duichongjijin/1
 execute as @a[scores={CanuseKard=1},tag=Talent_dianbiaodaozhuan] run function kards:game/player/talent/enable/dianbiaodaozhuan/1
 execute as @a[scores={CanuseKard=1},tag=Talent_gongsheng] run function kards:game/player/talent/enable/gongsheng/healback
+execute as @a[scores={CanuseKard=1},tag=Talent_xukongcunzhe] run function kards:game/player/talent/enable/xukongcunzhe/1
 
 #来日偿还
 execute as @a[scores={lairichanghuan_times=1}] run scoreboard players operation @s lairichanghuan_old = @s lairichanghuan_new
@@ -68,7 +63,9 @@ execute if entity @e[tag=tuteng,team=blue] run tellraw @a [{text:"蓝队",color:
 execute if entity @e[tag=tuteng] run tellraw @a [{text: "",color:"gray",bold:true}]
 
 #> 牌效
-tellraw @a [{text: "==========事件==========",color:"gray",bold:true}]
+tellraw @a [{text: "====================",color:"gray",bold:true}]
+# 
+function kards:game/yongpaiku/use_general/attribute/__
 #重伤
 scoreboard players remove @a[scores={ZhongShang_Round=1..}] ZhongShang_Round 1
 execute if entity @a[scores={ZhongShang_Round=1..}] run tellraw @a [{text: "[重伤]",color:"dark_gray",bold:true},{text:"生效至\n",color:"gray"},{selector:"@a[scores={ZhongShang_Round=1..}]",bold:true},{text: "\n他们本回合生命恢复效率减半",color:"gray",bold:true}]
@@ -100,10 +97,11 @@ execute if entity @a[team=red,scores={kujie=1..}] run tellraw @a [[{text: "红�
 execute if entity @a[team=blue,scores={kujie=1..}] run tellraw @a [[{text: "蓝队",color:"blue",bold:true},{text: "[枯竭]",color:"dark_gray",bold:true},{text: "生效中",color:"dark_gray",bold:true}],{text:"\n使用牌后额外扣除1K直至回合结束",color:"gold"}]
 execute if entity @a[scores={kujie=1..}] run tellraw @a [{text: "-",color:"gray"}]
 #地狱、漫水
-execute if score 红队 diyu matches 1 run scoreboard players set 红队 diyu 0
-execute if score 蓝队 diyu matches 1 run scoreboard players set 蓝队 diyu 0
-execute if score 红队 manshui matches 1 run scoreboard players set 红队 manshui 0
-execute if score 蓝队 manshui matches 1 run scoreboard players set 蓝队 manshui 0
+function kards:game/ingame/round/fashu with storage minecraft:changdidaxiao
+
+#凛冬将至
+execute if score 红队 fashu_lindongjiangzhi matches 1.. run scoreboard players remove 红队 fashu_lindongjiangzhi 1
+execute if score 蓝队 fashu_lindongjiangzhi matches 1.. run scoreboard players remove 蓝队 fashu_lindongjiangzhi 1
 
 #诅咒护甲
 execute as @a[tag=zuzhouhujia] if items entity @s armor.chest golden_chestplate[custom_data={kards:'诅咒护甲'}] run item replace entity @s armor.chest with air
@@ -117,7 +115,8 @@ scoreboard players reset @a[scores={hurt_by_mafeng=1,CanuseKard=1}] hurt_by_mafe
 scoreboard players set @a jiben 0
 scoreboard players set @a xukonghuixiang 0
 function kards:game/ingame/round/skill
-function kards:game/ingame/round/tuteng
+execute if score #system GameRound matches 0 as @e[tag=tuteng,team=blue] run function kards:game/ingame/round/tuteng
+execute if score #system GameRound matches 1 as @e[tag=tuteng,team=red] run function kards:game/ingame/round/tuteng
 
 scoreboard players set @a[scores={CanuseKard=0},tag=!Talent_xukongcunzhe] kardCount 0
 

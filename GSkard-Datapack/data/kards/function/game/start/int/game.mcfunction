@@ -25,3 +25,4 @@ time set midnight
 stopsound @a
 execute as @a at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 100 1
 function kards:game/ingame/round/fashu with storage changdidaxiao
+schedule function kards:game/player/talent/reshow 10t replace

@@ -1,2 +1,1 @@
-
-gamerule drowningDamage true
+gamerule drowning_damage true

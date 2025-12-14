@@ -22,46 +22,7 @@
         },
         {
             "type": "minecraft:plain_message",
-            "contents": {
-                "text": "风之庇护",
-                "color": "aqua",
-                "italic": false
-            },
-            "width": 1024
-        },
-        {
-            "type": "minecraft:plain_message",
-            "contents": {
-                "text": "拿在手中时 获得38%移速加成",
-                "color": "gray",
-                "italic": false
-            },
-            "width": 1024
-        },
-        {
-            "type": "minecraft:plain_message",
-            "contents": {
-                "text": "风袭",
-                "color": "aqua"
-            },
-            "width": 1024
-        },
-        {
-            "type": "minecraft:plain_message",
-            "contents": {
-                "text": "使用轻灵之语近战攻击会使目标旋转1.75s",
-                "color": "gray",
-                "italic": false
-            },
-            "width": 1024
-        },
-        {
-            "type": "minecraft:plain_message",
-            "contents": {
-                "text": "10s补充一次",
-                "color": "gray",
-                "italic": false
-            },
+            "contents": ["",{"color":"#CE9178","text":"-----神器特殊效果详情-----"},"\n",{"color":"aqua","bold":true,"text":"风之引"},"\n",{"color":"gray","text":"射出的箭矢会自动导向3格内的敌方生物"},"\n",{"color":"aqua","bold":true,"text":"风袭"},"\n",{"color":"gray","text":"使用"},{"color":"aqua","text":"轻灵之语"},{"color":"gray","text":"攻击会使目标"},{"color":"gold","text":"视角偏移"},{"color":"gray","text":" 并有"},{"color":"dark_aqua","text":"15%"},{"color":"gray","text":"的概率在其脚下生成风弹"},"\n",{"color":"aqua","bold":true,"text":"风蓄"},"\n",{"color":"gray","text":"蓄力长达"},{"color":"yellow","text":"2.5s"},{"color":"gray","text":"后射出的箭矢"},{"color":"gold","text":"伤害增加 速度增加并改为无重力"},"\n",{"color":"gray","text":"箭矢命中目标"},{"color":"dark_aqua","text":"100%"},{"color":"gray","text":"概率触发风弹 但此时箭矢"},{"color":"red","text":"不会导向目标"}],
             "width": 1024
         }
     ],

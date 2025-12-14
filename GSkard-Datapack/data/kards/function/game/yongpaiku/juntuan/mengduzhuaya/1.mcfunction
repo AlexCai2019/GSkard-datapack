@@ -11,8 +11,11 @@ execute if entity @s[team=blue] at @e[tag=red_marker_13] run summon cave_spider 
 
 execute if score @s kardCountmax matches 20.. run function kards:game/yongpaiku/juntuan/mengduzhuaya/2
 
-tag @e[tag=Mob_Start] remove Mob_Start
+
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
+function kards:game/yongpaiku/use_general/talent
+function kards:game/yongpaiku/use_general/attribute/
+tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_mengduzhuaya kardCount

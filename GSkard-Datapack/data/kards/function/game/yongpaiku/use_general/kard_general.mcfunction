@@ -1,4 +1,4 @@
-execute unless score @s pingbi matches 1 run function kards:game/yongpaiku/use_general/tellraw
+execute unless score @s pingbi matches 1 run function kards:game/yongpaiku/use_general/info/tellraw
 
 scoreboard players add @s use_kard_xp 1
 execute if score @s use_kard_xp matches 5 run xp add @s 2 levels
@@ -23,12 +23,12 @@ scoreboard players operation @s Use_K_Game += @s Use_K_temp
 scoreboard players operation @s Use_Kmax_Round += @s Use_Kmax_temp
 scoreboard players operation @s Use_Kmax_Game += @s Use_Kmax_temp
 
-execute if items entity @s weapon.offhand music_disc_mall run function kards:game/yongpaiku/use_general/jiben
-execute if items entity @s weapon.offhand music_disc_13 run function kards:game/yongpaiku/use_general/zhuangbei
-execute if items entity @s weapon.offhand music_disc_cat run function kards:game/yongpaiku/use_general/juntuan
-execute if items entity @s weapon.offhand music_disc_blocks run function kards:game/yongpaiku/use_general/tuteng
-execute if items entity @s weapon.offhand music_disc_wait run function kards:game/yongpaiku/use_general/xianjing
-execute if items entity @s weapon.offhand music_disc_mellohi run function kards:game/yongpaiku/use_general/fashu
-execute if items entity @s weapon.offhand music_disc_stal run function kards:game/yongpaiku/use_general/zuzhou
-execute if items entity @s weapon.offhand music_disc_strad run function kards:game/yongpaiku/use_general/shenji
+execute if items entity @s weapon.offhand music_disc_mall run function kards:game/yongpaiku/use_general/type/jiben
+execute if items entity @s weapon.offhand music_disc_13 run function kards:game/yongpaiku/use_general/type/zhuangbei
+execute if items entity @s weapon.offhand music_disc_cat run function kards:game/yongpaiku/use_general/type/juntuan
+execute if items entity @s weapon.offhand music_disc_blocks run function kards:game/yongpaiku/use_general/type/tuteng
+execute if items entity @s weapon.offhand music_disc_wait run function kards:game/yongpaiku/use_general/type/xianjing
+execute if items entity @s weapon.offhand music_disc_mellohi run function kards:game/yongpaiku/use_general/type/fashu
+execute if items entity @s weapon.offhand music_disc_stal run function kards:game/yongpaiku/use_general/type/zuzhou
+execute if items entity @s weapon.offhand music_disc_strad run function kards:game/yongpaiku/use_general/type/shenji
 

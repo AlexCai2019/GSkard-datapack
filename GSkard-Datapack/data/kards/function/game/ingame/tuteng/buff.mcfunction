@@ -1,6 +1,4 @@
-
 #牛
-    
     execute if entity @e[team=blue,tag=tuteng,type=cow,distance=0.01..] run effect give @a[team=blue] strength 1 0 false
     
     execute if entity @e[team=red,tag=tuteng,type=cow,distance=0.01..] run effect give @a[team=red] strength 1 0 false

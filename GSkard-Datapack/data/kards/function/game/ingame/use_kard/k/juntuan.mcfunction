@@ -24,5 +24,6 @@ execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'无人
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'嗜血狼群'}] if score @s kardCount >= #kard_shixuelangqun kardCount run function kards:game/yongpaiku/juntuan/shixuelangqun
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'尸帝'}] if score @s kardCount >= #kard_shidi kardCount run function kards:game/yongpaiku/juntuan/shidi/shidi
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'三人成众'}] if score @s kardCount >= #kard_sanrenchengzhong kardCount run function kards:game/yongpaiku/juntuan/sanrenchengzhong/1
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'沙地噩梦'}] if score @s kardCount >= #kard_shadiemeng kardCount run function kards:game/yongpaiku/juntuan/shadiemeng
 
 function kards-dlc:kard/use/juntuan

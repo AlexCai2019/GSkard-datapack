@@ -3,7 +3,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"虚空存折","color":"white"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
+        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -91,7 +91,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"每有1个队友死亡","color":"gold"},\
         {"text":" 每个友方回合开始时\n","color":"gray"},\
-        {"text":"+25经验+8♥生命恢复+额外抽1张牌","color":"gold"},\
+        {"text":"+15经验+5♥生命恢复+额外抽2张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -179,9 +179,9 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"对冲基金","color":"gold"}],\
         "tooltip": [\
         {"text":"立刻获得","color":"gray"},\
-        {"text":"16Kmax\n","color":"gold"},\
+        {"text":"8Kmax\n","color":"gold"},\
         {"text":"友方回合开始时\n","color":"gray"},\
-        {"text":"你每有8Kmax额外获得1Kmax","color":"gold"},\
+        {"text":"你每有9Kmax额外获得1Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -373,12 +373,72 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         }\
     }
 
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 25 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"禁忌之始"}],\
+        "tooltip": [{"color":"gray","text":"立刻获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"5回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"10回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1025"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 26 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"魔法牌库"}],\
+        "tooltip": ["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1026"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 27 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"aqua","text":"变废为宝"}],\
+        "tooltip": ["",{color:"gray",text:"本局游戏内 你",extra:[{underlined:true,text:"按住shift"},"丢弃"]},{color:"dark_aqua",text:"非[衍生牌]"},{color:"gray",text:"时 "},"\n",{color:"gray",text:"卡牌将被"},{color:"red",text:"销毁"},{color:"gray",text:" 但是"},"\n",{color:"gray",text:"有"},{color:"dark_aqua",text:"[35%/5%]"},{color:"gray",text:"的概率"},{color:"gold",text:"抽取同种类型卡牌[1/2]张"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1027"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 28 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"机械感染"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1028"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 29 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"化以为刃"}],\
+        "tooltip": ["",{color:"gray",text:"使用"},{color:"dark_green",text:"[军团牌]"},{color:"blue",text:"[基础牌]"},{color:"gray",text:"时"},"\n",{color:"gray",text:"令此次召唤的生物增加"},{color:"gold",text:"X"},{color:"gray",text:"点"},{color:"gold",text:"近战伤害"},{color:"dark_aqua",text:"[X=0.05*kmax且X≤10]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1029"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 30 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"图腾战士"}],\
+        "tooltip": ["",{"color":"gray","text":"根据场上"},{"color":"gold","text":"所有的图腾数量"},{"color":"gray","text":"获得"},{"color":"gold","text":"攻击力加成"},"\n",{"color":"gray","text":"触发"},{"color":"green","text":"友方图腾"},{"color":"gold","text":"回合类效果"},{"color":"gray","text":"时 你"},{"color":"gold","text":"再触发一次"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1030"\
+        }\
+    }
+
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 1 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"虚空存折","color":"aqua"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
+        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -466,7 +526,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"每有1个队友死亡","color":"gold"},\
         {"text":" 每个友方回合开始时\n","color":"gray"},\
-        {"text":"+25经验+8♥生命恢复+额外抽1张牌","color":"gold"},\
+        {"text":"+15经验+5♥生命恢复+额外抽2张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -554,9 +614,9 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"对冲基金","color":"gold"}],\
         "tooltip": [\
         {"text":"立刻获得","color":"gray"},\
-        {"text":"16Kmax\n","color":"gold"},\
+        {"text":"8Kmax\n","color":"gold"},\
         {"text":"友方回合开始时\n","color":"gray"},\
-        {"text":"你每有8Kmax额外获得1Kmax","color":"gold"},\
+        {"text":"你每有9Kmax额外获得1Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -748,12 +808,72 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         }\
     }
 
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 25 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"禁忌之始"}],\
+        "tooltip": [{"color":"gray","text":"立刻获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"5回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"10回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1025"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 26 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"魔法牌库"}],\
+        "tooltip": ["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1026"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 27 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"aqua","text":"变废为宝"}],\
+        "tooltip": ["",{color:"gray",text:"本局游戏内 你",extra:[{underlined:true,text:"按住shift"},"丢弃"]},{color:"dark_aqua",text:"非[衍生牌]"},{color:"gray",text:"时 "},"\n",{color:"gray",text:"卡牌将被"},{color:"red",text:"销毁"},{color:"gray",text:" 但是"},"\n",{color:"gray",text:"有"},{color:"dark_aqua",text:"[35%/5%]"},{color:"gray",text:"的概率"},{color:"gold",text:"抽取同种类型卡牌[1/2]张"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1027"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 28 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"机械感染"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1028"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 29 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"化以为刃"}],\
+        "tooltip": ["",{color:"gray",text:"使用"},{color:"dark_green",text:"[军团牌]"},{color:"blue",text:"[基础牌]"},{color:"gray",text:"时"},"\n",{color:"gray",text:"令此次召唤的生物增加"},{color:"gold",text:"X"},{color:"gray",text:"点"},{color:"gold",text:"近战伤害"},{color:"dark_aqua",text:"[X=0.05*kmax且X≤10]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1029"\
+        }\
+    }
+    
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 30 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"图腾战士"}],\
+        "tooltip": ["",{"color":"gray","text":"根据场上"},{"color":"gold","text":"所有的图腾数量"},{"color":"gray","text":"获得"},{"color":"gold","text":"攻击力加成"},"\n",{"color":"gray","text":"触发"},{"color":"green","text":"友方图腾"},{"color":"gold","text":"回合类效果"},{"color":"gray","text":"时 你"},{"color":"gold","text":"再触发一次"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1030"\
+        }\
+    }
+
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 1 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"虚空存折","color":"aqua"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
+        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -841,7 +961,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"每有1个队友死亡","color":"gold"},\
         {"text":" 每个友方回合开始时\n","color":"gray"},\
-        {"text":"+25经验+8♥生命恢复+额外抽1张牌","color":"gold"},\
+        {"text":"+15经验+5♥生命恢复+额外抽2张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -929,9 +1049,9 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         "label": [{"text":"对冲基金","color":"gold"}],\
         "tooltip": [\
         {"text":"立刻获得","color":"gray"},\
-        {"text":"16Kmax\n","color":"gold"},\
+        {"text":"8Kmax\n","color":"gold"},\
         {"text":"友方回合开始时\n","color":"gray"},\
-        {"text":"你每有8Kmax额外获得1Kmax","color":"gold"},\
+        {"text":"你每有9Kmax额外获得1Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1123,12 +1243,72 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
         }\
     }
 
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 25 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"禁忌之始"}],\
+        "tooltip": [{"color":"gray","text":"立刻获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"5回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"10回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1025"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 26 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"魔法牌库"}],\
+        "tooltip": ["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1026"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 27 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"aqua","text":"变废为宝"}],\
+        "tooltip": ["",{color:"gray",text:"本局游戏内 你",extra:[{underlined:true,text:"按住shift"},"丢弃"]},{color:"dark_aqua",text:"非[衍生牌]"},{color:"gray",text:"时 "},"\n",{color:"gray",text:"卡牌将被"},{color:"red",text:"销毁"},{color:"gray",text:" 但是"},"\n",{color:"gray",text:"有"},{color:"dark_aqua",text:"[35%/5%]"},{color:"gray",text:"的概率"},{color:"gold",text:"抽取同种类型卡牌[1/2]张"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1027"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 28 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"机械感染"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1028"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 29 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"化以为刃"}],\
+        "tooltip": ["",{color:"gray",text:"使用"},{color:"dark_green",text:"[军团牌]"},{color:"blue",text:"[基础牌]"},{color:"gray",text:"时"},"\n",{color:"gray",text:"令此次召唤的生物增加"},{color:"gold",text:"X"},{color:"gray",text:"点"},{color:"gold",text:"近战伤害"},{color:"dark_aqua",text:"[X=0.05*kmax且X≤10]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1029"\
+        }\
+    }
+    
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 30 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"图腾战士"}],\
+        "tooltip": ["",{"color":"gray","text":"根据场上"},{"color":"gold","text":"所有的图腾数量"},{"color":"gray","text":"获得"},{"color":"gold","text":"攻击力加成"},"\n",{"color":"gray","text":"触发"},{"color":"green","text":"友方图腾"},{"color":"gold","text":"回合类效果"},{"color":"gray","text":"时 你"},{"color":"gold","text":"再触发一次"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1030"\
+        }\
+    }
+
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 1 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"虚空存折","color":"aqua"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
+        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1216,7 +1396,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"每有1个队友死亡","color":"gold"},\
         {"text":" 每个友方回合开始时\n","color":"gray"},\
-        {"text":"+25经验+8♥生命恢复+额外抽1张牌","color":"gold"},\
+        {"text":"+15经验+5♥生命恢复+额外抽2张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1304,9 +1484,9 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"对冲基金","color":"gold"}],\
         "tooltip": [\
         {"text":"立刻获得","color":"gray"},\
-        {"text":"16Kmax\n","color":"gold"},\
+        {"text":"8Kmax\n","color":"gold"},\
         {"text":"友方回合开始时\n","color":"gray"},\
-        {"text":"你每有8Kmax额外获得1Kmax","color":"gold"},\
+        {"text":"你每有9Kmax额外获得1Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1498,12 +1678,72 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         }\
     }
 
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 25 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"禁忌之始"}],\
+        "tooltip": [{"color":"gray","text":"立刻获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"5回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"10回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1025"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 26 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"魔法牌库"}],\
+        "tooltip": ["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1026"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 27 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"aqua","text":"变废为宝"}],\
+        "tooltip": ["",{color:"gray",text:"本局游戏内 你",extra:[{underlined:true,text:"按住shift"},"丢弃"]},{color:"dark_aqua",text:"非[衍生牌]"},{color:"gray",text:"时 "},"\n",{color:"gray",text:"卡牌将被"},{color:"red",text:"销毁"},{color:"gray",text:" 但是"},"\n",{color:"gray",text:"有"},{color:"dark_aqua",text:"[35%/5%]"},{color:"gray",text:"的概率"},{color:"gold",text:"抽取同种类型卡牌[1/2]张"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1027"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 28 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"机械感染"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1028"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 29 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"化以为刃"}],\
+        "tooltip": ["",{color:"gray",text:"使用"},{color:"dark_green",text:"[军团牌]"},{color:"blue",text:"[基础牌]"},{color:"gray",text:"时"},"\n",{color:"gray",text:"令此次召唤的生物增加"},{color:"gold",text:"X"},{color:"gray",text:"点"},{color:"gold",text:"近战伤害"},{color:"dark_aqua",text:"[X=0.05*kmax且X≤10]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1029"\
+        }\
+    }
+    
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 30 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"图腾战士"}],\
+        "tooltip": ["",{"color":"gray","text":"根据场上"},{"color":"gold","text":"所有的图腾数量"},{"color":"gray","text":"获得"},{"color":"gold","text":"攻击力加成"},"\n",{"color":"gray","text":"触发"},{"color":"green","text":"友方图腾"},{"color":"gold","text":"回合类效果"},{"color":"gray","text":"时 你"},{"color":"gold","text":"再触发一次"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1030"\
+        }\
+    }
+
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 1 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"虚空存折","color":"aqua"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
+        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1591,7 +1831,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"每有1个队友死亡","color":"gold"},\
         {"text":" 每个友方回合开始时\n","color":"gray"},\
-        {"text":"+25经验+8♥生命恢复+额外抽1张牌","color":"gold"},\
+        {"text":"+15经验+5♥生命恢复+额外抽2张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1679,9 +1919,9 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "label": [{"text":"对冲基金","color":"gold"}],\
         "tooltip": [\
         {"text":"立刻获得","color":"gray"},\
-        {"text":"16Kmax\n","color":"gold"},\
+        {"text":"8Kmax\n","color":"gold"},\
         {"text":"友方回合开始时\n","color":"gray"},\
-        {"text":"你每有8Kmax额外获得1Kmax","color":"gold"},\
+        {"text":"你每有9Kmax额外获得1Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1873,12 +2113,72 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         }\
     }
 
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 25 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"禁忌之始"}],\
+        "tooltip": [{"color":"gray","text":"立刻获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"5回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"10回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1025"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 26 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"魔法牌库"}],\
+        "tooltip": ["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1026"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 27 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"aqua","text":"变废为宝"}],\
+        "tooltip": ["",{color:"gray",text:"本局游戏内 你",extra:[{underlined:true,text:"按住shift"},"丢弃"]},{color:"dark_aqua",text:"非[衍生牌]"},{color:"gray",text:"时 "},"\n",{color:"gray",text:"卡牌将被"},{color:"red",text:"销毁"},{color:"gray",text:" 但是"},"\n",{color:"gray",text:"有"},{color:"dark_aqua",text:"[35%/5%]"},{color:"gray",text:"的概率"},{color:"gold",text:"抽取同种类型卡牌[1/2]张"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1027"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 28 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"机械感染"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1028"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 29 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"化以为刃"}],\
+        "tooltip": ["",{color:"gray",text:"使用"},{color:"dark_green",text:"[军团牌]"},{color:"blue",text:"[基础牌]"},{color:"gray",text:"时"},"\n",{color:"gray",text:"令此次召唤的生物增加"},{color:"gold",text:"X"},{color:"gray",text:"点"},{color:"gold",text:"近战伤害"},{color:"dark_aqua",text:"[X=0.05*kmax且X≤10]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1029"\
+        }\
+    }
+    
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 30 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"图腾战士"}],\
+        "tooltip": ["",{"color":"gray","text":"根据场上"},{"color":"gold","text":"所有的图腾数量"},{"color":"gray","text":"获得"},{"color":"gold","text":"攻击力加成"},"\n",{"color":"gray","text":"触发"},{"color":"green","text":"友方图腾"},{"color":"gold","text":"回合类效果"},{"color":"gray","text":"时 你"},{"color":"gold","text":"再触发一次"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1030"\
+        }\
+    }
+
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 1 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"虚空存折","color":"aqua"}],\
         "tooltip": [\
         {"text":"在本局游戏内\n","color":"gray"},\
-        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置\n","color":"gold"},\
+        {"text":"友方回合结束时 ","color":"red"},{"text":"你的","color":"gray"},{"text":"K不再重置","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -1966,7 +2266,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         {"text":"在本局游戏内\n","color":"gray"},\
         {"text":"每有1个队友死亡","color":"gold"},\
         {"text":" 每个友方回合开始时\n","color":"gray"},\
-        {"text":"+25经验+8♥生命恢复+额外抽1张牌","color":"gold"},\
+        {"text":"+15经验+5♥生命恢复+额外抽2张牌","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\
@@ -2243,5 +2543,65 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1024"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 25 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"禁忌之始"}],\
+        "tooltip": [{"color":"gray","text":"立刻获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"5回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"},"\n",{"color":"gray","text":"10回合后再获得一张"},{"color":"dark_purple","text":"[禁字启封]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1025"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 26 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"dark_purple","text":"魔法牌库"}],\
+        "tooltip": ["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1026"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 27 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"aqua","text":"变废为宝"}],\
+        "tooltip": ["",{color:"gray",text:"本局游戏内 你",extra:[{underlined:true,text:"按住shift"},"丢弃"]},{color:"dark_aqua",text:"非[衍生牌]"},{color:"gray",text:"时 "},"\n",{color:"gray",text:"卡牌将被"},{color:"red",text:"销毁"},{color:"gray",text:" 但是"},"\n",{color:"gray",text:"有"},{color:"dark_aqua",text:"[35%/5%]"},{color:"gray",text:"的概率"},{color:"gold",text:"抽取同种类型卡牌[1/2]张"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1027"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 28 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"机械感染"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1028"\
+        }\
+    }
+
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 29 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"化以为刃"}],\
+        "tooltip": ["",{color:"gray",text:"使用"},{color:"dark_green",text:"[军团牌]"},{color:"blue",text:"[基础牌]"},{color:"gray",text:"时"},"\n",{color:"gray",text:"令此次召唤的生物增加"},{color:"gold",text:"X"},{color:"gray",text:"点"},{color:"gold",text:"近战伤害"},{color:"dark_aqua",text:"[X=0.05*kmax且X≤10]"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1029"\
+        }\
+    }
+    
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 30 \
+    run data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"gray","text":"图腾战士"}],\
+        "tooltip": ["",{"color":"gray","text":"根据场上"},{"color":"gold","text":"所有的图腾数量"},{"color":"gray","text":"获得"},{"color":"gold","text":"攻击力加成"},"\n",{"color":"gray","text":"触发"},{"color":"green","text":"友方图腾"},{"color":"gold","text":"回合类效果"},{"color":"gray","text":"时 你"},{"color":"gold","text":"再触发一次"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1030"\
         }\
     }

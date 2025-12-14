@@ -8,7 +8,7 @@ tag @e[tag=User] remove User
 tag @s add User
 tag @a[tag=shenzhiyishou_end] remove shenzhiyishou_end
 tag @a[tag=shenzhiyishou] remove shenzhiyishou
-execute if entity @s[team=red] at @s as @r[team=blue,gamemode=adventure] run function kards:game/yongpaiku/shenji/shenzhiyishou/2
-execute if entity @s[team=blue] at @s as @r[team=red,gamemode=adventure] run function kards:game/yongpaiku/shenji/shenzhiyishou/2
+execute if entity @s[team=red] at @s as @a[team=blue,gamemode=adventure] run function kards:game/yongpaiku/shenji/shenzhiyishou/2
+execute if entity @s[team=blue] at @s as @a[team=red,gamemode=adventure] run function kards:game/yongpaiku/shenji/shenzhiyishou/2
 tag @s remove User
 

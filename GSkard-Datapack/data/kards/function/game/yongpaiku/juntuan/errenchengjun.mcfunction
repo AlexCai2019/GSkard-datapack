@@ -9,8 +9,11 @@ execute if entity @s[team=blue] at @e[tag=red_marker_8] run summon slime ~ 0 ~ {
 execute if entity @s[team=blue] unless entity @e[team=blue,type=!player,tag=!tuteng,tag=!Mob_Start] at @e[tag=red_marker_4] run summon slime ~ 0 ~ {Size:4,Team:blue,Tags:["Mob_Start"]}
 execute if entity @s[team=blue] unless entity @e[team=blue,type=!player,tag=!tuteng,tag=!Mob_Start] at @e[tag=red_marker_10] run summon slime ~ 0 ~ {Size:4,Team:blue}
 
-tag @e[tag=Mob_Start] remove Mob_Start
+
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
+function kards:game/yongpaiku/use_general/talent
+function kards:game/yongpaiku/use_general/attribute/
+tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_errenchengjun kardCount

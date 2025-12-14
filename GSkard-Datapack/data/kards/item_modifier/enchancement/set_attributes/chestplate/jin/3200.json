@@ -1,0 +1,20 @@
+{
+  "function": "minecraft:set_attributes",
+  "modifiers": [
+    {
+      "attribute": "minecraft:armor",
+      "id": "enchancement-10",
+      "amount": 0.5,
+      "operation": "add_value",
+      "slot": "chest"
+    },
+    {
+      "attribute": "minecraft:armor_toughness",
+      "id": "enchancement-5",
+      "amount": 0.5,
+      "operation": "add_value",
+      "slot": "chest"
+    }
+  ],
+  "replace": false
+}

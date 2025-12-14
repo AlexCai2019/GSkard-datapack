@@ -4,3 +4,5 @@ execute as @s[team=blue] rotated as @s facing entity @n[team=red,tag=!spectator,
 data modify entity @s Motion set from entity @n[tag=temp,type=marker] Pos
 
 kill @e[tag=temp,type=marker]
+
+

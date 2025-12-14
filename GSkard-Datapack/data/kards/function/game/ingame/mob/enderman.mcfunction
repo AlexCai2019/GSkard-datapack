@@ -6,3 +6,5 @@ execute if score #system dituxuanze matches 101.. as @e[team=blue,type=minecraft
 
 execute as @e[team=red,type=minecraft:enderman] at @s if block ~ ~-1 ~ barrier at @e[tag=blue_marker_7,limit=1] run tp @s ~ 0 ~
 execute as @e[team=blue,type=minecraft:enderman] at @s if block ~ ~-1 ~ barrier at @e[tag=red_marker_7,limit=1] run tp @s ~ 0 ~
+
+execute as @e[type=minecraft:enderman] run data modify entity @s anger_end_time set value 9999999

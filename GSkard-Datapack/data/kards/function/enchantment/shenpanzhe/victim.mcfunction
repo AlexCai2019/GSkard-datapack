@@ -1,7 +1,7 @@
 tag @s add enchantment_shenpanzhe_victim
 
 execute store result storage temp enchantment_temp.chance int 15 run data get entity @s equipment.head.components."minecraft:enchantments"."kards:shenpanzhe"
-execute store result storage temp enchantment_temp.bufftime int 10 run data get entity @s equipment.head.components."minecraft:enchantments"."kards:shenpanzhe"
+execute store result storage temp enchantment_temp.bufftime int 7 run data get entity @s equipment.head.components."minecraft:enchantments"."kards:shenpanzhe"
 
 execute as @n[tag=enchantment_shenpanzhe_attacker] run function kards:enchantment/shenpanzhe/1 with storage temp enchantment_temp
 

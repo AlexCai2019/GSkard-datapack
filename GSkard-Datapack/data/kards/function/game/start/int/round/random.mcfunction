@@ -1,5 +1,4 @@
-scoreboard players set @a cishu 0
-execute if score #system random_start matches 0 run return run schedule function kards:game/random_start/title/all 2s
+execute if score #system random_gamerule_enable matches 1 run return run schedule function kards:game/random_start/title/all 2s
 
 execute if score #system random_start matches 1.. run tellraw @a {"text":""}
 execute if score #system random_start matches 1.. run tellraw @a [{"text":"======","color":"gray"},{"text":"随机游戏规则","color":"green","bold":true},{"text":"======","color":"gray"}]

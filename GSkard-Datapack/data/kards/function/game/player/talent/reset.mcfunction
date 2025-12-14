@@ -6,6 +6,7 @@ attribute @s armor modifier remove talent-4
 attribute @s max_health modifier remove talent-5
 attribute @s armor modifier remove talent-6
 attribute @s attack_damage modifier remove talent-7
+attribute @s attack_damage modifier remove talent-8
 ## Tags
 tag @s remove Talent_kapaiji
 tag @s remove Talent_xukongcunzhe
@@ -34,7 +35,12 @@ tag @s remove Talent_qiongbingduwu_Damage
 tag @s remove Talent_zhanshudaji
 tag @s remove Talent_shanjizhanfa
 tag @s remove Talent_haorenliaoliao
-
+tag @s remove Talent_jinjizhishi
+tag @s remove Talent_mofashuku
+tag @s remove Talent_bianfeiweibao
+tag @s remove Talent_jixieganran
+tag @s remove Talent_huayiweiren
+tag @s remove Talent_tutengzhanshi
 ## Bossbar
 execute store result storage temp UUID int 1 run data get entity @s UUID.[0]
 function kards:game/player/talent/enable/ranjiweiguang/bossbar/4 with storage temp

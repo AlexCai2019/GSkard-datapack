@@ -27,5 +27,6 @@ execute positioned 105.5 239 -50.0 as @a[gamemode=!spectator,dx=0.5,dy=4,dz=4] a
 execute positioned 105.5 239 -50.0 as @a[gamemode=!spectator,dx=0.5,dy=4,dz=4] run tp @s 104.0 227 -12.0 90 ~
 #speed
 execute positioned 66.0 225 -27.0 as @a[dx=1,dz=3,dy=0.5] at @s if block ~ ~-1 ~ magenta_glazed_terracotta run function kards:lobby/speed
+scoreboard players remove @a[scores={Lobby_speed_countdown=1..}] Lobby_speed_countdown 1
 #跑酷
 function kards:lobby/run/general

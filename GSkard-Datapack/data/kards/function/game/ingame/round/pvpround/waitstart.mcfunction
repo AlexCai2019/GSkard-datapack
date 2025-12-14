@@ -15,7 +15,6 @@ clear @a minecraft:music_disc_strad[custom_data={kards:'飞雷神•反'}]
 scoreboard players reset @a feileishen
 bossbar set roundtime visible false
 tellraw @a [{text: "PVP回合：",color:"gold"},{text: "战斗！存活下来的队伍获胜",color:"red"}]
-tellraw @a {text: "准备时间30s",color:"gray",bold:true}
 tp @a[team=red] -179 -9 -164
 tp @a[team=blue] -242 -9 -164
 kill @e[type=!player,type=!marker,type=!#kards:display]

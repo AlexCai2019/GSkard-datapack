@@ -9,7 +9,7 @@ $execute store result bossbar kards:zhongshang_$(UUID) value run scoreboard play
 
 $execute if score @s ZhongShang_Round matches 1.. store result bossbar kards:zhongshang_$(UUID) value run bossbar get kards:zhongshang_$(UUID) max
 
-$execute if score @s ZhongShang_Tick matches 0 unless score @s ZhongShang_Round matches 1.. run bossbar remove kards:zhongshang_$(UUID)
-$execute if score @s ZhongShang_Round matches 0 unless score @s ZhongShang_Tick matches 1.. run bossbar remove kards:zhongshang_$(UUID)
-execute if score @s ZhongShang_Tick matches 0 unless score @s ZhongShang_Round matches 1.. run tag @s remove bossbar_max_ZhongShang
-execute if score @s ZhongShang_Round matches 0 unless score @s ZhongShang_Tick matches 1.. run tag @s remove bossbar_max_ZhongShang
+$execute if score @s ZhongShang_Tick matches ..0 unless score @s ZhongShang_Round matches 1.. run bossbar remove kards:zhongshang_$(UUID)
+$execute if score @s ZhongShang_Round matches ..0 unless score @s ZhongShang_Tick matches 1.. run bossbar remove kards:zhongshang_$(UUID)
+execute if score @s ZhongShang_Tick matches ..0 unless score @s ZhongShang_Round matches 1.. run tag @s remove bossbar_max_ZhongShang
+execute if score @s ZhongShang_Round matches ..0 unless score @s ZhongShang_Tick matches 1.. run tag @s remove bossbar_max_ZhongShang

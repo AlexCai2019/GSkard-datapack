@@ -26,8 +26,8 @@ execute if entity @s[team=blue] if score @s kardCount >= #kard_shufashixiao kard
 execute if entity @s[team=red] if score @s kardCount >= #kard_yaoyuandeqiao kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'遥远的桥'}] unless score 蓝队 xianjin_yaoyuandeqiao matches 1 run function kards:game/yongpaiku/xianjing/used/yaoyuandeqiao
 execute if entity @s[team=blue] if score @s kardCount >= #kard_yaoyuandeqiao kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'遥远的桥'}] unless score 红队 xianjin_yaoyuandeqiao matches 1 run function kards:game/yongpaiku/xianjing/used/yaoyuandeqiao
 
-execute if entity @s[team=red] if score @s kardCount >= #kard_youdi kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'诱敌'}] unless score 蓝队 xianjin_youdi matches 1 run function kards:game/yongpaiku/xianjing/used/youdi
-execute if entity @s[team=blue] if score @s kardCount >= #kard_youdi kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'诱敌'}] unless score 红队 xianjin_youdi matches 1 run function kards:game/yongpaiku/xianjing/used/youdi
+execute if entity @s[team=red] if score @s kardCount >= #kard_youdi kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'诱敌'}] unless score 蓝队 xianjin_youdi matches 1..2 run function kards:game/yongpaiku/xianjing/used/youdi
+execute if entity @s[team=blue] if score @s kardCount >= #kard_youdi kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'诱敌'}] unless score 红队 xianjin_youdi matches 1..2 run function kards:game/yongpaiku/xianjing/used/youdi
 
 execute if entity @s[team=red] if score @s kardCount >= #kard_qianjunyifa kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'千钧一发'}] unless score 蓝队 xianjin_qianjunyifa matches 1 run function kards:game/yongpaiku/xianjing/used/qianjunyifa
 execute if entity @s[team=blue] if score @s kardCount >= #kard_qianjunyifa kardCount if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'千钧一发'}] unless score 红队 xianjin_qianjunyifa matches 1 run function kards:game/yongpaiku/xianjing/used/qianjunyifa

@@ -34,5 +34,5 @@ effect give @e[tag=zombie_enhance_0,tag=Mob_Start] speed infinite 0 true
 effect give @e[tag=zombie_enhance_1,tag=Mob_Start] speed infinite 1 true 
 effect give @e[tag=zombie_enhance_2,tag=Mob_Start] speed infinite 2 true 
 
-tag @e[tag=Mob_Start] remove Mob_Start
+
 execute if score @s zombie_enhance matches 76.. run advancement grant @s only kards:advancement/wanglingpaidui

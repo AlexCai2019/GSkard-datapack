@@ -1,5 +1,4 @@
 
-tag @s add XuanYun
 scoreboard players add @s XuanYun 60
 
 damage @s 40 kards:junlintianxia by @p[distance=..7,tag=jyda]

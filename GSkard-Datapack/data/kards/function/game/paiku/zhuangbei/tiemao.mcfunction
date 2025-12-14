@@ -1,0 +1,3 @@
+
+give @s music_disc_13[item_name=[{text: "7K",color:"aqua"},{text:" "},{text: "铁矛",color:"gold"}],lore=[{text: "装备牌",color:"gold",italic:false},{text: "获得一把铁矛",color:"gray",italic:false},{text: "自带突进1",color:"gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'铁矛',K:7},tooltip_style="kards:kard/equipment"]
+scoreboard players set #kard_tiemao kardCount 7

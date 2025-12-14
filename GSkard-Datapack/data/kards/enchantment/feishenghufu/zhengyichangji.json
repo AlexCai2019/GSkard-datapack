@@ -1,0 +1,42 @@
+{
+    "description": ["",{"color":"gold","bold":true,"text":"最后的「绝唱」"}],
+    "supported_items": "trident",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+        "mainhand"
+    ],
+    "effects": {
+        "minecraft:post_attack": [
+            {
+                "affected": "victim",
+                "effect": {
+                    "type": "minecraft:all_of",
+                    "effects": [
+                        {
+                            "type": "minecraft:run_function",
+                            "function": "kards:game/yongpaiku/shenji/wangzhibaoku/zhengyichangji/3"
+                        }
+                    ]
+                },
+                "enchanted": "attacker",
+                "requirements": {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "direct_attacker",
+                    "predicate": {
+                        "type": "minecraft:trident"
+                    }
+                }
+            }
+        ]
+    }
+}

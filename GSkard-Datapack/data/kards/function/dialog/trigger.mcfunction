@@ -43,7 +43,8 @@ execute if score @s dialog matches 308 run return run function kards:lobby/setti
 execute if score @s dialog matches 309 run return run function kards:dialog/setting/random_gamerule/show
 
 #execute if score @s dialog matches 1000 run return run function kards:dialog/talent/show
-execute if score @s dialog matches 1001..1024 run tag @s remove talent_dialog_show
+execute if score @s dialog matches 1001..1030 run tag @s remove talent_dialog_show
+execute if score @s dialog matches 1001..1030 run dialog clear @s
 execute if score @s dialog matches 1001 run return run function kards:game/player/talent/set/xukongcunzhe
 execute if score @s dialog matches 1002 run return run function kards:game/player/talent/set/bujingtanyu
 execute if score @s dialog matches 1003 run return run function kards:game/player/talent/set/muyuankuanghuan
@@ -68,3 +69,9 @@ execute if score @s dialog matches 1021 run return run function kards:game/playe
 execute if score @s dialog matches 1022 run return run function kards:game/player/talent/set/zhanshudaji
 execute if score @s dialog matches 1023 run return run function kards:game/player/talent/set/shanjizhanfa
 execute if score @s dialog matches 1024 run return run function kards:game/player/talent/set/haorenliaoliao
+execute if score @s dialog matches 1025 run return run function kards:game/player/talent/set/jinjizhishi
+execute if score @s dialog matches 1026 run return run function kards:game/player/talent/set/mofashuku
+execute if score @s dialog matches 1027 run return run function kards:game/player/talent/set/bianfeiweibao
+execute if score @s dialog matches 1028 run return run function kards:game/player/talent/set/jixieganran
+execute if score @s dialog matches 1029 run return run function kards:game/player/talent/set/huayiweiren
+execute if score @s dialog matches 1030 run return run function kards:game/player/talent/set/tutengzhanshi

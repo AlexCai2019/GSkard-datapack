@@ -1,0 +1,13 @@
+{
+  "function": "minecraft:set_attributes",
+  "modifiers": [
+    {
+      "attribute": "minecraft:armor",
+      "id": "enchancement-37",
+      "amount": 1,
+      "operation": "add_value",
+      "slot": "head"
+    }
+  ],
+  "replace": false
+}

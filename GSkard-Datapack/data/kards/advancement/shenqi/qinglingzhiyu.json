@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "bow",
+          "predicates": {
+            "custom_data": "{kards:'轻灵之语'}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kards:enchantment/xufeng/2"
+  }
+}

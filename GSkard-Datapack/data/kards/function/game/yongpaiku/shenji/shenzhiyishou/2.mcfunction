@@ -38,8 +38,6 @@ execute if score @s random_clear matches 33 unless items entity @s container.33 
 execute if score @s random_clear matches 34 unless items entity @s container.34 #kards:kard run return run function kards:game/yongpaiku/shenji/shenzhiyishou/2
 execute if score @s random_clear matches 35 unless items entity @s container.35 #kards:kard run return run function kards:game/yongpaiku/shenji/shenzhiyishou/2
 
-tag @s add shenzhiyishou
-
 summon item ~ ~ ~ {PickupDelay:-1,Item:{id:"music_disc_11"},Tags:["copy"]}
 data modify entity @n[tag=copy,type=item] Owner set from entity @n[tag=User] UUID
 
@@ -119,7 +117,7 @@ execute if score @s random_clear matches 35 run item replace entity @s container
 
 tag @s add Kard_Info_User
 
-execute as @n[tag=copy,type=item] run function kards:game/yongpaiku/use_general/info
+execute as @n[tag=copy,type=item] run function kards:game/yongpaiku/use_general/info/drop
 
 tag @s remove Kard_Info_User
 
@@ -127,8 +125,3 @@ data modify entity @n[tag=copy,type=item] PickupDelay set value 1
 tag @n[tag=copy,type=item] add copy_end
 tag @n[tag=copy,type=item] remove copy
 kill @e[type=item,nbt={Item:{id:"minecraft:music_disc_11"}},tag=copy_end]
-
-execute if entity @s[team=red] if entity @a[team=red,gamemode=adventure,tag=!shenzhiyishou] as @r[team=red,gamemode=adventure,tag=!shenzhiyishou] run return run function kards:game/yongpaiku/shenji/shenzhiyishou/2
-execute if entity @s[team=blue] if entity @a[team=blue,gamemode=adventure,tag=!shenzhiyishou] as @r[team=blue,gamemode=adventure,tag=!shenzhiyishou] run return run function kards:game/yongpaiku/shenji/shenzhiyishou/2
-
-tag @a[tag=shenzhiyishou] remove shenzhiyishou

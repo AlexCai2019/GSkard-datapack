@@ -1,4 +1,3 @@
-
 #魔盒
 execute if entity @s[type=!player] run return fail
 #侦测贝
@@ -18,3 +17,4 @@ execute if entity @s[team=blue] if score 蓝队 xianjin_hewei matches 1 at @s ru
 
 #DLC
 function kards-dlc:kard/type/xianjing/check/mob
+

@@ -18,5 +18,6 @@ scoreboard players operation #system worldborder = time worldborder
 bossbar set pvp_start_countdown visible false
 bossbar set minecraft:worldborder visible true
 bossbar set minecraft:worldborder players @a
+scoreboard players operation #pvp worldborder = #system worldborder
 function kards:game/ingame/round/pvpround/worldborder
 schedule clear kards:game/ingame/round/roundtime

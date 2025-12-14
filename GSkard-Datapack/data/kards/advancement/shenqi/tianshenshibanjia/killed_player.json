@@ -6,7 +6,7 @@
                 "player": {
                     "equipment": {
                         "chest": {
-                            "components": {
+                            "predicates": {
                                 "minecraft:custom_data": "{kards:'天神石板甲'}"
                             }
                         }

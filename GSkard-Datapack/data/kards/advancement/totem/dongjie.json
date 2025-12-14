@@ -4,7 +4,7 @@
             "trigger": "minecraft:used_totem",
             "conditions": {
                 "item": {
-                    "components": {
+                    "predicates": {
                         "custom_data": "{kards:'冻结图腾'}"
                     }
                 }

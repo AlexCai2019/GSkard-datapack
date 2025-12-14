@@ -1,6 +1,9 @@
 {
   "pack": {
-    "pack_format": 81,
+    "min_format": [
+      94,
+      1
+    ],
     "description": "By Hart_GS"
   },
   "filter": {

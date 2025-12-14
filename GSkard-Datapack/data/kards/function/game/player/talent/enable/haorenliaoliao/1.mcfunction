@@ -11,7 +11,7 @@ execute if items entity @s weapon.offhand music_disc_blocks run tellraw @s [{tex
 execute if items entity @s weapon.offhand music_disc_blocks run scoreboard players add @s tutengcishu 1
 
 execute if items entity @s weapon.offhand music_disc_wait run tellraw @s [{text:"[好人寥寥]",color:"aqua"},{text:"抽取了1张",color:"gold"},{text:"[陷阱牌]",color:dark_aqua}]
-execute if items entity @s weapon.offhand music_disc_wait run scoreboard players add @s xianjincishu 1
+execute if items entity @s weapon.offhand music_disc_wait run scoreboard players add @s xianjingcishu 1
 
 execute if items entity @s weapon.offhand music_disc_mellohi run tellraw @s [{text:"[好人寥寥]",color:"aqua"},{text:"抽取了1张",color:"gold"},{text:"[法术牌]",color:light_purple}]
 execute if items entity @s weapon.offhand music_disc_mellohi run scoreboard players add @s fashucishu 1

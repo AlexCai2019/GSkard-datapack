@@ -1,0 +1,13 @@
+execute as @s[team=red] at @s run effect give @e[team=blue,distance=..4,tag=!spectator] weakness 3 0 false
+execute as @s[team=blue] at @s run effect give @e[team=red,distance=..4,tag=!spectator] weakness 3 0 false
+
+scoreboard players set @s[scores={XuanYun=1..}] XuanYun 0
+scoreboard players set @s[scores={YongHan=1..}] YongHan 0
+scoreboard players set @s[scores={DongJie=1..}] DongJie 0
+scoreboard players set @s[scores={XuanZhuan=1..}] XuanZhuan 0
+scoreboard players set @s[scores={Fire=1..}] Fire 0
+scoreboard players set @s[scores={ChengMo=1..}] ChengMo 0
+scoreboard players set @s[scores={DuanTui=1..}] DuanTui 0
+scoreboard players set @s[scores={ZhongShang_Round=1..}] ZhongShang_Round 0
+scoreboard players set @s[scores={ZhongShang_Tick=1..}] ZhongShang_Tick 0
+scoreboard players set @s[scores={PoJia=1..}] PoJia 0

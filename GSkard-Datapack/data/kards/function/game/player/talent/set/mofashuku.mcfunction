@@ -1,0 +1,10 @@
+execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Enable matches 1 run return run tellraw @s [{text:"你本轮已选择过天赋!",color:red}]
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Enable matches 2 run return run tellraw @s [{text:"你本轮已选择过天赋!",color:red}]
+tag @s add Talent_mofashuku
+execute if score #system Talent_Random_Mode matches 1 run scoreboard players set @s Talent_Enable 1
+execute if score #system Talent_Random_Mode matches 2 run scoreboard players set @s Talent_Enable 2
+
+scoreboard players add @s fashucishu 1
+# Tellraw
+execute as @s[team=red] run tellraw @a[team=red,distance=0.1..] [{selector:"@s"},{text:"选择了",color:"gray"},{text:"魔法书库",color:"aqua",hover_event:{action:"show_text",value:["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}]}}]
+execute as @s[team=blue] run tellraw @a[team=blue,distance=0.1..] [{selector:"@s"},{text:"选择了",color:"gray"},{text:"魔法书库",color:"aqua",hover_event:{action:"show_text",value:["",{color:"gray",text:"立刻获得1张"},{color:"dark_purple",text:"[法术牌]"},{color:"gray",text:" 每回合"},{color:"gold",text:"额外抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"你抽取",extra:[{underlined:true,text:"非法术卡"},"时 有"]},{color:"dark_aqua",text:"30%"},{color:"gray",text:"的概率"},{color:"gold",text:"改为抽取1张"},{color:"dark_purple",text:"[法术牌]"},"\n",{color:"gray",text:"但是你抽取"},{color:"red",text:"[禁字决]"},{color:"gray",text:"的概率"},{color:"red",text:"降低50%"}]}}]

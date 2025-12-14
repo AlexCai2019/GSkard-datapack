@@ -5,3 +5,6 @@ execute as @s[team=blue] run tellraw @a [{text:"红队",color:red},{text: "玩�
 
 execute as @s[team=red] run scoreboard players set @a[team=blue,gamemode=adventure] ZhongShang_Tick 2400
 execute as @s[team=blue] run scoreboard players set @a[team=red,gamemode=adventure] ZhongShang_Tick 2400
+
+execute as @s[team=red] if items entity @s container.* nether_star[custom_data~{kards:'讲述者',feishenghufu:"绝唱"}] run scoreboard players set @a[team=blue,gamemode=adventure] ZhongShang_Tick 4800
+execute as @s[team=blue] if items entity @s container.* nether_star[custom_data~{kards:'讲述者',feishenghufu:"绝唱"}] run scoreboard players set @a[team=red,gamemode=adventure] ZhongShang_Tick 4800

@@ -18,8 +18,12 @@ execute if score @s random3 matches 350..370 run function kards:game/paiku/zhuan
 execute if score @s random3 matches 371..375 run function kards:game/paiku/zhuangbei/quanxidunpai
 execute if score @s random3 matches 376..385 run function kards:game/paiku/zhuangbei/jianduandunpai
 execute if score @s random3 matches 386..390 run function kards:game/paiku/zhuangbei/jingjidunpai
+execute if score @s random3 matches 391..395 run function kards:game/paiku/zhuangbei/xiajiehejinfu
+execute if score @s random3 matches 396..415 run function kards:game/paiku/zhuangbei/tiemao
+execute if score @s random3 matches 416..430 run function kards:game/paiku/zhuangbei/zuanshimao
+execute if score @s random3 matches 431..435 run function kards:game/paiku/zhuangbei/xiajiehejinmao
 
-execute if score @s random3 matches 391.. run function kards-dlc:kard/type/zhuangbei/ganeral
+execute if score @s random3 matches 436.. run function kards-dlc:kard/type/zhuangbei/ganeral
 
 scoreboard players set @s random3 0
 scoreboard players remove @s zhuangbeicishu 1

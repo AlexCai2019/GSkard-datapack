@@ -131,7 +131,7 @@ scoreboard players operation @s Talent_qiongbingduwu_Damage_temp2 %= #system tem
 
 tag @s add Kard_Info_User
 
-execute as @n[tag=copy,type=item] run function kards:game/yongpaiku/use_general/info
+execute as @n[tag=copy,type=item] run function kards:game/yongpaiku/use_general/info/drop
 kill @n[tag=copy,type=item]
 
 tag @s remove Kard_Info_User

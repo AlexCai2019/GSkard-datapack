@@ -1,4 +1,4 @@
-execute unless score @s Xp_Levels matches 120.. run tellraw @s [{text:"[经验商店]",color:"green"},{text:"很遗憾的通知您",color:"gold"},{text:" 您买不起",color:"red"}]
+execute unless score @s Xp_Levels matches 120.. run tellraw @s [{text:"[经验商店]",color:"green"},{text:"很遗憾地通知您",color:"gold"},{text:" 您买不起",color:"red"}]
 execute unless score @s Xp_Levels matches 120.. run return run execute at @s run playsound minecraft:block.vault.eject_item player @s
 
 tellraw @s [{text:"[经验商店]",color:"green"},{text:"您消耗了",color:"gray"},{text:"120级经验",color:"gold"},{text:"购买了",color:"gray"},{text:"连锁打击 ",color:"dark_aqua"},{text:"I",color:"gray"}]

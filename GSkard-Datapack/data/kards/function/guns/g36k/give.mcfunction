@@ -8,7 +8,6 @@ lore=[\
 [{text:"§6◮◮◮◮ §e5.56x45mm 步枪弹",color:yellow,bold:0b,italic:0b}],\
 [{text:"§e▊▊▊▊ §7∞/∞",color:green,bold:0b,italic:0b}],\
 [{text:""}],\
-[{text:"放置到副手后长按潜行键1.0s装弹",color:green,bold:0b,italic:0b}],\
 [{text:"§8射程: §b50格",color:green,bold:0b,italic:0b}],\
 [{text:"§8伤害: §c1❤",color:green,bold:0b,italic:0b}],\
 [{text:""}],\

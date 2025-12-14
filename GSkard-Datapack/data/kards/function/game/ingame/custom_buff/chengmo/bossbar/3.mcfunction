@@ -8,4 +8,4 @@ $bossbar set kards:chengmo_$(UUID) value 1
 
 $execute store result bossbar kards:chengmo_$(UUID) value run scoreboard players get @s ChengMo
 
-$execute if score @s ChengMo matches 0 run bossbar remove kards:chengmo_$(UUID)
+$execute if score @s ChengMo matches ..0 run bossbar remove kards:chengmo_$(UUID)

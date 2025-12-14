@@ -16,8 +16,9 @@ execute if items entity @s container.* music_disc_mall[custom_data~{kards:'è‹¦åŠ
 
 execute if score #system random_start matches 8 as @e[tag=Mob_Start] run data modify entity @s Fuse set value 20
 
-tag @e[tag=Mob_Start] remove Mob_Start
-
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
+function kards:game/yongpaiku/use_general/talent
+function kards:game/yongpaiku/use_general/attribute/
+tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_baozhajuntuan kardCount

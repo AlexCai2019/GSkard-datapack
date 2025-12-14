@@ -10,7 +10,7 @@ execute if entity @s[team=red] if entity @e[type=villager,tag=tuteng,team=red] r
 execute if entity @s[team=blue] if entity @e[type=villager,tag=tuteng,team=blue] run kill @e[type=villager,tag=tuteng,team=blue]
 
 execute as @e[tag=Mob_Start] store result score @s Mob_Health_last run data get entity @s Health 10
-tag @e[tag=Mob_Start] remove Mob_Start
+
 
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_peiyangshi kardCount

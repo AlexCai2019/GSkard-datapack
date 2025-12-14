@@ -1,15 +1,9 @@
-advancement revoke @s only kards:ceshi
-scoreboard players set @s[gamemode=adventure] GameMode 1
-scoreboard players set @s[gamemode=creative] GameMode 2
-
-execute at @s run tp @s ~ ~1000 ~
-gamemode creative @s
-execute at @s rotated ~ -15 positioned ^ ^-0.5 ^-3 anchored eyes summon minecraft:end_crystal run damage @s 1
-execute at @s rotated ~ ~ positioned ^ ^-0.5 ^-3 anchored eyes summon minecraft:end_crystal run damage @s 1
-
-gamemode adventure @s[scores={GameMode=1}]
-gamemode creative @s[scores={GameMode=2}]
-
-execute at @s run tp @s ~ ~-1000 ~
-particle cloud ~ ~ ~ 0.25 0 0.25 0 25 force
-playsound entity.wind_charge.wind_burst block @s ~ ~ ~ 100 1
+data modify storage kards dialog._."actions" append value {\
+        "label": [{"color":"aqua","text":"变废为宝"}],\
+        "tooltip": ["",{color:"gray",text:"本局游戏内 你",extra:[{underlined:true,text:"按住shift"},"丢弃"]},{color:"dark_aqua",text:"非[衍生牌]"},{color:"gray",text:"时 "},"\n",{color:"gray",text:"卡牌将被"},{color:"red",text:"销毁"},{color:"gray",text:" 但是"},"\n",{color:"gray",text:"有"},{color:"dark_aqua",text:"[35%/5%]"},{color:"gray",text:"的概率"},{color:"gold",text:"抽取同种类型卡牌[1/2]张"}],\
+        "action": {\
+            "type": "run_command",\
+            "command": "trigger dialog set 1027"\
+        }\
+    }
+    

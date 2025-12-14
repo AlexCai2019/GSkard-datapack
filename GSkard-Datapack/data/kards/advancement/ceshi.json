@@ -1,15 +1,18 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:consume_item",
+      "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
-          "items": "feather"
+          "items": "bow",
+          "predicates": {
+            "custom_data": "{kards:'ceshi'}"
+          }
         }
       }
     }
   },
   "rewards": {
-    "function": "kards:ceshi/2"
+    "function": "kards:ceshi/1"
   }
 }

@@ -1,4 +1,4 @@
-
+xp add @s 40 levels
 tellraw @a [{selector:"@s"},{text: ":",color: "gray"},{text: "赐福 乃自然之理",color: "green"}]
 execute store result score @s jiangshuzhe_random run random value 1..4
 execute if score @s jiangshuzhe_random matches 1 run function kards:game/yongpaiku/shenji/wangzhibaoku/jiangshuzhe/event/enze/guixiang/1

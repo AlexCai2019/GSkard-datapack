@@ -41,12 +41,13 @@ weather clear
 #清空效果
 effect clear @a
 #重置规则
-gamerule naturalRegeneration false
+gamerule natural_health_regeneration false
 #清空背包
 clear @a
 #隐藏倒计时
 bossbar set minecraft:roundtime visible false
 bossbar set pvp_start_countdown visible false
+dialog clear @a
 #改模式
 gamemode adventure @a
 #时间
@@ -56,7 +57,7 @@ team empty blue
 team empty red
 team join lobby @a
 #重生点
-spawnpoint @a 59 226 -26 -90
+spawnpoint @a 59 226 -26 -90 0
 #设置难度为和平
 difficulty peaceful
 #清生物
@@ -97,6 +98,7 @@ execute as @a run attribute @s minecraft:max_health modifier remove 0-0-10
 execute as @a run attribute @s minecraft:max_health modifier remove 0-0-12
 execute as @a run attribute @s minecraft:max_health modifier remove 0-0-13
 execute as @a run attribute @s minecraft:max_health modifier remove 1-0-1
+execute as @a run attribute @s minecraft:max_health modifier remove minecraft:feishenghufu-3
 execute as @a run attribute @s minecraft:max_health base set 20
 execute as @a run attribute @s minecraft:jump_strength modifier remove 0-0-1
 execute as @a run attribute @s minecraft:jump_strength modifier remove 0-0-2
@@ -118,6 +120,7 @@ execute as @a run attribute @s safe_fall_distance modifier remove 0-0-2
 execute as @a run attribute @s safe_fall_distance base reset
 execute as @a run attribute @s attack_speed modifier remove talent
 execute as @a run attribute @s attack_damage base reset
+execute as @a run attribute @s attack_damage modifier remove feishenghufu-2
 execute as @a run attribute @s armor base reset
 #重置分数
 scoreboard players set * jinzijue 0

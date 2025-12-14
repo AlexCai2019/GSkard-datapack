@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": "{feishenghufu:\"绝唱灵魂\",kards:'灵魂_大'}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "kards:enchantment/feishenghufu/sishenzhilian/eat/3"
+    }
+}

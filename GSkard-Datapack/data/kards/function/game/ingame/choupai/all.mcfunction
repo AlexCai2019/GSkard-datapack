@@ -1,3 +1,8 @@
+execute if entity @a[tag=talent_dialog_show] run return fail
+
+execute as @s[tag=Talent_mofashuku] store result score @s random run random value 1..100
+execute as @s[tag=Talent_mofashuku] if score @s random matches 1..30 run return run function kards:game/player/talent/enable/mofashuku/choupai
+
 execute store result score @s random run random value 1..110
 execute if score @s random matches 1..25 run scoreboard players add @s jibencishu 1
 execute if score @s random matches 26..45 run scoreboard players add @s juntuancishu 1
@@ -6,7 +11,7 @@ execute if score @s random matches 56..65 run scoreboard players add @s tutengci
 execute if score @s random matches 66..85 run scoreboard players add @s fashucishu 1
 execute if score @s random matches 86..90 run scoreboard players add @s shenjicishu 1
 execute if score @s random matches 91..100 run scoreboard players add @s zuzhoucishu 1
-execute if score @s random matches 101..110 run scoreboard players add @s xianjincishu 1
+execute if score @s random matches 101..110 run scoreboard players add @s xianjingcishu 1
 scoreboard players set @s random 0
 scoreboard players remove @s cishu 1
 

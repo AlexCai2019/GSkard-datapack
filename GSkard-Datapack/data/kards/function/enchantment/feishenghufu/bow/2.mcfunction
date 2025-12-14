@@ -1,0 +1,2 @@
+execute as @s[team=red] if items entity @s weapon.* bow[custom_data~{feishenghufu:"绝唱"}] at @s as @e[distance=..6,team=blue,tag=!spectator] unless score @s PoJia matches 3.. run scoreboard players set @s PoJia 2
+execute as @s[team=blue] if items entity @s weapon.* bow[custom_data~{feishenghufu:"绝唱"}] at @s as @e[distance=..6,team=red,tag=!spectator] unless score @s PoJia matches 3.. run scoreboard players set @s PoJia 2

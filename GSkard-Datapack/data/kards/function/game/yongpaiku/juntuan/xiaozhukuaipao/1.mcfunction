@@ -13,8 +13,11 @@ execute if entity @s[team=blue] if entity @e[type=piglin,team=blue] run tag @e[t
 execute if entity @s[team=red] if entity @e[type=piglin,team=red] as @e[tag=Mob_Start] at @s run function kards:game/yongpaiku/juntuan/xiaozhukuaipao/2
 execute if entity @s[team=blue] if entity @e[type=piglin,team=blue] as @e[tag=Mob_Start] at @s run function kards:game/yongpaiku/juntuan/xiaoguidangjia/2
 
-tag @e[tag=Mob_Start] remove Mob_Start
+
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
+function kards:game/yongpaiku/use_general/talent
+function kards:game/yongpaiku/use_general/attribute/
+tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_xiaozhukuaipao kardCount

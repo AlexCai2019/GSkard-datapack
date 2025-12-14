@@ -23,6 +23,9 @@ execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'钻石
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'重锤'}] if score @s kardCount >= #kard_zhongchui kardCount run function kards:game/yongpaiku/zhuangbei/zhongchui
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'灵魂收割器'}] if score @s kardCount >= #kard_linghunshougeqi kardCount run function kards:game/yongpaiku/zhuangbei/linghunshougeqi
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'弩'}] if score @s kardCount >= #kard_nu kardCount run function kards:game/yongpaiku/zhuangbei/nu
-
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'下界合金斧'}] if score @s kardCount >= #kard_xiajiehejinfu kardCount run function kards:game/yongpaiku/zhuangbei/xiajiehejinfu
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'铁矛'}] if score @s kardCount >= #kard_tiemao kardCount run function kards:game/yongpaiku/zhuangbei/tiemao
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'钻石矛'}] if score @s kardCount >= #kard_zuanshimao kardCount run function kards:game/yongpaiku/zhuangbei/zuanshimao
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'下界合金矛'}] if score @s kardCount >= #kard_xiajiehejinmao kardCount run function kards:game/yongpaiku/zhuangbei/xiajiehejinmao
 
 function kards-dlc:kard/use/zhuangbei

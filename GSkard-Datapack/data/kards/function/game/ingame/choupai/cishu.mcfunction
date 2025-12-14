@@ -6,7 +6,7 @@ execute as @a if score @s tutengcishu matches 1.. run function kards:game/ingame
 execute as @a if score @s fashucishu matches 1.. run function kards:game/ingame/choupai/5 with storage kards:setting kard_count
 execute as @a if score @s shenjicishu matches 1.. run function kards:game/ingame/choupai/6 with storage kards:setting kard_count
 execute as @a if score @s zuzhoucishu matches 1.. run function kards:game/ingame/choupai/7 with storage kards:setting kard_count
-execute as @a if score @s xianjincishu matches 1.. run function kards:game/ingame/choupai/8 with storage kards:setting kard_count
+execute as @a if score @s xianjingcishu matches 1.. run function kards:game/ingame/choupai/8 with storage kards:setting kard_count
 execute as @a if score @s tanyumohe_cishu matches 1.. run function kards:game/ingame/choupai/tanyu with storage kards:setting kard_count
 
 execute as @a if score @s cishu matches 1.. run function kards:game/ingame/choupai/all

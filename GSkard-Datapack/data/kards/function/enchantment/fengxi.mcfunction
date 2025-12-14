@@ -10,5 +10,8 @@ execute rotated as @n[type=armor_stand,tag=Rotation] run rotate @s ~ ~
 kill @n[type=armor_stand,tag=Rotation]
 
 execute store result score @s enchantment_chance_temp run random value 1..100
+tag @s add temp
+execute on attacker if score @s qinglingzhiyu_xufeng matches 51.. run scoreboard players set @n[tag=temp] enchantment_chance_temp 15
+tag @s remove temp
 execute if score @s enchantment_chance_temp matches 1..15 run summon wind_charge ~ ~ ~ {Tags:["temp"]}
 execute as @e[tag=temp,type=wind_charge] run data modify entity @s Motion set value [0,-1,0]

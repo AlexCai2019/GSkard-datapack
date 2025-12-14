@@ -7,7 +7,7 @@
                     "source_entity": {
                         "equipment": {
                             "mainhand": {
-                                "components": {
+                                "predicates": {
                                     "minecraft:custom_data": "{kards:'正义长戟'}"
                                 }
                             }

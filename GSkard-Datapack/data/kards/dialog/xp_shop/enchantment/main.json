@@ -388,7 +388,7 @@
             "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          [{"color":"gray","text":"","extra":[{"underlined":true,"text":"受击时"},"有"]},{"color":"dark_aqua","text":"(15%*附魔等级)"},{"color":"gray","text":"的概率使","extra":[{"underlined":true,"text":"攻击者"},"受到"]},{"color":"red","text":"雷击"},{"color":"gray","text":"并"},{"color":"red","text":"眩晕"},{"color":"dark_aqua","text":"(0.5*附魔等级)"},{"color":"gray","text":"秒\n\n"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"5\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"头盔","color":"gray"}
+          [{"color":"gray","text":"","extra":[{"underlined":true,"text":"受击时"},"有"]},{"color":"dark_aqua","text":"(15%*附魔等级)"},{"color":"gray","text":"的概率使","extra":[{"underlined":true,"text":"攻击者"},"受到"]},{"color":"red","text":"雷击"},{"color":"gray","text":"并"},{"color":"red","text":"眩晕"},{"color":"dark_aqua","text":"(0.35*附魔等级)"},{"color":"gray","text":"秒\n\n"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"5\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"头盔","color":"gray"}
         ],
         "color": "gray"
       },

@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "items": "minecraft:totem_of_undying",
-                    "components": {
+                    "predicates": {
                         "custom_data": "{kards:'生命图腾'}"
                     }
                 }

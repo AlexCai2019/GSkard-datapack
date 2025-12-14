@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/tellraw
+function kards:game/yongpaiku/use_general/info/tellraw
 execute at @s[team=red] run effect give @e[distance=..5,team=blue] levitation 5 4 false
 execute if entity @s[team=red] run effect clear @e[team=red] slowness
 execute if entity @s[team=red] run effect clear @e[team=red] mining_fatigue

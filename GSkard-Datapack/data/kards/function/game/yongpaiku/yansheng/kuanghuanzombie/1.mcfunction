@@ -3,7 +3,7 @@ scoreboard players add @s zombie_enhance 1
 scoreboard players add @s[scores={zombie_enhance=20..}] zombie_enhance_2 1
 scoreboard players add @s[tag=Talent_libingmoma] Talent_libingmoma 1
 execute if score @s Talent_libingmoma matches 6 run function kards:game/player/talent/enable/libingmoma/1
-function kards:game/yongpaiku/use_general/tellraw
+function kards:game/yongpaiku/use_general/info/tellraw
 tellraw @a [{text: "目前使用次数为:",color:"white"},{score:{objective:"zombie_enhance",name:"@s"},color:"green",bold:false}]
 
     execute if score @s zombie_enhance matches 1..5 if entity @s[team=red] at @e[tag=blue_marker_7,limit=1] run summon zombie ~ 1 ~ {Tags:["Mob_Start"],Team:red,IsBaby:false,equipment:{head:{id:"minecraft:dispenser"}}}
@@ -30,13 +30,16 @@ tellraw @a [{text: "目前使用次数为:",color:"white"},{score:{objective:"zo
     execute if score @s zombie_enhance matches 61..75 if entity @s[team=blue] at @e[tag=red_marker_7,limit=1] run summon zombie ~ 1 ~ {Tags:["Mob_Start","zombie_enhance_2"],Team:blue,IsBaby:false,equipment:{mainhand:{id:"minecraft:netherite_sword"},head:{id:"minecraft:dispenser"},chest:{id: "minecraft:diamond_chestplate"},legs:{id: "minecraft:diamond_leggings"},feet:{id: "minecraft:diamond_boots"}}}
     execute if score @s zombie_enhance matches 76.. if entity @s[team=blue] at @e[tag=red_marker_7,limit=1] run summon zombie ~ 1 ~ {Tags:["Mob_Start","zombie_enhance_2"],Team:blue,IsBaby:false,equipment:{mainhand:{id:"minecraft:netherite_sword"},head:{id:"minecraft:dragon_head"},chest:{id: "minecraft:netherite_chestplate"},legs:{id: "minecraft:netherite_leggings"},feet:{id: "minecraft:netherite_boots"}}}
 
-execute if score @s zombie_enhance_2 matches 5 run function kards:game/yongpaiku/yansheng/kuanghuanzombie/2
+execute if score @s zombie_enhance_2 matches 7 run function kards:game/yongpaiku/yansheng/kuanghuanzombie/2
 
 effect give @e[tag=zombie_enhance_0,tag=Mob_Start] speed infinite 0 true 
 effect give @e[tag=zombie_enhance_1,tag=Mob_Start] speed infinite 1 true 
 effect give @e[tag=zombie_enhance_2,tag=Mob_Start] speed infinite 2 true 
 
+function kards:game/yongpaiku/use_general/talent
+function kards:game/yongpaiku/use_general/attribute/
 tag @e[tag=Mob_Start] remove Mob_Start
+
 item modify entity @s weapon.offhand {function:"set_count",count:-1,add:true}
 scoreboard players operation @s kardCount -= #kard_kuanghuanzombie kardCount
 scoreboard players remove @s[scores={kujie=1..}] kardCount 1

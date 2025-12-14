@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/tellraw
+function kards:game/yongpaiku/use_general/info/tellraw
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_jinzijue kardCount
 

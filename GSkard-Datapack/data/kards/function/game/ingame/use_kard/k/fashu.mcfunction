@@ -43,5 +43,7 @@ execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'春日
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'酸辣无骨鸡爪'}] if score @s kardCount >= #kard_suanlawugujizhua kardCount run function kards:game/yongpaiku/fashu/suanlawugujizhua/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'图腾进击'}] if score @s kardCount >= #kard_tutengjinji kardCount run function kards:game/yongpaiku/fashu/tutengjingji/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'冷效吸血'}] if score @s kardCount >= #kard_lengxiaoxixue kardCount run function kards:game/yongpaiku/fashu/lengxiaoxixue
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'时间回溯'}] if score @s kardCount >= #kard_shijianhuisu kardCount run function kards:game/yongpaiku/fashu/shijianhuisu
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'凛冬将至'}] if score @s kardCount >= #kard_lindongjiangzhi kardCount run function kards:game/yongpaiku/fashu/lindongjiangzhi/1
 
 function kards-dlc:kard/use/fashu

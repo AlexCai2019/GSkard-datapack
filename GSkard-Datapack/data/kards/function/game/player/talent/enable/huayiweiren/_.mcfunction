@@ -1,0 +1,1 @@
+$attribute @s attack_damage modifier add talent_huayiweiren $(attack_damage) add_value

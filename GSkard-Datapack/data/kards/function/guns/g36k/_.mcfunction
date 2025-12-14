@@ -1,7 +1,7 @@
 scoreboard players remove @s G36K_Ray 1
 particle enchanted_hit ~ ~ ~ 0 0 0 0 1 force @a
 
-execute positioned ^ ^ ^0.25 unless block ~ ~ ~ #air run scoreboard players set @s G36K_Ray 0
+execute positioned ^ ^ ^0.25 unless block ~ ~ ~ #kards:ray run scoreboard players set @s G36K_Ray 0
 
 execute if entity @e[dy=1.5,tag=!G36K_Shoot,type=!#kards:display] run scoreboard players set @s G36K_Ray -1
 

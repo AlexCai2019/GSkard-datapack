@@ -1,8 +1,10 @@
+tellraw @a [{selector:"@s"},{text:"穿戴上了",color:"gold"},{text:"<诅咒护甲>",color:"light_purple"}]
+execute if items entity @s armor.chest golden_chestplate[custom_data~{kards:'天神石板甲',feishenghufu:"绝唱"}] run tellraw @a [{selector:"@s"},{color:"gray",text:"由于穿戴着"},{color:"gold",text:"天神石板甲"},{color:"gray",text:"故"},{color:"light_purple",text:"<诅咒护甲>"},{color:"gray",text:"改为增加"},{color:"gold",text:"40层显圣"}]
+execute if items entity @s armor.chest golden_chestplate[custom_data~{kards:'天神石板甲',feishenghufu:"绝唱"}] run return run scoreboard players add @s tianshenshibanjia_xiansheng 40
 
 title @s times 10t 2s 10t
 title @s title [{text:"[诅咒护甲]",color:"light_purple"},{text:"作用于你",color:"gray"}]
 title @s subtitle [{text:"原装备已掉落",color:"gray"}]
-tellraw @a [{selector:"@s"},{text:"穿戴上了",color:"gold"},{text:"<诅咒护甲>",color:"light_purple"}]
 
 #生成一个掉落物实体 带有无法被沉默清除的标签replaace_item
 execute if items entity @s armor.chest * run summon item ~ ~ ~ {PickupDelay:-1,Item:{id:"music_disc_11"},Tags:["replace_item"],Invulnerable:1b}

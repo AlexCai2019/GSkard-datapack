@@ -7,5 +7,5 @@ $execute as @s[tag=!bossbar_max_DongJie] run bossbar set kards:dongjie_$(UUID) m
 tag @s add bossbar_max_DongJie
 $execute store result bossbar kards:dongjie_$(UUID) value run scoreboard players get @s DongJie
 
-$execute if score @s DongJie matches 1 run bossbar remove kards:dongjie_$(UUID)
-execute if score @s DongJie matches 1 run tag @s remove bossbar_max_DongJie
+$execute if score @s DongJie matches ..1 run bossbar remove kards:dongjie_$(UUID)
+execute if score @s DongJie matches ..1 run tag @s remove bossbar_max_DongJie
