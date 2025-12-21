@@ -1,6 +1,6 @@
 #大厅buff
-#execute if score #system GameStatus matches 0 run effect give @a minecraft:resistance 1 4 true
-#execute if score #system GameStatus matches 0 run effect give @a instant_health 1 200 true
+execute if score #system GameStatus matches 0 run effect give @a minecraft:resistance 1 4 true
+execute if score #system GameStatus matches 0 run effect give @a instant_health 1 200 true
 #视奸buff
 execute if score #system GameStatus matches 1 run effect give @a[tag=spectator] minecraft:resistance 1 4 true
 execute if score #system GameStatus matches 1 run effect give @a[tag=spectator] minecraft:instant_health 1 4 true
