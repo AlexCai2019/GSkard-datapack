@@ -10,8 +10,10 @@ execute if score @s random7 matches 8 run function kards:game/paiku/zuzhou/kujie
 execute if score @s random7 matches 9 run function kards:game/paiku/zuzhou/diandao
 execute if score @s random7 matches 10 run function kards:game/paiku/zuzhou/pingbi
 execute if score @s random7 matches 11 run function kards:game/paiku/zuzhou/zhongshang
+execute if score @s random7 matches 12 run function kards:game/paiku/zuzhou/shiyi
+execute if score @s random7 matches 13 run function kards:game/paiku/zuzhou/mimang
 
-execute if score @s random7 matches 12.. run function kards-dlc:kard/type/zuzhou/ganeral
+execute if score @s random7 matches 14.. run function kards-dlc:kard/type/zuzhou/ganeral
 
 scoreboard players set @s random7 0
 scoreboard players remove @s zuzhoucishu 1

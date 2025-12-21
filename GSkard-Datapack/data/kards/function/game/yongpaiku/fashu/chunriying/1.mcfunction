@@ -16,7 +16,7 @@ execute as @e[tag=Mob_Start,type=block_display] run function kards:game/yongpaik
 
 stopsound @a block
 playsound kards:chunriying block @a ~ ~ ~ 0.75 1 0.75
-
+tellraw @a ["",{color:"gray",text:"Tips:音乐大小可以在声音设置\"方块\"选项调整哦"}]
 title @s times 10t 2s 10t
 execute as @s[team=red] if score #system GameRound matches 1 run title @a title [{text:"[《春日影》]",color:"light_purple"},{text:"于",color:"gray"},{text:"蓝队",color:"blue"},{text:"放送~",color:"gray"}]
 execute as @s[team=red] if score #system GameRound matches 0 run title @a title [{text:"[《春日影》]",color:"light_purple"},{text:"于",color:"gray"},{text:"红队",color:"red"},{text:"放送~",color:"gray"}]

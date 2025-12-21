@@ -1,0 +1,2 @@
+scoreboard players set #kard_xuanfengqishi kardCount 6
+give @s music_disc_mall[item_name=[{text: "6K",color:"aqua"},{text:" "},{text: "旋风骑士",color:"blue"}],lore=[{text: "基本牌",color:"blue",italic:false},[{italic:false,color:"white",text:""},{color:"gray",text:"召唤一只"},{color:"gold",text:"旋风人与手持长矛的小僵尸"}],[{italic:false,color:"white",text:""},{color:"gray",text:"小僵尸将作为乘客骑乘旋风人"}],[{italic:false,color:"white",text:""},{color:"gray",text:"小僵尸的生命值为4♥"}]],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'旋风骑士',K:6},tooltip_style="kards:kard/common"]

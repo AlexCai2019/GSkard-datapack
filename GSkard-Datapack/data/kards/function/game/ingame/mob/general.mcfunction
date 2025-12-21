@@ -22,7 +22,7 @@ execute as @s[type=skeleton,tag=silingwushi] run function kards:game/ingame/mob/
 #监守者
 execute as @s[type=warden,tag=warden] run function kards:game/ingame/mob/warden
 #舞王僵尸
-execute as @s[tag=wuwangjiangshi] run function kards:game/ingame/mob/wuwangjiangshi
+execute as @s[tag=wuwangjiangshi] run function kards:game/ingame/mob/wuwangjiangshi/1
 #三人成众
 execute as @s[tag=sanrenchengzhong] run function kards:game/ingame/mob/sanrenchengzhong
 #尸帝

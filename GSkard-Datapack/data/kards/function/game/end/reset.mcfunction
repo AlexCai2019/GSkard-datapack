@@ -8,6 +8,7 @@ execute as @a[tag=Ready] run scoreboard players operation @s tongji_hurt /= #sys
 scoreboard players operation #system tongji_damage > @a tongji_damage
 scoreboard players operation #system tongji_killed > @a tongji_killed
 scoreboard players operation #system tongji_hurt > @a tongji_hurt
+
 execute as @a if score @s tongji_damage = #system tongji_damage run tag @s add DamageMAX
 execute as @a if score @s tongji_killed = #system tongji_killed run tag @s add KillMAX
 execute as @a if score @s tongji_hurt = #system tongji_hurt run tag @s add HurtMAX

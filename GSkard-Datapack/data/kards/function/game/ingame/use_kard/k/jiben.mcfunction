@@ -25,8 +25,9 @@ execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'寂静
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'蛮兵'}] if score @s kardCount >= #kard_manbing kardCount run function kards:game/yongpaiku/jiben/manbing
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'远古守卫者'}] if score @s kardCount >= #kard_yuangushouweizhe kardCount run function kards:game/yongpaiku/jiben/yuangushouweizhe
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'马蜂'}] if score @s kardCount >= #kard_mafeng kardCount run function kards:game/yongpaiku/jiben/mafeng
-execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'墨鱼怪'}] if score @s kardCount >= #kard_moyuguai kardCount run function kards:game/yongpaiku/jiben/moyuguai
+#execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'墨鱼怪'}] if score @s kardCount >= #kard_moyuguai kardCount run function kards:game/yongpaiku/jiben/moyuguai
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'焦骸'}] if score @s kardCount >= #kard_jiaohai kardCount run function kards:game/yongpaiku/jiben/jiaohai
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'北极熊'}] if score @s kardCount >= #kard_beijixiong kardCount run function kards:game/yongpaiku/jiben/beijixiong
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'旋风骑士'}] if score @s kardCount >= #kard_xuanfengqishi kardCount run function kards:game/yongpaiku/jiben/xuanfengqishi
 
 function kards-dlc:kard/use/jiben

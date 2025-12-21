@@ -9,5 +9,6 @@ execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'无力
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'枯竭'}] if score @s kardCount >= #kard_kujie kardCount run function kards:game/yongpaiku/zuzhou/kujie
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'无形'}] if score @s kardCount >= #kard_wuxing kardCount run function kards:game/yongpaiku/zuzhou/wuxing
 execute unless score #system GameStatus matches 2 if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'重伤'}] if score @s kardCount >= #kard_zhongshang kardCount run function kards:game/yongpaiku/zuzhou/zhongshang
-
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'失忆'}] if score @s kardCount >= #kard_shiyi kardCount run function kards:game/yongpaiku/zuzhou/shiyi/1
+execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'迷茫'}] if score @s kardCount >= #kard_mimang kardCount run function kards:game/yongpaiku/zuzhou/mimang
 function kards-dlc:kard/use/zuzhou

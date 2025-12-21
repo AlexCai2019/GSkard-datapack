@@ -25,6 +25,7 @@ bossbar set minecraft:roundtime color white
 bossbar set minecraft:pvp_start_countdown color green
 #注册计分项目
 scoreboard objectives add tongji_damage_huansuan dummy
+scoreboard objectives add tongji_killed totalKillCount
 
 scoreboard objectives add kunanyaolan_hurt_juechang minecraft.custom:damage_taken
 scoreboard objectives add kunanyaolan_hurt_juechang_ dummy
@@ -501,20 +502,22 @@ scoreboard objectives add Scale trigger
 scoreboard objectives add xixue_lx_temp1 dummy
 scoreboard objectives add xixue_lx_temp2 dummy
 scoreboard objectives add FriendlyFire dummy
-
+scoreboard objectives add shiyi_item_2 dummy
+scoreboard objectives add shiyi_item_1 dummy
+scoreboard objectives add shiyi_counter dummy
 # 注册卡牌数量
 data modify storage kards:setting kard_count set value \
 {\
-    jiben:28,\
+    jiben:29,\
     juntuan:270,\
     zhuangbei:435,\
     tuteng:13,\
     fashu:47,\
     shenji:18,\
-    zuzhou:11,\
+    zuzhou:13,\
     xianjing:13,\
     shipin:105\
 }
 
-# GSkard-1.6
-tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.6"},"\n=========================="]
+# GSkard-1.61
+tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.61"},"\n=========================="]
