@@ -12,7 +12,7 @@
     "body": [
         {
             "type": "minecraft:plain_message",
-            "width": 1024,
+            "width": 480,
             "contents": {
                 "text": "资源有哪些？\n\n\n",
                 "color": "gold",
@@ -147,7 +147,7 @@
                                 "bold": true
                             },
                             {
-                                "text": "12Kmax与获得12K\n\n\n\n\n\n",
+                                "text": "12Kmax与获得12K",
                                 "color": "gold",
                                 "bold": true
                             }

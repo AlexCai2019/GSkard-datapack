@@ -64,7 +64,7 @@
     },
     {
       "type": "minecraft:plain_message",
-      "width": 512,
+      "width": 384,
       "contents": {
         "text": "\n我如何了解一张卡牌?\n\n\n",
         "color": "gold",
@@ -124,7 +124,7 @@
     },
     {
       "type": "minecraft:plain_message",
-      "width": 512,
+      "width": 384,
       "contents": {
         "text": "\n| 当玩家使用了上方卡牌时 聊天消息会弹出类似信息   \n\n",
         "color": "gray",
@@ -194,7 +194,7 @@
     },
     {
       "type": "minecraft:plain_message",
-      "width": 512,
+      "width": 384,
       "contents": {
         "text": "          | 此外 你还可以通过",
         "color": "gray",
@@ -206,7 +206,7 @@
             "bold": true
           },
           {
-            "text": "以直接进入对应的牌库界面查看所有牌\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "text": "以直接进入对应的牌库界面查看所有牌",
             "color": "gray",
             "bold": true
           }

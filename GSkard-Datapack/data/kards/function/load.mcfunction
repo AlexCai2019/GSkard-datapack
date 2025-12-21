@@ -32,6 +32,7 @@ scoreboard objectives add kunanyaolan_hurt_juechang_maxhealth dummy
 
 scoreboard objectives add fashu_lindongjiangzhi dummy
 scoreboard objectives add fashu_lindongjiangzhi_time dummy
+scoreboard objectives add fashu_lindongjiangzhi_addtime dummy
 scoreboard objectives add fashu_lindongjiangzhi_damagetime dummy
 
 scoreboard objectives add existing_value_Helmet dummy
@@ -504,7 +505,7 @@ scoreboard objectives add FriendlyFire dummy
 # 注册卡牌数量
 data modify storage kards:setting kard_count set value \
 {\
-    jiben:26,\
+    jiben:28,\
     juntuan:270,\
     zhuangbei:435,\
     tuteng:13,\

@@ -1,6 +1,5 @@
-
-tp @s ~ 5 ~
-data merge entity @s {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[2f,0f,0f,0f],scale:[1f,1f,1f],translation:[0f,0f,0f]},Glowing:1b,block_state:{Name:note_block},Tags:["droll"]}
-scoreboard players set @s lifetime 100
-stopsound @a block
-playsound minecraft:chunriying block @a ~ ~ ~ 0.75 1 0.75
+execute at @e[tag=blue_marker_1,limit=1] run summon block_display ~ ~1 ~ {Tags:["Mob_Start"]}
+execute at @e[tag=blue_marker_3,limit=1] run summon block_display ~ ~1 ~ {Tags:["Mob_Start"]}
+execute at @e[tag=blue_marker_11,limit=1] run summon block_display ~ ~1 ~ {Tags:["Mob_Start"]}
+execute at @e[tag=blue_marker_13,limit=1] run summon block_display ~ ~1 ~ {Tags:["Mob_Start"]}
+execute as @e[type=block_display,tag=Mob_Start] at @s facing entity @n[tag=blue_marker_7] eyes run rotate @s ~ ~

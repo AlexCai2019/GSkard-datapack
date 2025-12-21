@@ -23,7 +23,7 @@
         {
             "type": "minecraft:plain_message",
             "contents": ["",{"color":"gold","bold":true,"text":"最后的「绝唱」"},"\n",{"color":"#CE9178","text":"-----神器特殊效果详情-----"},"\n",{"color":"green","text":"泰坦体魄"},"\n",{"color":"gray","text":"+20%体积 获得20♥最大生命 获得60%击退抗性"},"\n",{"color":"green","text":"生息 I"},"\n",{"color":"gray","text":"每4.5s回复周围5格友方非图腾生物0.5♥ 自身获得双倍"},"\n",{"color":"green","text":"森林之御"},"\n",{"color":"gray","text":"每损失10♥ 获得6♥临时生命20s"},"\n\n",{"color":"gray","text":"穿在身上时："},"\n",{"color":"gray","text":" "},{"color":"blue","text":"+5 护甲值"},"\n",{"color":"blue","text":" +3 盔甲韧性"}],
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

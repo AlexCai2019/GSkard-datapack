@@ -33,6 +33,7 @@ scoreboard players reset 回合数
 scoreboard objectives setdisplay below_name
 scoreboard objectives setdisplay sidebar
 scoreboard objectives setdisplay list
+scoreboard players reset #pvp
 #经验
 xp set @a 0 points
 xp set @a 0 levels
@@ -85,43 +86,8 @@ scoreboard players reset 蓝队
 scoreboard players reset #红队
 scoreboard players reset #蓝队
 #重置属性
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-1
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-2
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-3
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-4
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-5
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-6
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-7
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-8
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-9
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-10
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-12
-execute as @a run attribute @s minecraft:max_health modifier remove 0-0-13
-execute as @a run attribute @s minecraft:max_health modifier remove 1-0-1
-execute as @a run attribute @s minecraft:max_health modifier remove minecraft:feishenghufu-3
+execute as @a run function kards:game/player/reset_attribute
 execute as @a run attribute @s minecraft:max_health base set 20
-execute as @a run attribute @s minecraft:jump_strength modifier remove 0-0-1
-execute as @a run attribute @s minecraft:jump_strength modifier remove 0-0-2
-execute as @a run attribute @s minecraft:jump_strength modifier remove 0-0-3
-execute as @a run attribute @s minecraft:jump_strength modifier remove 0-0-5
-execute as @a run attribute @s minecraft:jump_strength modifier remove 0-0-6
-execute as @a run attribute @s minecraft:jump_strength base reset
-execute as @a run attribute @s minecraft:scale base reset
-execute as @a run attribute @s minecraft:movement_speed modifier remove 0-0-6
-execute as @a run attribute @s minecraft:movement_speed modifier remove 0-0-7
-execute as @a run attribute @s minecraft:movement_speed base reset
-execute as @a run attribute @s minecraft:entity_interaction_range modifier remove 0-0-2
-execute as @a run attribute @s minecraft:entity_interaction_range modifier remove 0-0-3
-execute as @a run attribute @s minecraft:entity_interaction_range modifier remove 0-0-4
-execute as @a run attribute @s minecraft:entity_interaction_range base reset
-execute as @a run attribute @s gravity modifier remove 0-0-1
-execute as @a run attribute @s minecraft:gravity base reset
-execute as @a run attribute @s safe_fall_distance modifier remove 0-0-2
-execute as @a run attribute @s safe_fall_distance base reset
-execute as @a run attribute @s attack_speed modifier remove talent
-execute as @a run attribute @s attack_damage base reset
-execute as @a run attribute @s attack_damage modifier remove feishenghufu-2
-execute as @a run attribute @s armor base reset
 #重置分数
 scoreboard players set * jinzijue 0
 

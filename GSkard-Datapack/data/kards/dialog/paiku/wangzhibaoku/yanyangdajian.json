@@ -20,7 +20,7 @@
         {
             "type": "minecraft:plain_message",
             "contents": ["",{"color":"#CE9178","text":"-----神器特殊效果详情-----"},"\n",{"color":"dark_red","bold":true,"text":"沸血"},"\n",{"color":"gray","text":"击杀生物后"},"\n",{"color":"gray","text":"对最近的1个敌方生物造成"},{"color":"red","text":"7.5♥火焰伤害"},"\n",{"color":"gray","text":"若这个伤害击杀了目标 则以目标为基点再次伤害最近的另一个目标"},"\n",{"color":"#e36c09","bold":true,"text":"炎护"},"\n",{"color":"gray","text":"手持获得火焰保护"},"\n",{"color":"#690101","bold":true,"text":"焚烧之域"},"\n",{"color":"gray","text":"按住[Shift]2.5s 将开启"},{"color":"#690101","text":"[","extra":[{"bold":true,"text":"焚烧之域"},"] "]},{"color":"gray","text":"持续"},{"color":"dark_aqua","text":"10s"},"\n",{"color":"gray","text":"开启时持续"},{"color":"red","text":"点燃"},{"color":"gray","text":"5格内敌方生物且每秒对其造成"},{"color":"red","text":"1♥火焰伤害"},"\n",{"color":"#690101","text":"[","extra":[{"bold":true,"text":"焚烧之域"},"]"]},{"color":"gray","text":"期间你获得"},{"color":"gold","text":"速度2与抗性提升1"},"\n",{"color":"dark_aqua","text":"CD:35s"},"\n\n",{"color":"gray","text":"在主手时："},"\n",{"color":"dark_green","text":" 10 攻击伤害"},"\n",{"color":"dark_green","text":" 1.65 攻击速度"}],
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

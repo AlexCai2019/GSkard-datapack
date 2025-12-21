@@ -12,7 +12,7 @@
     "body": [
         {
             "type": "minecraft:plain_message",
-            "width": 1024,
+            "width": 480,
             "contents": {
                 "text": "什么是出牌回合与PVP回合?\n\n",
                 "color": "gold",
@@ -150,11 +150,6 @@
                     },
                     {
                         "text": "· 准备时间内玩家可以常规用牌              \n\n",
-                        "color": "gray",
-                        "bold": true
-                    },
-                    {
-                        "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
                         "color": "gray",
                         "bold": true
                     }

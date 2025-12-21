@@ -23,13 +23,13 @@
         "text": "使用方法：将附魔书放置在副手然后按shift为主手武器或对应穿着的护甲添加附魔\n",
         "extra": [
           {
-            "text": "使用后附魔等级加算\n\n",
+            "text": "使用后附魔等级加算\n\n\n\n\n\n",
             "color": "gold"
           }
         ],
         "color": "green"
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

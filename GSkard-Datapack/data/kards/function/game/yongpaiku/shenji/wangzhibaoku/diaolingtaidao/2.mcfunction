@@ -4,20 +4,20 @@ particle soul ~ ~ ~ 0.2 0.2 0.2 0 2 force @a
 
 execute store result score @s Rotation_1 run data get entity @s Rotation[1]
 
-execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~-0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~-0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~0.25 air unless block ~0.25 ~0.25 ~0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~-0.25 air unless block ~0.25 ~0.25 ~-0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~0.25 air unless block ~-0.25 ~0.25 ~0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 if data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~-0.25 air unless block ~-0.25 ~0.25 ~-0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
 
-execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~-0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~-0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~0.25 air unless block ~0.25 ~0.25 ~0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~-0.25 air unless block ~0.25 ~0.25 ~-0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~0.25 air unless block ~-0.25 ~0.25 ~0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute if score @s Rotation_1 matches 1..90 unless data entity @s {OnGround:1b} rotated ~ 0 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~-0.25 air unless block ~-0.25 ~0.25 ~-0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
 
-execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~-0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
-execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~-0.25 air run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~0.25 air unless block ~0.25 ~0.25 ~0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~0.25 ~0.25 ~-0.25 air unless block ~0.25 ~0.25 ~-0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~0.25 air unless block ~-0.25 ~0.25 ~0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
+execute unless score @s Rotation_1 matches 1..90 at @s positioned ^ ^ ^0.25 unless block ~-0.25 ~0.25 ~-0.25 air unless block ~-0.25 ~0.25 ~-0.25 light run return run scoreboard players set @s diaolingtaidao_tujing 0
 
 execute if entity @s[team=red] at @s as @e[team=blue,distance=..2,tag=!spectator,type=!#kards:display] unless data entity @s {NoAI:1b} run tag @s add diaolingtaidao_hurt
 execute if entity @s[team=blue] at @s as @e[team=red,distance=..2,tag=!spectator,type=!#kards:display] unless data entity @s {NoAI:1b} run tag @s add diaolingtaidao_hurt

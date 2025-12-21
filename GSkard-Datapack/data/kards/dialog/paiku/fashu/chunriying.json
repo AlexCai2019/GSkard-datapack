@@ -29,7 +29,7 @@
         "text": "放下一个音符盒并播放《春日影》",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -37,7 +37,7 @@
         "text": "春日影期间中心附近的实体无法移动并使其强制朝向音符盒 持续5秒",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -46,7 +46,7 @@
         "color": "dark_gray",
         "italic": true
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

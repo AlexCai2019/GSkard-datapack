@@ -29,7 +29,7 @@
         "text": "在地方场地周围放置一圈岩浆 怪物获得火焰抗性效果",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -37,7 +37,7 @@
         "text": "持续到回合结束 不可叠加",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

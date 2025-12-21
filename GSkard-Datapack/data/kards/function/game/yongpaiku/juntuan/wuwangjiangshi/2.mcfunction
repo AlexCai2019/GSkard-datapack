@@ -15,4 +15,4 @@ item replace entity @s armor.legs with leather_leggings[dyed_color=16777215,trim
 item replace entity @s armor.feet with leather_boots[dyed_color=8826796,trim={material:"netherite",pattern:"vex"}]
 item replace entity @s weapon.mainhand with music_disc_chirp
 
-execute at @r run playsound wuwangzhaohuan block @a ~ ~ ~ 0.75 1 0.75
+execute at @r run playsound kards:wuwangzhaohuan block @a ~ ~ ~ 0.75 1 0.75

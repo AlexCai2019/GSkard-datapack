@@ -7,7 +7,7 @@ scoreboard players reset @s DongJie
 scoreboard players reset @s XuanYun
 scoreboard players reset @s XuanZhuan
 
-execute if entity @e[tag=droll,type=block_display] run advancement grant @s only kards:advancement/death_in_chunriying
+execute if entity @e[tag=chunriying,type=block_display] run advancement grant @s only kards:advancement/death_in_chunriying
 
 function kards:game/end/bossbar_reset/1
 

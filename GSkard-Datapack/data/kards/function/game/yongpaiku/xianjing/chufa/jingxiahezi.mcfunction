@@ -9,4 +9,4 @@ execute if entity @s[team=blue] run scoreboard players set 蓝队 xianjin_jingxi
 
 
 tellraw @a [{selector: "@s"},{text: "触发了",color: "gray"},{text: "<惊吓盒子>",color: "dark_aqua",hover_event:{action:"show_text",value:"触发时在触发者场地生成1只略微加速爆炸的苦力怕"}}]
-execute as @a at @s run playsound minecraft:travis player @s ~ ~ ~ 100 1
+execute as @a at @s run playsound kards:travis player @s ~ ~ ~ 100 1

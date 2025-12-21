@@ -29,7 +29,7 @@
         "text": "获得三张没有用的牌",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -37,7 +37,7 @@
         "text": "可以用来触发陷阱",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

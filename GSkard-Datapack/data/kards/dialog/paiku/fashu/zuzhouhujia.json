@@ -35,7 +35,7 @@
           }
         ]
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -43,7 +43,7 @@
         "text": "持续至回合结束",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -51,7 +51,7 @@
         "text": "",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -59,7 +59,7 @@
         "text": "穿戴诅咒护甲时:",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -67,7 +67,7 @@
         "text": "-50% 护甲值",
         "color": "red"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -75,7 +75,7 @@
         "text": "-50% 攻击伤害",
         "color": "red"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -83,7 +83,7 @@
         "text": "-50% 攻击速度",
         "color": "red"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -91,7 +91,7 @@
         "text": "-50% 速度",
         "color": "red"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -100,7 +100,7 @@
         "color": "dark_gray",
         "italic": true
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

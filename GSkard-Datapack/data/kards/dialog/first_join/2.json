@@ -13,9 +13,9 @@
     {
       "type": "minecraft:plain_message",
       "contents": {
-        "text": "\n\n\n\ue000\n\n\n\n"
+        "text": "\n\n\n\ue000\n\n\n"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -41,7 +41,7 @@
           }
         ]
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

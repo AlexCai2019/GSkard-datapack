@@ -4,7 +4,7 @@ scoreboard players add @s use_kard_xp 1
 execute if score @s use_kard_xp matches 5 run xp add @s 2 levels
 execute if score @s use_kard_xp matches 5 run scoreboard players reset @s use_kard_xp
 
-execute if score #system random_start matches 13 run function kards:game/random_start/event/dianbiaodaozhuan
+execute if score #system random_gamerule_start matches 1 if score #system random_start matches 13 run function kards:game/random_start/event/dianbiaodaozhuan
 
 scoreboard players set @s pingbi 0
 scoreboard players add @s use_kard 1

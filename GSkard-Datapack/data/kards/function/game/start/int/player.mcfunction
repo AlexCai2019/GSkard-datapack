@@ -10,12 +10,7 @@ scoreboard players add @a lairichanghuan_times 0
 execute as @a[gamemode=adventure] run scoreboard players operation @s shenqicishu = #system shenqicishu
 
 # Attribute
-execute as @a run attribute @s scale base reset
-execute as @a run attribute @s attack_damage base reset
-execute as @a run attribute @s attack_knockback base reset
-execute as @a run attribute @s attack_speed base reset
-execute as @a run attribute @s entity_interaction_range base reset
-execute as @a run attribute @s knockback_resistance base reset
+execute as @a run function kards:game/player/reset_attribute
 
 # Equipment
 clear @a

@@ -31,7 +31,7 @@
                 "color": "white",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -47,7 +47,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -63,7 +63,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -80,7 +80,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -89,7 +89,7 @@
                 "color": "dark_gray",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

@@ -21,7 +21,7 @@
                 "color": "gold",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "plain_message",
@@ -30,7 +30,7 @@
                 "color": "red",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "plain_message",
@@ -39,7 +39,7 @@
                 "color": "gray",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "plain_message",
@@ -48,7 +48,7 @@
                 "color": "gray",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "plain_message",
@@ -57,7 +57,7 @@
                 "color": "red",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "plain_message",
@@ -66,7 +66,7 @@
                 "color": "dark_gray",
                 "italic": true
             },
-            "width": 1024
+            "width": 480
         }
     ],
     "action": {

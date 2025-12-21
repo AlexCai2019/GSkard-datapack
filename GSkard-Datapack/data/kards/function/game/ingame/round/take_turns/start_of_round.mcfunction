@@ -14,8 +14,6 @@ scoreboard players reset blue
 execute if score 红队 xianjin_youdi matches 1 run scoreboard players set 红队 xianjin_youdi 2
 execute if score 蓝队 xianjin_youdi matches 1 run scoreboard players set 蓝队 xianjin_youdi 2
 weather clear
-#检测pvp
-execute if score 回合数 GameRound = #system RoundCount run return run function kards:game/ingame/round/pvpround/waitstart
 
 ## 讲述者
 scoreboard players reset jiangshuzhe
@@ -34,3 +32,5 @@ execute as @a[tag=Talent_qiongbingduwu] run function kards:game/player/talent/en
 scoreboard players add @a[tag=Talent_jinjizhishi] Talent_jinjizhishi_round 1
 execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=5}] run function kards:game/paiku/fashu/jinziqifeng
 execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=10}] run function kards:game/paiku/fashu/jinziqifeng
+
+

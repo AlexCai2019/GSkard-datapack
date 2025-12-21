@@ -1,7 +1,7 @@
 
 scoreboard players add @s HealBack 60
 
-playsound minecraft:tududududu player @a[distance=..20] ~ ~ ~ 100 0
+playsound kards:tududududu player @a[distance=..20] ~ ~ ~ 100 0
 playsound entity.evoker.prepare_summon player @a[distance=..20] ~ ~ ~ 100 1
 summon item_display ~ ~ ~ {item:{id:"totem_of_undying"},Motion:[0,0.8,0],Glowing:1b,Invulnerable:1b,billboard:vertical,glow_color_override:-1,Tags:["shengmingtuteng","shengmingtuteng_start"],start_interpolation:0,interpolation_duration:40}
 

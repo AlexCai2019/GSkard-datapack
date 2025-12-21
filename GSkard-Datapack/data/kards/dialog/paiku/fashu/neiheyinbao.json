@@ -35,7 +35,7 @@
           }
         ]
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -43,7 +43,7 @@
         "text": "一个敌方队伍玩家",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

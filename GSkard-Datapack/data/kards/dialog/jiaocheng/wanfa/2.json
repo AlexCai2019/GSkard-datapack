@@ -64,7 +64,7 @@
         },
         {
             "type": "minecraft:plain_message",
-            "width": 512,
+            "width": 384,
             "contents": {
                 "text": "\n我该如何使用卡牌？\n\n\n",
                 "color": "gold",
@@ -177,7 +177,7 @@
         },
         {
             "type": "minecraft:plain_message",
-            "width": 512,
+            "width": 384,
             "contents": [
                 {
                     "text": "· 这张牌使用时需要消耗",
@@ -217,7 +217,7 @@
                                     "bold": true
                                 },
                                 {
-                                    "text": "负数                        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+                                    "text": "负数                        ",
                                     "color": "red",
                                     "bold": true
                                 }

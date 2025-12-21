@@ -30,7 +30,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -39,7 +39,7 @@
                 "color": "gray",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -55,7 +55,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -64,7 +64,7 @@
                 "color": "dark_purple",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -80,7 +80,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -89,7 +89,7 @@
                 "color": "gray",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -98,7 +98,7 @@
                 "color": "gray",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -107,7 +107,7 @@
                 "color": "gray",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -115,7 +115,7 @@
                 "text": "\n\n一个大盗从死神手上盗走了它...小心被死神找上了门",
                 "color": "gray"
             },
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

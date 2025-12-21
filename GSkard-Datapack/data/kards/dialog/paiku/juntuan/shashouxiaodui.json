@@ -35,7 +35,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -53,7 +53,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -61,7 +61,7 @@
                 "text": "获得无限时长的隐身buff",
                 "color": "gray"
             },
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

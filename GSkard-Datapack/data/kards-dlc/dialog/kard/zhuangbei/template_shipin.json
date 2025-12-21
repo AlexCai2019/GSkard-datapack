@@ -27,7 +27,7 @@
                 "color": "gold",
                 "italic": false
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "plain_message",
@@ -48,7 +48,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         }
     ],
     "action": {

@@ -5,5 +5,5 @@ scoreboard players set @s G36K_Ray 300
 
 tag @s add G36K_Shoot
 
-playsound minecraft:grenade player @s ~ ~ ~ 100 2
+playsound kards:grenade player @s ~ ~ ~ 100 2
 execute at @s anchored eyes positioned ^ ^ ^0.5 run function kards:guns/g36k/_

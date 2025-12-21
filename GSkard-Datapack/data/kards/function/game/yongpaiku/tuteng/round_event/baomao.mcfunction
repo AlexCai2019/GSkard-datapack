@@ -10,7 +10,7 @@ execute if entity @s[team=blue] unless entity @e[team=red,tag=tuteng] run tellra
 
 execute as @e[tag=baomao_damage,limit=1] store result score @s Mob_Health run data get entity @s Health
 execute as @e[tag=baomao_damage,limit=1] if score @s Mob_Health matches ..8 run tellraw @a [{selector:"@s"},{text: "被吓死了",color:"gray"}]
-execute as @e[tag=baomao_damage,limit=1] if score @s Mob_Health matches ..8 at @s run playsound minecraft:wilhelm_scream player @a ~ ~ ~ 100 1
+execute as @e[tag=baomao_damage,limit=1] if score @s Mob_Health matches ..8 at @s run playsound kards:wilhelm_scream player @a ~ ~ ~ 100 1
 
 execute if entity @s[team=red] run damage @e[team=blue,tag=baomao_damage,limit=1] 8 kards:baomao by @s
 execute if entity @s[team=blue] run damage @e[team=red,tag=baomao_damage,limit=1] 8 kards:baomao by @s

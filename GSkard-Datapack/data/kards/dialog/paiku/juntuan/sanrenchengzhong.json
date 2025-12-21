@@ -35,7 +35,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -43,7 +43,7 @@
                 "text": "最小岩浆怪在30s后会变为大岩浆怪",
                 "color": "gray"
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -51,7 +51,7 @@
                 "text": "非用牌回合的时间不计入",
                 "color": "gray"
             },
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

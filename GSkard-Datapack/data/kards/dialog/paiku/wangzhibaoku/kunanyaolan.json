@@ -20,7 +20,7 @@
         {
             "type": "minecraft:plain_message",
             "contents": ["",{"color":"#CE9178","text":"-----神器特殊效果详情-----"},"\n",{"color":"gray","bold":true,"text":"我之苦难"},"\n",{"color":"gray","text":"每受到10♥伤害就分配"},{"color":"red","text":"10♥真实伤害"},{"color":"gray","text":"于敌方所有玩家"},"\n",{"color":"gray","bold":true,"text":"我之甘泽"},"\n",{"color":"gray","text":"每2次造成伤害"},{"color":"green","text":"恢复0.5♥"},{"color":"gray","text":" 苦难化身造成的伤害视为你造成的"},"\n",{"color":"gray","bold":true,"text":"苦难降临"},"\n",{"color":"gray","text":"每受到20♥伤害就召唤1只"},{"color":"red","text":"\"","extra":[{"bold":true,"text":"苦难化身"},"\""]},"\n\n",{"color":"red","bold":true,"text":"苦难化身"},"\n",{"color":"red","text":"无法被攻击 无法近战攻击"},"\n",{"color":"gray","text":"每秒对3格范围内最多3名敌人造成"},{"color":"red","text":"2.5♥魔法伤害 "},"\n",{"color":"gray","text":"存在时间15s"},"\n\n",{"color":"gray","text":"穿在身上时："},"\n",{"color":"blue","text":" +7 护甲值"},"\n",{"color":"blue","text":" +1 盔甲韧性"},"\n",{"color":"blue","text":" +15% 移动速度"}],
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

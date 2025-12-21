@@ -9,7 +9,6 @@ execute if score 回合数 GameRound = #system RoundCount run tellraw @a [{text:
 execute as @a[scores={CanuseKard=1},tag=!Talent_xukongcunzhe] run scoreboard players operation @s kardCount = @s kardCountmax
 
 function kards:game/ingame/round/take_turns/choupai with storage kards:setting
-
 #人数补偿
 execute if score #蓝队 Team_number > #红队 Team_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 5
 execute if score #蓝队 Team_number > #红队 Team_number run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 1

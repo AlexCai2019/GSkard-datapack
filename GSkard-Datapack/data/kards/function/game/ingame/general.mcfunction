@@ -4,7 +4,8 @@ function kards:game/ingame/use_kard/general
 #回合计时
 execute if score #system GameStatus matches 1 run function kards:game/ingame/round/roundtime
 #分数小标题
-execute as @a[gamemode=adventure,tag=Ready] if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data={kards:"wuxiuzhihuo"}] run title @s actionbar [{text: "K/Kmax  ",color:"dark_green"},{score:{objective:"kardCount",name:"@s"},color:"red"},{text: "/",color: "red"},{score:{objective:"kardCountmax",name:"@s"},color:"red",bold: true}]
+execute as @a[gamemode=adventure,tag=Ready] unless score @s ChaoPin matches 1.. if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data={kards:"wuxiuzhihuo"}] run title @s actionbar [{text: "K/Kmax  ",color:"dark_green"},{score:{objective:"kardCount",name:"@s"},color:"red"},{text: "/",color: "red"},{score:{objective:"kardCountmax",name:"@s"},color:"red",bold: true}]
+execute as @a[gamemode=adventure,tag=Ready] if score @s ChaoPin matches 1.. if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data={kards:"wuxiuzhihuo"}] run title @s actionbar ["",{color:"dark_aqua",bold:true,text:"[超频状态] "},{color:"dark_green",text:"K/Kmax ",extra:[{bold:true,italic:true,text:" "}]},{color:"red",score:{name:"@s",objective:"kardCount"},extra:["/",{bold:true,score:{name:"@s",objective:"kardCountmax"}}]}]
 #赋值
 scoreboard players add @a touxiang 0
 scoreboard players add @a kardCount 0
@@ -177,21 +178,8 @@ execute if entity @a[scores={jinzijue=10}] as @a if items entity @s container.* 
 execute if entity @a[scores={jinzijue=10}] as @a if items entity @s container.* #kards:kard[minecraft:custom_data={kards:'禁字启封'}] run clear @s #kards:kard[minecraft:custom_data={kards:'禁字启封'}]
 
 #音乐盒 春日影
-execute at @e[tag=droll] run particle minecraft:note ~0.5 ~ ~ 0.5 0.5 0.5 1 3
-execute as @e[tag=droll] if score @s lifetime matches 1.. at @s run tag @e[distance=..13,tag=!spectator,type=!#impact_projectiles] add droll_music
+execute as @e[tag=chunriying,type=block_display] at @s run function kards:game/yongpaiku/fashu/chunriying/5
 
-effect give @e[tag=droll_music,distance=0.1..] weakness 1 255 false
-execute as @e[tag=droll_music,distance=0.1..] run attribute @s minecraft:movement_speed modifier add 0-0-2 -100 add_multiplied_total
-execute as @e[tag=droll_music,distance=0.1..] run attribute @s minecraft:jump_strength modifier add 0-0-4 -100 add_multiplied_total
-execute as @e[tag=droll_music,distance=0.1..,type=!player] run attribute @s minecraft:flying_speed modifier add 0-0-1 -100 add_multiplied_total
-execute as @e[tag=droll_music,distance=0.1..,type=!wither_skull] at @s facing entity @n[tag=droll] eyes run tp @s ~ ~ ~ ~ ~
-execute as @e[tag=droll_music,distance=0.1..] at @s unless entity @e[tag=droll,distance=..13] run attribute @s minecraft:movement_speed modifier remove 0-0-2
-execute as @e[tag=droll_music,distance=0.1..] at @s unless entity @e[tag=droll,distance=..13] run attribute @s minecraft:jump_strength modifier remove 0-0-4
-execute as @e[tag=droll_music,distance=0.1..,type=!player] at @s unless entity @e[tag=droll,distance=..13] run attribute @s minecraft:flying_speed modifier remove 0-0-1
-execute as @e[tag=droll_music,distance=0.1..] at @s unless entity @e[tag=droll,distance=..13] run tag @s remove droll_music
-#存活时长
-execute as @e if score @s lifetime matches 1.. run scoreboard players remove @s lifetime 1
-execute as @e[tag=droll] if score @s lifetime matches 0 run kill @s
 #清弹射物
 kill @e[nbt={Item:{id:"minecraft:arrow"}}]
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]

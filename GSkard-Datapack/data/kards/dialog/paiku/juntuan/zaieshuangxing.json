@@ -43,7 +43,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -61,7 +61,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -75,7 +75,7 @@
                     }
                 ]
             },
-            "width": 1024
+            "width": 480
         },
         {
             "type": "minecraft:plain_message",
@@ -83,7 +83,7 @@
                 "text": "灾厄村民:掠夺者 卫道士 幻术师 唤魔者",
                 "color": "dark_gray"
             },
-            "width": 1024
+            "width": 480
         }
     ],
     "inputs": [],

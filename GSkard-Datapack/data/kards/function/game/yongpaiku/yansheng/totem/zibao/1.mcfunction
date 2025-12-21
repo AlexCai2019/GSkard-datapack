@@ -8,7 +8,7 @@ data modify entity @n[tag=copy,type=item] PickupDelay set value 1
 kill @e[type=item,nbt={Item:{id:"minecraft:music_disc_11"}},tag=copy]
 
 item replace entity @s armor.head with tnt[enchantments={binding_curse:1},tooltip_display={hide_tooltip:true}]
-playsound minecraft:alert player @a[distance=..20] ~ ~ ~ 100 1.1
+playsound kards:alert player @a[distance=..20] ~ ~ ~ 100 1.1
 
 scoreboard players set @s zibaotuteng_zibao 100
 

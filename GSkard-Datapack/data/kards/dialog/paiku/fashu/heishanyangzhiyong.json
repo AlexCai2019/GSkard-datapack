@@ -29,7 +29,7 @@
         "text": "使用后随机获得1个以下效果",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -37,7 +37,7 @@
         "text": " -2Kmax 生命恢复8♥",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -45,7 +45,7 @@
         "text": " -3Kmax 生命恢复15♥",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -53,7 +53,7 @@
         "text": " -4Kmax 生命恢复24♥",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -61,7 +61,7 @@
         "text": " -6Kmax 全队生命恢复20♥ 你额外恢复10♥",
         "color": "gray"
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -70,7 +70,7 @@
         "color": "dark_gray",
         "italic": true
       },
-      "width": 1024
+      "width": 480
     }
   ],
   "inputs": [],

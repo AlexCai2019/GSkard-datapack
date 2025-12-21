@@ -39,7 +39,6 @@ execute if score #system GameStatus matches 1 if items entity @s weapon.offhand 
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'无用'}] if score @s kardCount >= #kard_wuyong kardCount run function kards:game/yongpaiku/fashu/wuyong
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'地狱'}] if entity @s[team=red] unless score 蓝队 manshui matches 1 if score @s kardCount >= #kard_diyu kardCount run function kards:game/yongpaiku/fashu/diyu/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'地狱'}] if entity @s[team=blue] unless score 红队 manshui matches 1 if score @s kardCount >= #kard_diyu kardCount run function kards:game/yongpaiku/fashu/diyu/1
-execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'春日影'}] if score @s kardCount >= #kard_chunriying kardCount run function kards:game/yongpaiku/fashu/chunriying/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'酸辣无骨鸡爪'}] if score @s kardCount >= #kard_suanlawugujizhua kardCount run function kards:game/yongpaiku/fashu/suanlawugujizhua/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'图腾进击'}] if score @s kardCount >= #kard_tutengjinji kardCount run function kards:game/yongpaiku/fashu/tutengjingji/1
 execute if items entity @s weapon.offhand #kards:kard[custom_data~{kards:'冷效吸血'}] if score @s kardCount >= #kard_lengxiaoxixue kardCount run function kards:game/yongpaiku/fashu/lengxiaoxixue

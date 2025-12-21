@@ -45,7 +45,4 @@ execute if score #system dituxuanze matches 103 positioned -469 0 83 run functio
 
 #tellraw @a [{text: "提示 ",color: "green",bold: true},{text: "地图已切换!",color: "gold"}]
 
-execute store result score system ceshi if entity @e[type=marker]
-tellraw @a[tag=op] {score:{name:system,objective:ceshi}}
-
 playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 100 2

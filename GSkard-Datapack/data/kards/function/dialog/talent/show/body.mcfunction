@@ -7,7 +7,7 @@ data modify storage kards dialog._."body" set value \
         "text": "从下列天赋中选择一个",\
         "color": "green"\
       },\
-      "width": 1024\
+      "width": 480\
     },\
     {\
     "type": "minecraft:item",\

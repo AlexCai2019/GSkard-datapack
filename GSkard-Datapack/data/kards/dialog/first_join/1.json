@@ -15,7 +15,7 @@
       "contents": {
         "text": "\n\n\n\ue000\n\n\n\n"
       },
-      "width": 512
+      "width": 384
     },
     {
       "type": "minecraft:plain_message",
@@ -41,7 +41,7 @@
         ],
         "bold": true
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:item",
@@ -70,7 +70,7 @@
         ],
         "bold": true
       },
-      "width": 1024
+      "width": 480
     },
     {
       "type": "minecraft:plain_message",
@@ -89,14 +89,14 @@
             "bold": true
           },
           {
-            "text": "2",
+            "text": "2或3",
             "color": "gold",
             "bold": true
           }
         ],
         "bold": true
       },
-      "width": 1024
+      "width": 480
     }
   ],
 "inputs": [],

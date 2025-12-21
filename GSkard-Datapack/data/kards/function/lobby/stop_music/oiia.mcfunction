@@ -1,1 +1,1 @@
-stopsound @a * oiiaioooooiai
+stopsound @a * kards:oiiaioooooiai

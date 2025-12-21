@@ -2351,10 +2351,12 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
 
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 12 \
     run data modify storage kards dialog._."actions" append value {\
-        "label": [{"text":"对冲基金","color":"aqua"}],\
+        "label": [{"text":"对冲基金","color":"gold"}],\
         "tooltip": [\
-        {"text":"立刻获得20Kmax 本局游戏\n","color":"green"},\
-        {"text":"你每有10Kmax 友方回合开始时额外加2Kmax","color":"gold"},\
+        {"text":"立刻获得","color":"gray"},\
+        {"text":"8Kmax\n","color":"gold"},\
+        {"text":"友方回合开始时\n","color":"gray"},\
+        {"text":"你每有9Kmax额外获得1Kmax","color":"gold"},\
         ],\
         "action": {\
             "type": "run_command",\

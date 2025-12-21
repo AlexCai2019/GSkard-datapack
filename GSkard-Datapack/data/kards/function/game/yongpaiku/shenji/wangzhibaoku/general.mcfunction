@@ -97,7 +97,7 @@ effect clear @a[tag=xiangzhaoyushi] wither
 effect clear @a[tag=xiangzhaoyushi] levitation
 effect clear @a[tag=xiangzhaoyushi] darkness
 
-execute as @a[team=red,tag=xiangzhaoyushi] if items entity @s container.* emerald[custom_data~{kards:'祥兆玉石',feishenghufu:"绝唱"}] run function kards:game/yongpaiku/shenji/wangzhibaoku/xiangzhaoyushi/
+execute as @a[tag=xiangzhaoyushi] if items entity @s container.* emerald[custom_data~{kards:'祥兆玉石',feishenghufu:"绝唱"}] run function kards:game/yongpaiku/shenji/wangzhibaoku/xiangzhaoyushi/
 
 execute as @a[team=red,tag=xiangzhaoyushi] at @s run effect give @e[team=blue,distance=..4,tag=!spectator] slowness 3 2 false
 execute as @a[team=blue,tag=xiangzhaoyushi] at @s run effect give @e[team=red,distance=..4,tag=!spectator] slowness 3 2 false

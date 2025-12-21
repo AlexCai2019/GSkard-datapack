@@ -94,16 +94,16 @@
           }
         ]
       },
-      "width": 512
+      "width": 384
     },
     {
       "type": "minecraft:plain_message",
       "contents": {
-        "text": "在怪物与玩家的碰撞中 最终活下来的一方队伍胜利\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "text": "在怪物与玩家的碰撞中 最终活下来的一方队伍胜利",
         "color": "gray",
         "bold": true
       },
-      "width": 512
+      "width": 384
     }
   ],
   "inputs": [],

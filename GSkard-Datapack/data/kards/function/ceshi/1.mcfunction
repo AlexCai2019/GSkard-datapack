@@ -1,0 +1,1 @@
+tellraw @a [{color:"#6796E6",text:"-"},{color:"#CCCCCC",text:" 护甲韧性倍率:("},{color:"gray",text:"+0.01"},{color:"#CCCCCC",text:"): "},{score:{name:"#system",objective:"temp_2"},color:"gray"},{text:".",color:"gray"},{score:{name:"#system",objective:"temp_3"},color:"gray"}]
