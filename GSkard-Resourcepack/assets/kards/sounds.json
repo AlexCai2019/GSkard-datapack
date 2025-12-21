@@ -1,0 +1,284 @@
+{
+    "sandwitch" : {
+		"sounds":[
+			{
+                "name":"kards:custom/sandwitch",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "神秘三明治音乐"
+	},
+	"bowomp" : {
+		"sounds":[
+			{
+                "name":"kards:custom/bowomp",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "岩浆怪长大"
+	},
+	"alert" : {
+		"sounds":[
+			{
+                "name":"kards:custom/alert",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "警报声"
+	},
+	"bra" : {
+		"sounds":[
+			{
+                "name":"kards:custom/bra",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "触发<术法失效>音"
+	},
+	"brmm" : {
+		"sounds":[
+			{
+                "name":"kards:custom/brmm",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "爆炸"
+	},
+	"dogdoing" : {
+		"sounds":[
+			{
+                "name":"kards:custom/dogdoing",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "罪恶值+1"
+	},
+	"fart1" : {
+		"sounds":[
+			{
+                "name":"kards:custom/fart1",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "拉了"
+	},
+	"fartreverb" : {
+		"sounds":[
+			{
+                "name":"kards:custom/fartreverb",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "放屁"
+	},
+	"fnaf" : {
+		"sounds":[
+			{
+                "name":"kards:custom/fnaf",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "某音效"
+	},
+	"haaa" : {
+		"sounds":[
+			{
+                "name":"kards:custom/haaa",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "打鼾"
+	},
+	"icecream" : {
+		"sounds":[
+			{
+                "name":"kards:custom/icecream",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "冰淇淋...?"
+	},
+	"torok" : {
+		"sounds":[
+			{
+                "name":"kards:custom/torok",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "神秘呼麦"
+	},
+	"travis" : {
+		"sounds":[
+			{
+                "name":"kards:custom/travis",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "触发<惊吓盒子>/<施法小鬼>音"
+	},
+	"tududududu" : {
+		"sounds":[
+			{
+                "name":"kards:custom/tududududu",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "新的消息"
+	},
+	"whatfall" : {
+		"sounds":[
+			{
+                "name":"kards:custom/whatfall",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "触发<千钧一发>音"
+	},
+	"whop" : {
+		"sounds":[
+			{
+                "name":"kards:custom/whop",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "滑走了"
+	},
+	"fortnite_death" : {
+		"sounds":[
+			{
+                "name":"kards:custom/fortnite_death",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "数码死亡"
+	},
+	"throw" : {
+		"sounds":[
+			{
+                "name":"kards:custom/throw",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "投掷"
+	},
+	"wilhelm_scream" : {
+		"sounds":[
+			{
+                "name":"kards:custom/wilhelm_scream",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "触发<合围>/<遥远的桥>音"
+	},
+	"punch" : {
+		"sounds":[
+			{
+                "name":"kards:custom/punch1",
+				"stream": true,
+				"volume": 0.5
+			},
+			{
+                "name":"kards:custom/punch2",
+				"stream": true,
+				"volume": 0.5
+			},
+			{
+                "name":"kards:custom/punch3",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "殴打"
+	},
+	"itemdie" : {
+		"sounds":[
+			{
+                "name":"kards:custom/itemdie",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "物品消失..?"
+	},
+	"transform" : {
+		"sounds":[
+			{
+                "name":"kards:custom/transform",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "岩浆怪长大"
+	},
+	"grenade" : {
+		"sounds":[
+			{
+                "name":"kards:custom/grenade",
+				"stream": true,
+				"volume": 0.5
+			}
+		],
+		"subtitle": "枪声"
+	},
+	"wuwangzhaohuan":{
+		"sounds": [
+			{
+				"name": "kards:custom/wuwangzhaohuan",
+				"stream": true,
+				"volume": 1
+			}
+		],
+		"subtitle": "舞王僵尸召唤"
+	},
+	"death_for_fall":{
+		"sounds": [
+			{
+				"name": "kards:fall_death",
+				"stream": true,
+				"volume": 0.35
+			}
+		],
+		"subtitle": "钢管落地"
+	},
+    "chunriying": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "kards:music/chunriying",
+                "stream": true,
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "《春日影》"
+    },
+    "oiiaioooooiai": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "kards:music/oiiaioooooiai",
+                "stream": true,
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "臭猫叫"
+    }
+}

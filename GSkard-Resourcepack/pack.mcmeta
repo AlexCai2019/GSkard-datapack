@@ -10,11 +10,6 @@
         "color": "aqua"
       }
     ],
-    "pack_format": 64,
-    "supported_formats": [
-      64,
-      999
-    ],
     "min_format": 65,
     "max_format": 999
   }
