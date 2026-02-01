@@ -1,10 +1,9 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 
 
 
 function kards:game/yongpaiku/xianjing/jiance/fashujiance
-scoreboard players operation @s kardCount -= #kard_xipai kardCount
 execute if entity @s[type=player] unless items entity @s weapon.offhand * run return fail
 item replace entity @s weapon.offhand with air
 execute store result score @s kapaishuliang run clear @s #kards:kard 0

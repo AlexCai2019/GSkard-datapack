@@ -34,3 +34,6 @@ execute as @a[scores={Talent_bianfeiweibao_drop_shenji=1..}] at @s run function 
 
 #图腾战士
 execute if entity @e[tag=tuteng] as @a[tag=Talent_tutengzhanshi] run function kards:game/player/talent/enable/tutengzhanshi/
+
+#守护者
+scoreboard players set @a[tag=Talent_shouhuzhe,gamemode=adventure] ZhongShang_Round 1

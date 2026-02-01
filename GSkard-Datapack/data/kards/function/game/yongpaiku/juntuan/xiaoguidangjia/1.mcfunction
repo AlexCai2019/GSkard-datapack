@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 execute if entity @s[team=red] at @e[tag=blue_marker_4] run summon zombie ~ 0 ~ {Tags:["Mob_Start","xiaoguidangjia"],Team:red,IsBaby:true,equipment:{mainhand:{id:"minecraft:stick",components:{enchantments:{"kards:fire_protection":1,knockback:2}}},head:{id: "minecraft:leather_helmet",components:{dyed_color:15153412}}},Tags:["Mob_Start"]}
 execute if entity @s[team=red] at @e[tag=blue_marker_6] run summon zombie ~ 0 ~ {Tags:["Mob_Start","xiaoguidangjia"],Team:red,IsBaby:true,equipment:{mainhand:{id:"minecraft:stick",components:{enchantments:{"kards:fire_protection":1,knockback:2}}},head:{id: "minecraft:leather_helmet",components:{dyed_color:15153412}}},Tags:["Mob_Start"]}
 execute if entity @s[team=red] at @e[tag=blue_marker_8] run summon zombie ~ 0 ~ {Tags:["Mob_Start","xiaoguidangjia"],Team:red,IsBaby:true,equipment:{mainhand:{id:"minecraft:stick",components:{enchantments:{"kards:fire_protection":1,knockback:2}}},head:{id: "minecraft:leather_helmet",components:{dyed_color:15153412}}},Tags:["Mob_Start"]}
@@ -15,9 +15,7 @@ execute if entity @s[team=red] if entity @e[tag=tuteng,type=chicken,team=red] as
 execute if entity @s[team=blue] if entity @e[tag=tuteng,type=chicken,team=blue] as @e[tag=Mob_Start,tag=xiaoguidangjia] at @s run function kards:game/yongpaiku/juntuan/xiaoguidangjia/3
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/
+function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_xiaoguidangjia kardCount
 

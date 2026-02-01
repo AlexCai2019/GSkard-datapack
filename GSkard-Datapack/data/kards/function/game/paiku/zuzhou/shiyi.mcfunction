@@ -1,3 +1,1 @@
-
-give @s music_disc_stal[item_name=[{text: "3K",color:"aqua"},{text:" "},{text: "失忆",color:"dark_gray"}],lore=[{text: "诅咒牌",color:"dark_gray",italic:false},{text: "打乱敌方全体玩家快捷栏中与副手的物品顺序",color:"gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'失忆',K:3},tooltip_style="kards:kard/curse"]
-scoreboard players set #kard_shiyi kardCount 3
+give @s music_disc_stal[item_name=[{text: "3K",color:"aqua"},{text:" "},{text: "失忆",color:"dark_gray"}],lore=[{text: "诅咒牌",color:"dark_gray",italic:false},{text: "打乱敌方全体玩家快捷栏中与副手的物品顺序",color:"gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"zuzhou/shiyi",K:3},tooltip_style="kards:kard/curse"]

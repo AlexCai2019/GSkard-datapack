@@ -7,7 +7,7 @@ execute store result score @s random_panduolamohe run random value 1..38
 
 execute if score @s random_panduolamohe matches 1 run function kards:game/yongpaiku/juntuan/baozhajuntuan/1
 execute if score @s random_panduolamohe matches 1 run tellraw @s [{text: "[潘多拉魔盒] ", color: "blue"}, {text: "你抽到了", color: "white"}, {text: " 苦力怕", color: "blue"}]
-execute if score @s random_panduolamohe matches 2 run function kards:game/yongpaiku/juntuan/chongzai
+execute if score @s random_panduolamohe matches 2 run function kards:game/yongpaiku/juntuan/chongzai/1
 execute if score @s random_panduolamohe matches 2 run tellraw @s [{text: "[潘多拉魔盒] ", color: "blue"}, {text: "你抽到了", color: "white"}, {text: " 末影螨", color: "blue"}]
 execute if score @s random_panduolamohe matches 3 run function kards:game/yongpaiku/juntuan/diyuzhihuo
 execute if score @s random_panduolamohe matches 3 run tellraw @s [{text: "[潘多拉魔盒] ", color: "blue"}, {text: "你抽到了", color: "white"}, {text: " 烈焰人", color: "blue"}]

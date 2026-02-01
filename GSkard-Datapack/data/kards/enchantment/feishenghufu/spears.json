@@ -1,0 +1,37 @@
+{
+    "anvil_cost": 8,
+    "description": ["",{"color":"gold","bold":true,"text":"「绝唱」"}],
+    "effects": {
+        "minecraft:post_piercing_attack": [
+            {
+                "effect":  {
+                    "type": "run_function",
+                    "function": "kards:enchantment/feishenghufu/spears/1"
+                }
+            }
+    ],
+        "attributes": [
+            {
+                "amount": 0.25,
+                "attribute": "minecraft:movement_speed",
+                "id": "feishenghufu-1",
+                "operation": "add_multiplied_total"
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 15,
+        "per_level_above_first": 8
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 8,
+        "per_level_above_first": 5
+    },
+    "primary_items": "#spears",
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "#spears",
+    "weight": 4
+}

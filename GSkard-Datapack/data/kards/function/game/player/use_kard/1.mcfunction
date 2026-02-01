@@ -1,0 +1,1 @@
+execute store result score compare kardCount run data get entity @s equipment.offhand.components.minecraft:custom_data.K

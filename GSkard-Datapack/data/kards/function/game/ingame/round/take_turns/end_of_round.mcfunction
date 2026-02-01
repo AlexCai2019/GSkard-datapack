@@ -64,7 +64,7 @@ execute if entity @e[tag=tuteng] run tellraw @a [{text: "",color:"gray",bold:tru
 #> 牌效
 tellraw @a [{text: "====================",color:"gray",bold:true}]
 # 
-function kards:game/yongpaiku/use_general/attribute/__
+#function kards:game/player/use_kard/use_general/attribute/__
 #重伤
 scoreboard players remove @a[scores={ZhongShang_Round=1..}] ZhongShang_Round 1
 execute if entity @a[scores={ZhongShang_Round=1..}] run tellraw @a [{text: "[重伤]",color:"dark_gray",bold:true},{text:"生效至\n",color:"gray"},{selector:"@a[scores={ZhongShang_Round=1..}]",bold:true},{text: "\n他们本回合生命恢复效率减半",color:"gray",bold:true}]
@@ -103,7 +103,7 @@ execute if score 红队 fashu_lindongjiangzhi matches 1.. run scoreboard players
 execute if score 蓝队 fashu_lindongjiangzhi matches 1.. run scoreboard players remove 蓝队 fashu_lindongjiangzhi 1
 
 #诅咒护甲
-execute as @a[tag=zuzhouhujia] if items entity @s armor.chest golden_chestplate[custom_data={kards:'诅咒护甲'}] run item replace entity @s armor.chest with air
+execute as @a[tag=zuzhouhujia] if items entity @s armor.chest golden_chestplate[custom_data~{kards:'诅咒护甲'}] run item replace entity @s armor.chest with air
 tag @a[tag=zuzhouhujia] remove zuzhouhujia
 
 #马蜂
@@ -119,11 +119,8 @@ execute if score #system GameRound matches 1 as @e[tag=tuteng,team=red] run func
 
 scoreboard players set @a[scores={CanuseKard=0},tag=!Talent_xukongcunzhe] kardCount 0
 
-#酸辣无骨鸡爪
-execute as @a[gamemode=adventure] store result score @s suanlawugujizhua run clear @s bone[custom_data={kards:'鸡爪'}] 0
-
 #禁法结界
-execute as @a[scores={CanuseKard=1,JinFaJieJie=1}] run function kards:game/yongpaiku/shenji/jinfajiejie/2
+execute as @a[scores={CanuseKard=1,JinFaJieJie=1..}] run function kards:game/yongpaiku/shenji/jinfajiejie/2
 
 #旁观者
 scoreboard players set @a[gamemode=spectator] cishu 0

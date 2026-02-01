@@ -19,5 +19,5 @@ tag @s remove yanyangdajian_fenshaozhiyu_damage
 
 scoreboard players set @s yanyangdajian_fenshaozhiyu_damage 0
 
-execute as @s[team=red] as @e[team=blue,distance=..5,tag=!spectator,type=!#kards:display] unless score @s Fire matches 121.. run scoreboard players set @s Fire 120
-execute as @s[team=blue] as @e[team=red,distance=..5,tag=!spectator,type=!#kards:display] unless score @s Fire matches 121.. run scoreboard players set @s Fire 120
+execute as @s[team=red] as @e[team=blue,distance=..5,tag=!spectator,type=!#kards:display] unless score @s RanShao matches 121.. run scoreboard players set @s RanShao 120
+execute as @s[team=blue] as @e[team=red,distance=..5,tag=!spectator,type=!#kards:display] unless score @s RanShao matches 121.. run scoreboard players set @s RanShao 120

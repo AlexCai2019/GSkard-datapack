@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 execute if entity @s[team=red] at @e[tag=blue_marker_6] run summon minecraft:illusioner ~ 0 ~ {Team:red,attributes:[{id:"follow_range",base:100},{id:"minecraft:max_health",base:30.0d}],Health:30.0f,equipment:{mainhand:{id:"minecraft:bow"}},Tags:["Mob_Start"]}
 execute if entity @s[team=red] at @e[tag=blue_marker_8] run summon minecraft:evoker ~ 0 ~ {Team:red,attributes:[{id:"follow_range",base:100},{id:"minecraft:max_health",base:30.0d}],Health:30.0f,Tags:["Mob_Start"]}
 
@@ -14,9 +14,7 @@ execute if entity @s[team=blue] if score @s Mob_Count_Illager matches 9.. at @e[
 scoreboard players reset @s Mob_Count_Illager
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/
+function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_zaieshuangxing kardCount
 

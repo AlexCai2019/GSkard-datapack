@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
@@ -12,4 +12,3 @@ execute as @a[tag=fanxiangfeileishen] run scoreboard players set @s feileishen 2
 effect give @a[tag=fanxiangfeileishen] resistance 10 1 false
 tag @a remove fanxiangfeileishen
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_fanxiangfeileishen kardCount

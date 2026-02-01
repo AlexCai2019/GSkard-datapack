@@ -2,7 +2,7 @@ scoreboard players set @s death 0
 
 tag @s remove XuanYun
 
-scoreboard players reset @s Fire
+scoreboard players reset @s RanShao
 scoreboard players reset @s DongJie
 scoreboard players reset @s XuanYun
 scoreboard players reset @s XuanZhuan

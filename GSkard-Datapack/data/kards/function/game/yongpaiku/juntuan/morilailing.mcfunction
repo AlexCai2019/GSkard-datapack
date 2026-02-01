@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 execute if entity @s[team=red] at @e[tag=blue_marker_5] run summon creeper ~ 0 ~ {powered:1b,Team:red,Tags:["morilailing"],Passengers:[{id:"item_display",billboard:"vertical",start_interpolation:0,interpolation_duration:40,item:{id:"creeper_head"},Tags:["Mob_Start","morilailing"]}]}
 execute if entity @s[team=red] at @e[tag=blue_marker_9] run summon creeper ~ 0 ~ {powered:1b,Team:red,Tags:["morilailing"],Passengers:[{id:"item_display",billboard:"vertical",start_interpolation:0,interpolation_duration:40,item:{id:"creeper_head"},Tags:["Mob_Start","morilailing"]}]}
 
@@ -11,8 +11,6 @@ execute if entity @s[team=blue] run team join blue @e[tag=Mob_Start]
 execute as @e[tag=Mob_Start] run data modify entity @s transformation.translation set value [0,0.5,0]
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/
+function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_morilailin kardCount

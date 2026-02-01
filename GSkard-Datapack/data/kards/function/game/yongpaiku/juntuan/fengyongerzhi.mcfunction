@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 execute if entity @s[team=red] at @e[tag=blue_marker_4] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
 execute if entity @s[team=red] at @e[tag=blue_marker_6] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
 execute if entity @s[team=red] at @e[tag=blue_marker_8] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
@@ -14,8 +14,6 @@ execute if entity @s[team=blue] if entity @e[tag=!Mob_Start,type=bee] as @e[tag=
 
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/
+function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_fengyongerzhi kardCount

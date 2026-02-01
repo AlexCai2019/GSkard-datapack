@@ -1,0 +1,1 @@
+$function kards:game/yongpaiku/$(function)

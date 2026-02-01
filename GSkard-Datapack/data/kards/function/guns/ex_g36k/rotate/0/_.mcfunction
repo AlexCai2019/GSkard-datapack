@@ -1,2 +1,2 @@
-execute unless block ~ ~ ~0.35 air if block ~0.35 ~ ~ air store result entity @s Rotation[0] float -1 run return run data get entity @s Rotation[0]
-execute unless block ~0.35 ~ ~ air if block ~ ~ ~0.35 air run function kards:guns/ex_g36k/rotate/0/x
+execute unless block ~ ~ ~0.35 #kards:no_collision_blocks if block ~0.35 ~ ~ #kards:no_collision_blocks store result entity @s Rotation[0] float -1 run return run data get entity @s Rotation[0]
+execute unless block ~0.35 ~ ~ #kards:no_collision_blocks if block ~ ~ ~0.35 #kards:no_collision_blocks run function kards:guns/ex_g36k/rotate/0/x

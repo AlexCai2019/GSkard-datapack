@@ -10,8 +10,8 @@ team modify red friendlyFire false
 team modify blue friendlyFire false
 effect clear @a
 effect give @a minecraft:resistance 30 9 false
-clear @a minecraft:music_disc_strad[custom_data={kards:'飞雷神'}]
-clear @a minecraft:music_disc_strad[custom_data={kards:'飞雷神•反'}]
+clear @a minecraft:music_disc_strad[custom_data~{kards:'飞雷神'}]
+clear @a minecraft:music_disc_strad[custom_data~{kards:'飞雷神•反'}]
 scoreboard players reset @a feileishen
 bossbar set roundtime visible false
 tellraw @a [{text: "PVP回合：",color:"gold"},{text: "战斗！存活下来的队伍获胜",color:"red"}]
@@ -25,7 +25,7 @@ scoreboard players operation #pvp pvp_start_countdown = #system pvp_start_countd
 fill -188 -9 -137 -188 0 -191 minecraft:barrier replace air
 fill -233 -9 -191 -233 0 -137 minecraft:barrier replace air
 worldborder set 80
-execute as @a[tag=zuzhouhujia] if items entity @s armor.chest golden_chestplate[custom_data={kards:'诅咒护甲'}] run item replace entity @s armor.chest with air
+execute as @a[tag=zuzhouhujia] if items entity @s armor.chest golden_chestplate[custom_data~{kards:'诅咒护甲'}] run item replace entity @s armor.chest with air
 tag @a[tag=zuzhouhujia] remove zuzhouhujia
 
 function kards:game/ingame/round/pvpround/countdown

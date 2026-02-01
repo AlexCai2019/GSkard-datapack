@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 
 
@@ -9,9 +9,7 @@ title @a title "\u00a74尸"
 schedule function kards:game/yongpaiku/juntuan/shidi/1 5t
 execute as @a at @s run playsound minecraft:block.fire.extinguish player @s ~ ~ ~
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/
+function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 
-scoreboard players operation @s kardCount -= #kard_shidi kardCount

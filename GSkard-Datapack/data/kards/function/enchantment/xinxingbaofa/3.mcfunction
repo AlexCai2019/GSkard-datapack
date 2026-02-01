@@ -1,1 +1,1 @@
-execute unless score @s Fire matches 60.. run scoreboard players set @s Fire 60
+execute unless score @s RanShao matches 60.. run scoreboard players set @s RanShao 60

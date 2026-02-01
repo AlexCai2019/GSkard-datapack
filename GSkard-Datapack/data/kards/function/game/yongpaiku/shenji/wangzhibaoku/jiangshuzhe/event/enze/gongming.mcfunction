@@ -5,4 +5,6 @@ execute as @s[team=blue] run tellraw @a [{text:"蓝队",color:"blue"},{text: "�
 
 
 execute as @s[team=red] run scoreboard players set @a[team=red,gamemode=adventure] ChaoPin 2
+execute as @s[team=red] run scoreboard players set @a[team=red,gamemode=adventure] xukonghuixiang 1
 execute as @s[team=blue] run scoreboard players set @a[team=blue,gamemode=adventure] ChaoPin 2
+execute as @s[team=blue] run scoreboard players set @a[team=blue,gamemode=adventure] xukonghuixiang 1

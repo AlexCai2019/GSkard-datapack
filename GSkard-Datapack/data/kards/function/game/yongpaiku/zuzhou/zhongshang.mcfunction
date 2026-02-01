@@ -1,6 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
-
-
+function kards:game/player/use_kard/use_general/kard_general
 
 tag @s add zhongshang_damage
 
@@ -12,5 +10,4 @@ execute if entity @s[team=blue] run scoreboard players set @a[gamemode=adventure
 
 tag @s remove zhongshang_damage
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_zhongshang kardCount
 

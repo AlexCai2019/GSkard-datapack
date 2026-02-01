@@ -24,8 +24,48 @@ bossbar add minecraft:pvp_start_countdown {text:"等待开放",color:"green"}
 bossbar set minecraft:roundtime color white
 bossbar set minecraft:pvp_start_countdown color green
 #注册计分项目
+scoreboard objectives add foodLevel dummy
+scoreboard objectives add foodSaturationLevel dummy
+scoreboard objectives add Saturation dummy
+scoreboard objectives add Pastor dummy
+scoreboard objectives add Entry_Round_1 dummy
+scoreboard objectives add Entry_Round_2 dummy
+scoreboard objectives add Entry_Round_3 dummy
+scoreboard objectives add Entry_Round_4 dummy
+scoreboard objectives add Entry_potion dummy
+scoreboard objectives add Entry_wither dummy
+scoreboard objectives add Entry_extreme_cold dummy
+scoreboard objectives add Entry_deterrence dummy
+scoreboard objectives add Entry_fire dummy
+scoreboard objectives add Entry_speed dummy
+scoreboard objectives add Entry_strength dummy
+scoreboard objectives add Entry_armor_toughness dummy
+scoreboard objectives add Entry_armor dummy
+scoreboard objectives add Entry_knockback_resistance dummy
+scoreboard objectives add Entry_attack_knockback dummy
+scoreboard objectives add Entry_feather_falling dummy
+scoreboard objectives add Entry_teleport dummy
+scoreboard objectives add Entry_pastor dummy
+scoreboard objectives add Entry_lost_memories dummy
+scoreboard objectives add Entry_twilight_of_the_gods dummy
+
+scoreboard objectives add Mob_Levels dummy
+scoreboard objectives add Health_Max_Add dummy
+scoreboard objectives add BeiPan dummy
+scoreboard objectives add BeiPan_time dummy
+
+scoreboard objectives add GIF trigger
+scoreboard objectives add GIF_Cooldown dummy
+scoreboard objectives add Pitch_Minus dummy
+scoreboard objectives add Note_Pitch dummy
+scoreboard objectives add Last_Note_Pitch dummy
+scoreboard objectives add Use_Cooldown dummy
 scoreboard objectives add tongji_damage_huansuan dummy
 scoreboard objectives add tongji_killed totalKillCount
+scoreboard objectives add tongji_hurt_huansuan dummy
+scoreboard objectives add tongji_killed_huansuan dummy
+scoreboard objectives add tongji_damage dummy
+scoreboard objectives add tongji_hurt dummy
 
 scoreboard objectives add kunanyaolan_hurt_juechang minecraft.custom:damage_taken
 scoreboard objectives add kunanyaolan_hurt_juechang_ dummy
@@ -243,7 +283,7 @@ scoreboard objectives add random_suanlawugujizhua dummy
 scoreboard objectives add enchantment_linghundaji_maxhealth dummy
 scoreboard objectives add enchantment_linghundaji_damage_Time dummy
 scoreboard objectives add diaolingtaidao_damage_add dummy
-scoreboard objectives add Fire_wait dummy
+scoreboard objectives add RanShao_wait dummy
 scoreboard objectives add yanyangdajian_fenshaozhiyu_damage dummy
 scoreboard objectives add yanyangdajian_fenshaozhiyu dummy
 scoreboard objectives add yanyangdajian_fenshaozhiyu_healback dummy
@@ -271,6 +311,7 @@ scoreboard objectives add fengbaozhanchui_lightning_bolt dummy
 scoreboard objectives add feishenghufu_replace_main dummy
 scoreboard objectives add feishenghufu_replace_off dummy
 scoreboard objectives add Damage minecraft.custom:damage_dealt
+scoreboard objectives add HealBack_haigui_Wait dummy
 scoreboard objectives add HealBack_Wait dummy
 scoreboard objectives add MaxHealth dummy
 scoreboard objectives add Health health
@@ -496,8 +537,8 @@ scoreboard objectives add UUID.0 dummy
 scoreboard objectives add UUID.1 dummy
 scoreboard objectives add UUID.2 dummy
 scoreboard objectives add UUID.3 dummy
-scoreboard objectives add Fire dummy
-scoreboard objectives add Fire_take_damage dummy
+scoreboard objectives add RanShao dummy
+scoreboard objectives add RanShao_take_damage dummy
 scoreboard objectives add Scale trigger
 scoreboard objectives add xixue_lx_temp1 dummy
 scoreboard objectives add xixue_lx_temp2 dummy
@@ -510,14 +551,14 @@ data modify storage kards:setting kard_count set value \
 {\
     jiben:29,\
     juntuan:270,\
-    zhuangbei:435,\
+    zhuangbei:445,\
     tuteng:13,\
     fashu:47,\
     shenji:18,\
-    zuzhou:13,\
+    zuzhou:14,\
     xianjing:13,\
     shipin:105\
 }
 
-# GSkard-1.61
-tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.61"},"\n=========================="]
+# GSkard-1.63
+tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.63"},"\n=========================="]

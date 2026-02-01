@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 execute if entity @s[team=blue] at @e[tag=red_marker_6] run summon minecraft:guardian ~ 0 ~ {Team:blue,Passengers:[{id:"minecraft:drowned",equipment:{mainhand:{id:"minecraft:trident",count:1}},Team:blue,Tags:["Mob_Start"]}]}
 execute if entity @s[team=blue] at @e[tag=red_marker_8] run summon minecraft:guardian ~ 0 ~ {Team:blue,Passengers:[{id:"minecraft:drowned",equipment:{mainhand:{id:"minecraft:trident",count:1}},Team:blue,Tags:["Mob_Start"]}]}
    
@@ -13,8 +13,6 @@ execute if entity @s[team=blue] if score 红队 manshui matches 1 run scoreboard
 
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/
+function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_wojilangchao kardCount

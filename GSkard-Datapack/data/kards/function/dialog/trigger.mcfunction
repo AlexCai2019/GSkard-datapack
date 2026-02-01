@@ -42,6 +42,28 @@ execute if score @s dialog matches 307 run return run function kards:lobby/setti
 execute if score @s dialog matches 308 run return run function kards:lobby/setting/random_gamerule/random/true
 execute if score @s dialog matches 309 run return run function kards:dialog/setting/random_gamerule/show
 
+execute if score @s dialog matches 401 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE001",font:"minecraft:gif"}]
+execute if score @s dialog matches 402 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE002",font:"minecraft:gif"}]
+execute if score @s dialog matches 403 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE003",font:"minecraft:gif"}]
+execute if score @s dialog matches 404 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE004",font:"minecraft:gif"}]
+execute if score @s dialog matches 405 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE005",font:"minecraft:gif"}]
+execute if score @s dialog matches 406 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE006",font:"minecraft:gif"}]
+execute if score @s dialog matches 407 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE007",font:"minecraft:gif"}]
+execute if score @s dialog matches 408 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE008",font:"minecraft:gif"}]
+execute if score @s dialog matches 409 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE009",font:"minecraft:gif"}]
+execute if score @s dialog matches 410 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE010",font:"minecraft:gif"}]
+execute if score @s dialog matches 411 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE011",font:"minecraft:gif"}]
+execute if score @s dialog matches 412 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE012",font:"minecraft:gif"}]
+execute if score @s dialog matches 413 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE013",font:"minecraft:gif"}]
+execute if score @s dialog matches 414..415 run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:" 我要烟牌"}]
+execute if score @s dialog matches 414 at @s run return run playsound kards:yanpai_hunxiang player @a ~ ~ ~ 100 1 0.5
+execute if score @s dialog matches 415 at @s run return run playsound kards:yanpai_zhengchang player @a ~ ~ ~ 100 1 0.5
+execute if score @s dialog matches 416..417 run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:" 给我擦皮鞋"}]
+execute if score @s dialog matches 416 at @s run return run playsound kards:capixie_hunxiang player @a ~ ~ ~ 100 1 0.5
+execute if score @s dialog matches 417 at @s run return run playsound kards:capixie_zhengchang player @a ~ ~ ~ 100 1 0.5
+execute if score @s dialog matches 418 run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:" 我跟你换!我跟你换"}]
+execute if score @s dialog matches 418 at @s run return run playsound kards:wogennihuan player @a ~ ~ ~ 100 1 0.5
+
 #execute if score @s dialog matches 1000 run return run function kards:dialog/talent/show
 execute if score @s dialog matches 1001..1030 run tag @s remove talent_dialog_show
 execute if score @s dialog matches 1001..1030 run dialog clear @s

@@ -1,19 +1,24 @@
+#表情包
+scoreboard players enable @a GIF
+scoreboard players remove @a[scores={GIF_Cooldown=1..}] GIF_Cooldown 1
+execute as @a[scores={GIF=1..}] run function kards:game/player/gif/
 #牌相关
 function kards:game/ingame/choupai/cishu
 function kards:game/ingame/use_kard/general
+execute as @e[type=item] run data remove entity @s Owner
 #回合计时
 execute if score #system GameStatus matches 1 run function kards:game/ingame/round/roundtime
 #分数小标题
-execute as @a[gamemode=adventure,tag=Ready] unless score @s ChaoPin matches 1.. if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data={kards:"wuxiuzhihuo"}] run title @s actionbar [{text: "K/Kmax  ",color:"dark_green"},{score:{objective:"kardCount",name:"@s"},color:"red"},{text: "/",color: "red"},{score:{objective:"kardCountmax",name:"@s"},color:"red",bold: true}]
-execute as @a[gamemode=adventure,tag=Ready] if score @s ChaoPin matches 1.. if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data={kards:"wuxiuzhihuo"}] run title @s actionbar ["",{color:"dark_aqua",bold:true,text:"[超频状态] "},{color:"dark_green",text:"K/Kmax ",extra:[{bold:true,italic:true,text:" "}]},{color:"red",score:{name:"@s",objective:"kardCount"},extra:["/",{bold:true,score:{name:"@s",objective:"kardCountmax"}}]}]
+execute as @a[gamemode=adventure,tag=Ready] unless score @s ChaoPin matches 1.. if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data~{kards:"wuxiuzhihuo"}] run title @s actionbar [{text: "K/Kmax  ",color:"dark_green"},{score:{objective:"kardCount",name:"@s"},color:"red"},{text: "/",color: "red"},{score:{objective:"kardCountmax",name:"@s"},color:"red",bold: true}]
+execute as @a[gamemode=adventure,tag=Ready] if score @s ChaoPin matches 1.. if score #system GameStatus matches 1..2 unless items entity @s weapon.mainhand lantern[custom_data~{kards:"wuxiuzhihuo"}] run title @s actionbar ["",{color:"dark_aqua",bold:true,text:"[超频状态] "},{color:"dark_green",text:"K/Kmax ",extra:[{bold:true,italic:true,text:" "}]},{color:"red",score:{name:"@s",objective:"kardCount"},extra:["/",{bold:true,score:{name:"@s",objective:"kardCountmax"}}]}]
 #赋值
 scoreboard players add @a touxiang 0
 scoreboard players add @a kardCount 0
 scoreboard players add @a jinziqifeng 0
 #图腾
-function kards:game/ingame/tuteng/buff
-
-execute if entity @e[tag=tuteng,distance=0.01..] run function kards:game/ingame/tuteng/health/1
+execute if entity @e[tag=tuteng,distance=0.01..] as @e[tag=tuteng] run function kards:game/ingame/tuteng/general
+#玩家使用物品冷却
+scoreboard players remove @a[scores={Use_Cooldown=1..}] Use_Cooldown 1
 #神器
 function kards:game/yongpaiku/shenji/wangzhibaoku/general
 #PVP
@@ -26,23 +31,25 @@ function kards:game/yongpaiku/zhuangbei/general
 execute if entity @e[scores={YongHan=0..}] run function kards:game/ingame/custom_buff/yonghan/1
 #冻结
 execute if entity @e[scores={DongJie=0..}] run function kards:game/ingame/custom_buff/dongjie/1
+execute as @e[tag=iceblock,scores={lifetime=1..}] at @s run function kards:game/ingame/custom_buff/dongjie/bossbar/block_remove
 #重伤
-execute if entity @a[scores={ZhongShang_Tick=0..}] run function kards:game/ingame/custom_buff/zhongshang/tick
-execute if entity @a[scores={ZhongShang_Round=0..}] run function kards:game/ingame/custom_buff/zhongshang/round
+function kards:game/ingame/custom_buff/zhongshang/1
 #回血
-execute if entity @e[scores={HealBack=0..}] run function kards:game/ingame/custom_buff/healback
+execute if entity @e[scores={HealBack=0..}] run function kards:game/ingame/custom_buff/healback/1
 #破甲
 execute if entity @e[scores={PoJia=0..}] run function kards:game/ingame/custom_buff/pojia/1
 #眩晕
 execute if entity @e[scores={XuanYun=0..}] run function kards:game/ingame/custom_buff/xuanyun/1
 #旋转
-execute if entity @e[scores={XuanZhuan=0..}] run function kards:game/ingame/custom_buff/xuanzhuan
+execute if entity @e[scores={XuanZhuan=0..}] run function kards:game/ingame/custom_buff/xuanzhuan/1
 #断腿
 execute if entity @e[scores={DuanTui=0..}] run function kards:game/ingame/custom_buff/duantui/1
 #火焰
-execute if entity @e[scores={Fire=0..}] run function kards:game/ingame/custom_buff/huoyan/1
+execute if entity @e[scores={RanShao=0..}] run function kards:game/ingame/custom_buff/huoyan/1
 #沉默
 execute if entity @a[scores={ChengMo=0..}] run function kards:game/ingame/custom_buff/chengmo/1
+#背叛
+execute if entity @a[scores={BeiPan=0..}] run function kards:game/ingame/custom_buff/beipan/1
 
 #附魔伤害累计
 execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:yuezhan"}]] run scoreboard players set @s enchantment_yuezhan_damage 0
@@ -130,7 +137,7 @@ execute as @a at @s if block ~ ~-1 ~ minecraft:farmland run effect give @s minec
 execute as @a if score @s feileishen matches 1.. run scoreboard players remove @s feileishen 1
 execute as @a if score @s feileishen matches 1 run function kards:game/yongpaiku/shenji/feileishen/2
 #下界合金套
-execute as @a store result score @s chuandai_xjhj if items entity @s armor.* *[minecraft:custom_data={kards:'下界合金护甲'}]
+execute as @a store result score @s chuandai_xjhj if items entity @s armor.* *[minecraft:custom_data~{kards:'下界合金护甲'}]
 effect give @a[scores={chuandai_xjhj=2}] resistance 1 1 false
 effect give @a[scores={chuandai_xjhj=3}] resistance 1 2 false
 effect give @a[scores={chuandai_xjhj=4}] resistance 1 3 false
@@ -174,8 +181,8 @@ scoreboard players add @a[scores={jinzijue=6..}] jinzijue_1 1
 effect give @a[scores={jinzijue_1=600..}] absorption 30 9 false
 scoreboard players set @a[scores={jinzijue_1=600..}] jinzijue_1 0
 #禁字启封
-execute if entity @a[scores={jinzijue=10}] as @a if items entity @s container.* #kards:kard[minecraft:custom_data={kards:'禁字启封'}] run scoreboard players add @s cishu 1
-execute if entity @a[scores={jinzijue=10}] as @a if items entity @s container.* #kards:kard[minecraft:custom_data={kards:'禁字启封'}] run clear @s #kards:kard[minecraft:custom_data={kards:'禁字启封'}]
+execute if entity @a[scores={jinzijue=10}] as @a if items entity @s container.* #kards:kard[minecraft:custom_data~{kards:'禁字启封'}] run scoreboard players add @s cishu 1
+execute if entity @a[scores={jinzijue=10}] as @a if items entity @s container.* #kards:kard[minecraft:custom_data~{kards:'禁字启封'}] run clear @s #kards:kard[minecraft:custom_data~{kards:'禁字启封'}]
 
 #音乐盒 春日影
 execute as @e[tag=chunriying,type=block_display] at @s run function kards:game/yongpaiku/fashu/chunriying/5
@@ -183,7 +190,7 @@ execute as @e[tag=chunriying,type=block_display] at @s run function kards:game/y
 #清弹射物
 kill @e[nbt={Item:{id:"minecraft:arrow"}}]
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
-kill @e[type=minecraft:trident,nbt={inGround:1b},nbt=!{item:{components:{"minecraft:custom_data":{kards:"正义长戟"}}}}]
+execute as @e[type=trident] if data entity @s {inGround:1b} unless data entity @s item.components.minecraft:enchantments."minecraft:loyalty" run kill @s
 #投降
 execute if score #system GameStatus matches 1..2 run scoreboard players enable @a[gamemode=adventure] touxiang
 execute as @a[scores={touxiang=1..}] run function kards:game/ingame/touxiang/1
@@ -220,3 +227,4 @@ scoreboard players enable @a[scores={reset=0}] reset
 execute as @a if score @s reset matches 1 run function kards:game/end/reset
 #---生物相关---#
 execute as @e[type=#kards:mob] run function kards:game/ingame/mob/general
+function kards:game/ingame/entry/general

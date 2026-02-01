@@ -1,0 +1,29 @@
+{
+    "anvil_cost": 8,
+    "description": ["",{"color":"gold","bold":true,"text":"「绝唱」"}],
+    "effects": {
+        "minecraft:projectile_spawned": [
+            {
+                "effect":  {
+                    "type": "run_function",
+                    "function": "kards:enchantment/feishenghufu/trident/1"
+                }
+            }
+    ]
+    },
+    "max_cost": {
+        "base": 15,
+        "per_level_above_first": 8
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 8,
+        "per_level_above_first": 5
+    },
+    "primary_items": "trident",
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "trident",
+    "weight": 4
+}

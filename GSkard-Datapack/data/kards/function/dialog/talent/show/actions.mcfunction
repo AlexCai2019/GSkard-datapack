@@ -238,16 +238,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 16 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"守护者","color":"gold"}],\
-        "tooltip": [\
-        {"text":"你立即穿戴全套拥有","color":"gray"},\
-        {"text":"绑定诅咒","color":"red"},\
-        {"text":"的","color":"gray"},\
-        {"text":"下界合金盔甲\n","color":"gold"},\
-        {"text":"且","color":"gray"},\
-        {"text":"不会成为诅咒护甲的选中目标\n","color":"gold"},\
-        {"text":"但在本局游戏内","color":"gray"},\
-        {"text":"无法使用卡牌","color":"red"},\
-        ],\
+        "tooltip": ["",{"color":"gray","text":"你立即穿戴全套拥有"},{"color":"red","text":"绑定诅咒"},{"color":"gray","text":"的"},{"color":"gold","text":"下界合金盔甲"},"\n",{"color":"gray","text":"且"},{"color":"gold","text":"不会成为诅咒护甲的选中目标"},"\n",{"color":"gray","text":"但在本局游戏内"},{"color":"red","text":"无法使用卡牌"},"\n",{"color":"red","text":"并且永久拥有 \"重伤\""}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1016"\
@@ -406,7 +397,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_1 matches 28 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"color":"gray","text":"机械感染"}],\
-        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀3个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1028"\
@@ -673,16 +664,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 16 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"守护者","color":"gold"}],\
-        "tooltip": [\
-        {"text":"你立即穿戴全套拥有","color":"gray"},\
-        {"text":"绑定诅咒","color":"red"},\
-        {"text":"的","color":"gray"},\
-        {"text":"下界合金盔甲\n","color":"gold"},\
-        {"text":"且","color":"gray"},\
-        {"text":"不会成为诅咒护甲的选中目标\n","color":"gold"},\
-        {"text":"但在本局游戏内","color":"gray"},\
-        {"text":"无法使用卡牌","color":"red"},\
-        ],\
+        "tooltip": ["",{"color":"gray","text":"你立即穿戴全套拥有"},{"color":"red","text":"绑定诅咒"},{"color":"gray","text":"的"},{"color":"gold","text":"下界合金盔甲"},"\n",{"color":"gray","text":"且"},{"color":"gold","text":"不会成为诅咒护甲的选中目标"},"\n",{"color":"gray","text":"但在本局游戏内"},{"color":"red","text":"无法使用卡牌"},"\n",{"color":"red","text":"并且永久拥有 \"重伤\""}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1016"\
@@ -841,7 +823,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_2 matches 28 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"color":"gray","text":"机械感染"}],\
-        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀3个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1028"\
@@ -1108,16 +1090,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 16 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"守护者","color":"gold"}],\
-        "tooltip": [\
-        {"text":"你立即穿戴全套拥有","color":"gray"},\
-        {"text":"绑定诅咒","color":"red"},\
-        {"text":"的","color":"gray"},\
-        {"text":"下界合金盔甲\n","color":"gold"},\
-        {"text":"且","color":"gray"},\
-        {"text":"不会成为诅咒护甲的选中目标\n","color":"gold"},\
-        {"text":"但在本局游戏内","color":"gray"},\
-        {"text":"无法使用卡牌","color":"red"},\
-        ],\
+        "tooltip": ["",{"color":"gray","text":"你立即穿戴全套拥有"},{"color":"red","text":"绑定诅咒"},{"color":"gray","text":"的"},{"color":"gold","text":"下界合金盔甲"},"\n",{"color":"gray","text":"且"},{"color":"gold","text":"不会成为诅咒护甲的选中目标"},"\n",{"color":"gray","text":"但在本局游戏内"},{"color":"red","text":"无法使用卡牌"},"\n",{"color":"red","text":"并且永久拥有 \"重伤\""}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1016"\
@@ -1276,7 +1249,7 @@ execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 1 if score @s Talent_Random_3 matches 28 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"color":"gray","text":"机械感染"}],\
-        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀3个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1028"\
@@ -1543,16 +1516,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 16 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"守护者","color":"gold"}],\
-        "tooltip": [\
-        {"text":"你立即穿戴全套拥有","color":"gray"},\
-        {"text":"绑定诅咒","color":"red"},\
-        {"text":"的","color":"gray"},\
-        {"text":"下界合金盔甲\n","color":"gold"},\
-        {"text":"且","color":"gray"},\
-        {"text":"不会成为诅咒护甲的选中目标\n","color":"gold"},\
-        {"text":"但在本局游戏内","color":"gray"},\
-        {"text":"无法使用卡牌","color":"red"},\
-        ],\
+        "tooltip": ["",{"color":"gray","text":"你立即穿戴全套拥有"},{"color":"red","text":"绑定诅咒"},{"color":"gray","text":"的"},{"color":"gold","text":"下界合金盔甲"},"\n",{"color":"gray","text":"且"},{"color":"gold","text":"不会成为诅咒护甲的选中目标"},"\n",{"color":"gray","text":"但在本局游戏内"},{"color":"red","text":"无法使用卡牌"},"\n",{"color":"red","text":"并且永久拥有 \"重伤\""}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1016"\
@@ -1711,7 +1675,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_4 matches 28 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"color":"gray","text":"机械感染"}],\
-        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀3个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1028"\
@@ -1978,16 +1942,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 16 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"守护者","color":"gold"}],\
-        "tooltip": [\
-        {"text":"你立即穿戴全套拥有","color":"gray"},\
-        {"text":"绑定诅咒","color":"red"},\
-        {"text":"的","color":"gray"},\
-        {"text":"下界合金盔甲\n","color":"gold"},\
-        {"text":"且","color":"gray"},\
-        {"text":"不会成为诅咒护甲的选中目标\n","color":"gold"},\
-        {"text":"但在本局游戏内","color":"gray"},\
-        {"text":"无法使用卡牌","color":"red"},\
-        ],\
+        "tooltip": ["",{"color":"gray","text":"你立即穿戴全套拥有"},{"color":"red","text":"绑定诅咒"},{"color":"gray","text":"的"},{"color":"gold","text":"下界合金盔甲"},"\n",{"color":"gray","text":"且"},{"color":"gold","text":"不会成为诅咒护甲的选中目标"},"\n",{"color":"gray","text":"但在本局游戏内"},{"color":"red","text":"无法使用卡牌"},"\n",{"color":"red","text":"并且永久拥有 \"重伤\""}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1016"\
@@ -2146,7 +2101,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_5 matches 28 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"color":"gray","text":"机械感染"}],\
-        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀3个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1028"\
@@ -2413,16 +2368,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 16 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"守护者","color":"gold"}],\
-        "tooltip": [\
-        {"text":"你立即穿戴全套拥有","color":"gray"},\
-        {"text":"绑定诅咒","color":"red"},\
-        {"text":"的","color":"gray"},\
-        {"text":"下界合金盔甲\n","color":"gold"},\
-        {"text":"且","color":"gray"},\
-        {"text":"不会成为诅咒护甲的选中目标\n","color":"gold"},\
-        {"text":"但在本局游戏内","color":"gray"},\
-        {"text":"无法使用卡牌","color":"red"},\
-        ],\
+        "tooltip": ["",{"color":"gray","text":"你立即穿戴全套拥有"},{"color":"red","text":"绑定诅咒"},{"color":"gray","text":"的"},{"color":"gold","text":"下界合金盔甲"},"\n",{"color":"gray","text":"且"},{"color":"gold","text":"不会成为诅咒护甲的选中目标"},"\n",{"color":"gray","text":"但在本局游戏内"},{"color":"red","text":"无法使用卡牌"},"\n",{"color":"red","text":"并且永久拥有 \"重伤\""}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1016"\
@@ -2500,7 +2446,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
         }\
     }
 
-execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random6 matches 22 \
+execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 22 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"text":"战术打击","color":"aqua"}],\
         "tooltip": [\
@@ -2581,7 +2527,7 @@ execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_
 execute if score #system Talent_Random_Mode matches 2 if score @s Talent_Random_6 matches 28 \
     run data modify storage kards dialog._."actions" append value {\
         "label": [{"color":"gray","text":"机械感染"}],\
-        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀5个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
+        "tooltip": ["",{"color":"gray","text":"你"},{"color":"gold","text":"每击杀3个生物"},"\n",{"color":"gold","text":"位于自己"},{"color":"gray","text":"召唤1只"},{"color":"red","text":"生命值减少伤害减少"},{"color":"gray","text":"的"},{"color":"gold","text":"铁傀儡"}],\
         "action": {\
             "type": "run_command",\
             "command": "trigger dialog set 1028"\

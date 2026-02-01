@@ -1,10 +1,11 @@
 scoreboard players remove @s G36K_Ex_Ray 1
 scoreboard players add @s G36K_Ex_particle 1
 
-tp @s ^ ^ ^0.25
 execute if score @s G36K_Ex_particle matches 1 run particle note ~ ~ ~ 0 0 0 1 1 force @a
-execute if score @s G36K_Ex_particle matches 5 run scoreboard players set @s G36K_Ex_particle 0
-execute positioned ^ ^ ^0.25 unless block ~ ~ ~ air run function kards:guns/ex_g36k/rotate/_
+execute if score @s G36K_Ex_particle matches 1.. run particle enchant ~ ~ ~ 0 0 0 0 1 force @a
+execute if score @s G36K_Ex_particle matches 5.. run scoreboard players set @s G36K_Ex_particle 0
+tp @s ^ ^ ^0.25
+execute positioned ^ ^ ^0.25 unless block ~ ~ ~ #kards:no_collision_blocks run function kards:guns/ex_g36k/rotate/_
 
 execute if entity @e[dy=2,tag=!G36K_Ex_Shoot,type=!#kards:display] run tag @e[dy=2,tag=!G36K_Ex_Shoot,type=!#kards:display] add G36K_Ex_Damage
 

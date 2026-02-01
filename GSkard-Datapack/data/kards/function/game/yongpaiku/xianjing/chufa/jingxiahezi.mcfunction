@@ -1,4 +1,6 @@
-
+#侦测贝
+execute as @s[team=red] if entity @e[tag=tuteng,team=red,type=shulker] run return run damage @n[tag=tuteng,team=red,type=shulker] 2 out_of_world
+execute as @s[team=blue] if entity @e[tag=tuteng,team=blue,type=shulker] run return run damage @n[tag=tuteng,team=blue,type=shulker] 2 out_of_world
 
 execute if entity @s[team=red] at @e[tag=red_marker_7,limit=1] run summon creeper ~ 0 ~ {Team:blue,Fuse:15}
 execute if entity @s[team=red] run scoreboard players set 红队 xianjin_jingxiahezi 0

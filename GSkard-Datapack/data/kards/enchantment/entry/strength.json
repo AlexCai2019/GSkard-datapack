@@ -1,0 +1,33 @@
+{
+  "anvil_cost": 12,
+  "supported_items": "barrier",
+  "description": {"text":"力量"},
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:attack_damage",
+        "id": "entry",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 2,
+          "per_level_above_first": 2
+        },
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 100,
+    "per_level_above_first": 15
+  },
+  "max_level": 100,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 10
+  },
+  "primary_items": "barrier",
+  "slots": [
+    "body"
+  ],
+  "weight": 2
+}

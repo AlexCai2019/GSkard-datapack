@@ -22,8 +22,9 @@ execute if score @s random3 matches 391..395 run function kards:game/paiku/zhuan
 execute if score @s random3 matches 396..415 run function kards:game/paiku/zhuangbei/tiemao
 execute if score @s random3 matches 416..430 run function kards:game/paiku/zhuangbei/zuanshimao
 execute if score @s random3 matches 431..435 run function kards:game/paiku/zhuangbei/xiajiehejinmao
+execute if score @s random3 matches 436..445 run function kards:game/paiku/zhuangbei/nu
 
-execute if score @s random3 matches 436.. run function kards-dlc:kard/type/zhuangbei/ganeral
+execute if score @s random3 matches 446.. run function kards-dlc:kard/type/zhuangbei/ganeral
 
 scoreboard players set @s random3 0
 scoreboard players remove @s zhuangbeicishu 1

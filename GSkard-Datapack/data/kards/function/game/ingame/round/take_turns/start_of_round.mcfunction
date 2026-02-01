@@ -1,7 +1,7 @@
-execute if score red FriendlyFire matches 1 run scoreboard players set red FriendlyFire 0
-execute if score blue FriendlyFire matches 1 run scoreboard players set blue FriendlyFire 0
-execute if score red FriendlyFire matches 0 run team modify red friendlyFire false
-execute if score blue FriendlyFire matches 0 run team modify blue friendlyFire false
+execute if score red FriendlyFire matches 1.. run scoreboard players remove #红队 FriendlyFire 1
+execute if score blue FriendlyFire matches 1.. run scoreboard players remove #蓝队 FriendlyFire 1
+execute unless score red FriendlyFire matches 1.. run team modify red friendlyFire false
+execute unless score blue FriendlyFire matches 1.. run team modify blue friendlyFire false
 
 scoreboard players operation time roundtime = #system roundtime
 

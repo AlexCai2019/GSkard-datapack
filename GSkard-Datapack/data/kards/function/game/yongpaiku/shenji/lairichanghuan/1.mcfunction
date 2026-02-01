@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
 
@@ -17,4 +17,3 @@ scoreboard players reset @s lairichanghuan_damage_temp2
 execute if score @s lairichanghuan_all matches 1.. run function kards:game/yongpaiku/shenji/lairichanghuan/2
 
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCountmax -= #kard_lairichanghuan kardCountmax

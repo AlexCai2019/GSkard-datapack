@@ -15,4 +15,4 @@ tellraw @a [{text: "15秒后返回大厅",color:"gold",bold:true}]
 title @a title [{text: "蓝队",color:"blue",bold:true},{text: " 胜利",color:"gold",bold:true}]
 schedule function kards:game/end/reset 15s
 
-give @a carrot_on_a_stick[item_name=[{text:"音符枪",color:"gold",bold:true}],item_model="minecraft:golden_hoe",custom_data={kards:"G36K_Ex"}]
+execute as @a run function kards:guns/ex_g36k/give

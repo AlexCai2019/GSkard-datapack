@@ -30,7 +30,7 @@
                 "predicate": {
                   "equipment": {
                     "mainhand": {
-                      "items": "minecraft:sunflower",
+                      "items": "minecraft:heart_of_the_sea",
                       "predicates": {
                         "minecraft:custom_data": "{kards:'飞升护符'}"
                       }
@@ -44,7 +44,7 @@
                 "predicate": {
                   "equipment": {
                     "offhand": {
-                      "items": "minecraft:sunflower",
+                      "items": "minecraft:heart_of_the_sea",
                       "predicates": {
                         "minecraft:custom_data": "{kards:'飞升护符'}"
                       }

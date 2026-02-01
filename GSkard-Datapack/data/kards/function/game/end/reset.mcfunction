@@ -31,6 +31,7 @@ scoreboard players set #system worldborder -1
 scoreboard players set #system GameStatus 0
 #重置回合数
 scoreboard players reset 回合数
+scoreboard players reset Entry
 scoreboard objectives setdisplay below_name
 scoreboard objectives setdisplay sidebar
 scoreboard objectives setdisplay list
@@ -44,6 +45,7 @@ weather clear
 effect clear @a
 #重置规则
 gamerule natural_health_regeneration false
+gamerule send_command_feedback true
 #清空背包
 clear @a
 #隐藏倒计时

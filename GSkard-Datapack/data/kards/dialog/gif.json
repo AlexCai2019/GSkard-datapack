@@ -1,0 +1,275 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "表情包",
+    "color": "light_purple",
+    "bold": true
+  },
+  "external_title": {
+    "text": ""
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": ["",{"color":"gray","text":"你可以通过指令\n"},{"color":"gold","bold":true,"text":"/trigger GIF"},{"color":"gray","text":"\n打开这个对话框"},"\n\n",{"color":"yellow","text":"点击发送对应的表情包"}]
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "\n"
+      }
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "columns": 5,
+  "actions": [
+    {
+      "label": {
+        "text": "\uE001",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "震惊"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 401"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE002",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "激动"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 402"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE003",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "开心"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 403"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE004",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "祈祷"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 404"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE005",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "思考"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 405"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE006",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "Skip（跳过）"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 406"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE007",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "干嘛..."
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 407"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE008",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "揣手"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 408"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE009",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "老资历我敬你"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 409"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE010",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "害怕"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 410"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE011",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "测谎仪_滴"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 411"
+      },
+      "width": 70
+    },
+    {
+      "label": {
+        "text": "\uE012",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "测谎仪_叮咚"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 412"
+      },
+      "width": 70
+    },
+    {
+      "label": {
+        "text": "\uE013",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "失望"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 413"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "我要烟牌(混响)"
+      },
+      "tooltip": {
+        "text": "点击发送语音包"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 414"
+      },
+      "width": 70
+    },
+    {
+      "label": {
+        "text": "我要烟牌(正常)"
+      },
+      "tooltip": {
+        "text": "点击发送语音包"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 415"
+      },
+      "width": 70
+    },
+    {
+      "label": {
+        "text": "给我擦皮鞋(混响)"
+      },
+      "tooltip": {
+        "text": "点击发送语音包"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 416"
+      },
+      "width": 90
+    },
+    {
+      "label": {
+        "text": "给我擦皮鞋(正常)"
+      },
+      "tooltip": {
+        "text": "点击发送语音包"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 417"
+      },
+      "width": 90
+    },
+    {
+      "label": {
+        "text": "我跟你换!"
+      },
+      "tooltip": {
+        "text": "点击发送语音包"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 418"
+      },
+      "width": 50
+    }
+  ]
+}

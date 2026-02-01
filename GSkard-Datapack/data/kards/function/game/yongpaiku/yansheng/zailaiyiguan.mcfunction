@@ -1,7 +1,6 @@
-function kards:game/yongpaiku/use_general/info/tellraw
+function kards:game/player/use_kard/use_general/info/tellraw
 
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_zailaiyiguan kardCount
 
 
 function kards:game/paiku/yansheng/suanlawugujizhua/1

@@ -1,3 +1,1 @@
-scoreboard players set #kard_youchangjiedai kardCountmax 2
-
-give @s music_disc_mellohi[item_name=[{text: "2Kmax",color:"gold"},{text:" "},{text: "有偿借贷",color:"light_purple"}],lore=[{text: "法术牌",color:"light_purple",italic:false},[{text: "获得",color:"gray",italic:false},{text: "12K",color:"gold",italic:false}],{text: ""},{text: "消耗Kmax类卡牌可在敌方回合使用",color:"dark_gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'有偿借贷',Kmax:"2"},tooltip_style="kards:kard/spell"]
+give @s music_disc_mellohi[item_name=[{text: "2Kmax",color:"gold"},{text:" "},{text: "有偿借贷",color:"light_purple"}],lore=[{text: "法术牌",color:"light_purple",italic:false},[{text: "获得",color:"gray",italic:false},{text: "12K",color:"gold",italic:false}],{text: ""},{text: "消耗Kmax类卡牌可在敌方回合使用",color:"dark_gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"fashu/youchangjiedai",Kmax:"2"},tooltip_style="kards:kard/spell"]

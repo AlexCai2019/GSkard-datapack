@@ -20,8 +20,3 @@ execute as @s[tag=qinglingzhiyu_mofa,scores={temp=2},team=blue] at @s as @e[team
 
 execute on origin run tag @s remove Attacker
 scoreboard players set @s[tag=qinglingzhiyu_mofa,scores={temp=2..}] temp 0
-
-execute unless predicate kards:random0.02 run return fail
-
-execute as @s[team=red] at @s positioned ^ ^ ^0.5 run tp @e[team=blue,tag=!spectator,type=!#kards:display,distance=..5] @s
-execute as @s[team=blue] at @s positioned ^ ^ ^0.5 run tp @e[team=red,tag=!spectator,type=!#kards:display,distance=..5] @s

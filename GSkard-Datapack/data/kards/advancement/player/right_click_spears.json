@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "items": "#spears"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "kards:game/player/right_click_spears"
+    }
+}

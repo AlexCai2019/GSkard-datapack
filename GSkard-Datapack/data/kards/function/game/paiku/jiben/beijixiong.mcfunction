@@ -1,2 +1,1 @@
-scoreboard players set #kard_beijixiong kardCount 3
-give @s music_disc_mall[item_name=[{text: "3K",color:"aqua"},{text:" "},{text: "北极熊",color:"blue"}],lore=[{text: "基本牌",color:"blue",italic:false},[{text: "召唤一只",color:"gray",italic:false},{text: "北极熊",color:"gold",italic:false}]],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'北极熊',K:3},tooltip_style="kards:kard/common"]
+give @s music_disc_mall[item_name=[{text: "3K",color:"aqua"},{text:" "},{text: "北极熊",color:"blue"}],lore=[{text: "基本牌",color:"blue",italic:false},[{text: "召唤一只",color:"gray",italic:false},{text: "北极熊",color:"gold",italic:false}]],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"jiben/beijixiong",K:3},tooltip_style="kards:kard/common"]

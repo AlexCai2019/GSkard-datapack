@@ -7,5 +7,4 @@ execute if entity @s[team=red] run summon zombie ~-2 ~ ~ {Team:red,equipment:{ch
 execute if entity @s[team=blue] run summon zombie ~2 ~ ~ {Team:blue,equipment:{chest:{id:"diamond_chestplate"},head:{id:"diamond_helmet"},feet:{id:"diamond_boots"},legs:{id:"diamond_leggings"},mainhand:{id:"diamond_sword"},offhand:{id:shield}},CustomName:[{text:"尸帝护卫",color:"red"}],Tags:["Mob_Start"]}
 execute if entity @s[team=blue] run summon zombie ~-2 ~ ~ {Team:blue,equipment:{chest:{id:"diamond_chestplate"},head:{id:"diamond_helmet"},feet:{id:"diamond_boots"},legs:{id:"diamond_leggings"},mainhand:{id:"diamond_sword"},offhand:{id:shield}},CustomName:[{text:"尸帝护卫",color:"red"}],Tags:["Mob_Start"]}
 
-function kards:game/yongpaiku/use_general/attribute/
 tag @e[tag=Mob_Start] remove Mob_Start

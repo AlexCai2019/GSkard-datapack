@@ -1,5 +1,7 @@
 
-
+#侦测贝
+execute as @s[team=red] if entity @e[tag=tuteng,team=red,type=shulker] run return run damage @n[tag=tuteng,team=red,type=shulker] 2 out_of_world
+execute as @s[team=blue] if entity @e[tag=tuteng,team=blue,type=shulker] run return run damage @n[tag=tuteng,team=blue,type=shulker] 2 out_of_world
 
 execute if entity @s[team=red] run effect give @a[team=blue] absorption 20 9 false
 execute if entity @s[team=blue] run effect give @a[team=red] absorption 20 9 false

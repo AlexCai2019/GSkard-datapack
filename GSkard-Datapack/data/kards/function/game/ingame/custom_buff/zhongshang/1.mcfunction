@@ -1,0 +1,2 @@
+execute if entity @a[scores={ZhongShang_Tick=0..}] run return run function kards:game/ingame/custom_buff/zhongshang/2
+execute if entity @a[scores={ZhongShang_Round=0..}] run return run function kards:game/ingame/custom_buff/zhongshang/2

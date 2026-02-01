@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
 execute store result score @s random run random value 1..16
@@ -20,5 +20,4 @@ execute if score @s random matches 15 run function kards:game/yongpaiku/shenji/w
 execute if score @s random matches 16 run function kards:game/yongpaiku/shenji/wangzhibaoku/diaolingtaidao/give
 scoreboard players set @s random 0
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_wangzhibaoku kardCount
 

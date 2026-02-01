@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 execute if entity @s[team=red] at @e[tag=blue_marker_2] run summon blaze ~ 5 ~ {Team:red,attributes:[{id:"follow_range",base:100}],Tags:["Mob_Start"]}
 execute if entity @s[team=red] at @e[tag=blue_marker_5] run summon blaze ~ 5 ~ {Team:red,attributes:[{id:"follow_range",base:100}],Tags:["Mob_Start"]}
 execute if entity @s[team=red] at @e[tag=blue_marker_9] run summon blaze ~ 5 ~ {Team:red,attributes:[{id:"follow_range",base:100}],Tags:["Mob_Start"]}
@@ -17,8 +17,6 @@ execute if score @s Mob_Count_Nether matches 8.. as @e[tag=Mob_Start] run item r
 scoreboard players reset @s Mob_Count_Nether
 
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/
+function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_diyuzhihuo kardCount

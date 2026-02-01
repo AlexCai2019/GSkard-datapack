@@ -1,1 +1,1 @@
-scoreboard players add @s Fire 15
+scoreboard players add @s RanShao 15

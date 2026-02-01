@@ -1,0 +1,1 @@
+give @s light_gray_dye[item_name=[{text: "0K",color:"aqua"},{text:" "},{text: "特殊蛋",color:"yellow"}],lore=[{text: "鸡下的蛋",color:"aqua",italic:false},[{italic:false,color:"white",text:""},{color:"gold",text:"抽3张牌并+12K"}]],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"yansheng/egg/teshu",K:0},tooltip_style="kards:kard/equipment",item_model="egg"]

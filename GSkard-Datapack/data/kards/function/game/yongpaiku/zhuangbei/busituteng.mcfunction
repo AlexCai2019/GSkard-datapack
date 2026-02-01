@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 
 
@@ -11,5 +11,4 @@ execute if score @s random_busituteng matches 5 run function kards:game/paiku/ya
 execute if score @s random_busituteng matches 6 run function kards:game/paiku/yansheng/busituteng/huoyan
 scoreboard players set @s random_busituteng 0
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_busituteng kardCount
 

@@ -1,3 +1,1 @@
-
-give @s music_disc_13[item_name=[{text: "14K",color:"aqua"},{text:" "},{text: "下界合金斧",color:"gold"}],lore=[{text: "装备牌",color:"gold",italic:false},{text: "获得一把下界合金斧",color:"gray",italic:false},{text: "斧可以横扫",color:"dark_gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'下界合金斧',K:14},tooltip_style="kards:kard/equipment"]
-scoreboard players set #kard_xiajiehejinfu kardCount 14
+give @s music_disc_13[item_name=[{text: "14K",color:"aqua"},{text:" "},{text: "下界合金斧",color:"gold"}],lore=[{text: "装备牌",color:"gold",italic:false},{text: "获得一把下界合金斧",color:"gray",italic:false},{text: "斧可以横扫",color:"dark_gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"zhuangbei/xiajiehejinfu",K:14},tooltip_style="kards:kard/equipment"]

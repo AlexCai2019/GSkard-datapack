@@ -1,6 +1,5 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
-scoreboard players operation @s kardCount -= #kard_shenzhiyishou kardCount
 
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
 item replace entity @s weapon.offhand with air

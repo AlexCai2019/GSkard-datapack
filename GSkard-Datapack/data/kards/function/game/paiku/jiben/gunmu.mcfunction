@@ -1,3 +1,1 @@
-scoreboard players set #kard_gunmu kardCount 0
-
-give @s music_disc_mall[item_name=[{text: "0K",color:"aqua"}],lore=[{text: "基本牌",color:"blue",italic:false},[{text: "召唤一只",color:"gray",italic:false},{text: "",color:"gold",italic:false}],{text: "刻意的游戏设计",color:"dark_gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'滚木',K:0},tooltip_style="kards:kard/common"]
+give @s music_disc_mall[item_name=[{text: "0K",color:"aqua"}],lore=[{text: "基本牌",color:"blue",italic:false},[{text: "召唤一只",color:"gray",italic:false},{text: "",color:"gold",italic:false}],{text: "刻意的游戏设计",color:"dark_gray",italic:false}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"jiben/gunmu",K:0},tooltip_style="kards:kard/common"]

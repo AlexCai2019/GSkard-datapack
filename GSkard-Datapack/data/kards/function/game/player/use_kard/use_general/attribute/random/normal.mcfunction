@@ -1,0 +1,38 @@
+execute store result score Entry temp run random value 1..6
+
+execute if score Entry temp matches 1 run scoreboard players add Entry Entry_speed 1
+execute if score Entry temp matches 2 run scoreboard players add Entry Entry_strength 1
+execute if score Entry temp matches 3 run scoreboard players add Entry Entry_armor_toughness 1
+execute if score Entry temp matches 4 run scoreboard players add Entry Entry_armor 1
+execute if score Entry temp matches 5 run scoreboard players add Entry Entry_attack_knockback 1
+execute if score Entry temp matches 6 run scoreboard players add Entry Entry_knockback_resistance 1
+
+execute if score Entry temp matches 1 run tellraw @a ["",{color:"gray",text:"为所有怪物添加了词条 | "},{color:"aqua",text:"疾速 I "},{color:"gray",text:"| "},{color:"gray",text:"每级提供"},{color:"gold",text:"15%移动速度"}]
+execute if score Entry temp matches 2 run tellraw @a ["",{color:"gray",text:"为所有怪物添加了词条 | "},{color:"red",text:"力量 I "},{color:"gray",text:"| "},{color:"gray",text:"每级提供"},{color:"gold",text:"2点攻击伤害"}]
+execute if score Entry temp matches 3 run tellraw @a ["",{color:"gray",text:"为所有怪物添加了词条 | "},{color:"aqua",text:"护佑 I "},{color:"gray",text:"| "},{color:"white",text:"每级提供"},{color:"gold",text:"2点护甲韧性"}]
+execute if score Entry temp matches 4 run tellraw @a ["",{color:"gray",text:"为所有怪物添加了词条 | "},{color:"aqua",text:"装甲 I "},{color:"gray",text:"| "},{color:"gray",text:"每级提供"},{color:"gold",text:"2点护甲值"}]
+execute if score Entry temp matches 5 run tellraw @a ["",{color:"gray",text:"为所有怪物添加了词条 | "},{color:"aqua",text:"击退 I "},{color:"gray",text:"| "},{color:"yellow",text:"每级提供"},{color:"gold",text:"0.1的击退属性"}]
+execute if score Entry temp matches 6 run tellraw @a ["",{color:"gray",text:"为所有怪物添加了词条 | "},{color:"aqua",text:"屹立 I "},{color:"gray",text:"| "},{color:"white",text:"每级提供"},{color:"gold",text:"10%击退抗性"}]
+
+## 常见词条
+#疾速 每级提供15%移动速度\
+#力量 每级提供2点攻击伤害\
+#护佑 每级提供2点护甲韧性\
+#装甲 每级提供2点护甲值\
+#屹立 每级提供10%击退抗性\
+#击退 每级提供0.1的击退属性
+## 稀有词条
+#剧毒 1级时攻击目标有30%概率施加3s中毒1 2级后每级增加15%概率 每2级增加1s时间 每5级增加1级等级\
+#凋零 1级时攻击目标有30%概率施加3s凋零1 2级后每级增加15%概率 每2级增加1s时间 每5级增加1级等级\
+#极寒 攻击附带5层永寒 2级后每级增加5层\
+#威慑 4.5格范围内敌人攻速降低30% 每级增加10%\
+#燃烧 1级时点燃目标0.5s 2级后每级额外点燃目标0.25s
+## 特殊词条
+#羽落 免疫摔落伤害\
+#传送 被攻击后随机传送到攻击者范围内\
+#牧师 为范围内友方生物提供每秒等同于等级的生命恢复\
+#遗忆 攻击玩家有5%概率打乱其物品栏 每级提供5%概率
+## 传奇词条
+#诸神黄昏 周围玩家每拥有1把神器获得50%攻击伤害 20%击退抗性 10点护甲值
+
+scoreboard players set 回合数 Entry_Round_1 0

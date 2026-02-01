@@ -1,5 +1,3 @@
-
 give @s music_disc_stal[item_name=[{text: "2K",color:"aqua"},{text:" "},{text: "迷茫",color:"dark_gray"}],lore=[{text: "诅咒牌",color:"dark_gray",italic:false},{text: "给敌方全体玩家施加速度100 持续3s",color:"gray",italic:false},\
 {text:"*速度低了是增益*",color:dark_gray,italic:1b},\
-{text:"*速度高了可就是减益了*",color:dark_gray,italic:1b}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={kards:'迷茫',K:2},tooltip_style="kards:kard/curse"]
-scoreboard players set #kard_mimang kardCount 2
+{text:"*速度高了可就是减益了*",color:dark_gray,italic:1b}],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"zuzhou/mimang",K:2},tooltip_style="kards:kard/curse"]

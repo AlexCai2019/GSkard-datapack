@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
     scoreboard players add @s kardCount 15
     execute store result score #蓝队 Team_alive if entity @a[team=blue,gamemode=adventure]

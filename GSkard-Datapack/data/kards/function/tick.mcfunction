@@ -5,7 +5,6 @@ tag @a[gamemode=adventure,tag=spectator] remove spectator
 
 #全局buff
 effect give @a minecraft:night_vision infinite 0 true
-effect give @a minecraft:saturation infinite 0 true
 #进入大厅
 execute positioned 299.5 -59 307.00 run tp @a[dx=2,dy=4,dz=0] 59 226 -26 -90 0
 #暂定命名
@@ -33,7 +32,6 @@ execute as @a[scores={dialog=1..}] run function kards:dialog/trigger
 #title @a[scores={dialog=1..}] title {text:"\uE002"}
 scoreboard players reset @a[scores={dialog=1..}] dialog
 ## 整着玩的
-
 scoreboard players add #system Color 1
 execute if score #system Color matches 5 run team modify First prefix [{text: "[",color:"red"},{text: "萌",color:"yellow"},{text: "新",color:"green"},{text: "]",color:"aqua"}]
 execute if score #system Color matches 5 run team modify First color red

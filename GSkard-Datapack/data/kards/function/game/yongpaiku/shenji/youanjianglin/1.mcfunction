@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
@@ -26,4 +26,3 @@ tag @e[type=minecraft:warden,tag=] add warden_1
 schedule function kards:game/yongpaiku/shenji/youanjianglin/2 2t
 
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_youanjianglin kardCount

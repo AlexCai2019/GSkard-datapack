@@ -85,12 +85,12 @@ kards-dlc/
 **函数路径**: `kards:game/yongpaiku/jiben/diaolingkulou`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 execute if entity @s[team=red] at @e[tag=blue_marker_7,limit=1] run summon wither_skeleton ~ 0 ~ {Team:red,equipment:{mainhand:{id:"minecraft:stone_sword"}},attributes:[{id:"follow_range",base:100}]}
 execute if entity @s[team=blue] at @e[tag=red_marker_7,limit=1] run summon wither_skeleton ~ 0 ~ {Team:blue,equipment:{mainhand:{id:"minecraft:stone_sword"}},attributes:[{id:"follow_range",base:100}]}
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/__
+function kards:game/player/use_kard/use_general/talent
+function kards:game/player/use_kard/use_general/attribute/__
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_diaolingkulou kardCount
@@ -105,7 +105,7 @@ scoreboard players operation @s kardCount -= #kard_diaolingkulou kardCount
 **函数路径**: `kards-dlc:kard/type/juntuan/template_juntuan/use`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
     execute if entity @s[team=red] at @e[tag=blue_marker_4] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
     execute if entity @s[team=red] at @e[tag=blue_marker_6] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
     execute if entity @s[team=red] at @e[tag=blue_marker_8] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
@@ -120,8 +120,8 @@ function kards:game/yongpaiku/use_general/kard_general
     execute if entity @s[team=blue] if entity @e[tag=!Mob_Start,type=bee] as @e[tag=Mob_Start] run tp @s @e[tag=!Mob_Start,type=bee,limit=1,team=blue]
     
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/yongpaiku/use_general/talent
-function kards:game/yongpaiku/use_general/attribute/__
+function kards:game/player/use_kard/use_general/talent
+function kards:game/player/use_kard/use_general/attribute/__
 tag @e[tag=Mob_Start] remove Mob_Start
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_template_juntuan kardCount
@@ -136,7 +136,7 @@ scoreboard players operation @s kardCount -= #kard_template_juntuan kardCount
 **函数路径**: `kards-dlc:kard/type/zhuangbei/template_zhuangbei/use`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
     give @s minecraft:crossbow[minecraft:custom_name={italic:false,text: "弩",color:"gold"},lore=[{text: "新时代战斗工具!",color:"gray",italic:false}],custom_data={kards:'弩'},tooltip_display={hidden_components:["attribute_modifiers","unbreakable"]},charged_projectiles=[{id:"minecraft:arrow",count:1b}]]
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_template_zhuangbei kardCount
@@ -151,7 +151,7 @@ scoreboard players operation @s kardCount -= #kard_template_zhuangbei kardCount
 **函数路径**: `kards-dlc:kard/type/shipin/template_shipin/use`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
     give @s minecraft:turtle_scute[custom_name={italic:false,text: "海龟鳞甲",color:"gold"},lore=[[{text: "放在背包最右侧一列佩戴 同个配件只生效一个",color:"gray",italic:false}],[{text: "",color:"gray",italic:false}],[{text: "佩戴时：",color:"gray",italic:false}],[{text: "+5 护甲值",color:"blue",italic:false}],[{text: "+1 盔甲韧性",color:"blue",italic:false}]],max_stack_size=1,custom_data={kards:'海龟鳞甲'}]
 item replace entity @s weapon.offhand with air
 scoreboard players operation @s kardCount -= #kard_template_shipin kardCount
@@ -166,7 +166,7 @@ scoreboard players operation @s kardCount -= #kard_template_shipin kardCount
 **函数路径**: `kards-dlc:kard/type/fashu/template_fashu/use`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/fashujiance
 scoreboard players operation @s kardCount -= #kard_shenshengzhiguang kardCount
 execute if entity @s[type=player] unless items entity @s weapon.offhand * run return fail
@@ -184,7 +184,7 @@ scoreboard players add @s HealBack 32
 **函数路径**: `kards-dlc:kard/type/shenji/template_shenji/use`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
     scoreboard players add @s kardCount 15
     execute store result score #蓝队 Team_alive if entity @a[team=blue,gamemode=adventure]
@@ -205,7 +205,7 @@ scoreboard players operation @s kardCount -= #kard_template_shenji kardCount
 **函数路径**: `kards-dlc:kard/type/tuteng/tempalte_tuteng/use`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
     execute if entity @s[team=red] at @e[tag=r_tuteng,limit=1] run summon sheep ~ 0 ~ {Team:red,Tags:["tuteng","tuteng.template"],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20.0f,Color:14b,Age:0,Silent:1b}
     execute if entity @s[team=blue] at @e[tag=b_tuteng,limit=1] run summon sheep ~ 0 ~ {Team:blue,Tags:["tuteng","tuteng.template"],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20.0f,Color:11b,Age:0,Silent:1b}
 item replace entity @s weapon.offhand with air
@@ -221,7 +221,7 @@ scoreboard players operation @s kardCount -= #kard_template_tuteng kardCount
 **函数路径**: `kards-dlc:kard/type/zuzhou/template_zuzhou/use`
 
 ```mcfunction
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
     execute if entity @s[team=red] as @a[team=blue,gamemode=adventure] run function kards-dlc:kard/type/zuzhou/template_zuzhou/use2
     execute if entity @s[team=blue] as @a[team=red,gamemode=adventure] run function kards-dlc:kard/type/zuzhou/template_zuzhou/use2
 item replace entity @s weapon.offhand with air

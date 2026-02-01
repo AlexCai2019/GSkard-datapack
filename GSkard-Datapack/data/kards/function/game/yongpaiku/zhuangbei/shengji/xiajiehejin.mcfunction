@@ -1,4 +1,4 @@
-function kards:game/yongpaiku/use_general/kard_general
+function kards:game/player/use_kard/use_general/kard_general
 
 
 
@@ -19,4 +19,3 @@ execute if entity @s[team=red] if score #红队 xiajiehejinhujia matches 4 run s
 execute if entity @s[team=blue] if score #蓝队 xiajiehejinhujia matches 4 run scoreboard players set #蓝队 xiajiehejinhujia 0
 
 item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_xiajiehejinshengji kardCount

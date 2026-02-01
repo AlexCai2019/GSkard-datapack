@@ -1,4 +1,6 @@
-
+#侦测贝
+execute as @s[team=red] if entity @e[tag=tuteng,team=red,type=shulker] run return run damage @n[tag=tuteng,team=red,type=shulker] 2 out_of_world
+execute as @s[team=blue] if entity @e[tag=tuteng,team=blue,type=shulker] run return run damage @n[tag=tuteng,team=blue,type=shulker] 2 out_of_world
 
 execute if entity @s[team=red] at @r[team=blue,gamemode=adventure] run summon item ~ ~ ~ {PickupDelay:-1,Item:{id:"music_disc_11"},Tags:["copy"]}
 execute if entity @s[team=red] run scoreboard players set 红队 xianjin_toulianghuanzhu 0

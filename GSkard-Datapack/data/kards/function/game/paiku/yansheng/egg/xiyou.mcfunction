@@ -1,0 +1,1 @@
+give @s light_gray_dye[item_name=[{text: "0K",color:"aqua"},{text:" "},{text: "稀有蛋",color:"gold"}],lore=[{text: "鸡下的蛋",color:"aqua",italic:false},[{italic:false,color:"white",text:""},{color:"gold",text:"抽2张牌并+8K"}]],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"yansheng/egg/xiyou",K:0},tooltip_style="kards:kard/equipment",item_model="egg"]

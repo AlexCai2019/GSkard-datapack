@@ -4,6 +4,14 @@ function kards:game/ingame/round/take_turns/start_of_round
 execute if score 回合数 GameRound = #system RoundCount run return run function kards:game/ingame/round/pvpround/waitstart
 #回合轮换
 scoreboard players add 回合数 GameRound 1
+scoreboard players add 回合数 Entry_Round_1 1
+scoreboard players add 回合数 Entry_Round_2 1
+scoreboard players add 回合数 Entry_Round_3 1
+scoreboard players add 回合数 Entry_Round_4 1
+execute if score 回合数 Entry_Round_1 matches 5 run function kards:game/player/use_kard/use_general/attribute/random/normal
+execute if score 回合数 Entry_Round_2 matches 25 run function kards:game/player/use_kard/use_general/attribute/random/rare
+execute if score 回合数 Entry_Round_3 matches 50 run function kards:game/player/use_kard/use_general/attribute/random/speacial
+execute if score 回合数 Entry_Round_4 matches 100 run function kards:game/player/use_kard/use_general/attribute/random/legend
 
 scoreboard players set #system round_panding 2
 scoreboard players operation #system GameRound = 回合数 GameRound

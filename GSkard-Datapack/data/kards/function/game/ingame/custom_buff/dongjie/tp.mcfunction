@@ -1,0 +1,1 @@
+$execute as @n[tag=temp_$(UUID)] rotated as @p run tp @s ~ ~ ~ ~ 0

@@ -117,7 +117,7 @@ execute if score @s random_clear matches 35 run item replace entity @s container
 
 tag @s add Kard_Info_User
 
-execute as @n[tag=copy,type=item] run function kards:game/yongpaiku/use_general/info/drop
+execute as @n[tag=copy,type=item] run function kards:game/player/use_kard/use_general/info/drop
 
 tag @s remove Kard_Info_User
 

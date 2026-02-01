@@ -1,0 +1,1 @@
+give @s light_gray_dye[item_name=[{text: "0K",color:"aqua"},{text:" "},{text: "普通蛋",color:"gray"}],lore=[{text: "鸡下的蛋",color:"aqua",italic:false},[{italic:false,color:"white",text:""},{color:"gold",text:"抽1张牌并+4K"}]],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"yansheng/egg/putong",K:0},tooltip_style="kards:kard/common",item_model="egg"]

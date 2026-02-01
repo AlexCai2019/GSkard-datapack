@@ -1,9 +1,20 @@
-execute as @s[team=red,type=!piglin] unless data entity @s angry_at run data modify entity @s angry_at set from entity @p[team=blue,gamemode=adventure] UUID
-execute as @s[team=blue,type=!piglin] unless data entity @s angry_at run data modify entity @s angry_at set from entity @p[team=red,gamemode=adventure] UUID
-execute as @s[team=!red,team=!blue,type=!piglin] unless data entity @s angry_at run data modify entity @s angry_at set from entity @p[team=!red,team=!blue,gamemode=adventure] UUID
-execute as @s[team=red,type=piglin] unless data entity @s angrBrain.memories."minecraft:angry_at".valuey_at run data modify entity @s Brain.memories."minecraft:angry_at".value set from entity @p[team=blue,gamemode=adventure] UUID
-execute as @s[team=blue,type=piglin] unless data entity @s Brain.memories."minecraft:angry_at".value run data modify entity @s Brain.memories."minecraft:angry_at".value set from entity @p[team=red,gamemode=adventure] UUID
-execute as @s[team=!red,team=!blue,type=piglin] unless data entity @s Brain.memories."minecraft:angry_at".value run data modify entity @s Brain.memories."minecraft:angry_at".value set from entity @p[team=!red,team=!blue,gamemode=adventure] UUID
+#设置愤怒对象
+execute as @s[type=#kards:mid_stand_mobs,team=red] unless data entity @s angry_at at @s \
+run data modify entity @s angry_at set from entity @p[team=blue,gamemode=adventure] UUID
+execute as @s[type=#kards:mid_stand_mobs,team=blue] unless data entity @s angry_at at @s \
+run data modify entity @s angry_at set from entity @p[team=red,gamemode=adventure] UUID
+
+execute as @s[type=#kards:mid_stand_mobs,team=!red,team=!blue] unless data entity @s angry_at at @s \
+run data modify entity @s angry_at set from entity @p[team=!red,team=!blue,gamemode=adventure] UUID
+
+#对于使用记忆索敌的对象，修改记忆
+execute as @s[type=#kards:brain_angry_mobs,team=red] unless data entity @s Brain.memories."minecraft:angry_at".value at @s \
+run data modify entity @s Brain.memories."minecraft:angry_at".value set from entity @p[team=blue,gamemode=adventure] UUID
+execute as @s[type=#kards:brain_angry_mobs,team=blue] unless data entity @s Brain.memories."minecraft:angry_at".value at @s \
+run data modify entity @s Brain.memories."minecraft:angry_at".value set from entity @p[team=red,gamemode=adventure] UUID
+
+execute as @s[type=#kards:brain_angry_mobs,team=!red,team=!blue] unless data entity @s Brain.memories."minecraft:angry_at".value at @s \
+run data modify entity @s Brain.memories."minecraft:angry_at".value set from entity @p[team=!red,team=!blue,gamemode=adventure] UUID
 
 #蜜蜂
 execute as @s[type=bee] run data modify entity @s HasStung set value 0b

@@ -6,14 +6,7 @@ execute as @a if items entity @s armor.chest leather_chestplate[custom_data~{kar
 
 execute as @a[tag=senlinzhihu] run function kards:game/yongpaiku/shenji/wangzhibaoku/senlinzhihu/particle
 
-scoreboard players add @a[tag=senlinzhihu] senlinzhihu_HealBack 1
-execute as @a[tag=senlinzhihu] if score @s senlinzhihu_HealBack matches 90 at @s run scoreboard players add @s HealBack 1
-execute as @a[tag=senlinzhihu] if entity @s[team=red] if score @s senlinzhihu_HealBack matches 90 at @s run scoreboard players add @e[distance=..5,team=red,tag=!tuteng] HealBack 1
-execute as @a[tag=senlinzhihu] if entity @s[team=blue] if score @s senlinzhihu_HealBack matches 90 at @s run scoreboard players add @a[distance=..5,team=blue,tag=!tuteng] HealBack 1
-execute as @a[tag=senlinzhihu] if entity @s[team=red] if score @s senlinzhihu_HealBack matches 90 at @e[distance=..5,team=red,tag=!tuteng] run particle minecraft:heart ~ ~2 ~ 0 0 0 0 1 force @a
-execute as @a[tag=senlinzhihu] if entity @s[team=blue] if score @s senlinzhihu_HealBack matches 90 at @e[distance=..5,team=blue,tag=!tuteng] run particle minecraft:heart ~ ~2 ~ 0 0 0 0 1 force @a
-
-execute as @a[tag=senlinzhihu] if score @s senlinzhihu_HealBack matches 90 run scoreboard players set @s senlinzhihu_HealBack 0
+execute as @a[tag=senlinzhihu] at @s run function kards:game/yongpaiku/shenji/wangzhibaoku/senlinzhihu/1
 
 execute as @a[tag=senlinzhihu] run scoreboard players operation @s senlinzhihu_taken -= @s senlinzhihu_absorbed
 scoreboard players set @a[tag=senlinzhihu] senlinzhihu_absorbed 0
@@ -102,7 +95,6 @@ execute as @a[tag=xiangzhaoyushi] if items entity @s container.* emerald[custom_
 execute as @a[team=red,tag=xiangzhaoyushi] at @s run effect give @e[team=blue,distance=..4,tag=!spectator] slowness 3 2 false
 execute as @a[team=blue,tag=xiangzhaoyushi] at @s run effect give @e[team=red,distance=..4,tag=!spectator] slowness 3 2 false
 
-
 scoreboard players add @a[tag=xiangzhaoyushi] xiangzhaoyushi 1
 execute as @a[tag=xiangzhaoyushi] if score @s xiangzhaoyushi matches 1200.. run effect give @s absorption 60 4 false
 execute as @a[tag=xiangzhaoyushi] if score @s xiangzhaoyushi matches 1200.. run scoreboard players set @s xiangzhaoyushi 0
@@ -111,7 +103,7 @@ execute as @a[tag=xiangzhaoyushi] unless items entity @s container.* emerald[cus
 #飞升护符
 execute as @a if items entity @s container.* *[custom_data~{kards:'飞升护符'}] run tag @s add feishenhufu
 effect give @a[tag=feishenhufu] strength 1 1 false
-execute as @a if items entity @s weapon.offhand sunflower[custom_data~{kards:'飞升护符'}] if predicate kards:sneak run function kards:game/yongpaiku/shenji/wangzhibaoku/feishenghufu/fusion
+execute as @a if items entity @s weapon.offhand heart_of_the_sea[custom_data~{kards:'飞升护符'}] if predicate kards:sneak run function kards:game/yongpaiku/shenji/wangzhibaoku/feishenghufu/fusion
 execute as @a[tag=feishenhufu] unless items entity @s container.* *[custom_data~{kards:'飞升护符'}] run effect clear @s strength
 execute as @a[tag=feishenhufu] unless items entity @s container.* *[custom_data~{kards:'飞升护符'}] run tag @s remove feishenhufu
 
@@ -177,7 +169,7 @@ execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom
 execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 181..350 run title @s actionbar [{text: "天察  ",color:"red"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
 execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 351.. run title @s actionbar [{text: "无休  ",color:"dark_red"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
 
-execute as @a if items entity @s weapon.offhand lantern[custom_data~{kards:'无休之火'}] run scoreboard players set @s Fire 200
+execute as @a if items entity @s weapon.offhand lantern[custom_data~{kards:'无休之火'}] run scoreboard players set @s RanShao 200
 
 execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}]
 

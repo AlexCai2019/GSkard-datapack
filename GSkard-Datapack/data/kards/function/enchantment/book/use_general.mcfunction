@@ -9,7 +9,7 @@ execute as @a if items entity @s weapon.offhand enchanted_book[stored_enchantmen
 #风佑者
 execute as @a if items entity @s weapon.offhand enchanted_book[stored_enchantments={'kards:fengxingzhe':1}] if predicate kards:sneak if items entity @s armor.feet #foot_armor unless items entity @s armor.feet #foot_armor[enchantments~[{enchantments:'kards:fengxingzhe'}]] run function kards:enchantment/book/add_enchantment/fengxingzhe
 #星月斩
-execute as @a if items entity @s weapon.offhand enchanted_book[stored_enchantments={'kards:yuezhan':1}] if predicate kards:sneak if items entity @s weapon.mainhand #kards:weapon unless items entity @s weapon.mainhand #kards:weapon[enchantments~[{enchantments:'kards:yuezhan',levels:3}]] run function kards:enchantment/book/add_enchantment/yuezhan
+execute as @a if items entity @s weapon.offhand enchanted_book[stored_enchantments={'kards:yuezhan':1}] if predicate kards:sneak if items entity @s weapon.mainhand #kards:melee_weapon unless items entity @s weapon.mainhand #kards:weapon[enchantments~[{enchantments:'kards:yuezhan',levels:3}]] run function kards:enchantment/book/add_enchantment/yuezhan
 #新星爆发
 execute as @a if items entity @s weapon.offhand enchanted_book[stored_enchantments={'kards:xinxingbaofa':1}] if predicate kards:sneak if items entity @s weapon.mainhand #kards:melee_weapon unless items entity @s weapon.mainhand #kards:melee_weapon[enchantments~[{enchantments:'kards:xinxingbaofa',levels:4}]] run function kards:enchantment/book/add_enchantment/xinxingbaofa
 #浴火者

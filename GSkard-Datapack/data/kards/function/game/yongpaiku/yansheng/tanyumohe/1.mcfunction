@@ -1,7 +1,8 @@
-function kards:game/yongpaiku/use_general/info/tellraw
+execute if score @s Use_Cooldown matches 1.. run return fail
+scoreboard players set @s Use_Cooldown 2
+function kards:game/player/use_kard/use_general/info/tellraw
 
 clear @s beetroot_soup[custom_data~{kards:'贪欲'}] 1
-scoreboard players operation @s kardCount -= #kard_tanyu kardCount
 
 scoreboard players add @s[tag=Talent_bujintanyu] Talent_bujintanyu 1
 
