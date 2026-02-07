@@ -5,8 +5,8 @@ function kards:game/yongpaiku/xianjing/jiance/mobjiance
 function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 
-execute as @s[team=red] run scoreboard players set @e[type=bee,tag=!tuteng,team=red] Entry_teleport 1
-execute as @s[team=blue] run scoreboard players set @e[type=bee,tag=!tuteng,team=blue] Entry_teleport 1
-execute as @e[type=bee,tag=!tuteng] at @s run function kards:game/ingame/entry/re_int
+execute as @s[team=red] at @e[limit=1,team=red,tag=mafeng] run scoreboard players set @e[type=#kards:mob,tag=!tuteng,team=red,distance=..3] Entry_potion 1
+execute as @s[team=blue] at @e[limit=1,team=red,tag=mafeng] run scoreboard players set @e[type=#kards:mob,tag=!tuteng,team=blue] Entry_potion 1
+execute as @e[type=#kards:mob,tag=!tuteng,distance=..3] at @s run function kards:game/ingame/entry/re_int
 
 item replace entity @s weapon.offhand with air

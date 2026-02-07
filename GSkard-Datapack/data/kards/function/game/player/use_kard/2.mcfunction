@@ -1,1 +1,0 @@
-execute store result score compare kardCountmax run data get entity @s equipment.offhand.components.minecraft:custom_data.Kmax

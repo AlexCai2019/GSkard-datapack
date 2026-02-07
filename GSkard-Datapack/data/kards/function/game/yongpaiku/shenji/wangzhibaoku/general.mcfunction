@@ -138,7 +138,7 @@ scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_juntuan 0
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_fashu 0
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_zuzhou 0
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_zhuangbei 0
-scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_xianjin 0
+scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_xianjing 0
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_tuteng 0
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_shenji 0
 
@@ -147,7 +147,7 @@ execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run sco
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run scoreboard players set @s wuxiuzhihuo_fashu 0
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run scoreboard players set @s wuxiuzhihuo_zuzhou 0
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run scoreboard players set @s wuxiuzhihuo_zhuangbei 0
-execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run scoreboard players set @s wuxiuzhihuo_xianjin 0
+execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run scoreboard players set @s wuxiuzhihuo_xianjing 0
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run scoreboard players set @s wuxiuzhihuo_tuteng 0
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 0 run scoreboard players set @s wuxiuzhihuo_shenji 0
 
@@ -156,7 +156,7 @@ execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if scor
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_fashu matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/fashu
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_zuzhou matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/zuzhou
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_zhuangbei matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/zhuangbei
-execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_xianjin matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/xianjing
+execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_xianjing matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/xianjing
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_tuteng matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/tuteng
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_shenji matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/shenji
 

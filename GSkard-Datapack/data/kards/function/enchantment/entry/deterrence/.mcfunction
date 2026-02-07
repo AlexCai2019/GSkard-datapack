@@ -1,4 +1,4 @@
-execute summon marker run function kards:enchantment/entry/deterrence/particle/1
+#execute summon marker run function kards:enchantment/entry/deterrence/particle/1
 
 execute store result score @s enchantment_level run data get entity @s equipment.body.components."minecraft:enchantments".kards:entry/deterrence
 

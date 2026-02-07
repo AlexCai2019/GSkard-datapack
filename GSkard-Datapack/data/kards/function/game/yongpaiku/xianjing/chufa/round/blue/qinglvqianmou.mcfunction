@@ -1,5 +1,5 @@
 
-scoreboard players reset 蓝队 xianjin_qinglvqianmou
+scoreboard players reset 蓝队 xianjing_qinglvqianmou
 execute as @a[team=blue,gamemode=adventure] run scoreboard players operation @s qinglvqianmou = @s use_kard
 scoreboard players reset @a[team=blue] use_kard 
 execute as @a[team=blue,gamemode=adventure] run function kards:game/yongpaiku/xianjing/chufa/qinglvqianmou

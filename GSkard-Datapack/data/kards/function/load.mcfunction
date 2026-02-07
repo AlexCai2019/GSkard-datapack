@@ -1,3 +1,17 @@
+# 注册卡牌数量
+data modify storage kards:setting kard_count set value \
+{\
+    jiben:29,\
+    juntuan:270,\
+    zhuangbei:455,\
+    tuteng:13,\
+    fashu:47,\
+    shenji:18,\
+    zuzhou:14,\
+    xianjing:13,\
+    shipin:105\
+}
+
 #Load
 forceload add 0 0
 #注册队伍
@@ -347,6 +361,9 @@ scoreboard objectives add enchantment_chance_xuruo dummy
 scoreboard objectives add enchantment_level dummy
 scoreboard objectives add enchantment_chance_temp dummy
 
+scoreboard objectives add huijinyu dummy
+scoreboard objectives add huijinyu_particle dummy
+scoreboard objectives add huijinyu_ dummy
 scoreboard objectives add haogaowuyuan dummy
 scoreboard objectives add diyu dummy
 scoreboard objectives add roundtimeOper dummy
@@ -388,19 +405,19 @@ scoreboard objectives add jiangshuzhe_shiting dummy
 scoreboard objectives add jiangshuzhe_shiting_time dummy
 scoreboard objectives add jiangshuzhe_yiming dummy
 
-scoreboard objectives add xianjin_shifaxiaogui dummy
-scoreboard objectives add xianjin_jingxiahezi dummy
-scoreboard objectives add xianjin_molifushi dummy
-scoreboard objectives add xianjin_shufashixiao dummy
-scoreboard objectives add xianjin_sunhaoguodu dummy
-scoreboard objectives add xianjin_shusifangshou dummy
-scoreboard objectives add xianjin_yaoyuandeqiao dummy
-scoreboard objectives add xianjin_hewei dummy
-scoreboard objectives add xianjin_buwendingdezhaohuan dummy
-scoreboard objectives add xianjin_laizishenchu dummy
-scoreboard objectives add xianjin_qinglvqianmou dummy
-scoreboard objectives add xianjin_youdi dummy
-scoreboard objectives add xianjin_qianjunyifa dummy
+scoreboard objectives add xianjing_shifaxiaogui dummy
+scoreboard objectives add xianjing_jingxiahezi dummy
+scoreboard objectives add xianjing_molifushi dummy
+scoreboard objectives add xianjing_shufashixiao dummy
+scoreboard objectives add xianjing_sunhaoguodu dummy
+scoreboard objectives add xianjing_shusifangshou dummy
+scoreboard objectives add xianjing_yaoyuandeqiao dummy
+scoreboard objectives add xianjing_hewei dummy
+scoreboard objectives add xianjing_buwendingdezhaohuan dummy
+scoreboard objectives add xianjing_laizishenchu dummy
+scoreboard objectives add xianjing_qinglvqianmou dummy
+scoreboard objectives add xianjing_youdi dummy
+scoreboard objectives add xianjing_qianjunyifa dummy
 scoreboard objectives add hurt_chuanci dummy
 scoreboard objectives add youchangjiedai dummy
 scoreboard objectives add random_clear dummy
@@ -478,7 +495,7 @@ scoreboard objectives add wuxiuzhihuo_throw minecraft.dropped:minecraft.lantern
 scoreboard objectives add wuxiuzhihuo_jiben minecraft.dropped:minecraft.music_disc_mall
 scoreboard objectives add wuxiuzhihuo_juntuan minecraft.dropped:minecraft.music_disc_cat
 scoreboard objectives add wuxiuzhihuo_fashu minecraft.dropped:minecraft.music_disc_mellohi
-scoreboard objectives add wuxiuzhihuo_xianjin minecraft.dropped:minecraft.music_disc_wait
+scoreboard objectives add wuxiuzhihuo_xianjing minecraft.dropped:minecraft.music_disc_wait
 scoreboard objectives add wuxiuzhihuo_zhuangbei minecraft.dropped:minecraft.music_disc_13
 scoreboard objectives add wuxiuzhihuo_tuteng minecraft.dropped:minecraft.music_disc_blocks
 scoreboard objectives add wuxiuzhihuo_zuzhou minecraft.dropped:minecraft.music_disc_stal
@@ -502,7 +519,7 @@ scoreboard objectives add YunSuan_1 dummy
 scoreboard objectives add YunSuan_2 dummy
 scoreboard objectives add YunSuan_3 dummy
 scoreboard objectives add YunSuan_4 dummy
-scoreboard objectives add xianjin_toulianghuanzhu dummy
+scoreboard objectives add xianjing_toulianghuanzhu dummy
 scoreboard objectives add end dummy
 scoreboard objectives add sishenzhilian_damage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add sishenzhilian_damage_tongji dummy
@@ -546,19 +563,7 @@ scoreboard objectives add FriendlyFire dummy
 scoreboard objectives add shiyi_item_2 dummy
 scoreboard objectives add shiyi_item_1 dummy
 scoreboard objectives add shiyi_counter dummy
-# 注册卡牌数量
-data modify storage kards:setting kard_count set value \
-{\
-    jiben:29,\
-    juntuan:270,\
-    zhuangbei:445,\
-    tuteng:13,\
-    fashu:47,\
-    shenji:18,\
-    zuzhou:14,\
-    xianjing:13,\
-    shipin:105\
-}
+
 
 # GSkard-1.63
 tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.63"},"\n=========================="]

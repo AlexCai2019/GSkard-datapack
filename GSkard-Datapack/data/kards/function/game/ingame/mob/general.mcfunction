@@ -24,6 +24,8 @@ execute as @s[type=enderman] run function kards:game/ingame/mob/enderman
 execute as @s[type=shulker,tag=tuteng] run function kards:game/ingame/mob/shulker
 #无人机
 execute as @s[tag=wurenji] run function kards:game/ingame/mob/wurenji
+#幻翼
+execute as @s[type=phantom] run function kards:game/ingame/mob/phantom/1
 #唤魔者
 execute as @s[type=evoker] run function kards:game/ingame/mob/evoker
 #幻术师

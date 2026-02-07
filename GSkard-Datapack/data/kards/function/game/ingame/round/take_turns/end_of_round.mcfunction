@@ -102,6 +102,10 @@ function kards:game/ingame/round/fashu with storage minecraft:changdidaxiao
 execute if score 红队 fashu_lindongjiangzhi matches 1.. run scoreboard players remove 红队 fashu_lindongjiangzhi 1
 execute if score 蓝队 fashu_lindongjiangzhi matches 1.. run scoreboard players remove 蓝队 fashu_lindongjiangzhi 1
 
+#灰烬雨
+execute if score 红队 huijinyu matches 1.. run scoreboard players remove 红队 huijinyu 1
+execute if score 蓝队 huijinyu matches 1.. run scoreboard players remove 蓝队 huijinyu 1
+
 #诅咒护甲
 execute as @a[tag=zuzhouhujia] if items entity @s armor.chest golden_chestplate[custom_data~{kards:'诅咒护甲'}] run item replace entity @s armor.chest with air
 tag @a[tag=zuzhouhujia] remove zuzhouhujia

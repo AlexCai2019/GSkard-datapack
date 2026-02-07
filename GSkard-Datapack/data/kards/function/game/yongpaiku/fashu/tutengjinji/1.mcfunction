@@ -1,8 +1,5 @@
 function kards:game/player/use_kard/use_general/kard_general
 
-
-
-
 function kards:game/yongpaiku/xianjing/jiance/fashujiance
 
 execute if entity @s[type=player] unless items entity @s weapon.offhand * run return fail
@@ -13,4 +10,4 @@ execute if entity @s[team=blue] store result score @s tutengjinji if entity @e[t
 execute if entity @s[team=red] run tellraw @a [{text:"目前",color:"gray"},{text:"红队",color:"red"},{text:"拥有图腾",color:"gray"},{score:{name:"@s",objective:"tutengjinji"}},{text:"只",color:"gray"}]
 execute if entity @s[team=blue] run tellraw @a [{text:"目前",color:"gray"},{text:"蓝队",color:"blue"},{text:"拥有图腾",color:"gray"},{score:{name:"@s",objective:"tutengjinji"}},{text:"只",color:"gray"}]
 
-function kards:game/yongpaiku/fashu/tutengjingji/2
+function kards:game/yongpaiku/fashu/tutengjinji/2

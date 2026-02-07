@@ -3,10 +3,10 @@ execute as @s[team=red] if entity @e[tag=tuteng,team=red,type=shulker] run retur
 execute as @s[team=blue] if entity @e[tag=tuteng,team=blue,type=shulker] run return run damage @n[tag=tuteng,team=blue,type=shulker] 2 out_of_world
 
 execute if entity @s[team=red] at @r[team=blue,gamemode=adventure] run summon item ~ ~ ~ {PickupDelay:-1,Item:{id:"music_disc_11"},Tags:["copy"]}
-execute if entity @s[team=red] run scoreboard players set 红队 xianjin_toulianghuanzhu 0
+execute if entity @s[team=red] run scoreboard players set 红队 xianjing_toulianghuanzhu 0
 
 execute if entity @s[team=blue] at @r[team=red,gamemode=adventure] run summon item ~ ~ ~ {PickupDelay:-1,Item:{id:"music_disc_11"},Tags:["copy"]}
-execute if entity @s[team=blue] run scoreboard players set 蓝队 xianjin_toulianghuanzhu 0
+execute if entity @s[team=blue] run scoreboard players set 蓝队 xianjing_toulianghuanzhu 0
 
 data modify entity @n[tag=copy,type=item] Item set from entity @s equipment.offhand
 kill @e[type=item,nbt={Item:{id:"minecraft:music_disc_13"}}]

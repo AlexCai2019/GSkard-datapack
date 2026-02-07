@@ -11,8 +11,8 @@ execute as @a[scores={CanuseKard=0},tag=!Talent_fushengzuzhou_end,tag=!Talent_to
 
 scoreboard players reset red
 scoreboard players reset blue
-execute if score 红队 xianjin_youdi matches 1 run scoreboard players set 红队 xianjin_youdi 2
-execute if score 蓝队 xianjin_youdi matches 1 run scoreboard players set 蓝队 xianjin_youdi 2
+execute if score 红队 xianjing_youdi matches 1 run scoreboard players set 红队 xianjing_youdi 2
+execute if score 蓝队 xianjing_youdi matches 1 run scoreboard players set 蓝队 xianjing_youdi 2
 weather clear
 
 ## 讲述者

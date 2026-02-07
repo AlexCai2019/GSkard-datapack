@@ -5,4 +5,4 @@ execute if score @s jiangshuzhe_random matches 2 run function kards:game/yongpai
 execute if score @s jiangshuzhe_random matches 3 run function kards:game/yongpaiku/shenji/wangzhibaoku/jiangshuzhe/event/enze/jinshen
 execute if score @s jiangshuzhe_random matches 4 run function kards:game/yongpaiku/shenji/wangzhibaoku/jiangshuzhe/event/enze/xinhuo/1
 
-execute if items entity @s container.* nether_star[custom_data~{kards:'祥兆玉石',feishenghufu:"绝唱"}] run xp add @s 40 levels
+execute if items entity @s container.* nether_star[custom_data~{kards:'讲述者',feishenghufu:"绝唱"}] run xp add @s 40 levels

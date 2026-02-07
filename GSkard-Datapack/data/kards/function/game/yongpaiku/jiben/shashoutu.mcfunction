@@ -4,4 +4,9 @@ function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
 function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
+
+execute as @s[team=red] run scoreboard players add @e[type=rabbit,tag=!tuteng,team=red] Entry_speed 2
+execute as @s[team=blue] run scoreboard players add @e[type=rabbit,tag=!tuteng,team=blue] Entry_speed 2
+execute as @e[type=rabbit,tag=!tuteng] at @s run function kards:game/ingame/entry/re_int
+
 item replace entity @s weapon.offhand with air

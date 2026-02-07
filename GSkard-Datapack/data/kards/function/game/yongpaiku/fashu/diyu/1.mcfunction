@@ -4,8 +4,16 @@ function kards:game/yongpaiku/xianjing/jiance/fashujiance
 execute if entity @s[type=player] unless items entity @s weapon.offhand * run return fail
 item replace entity @s weapon.offhand with air
 
-execute if entity @s[team=red] run scoreboard players set 蓝队 diyu 1
-execute if entity @s[team=blue] run scoreboard players set 红队 diyu 1
+execute as @s[team=red] if score 蓝队 manshui matches 1.. run return run function kards:game/yongpaiku/fashu/diyu/huijinyu/1
+execute as @s[team=blue] if score 红队 manshui matches 1.. run return run function kards:game/yongpaiku/fashu/diyu/huijinyu/1
+
+execute as @s[team=red] run scoreboard players set 蓝队 diyu 1
+execute as @s[team=blue] run scoreboard players set 红队 diyu 1
 
 function kards:game/yongpaiku/fashu/diyu/2
 function kards:game/yongpaiku/fashu/diyu/replace with storage changdidaxiao
+
+title @s times 10t 2s 10t
+execute as @s[team=red] run title @a title [{text:"[地狱]",color:"light_purple"},{text:"作用至",color:"gray"},{text:"蓝队",color:"blue"}]
+execute as @s[team=blue] run title @a title [{text:"[地狱]",color:"light_purple"},{text:"作用至",color:"gray"},{text:"红队",color:"red"}]
+title @a subtitle [{text:"持续1回合",color:"gray"}]

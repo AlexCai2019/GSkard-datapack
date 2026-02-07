@@ -15,7 +15,7 @@ effect give @a[scores={Saturation=40}] saturation 1 0 true
 scoreboard players set @a[scores={Saturation=40}] Saturation 0
 
 execute as @a store result score @s foodSaturationLevel run data get entity @s foodSaturationLevel
-effect give @a[scores={foodSaturationLevel=1..}] hunger infinite 255 true
-effect clear @a[scores={foodSaturationLevel=0}] hunger
+effect give @a[scores={foodSaturationLevel=3..}] hunger infinite 255 true
+effect clear @a[scores={foodSaturationLevel=2}] hunger
 
 #

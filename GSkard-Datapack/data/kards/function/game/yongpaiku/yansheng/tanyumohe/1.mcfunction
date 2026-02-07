@@ -41,6 +41,6 @@ execute if entity @s[team=blue] if score 蓝队 tanyu_temp_2 matches 9 as @a at 
 execute if entity @s[team=red] if score 红队 tanyu_temp_2 matches 9 run scoreboard players reset 红队 tanyu_temp_2
 execute if entity @s[team=blue] if score 蓝队 tanyu_temp_2 matches 9 run scoreboard players reset 蓝队 tanyu_temp_2
 
-
 scoreboard players add @s kardCount 2
 scoreboard players add @s tanyumohe_cishu 1
+item modify entity @s weapon.offhand {function:"set_count",count:-1,add:true}

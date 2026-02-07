@@ -4,7 +4,6 @@ scoreboard players remove @a[scores={GIF_Cooldown=1..}] GIF_Cooldown 1
 execute as @a[scores={GIF=1..}] run function kards:game/player/gif/
 #牌相关
 function kards:game/ingame/choupai/cishu
-function kards:game/ingame/use_kard/general
 execute as @e[type=item] run data remove entity @s Owner
 #回合计时
 execute if score #system GameStatus matches 1 run function kards:game/ingame/round/roundtime
@@ -208,6 +207,11 @@ execute if score 蓝队 diyu matches 1 run effect give @e[type=!player,team=red,
 #凛冬将至
 execute if score 红队 fashu_lindongjiangzhi matches 1.. run function kards:game/yongpaiku/fashu/lindongjiangzhi/2
 execute if score 蓝队 fashu_lindongjiangzhi matches 1.. run function kards:game/yongpaiku/fashu/lindongjiangzhi/2
+
+#灰烬雨
+execute if score 红队 huijinyu matches 1.. run function kards:game/yongpaiku/fashu/diyu/huijinyu/2
+execute if score 蓝队 huijinyu matches 1.. run function kards:game/yongpaiku/fashu/diyu/huijinyu/2
+
 
 #贪欲魔盒
 execute if score 红队 tanyu_temp_1 matches 3..5 if predicate kards:random0.0001 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4

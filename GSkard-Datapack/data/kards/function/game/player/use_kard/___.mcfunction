@@ -1,1 +1,1 @@
-$function kards:game/yongpaiku/$(function)
+$execute at @s run function kards:game/yongpaiku/$(function)

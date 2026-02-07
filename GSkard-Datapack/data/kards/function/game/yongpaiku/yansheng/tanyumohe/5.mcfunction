@@ -8,7 +8,7 @@ execute store result score @s random_panduolamohe run random value 1..38
 
 execute if score @s random_panduolamohe matches 1 run function kards:game/yongpaiku/juntuan/baozhajuntuan/1
 execute if score @s random_panduolamohe matches 1 run tellraw @s [{text: "[潘多拉魔盒] ", color: "blue"}, {text: "你抽到了", color: "white"}, {text: " 苦力怕", color: "blue"}]
-execute if score @s random_panduolamohe matches 2 run function kards:game/yongpaiku/juntuan/chongzai
+execute if score @s random_panduolamohe matches 2 run function kards:game/yongpaiku/juntuan/chongzai/1
 execute if score @s random_panduolamohe matches 2 run tellraw @s [{text: "[潘多拉魔盒] ", color: "blue"}, {text: "你抽到了", color: "white"}, {text: " 末影螨", color: "blue"}]
 execute if score @s random_panduolamohe matches 3 run function kards:game/yongpaiku/juntuan/diyuzhihuo
 execute if score @s random_panduolamohe matches 3 run tellraw @s [{text: "[潘多拉魔盒] ", color: "blue"}, {text: "你抽到了", color: "white"}, {text: " 烈焰人", color: "blue"}]
@@ -20,7 +20,7 @@ execute if score @s random_panduolamohe matches 6 run function kards:game/yongpa
 execute if score @s random_panduolamohe matches 6 run tellraw @a [{selector:"@s"},{text: "使用了",color:"gold"},{text:"[飓风过境]",color:"dark_green",hover_event:{action:"show_text",value:[{text: "军团牌",color:"dark_green",italic:false},[{text: "召唤2只",color:"gray",italic:false},{text: "旋风人",color:"gold",italic:false}],[{text: "每拥有12Kmax额外召唤1只",color:"gray",italic:false},{text: "旋风人",color:"gold",italic:false}],[{text: "最多生成6只",color:"gray",italic:false}]]}}]
 execute if score @s random_panduolamohe matches 7 run function kards:game/yongpaiku/juntuan/mengduzhuaya/1
 execute if score @s random_panduolamohe matches 7 run tellraw @a [{selector:"@s"},{text: "使用了",color:"gold"},{text:"[猛毒爪牙]",color:"dark_green",hover_event:{action:"show_text",value:[{text:"军团牌\n",color:"dark_green",italic:false},[{text: "召唤4只",color:"gray",italic:false},{text: "剧毒蜘蛛",color:"gold",italic:false}],[{text: "若Kmax",color:"gray",italic:false},{text: " 大于等于20",color:"gold",italic:false}],[{text: "每10Kmax使1只剧毒蜘蛛成为",color:"gray",italic:false},{text: "沼骸骑士",color:"gold",italic:false}]]}}]
-execute if score @s random_panduolamohe matches 8 run function kards:game/yongpaiku/juntuan/morilailing
+execute if score @s random_panduolamohe matches 8 run function kards:game/yongpaiku/juntuan/morilailin
 execute if score @s random_panduolamohe matches 8 run tellraw @a [{selector:"@s"},{text: "使用了",color:"gold"},{text:"[末日来袭]",color:"dark_green",hover_event:{action:"show_text",value:[{text:"军团牌\n",color:"dark_green",italic:false},[{text: "召唤2只",color:"gray",italic:false},{text: "闪电苦力怕",color:"gold",italic:false}],[{text: "爆炸后会生成1只",color:"gray",italic:false},{text: "加速爆炸的苦力怕",color:"gold",italic:false}]]}}]
 execute if score @s random_panduolamohe matches 9 run function kards:game/yongpaiku/juntuan/sanrenchengzhong/1
 execute if score @s random_panduolamohe matches 9 run tellraw @a [{selector:"@s"},{text: "使用了",color:"gold"},{text:"[三人成众]",color:"dark_green",hover_event:{action:"show_text",value:[{text:"军团牌",color:"dark_green",italic:false},[{text:"召唤3只",color:"gray",italic:false},{text:"大岩浆怪",color:"gold",italic:false}],[{text:"最小岩浆怪在30s后会变为大岩浆怪",color:"gray",italic:false}],[{text:"非用牌回合的时间不计入",color:"gray",italic:false}]]}}]

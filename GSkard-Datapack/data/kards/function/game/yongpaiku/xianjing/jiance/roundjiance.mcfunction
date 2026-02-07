@@ -9,12 +9,12 @@
 #execute if score #system GameRound matches 0 if entity @e[tag=tuteng,team=blue,type=shulker] run return run damage @n[tag=tuteng,team=blue,type=shulker] 2 out_of_world
 
 #<遥远的桥>
-execute if score #system GameRound matches 1 if score 红队 xianjin_yaoyuandeqiao matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/red/yaoyuandeqiao
-execute if score #system GameRound matches 0 if score 蓝队 xianjin_yaoyuandeqiao matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/blue/yaoyuandeqiao
+execute if score #system GameRound matches 1 if score 红队 xianjing_yaoyuandeqiao matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/red/yaoyuandeqiao
+execute if score #system GameRound matches 0 if score 蓝队 xianjing_yaoyuandeqiao matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/blue/yaoyuandeqiao
 
 #<轻虑浅谋>
-execute if score #system GameRound matches 0 if score 红队 xianjin_qinglvqianmou matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/red/qinglvqianmou
-execute if score #system GameRound matches 1 if score 蓝队 xianjin_qinglvqianmou matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/blue/qinglvqianmou
+execute if score #system GameRound matches 0 if score 红队 xianjing_qinglvqianmou matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/red/qinglvqianmou
+execute if score #system GameRound matches 1 if score 蓝队 xianjing_qinglvqianmou matches 1 run function kards:game/yongpaiku/xianjing/chufa/round/blue/qinglvqianmou
 
 #DLC
 function kards-dlc:kard/type/xianjing/check/round
