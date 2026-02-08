@@ -12,6 +12,29 @@ data modify storage kards:setting kard_count set value \
     shipin:105\
 }
 
+# 虚拟实体
+scoreboard players set 0 temp 0
+scoreboard players set 1 temp 1
+scoreboard players set 2 temp 2
+scoreboard players set 3 temp 3
+scoreboard players set 4 temp 4
+scoreboard players set 5 temp 5
+scoreboard players set 6 temp 6
+scoreboard players set 7 temp 7
+scoreboard players set 8 temp 8
+scoreboard players set 9 temp 9
+scoreboard players set 10 temp 10
+scoreboard players set 11 temp 11
+scoreboard players set 12 temp 12
+scoreboard players set 13 temp 13
+scoreboard players set 14 temp 14
+scoreboard players set 15 temp 15
+scoreboard players set 16 temp 16
+scoreboard players set 17 temp 17
+scoreboard players set 18 temp 18
+scoreboard players set 19 temp 19
+scoreboard players set 20 temp 20
+
 #Load
 forceload add 0 0
 #注册队伍
@@ -270,10 +293,9 @@ scoreboard objectives add lindongzhikai_lingyu dummy
 scoreboard objectives add YongHan dummy
 scoreboard objectives add ZhongShang_Tick dummy
 scoreboard objectives add ZhongShang_Round dummy
-scoreboard objectives add random_panduolamohe dummy
 scoreboard objectives add tanyumohe_cishu dummy
-scoreboard objectives add tanyu_temp dummy
-scoreboard objectives add tanyu_temp_1 dummy
+scoreboard objectives add tanyu_cishu dummy
+scoreboard objectives add tanyu_zuiezhi dummy
 scoreboard objectives add tanyu_temp_2 dummy
 scoreboard objectives add tanyu_zuzhou dummy
 scoreboard objectives add tanyu_fashu dummy

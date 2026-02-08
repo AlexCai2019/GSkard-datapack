@@ -1,4 +1,4 @@
-execute store result bossbar minecraft:roundtime value unless entity @a[tag=talent_dialog_show] run scoreboard players remove time roundtime 1
+execute store result bossbar minecraft:roundtime value unless entity @a[tag=talent_dialog_show,gamemode=adventure] run scoreboard players remove time roundtime 1
 execute if score time roundtime matches ..0 run function kards:game/ingame/round/take_turns/timeout
 
 scoreboard players set #system roundtimeOper 20

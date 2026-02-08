@@ -212,20 +212,6 @@ execute if score 蓝队 fashu_lindongjiangzhi matches 1.. run function kards:gam
 execute if score 红队 huijinyu matches 1.. run function kards:game/yongpaiku/fashu/diyu/huijinyu/2
 execute if score 蓝队 huijinyu matches 1.. run function kards:game/yongpaiku/fashu/diyu/huijinyu/2
 
-
-#贪欲魔盒
-execute if score 红队 tanyu_temp_1 matches 3..5 if predicate kards:random0.0001 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4
-execute if score 蓝队 tanyu_temp_1 matches 3..5 if predicate kards:random0.0001 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/5
-execute if score 红队 tanyu_temp_1 matches 6..8 if predicate kards:random0.0025 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4
-execute if score 蓝队 tanyu_temp_1 matches 6..8 if predicate kards:random0.0025 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/5
-execute if score 红队 tanyu_temp_1 matches 9..11 if predicate kards:random0.005 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4
-execute if score 蓝队 tanyu_temp_1 matches 9..11 if predicate kards:random0.005 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/5
-execute if score 红队 tanyu_temp_1 matches 12..14 if predicate kards:random0.01 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4
-execute if score 蓝队 tanyu_temp_1 matches 12..14 if predicate kards:random0.01 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/5
-execute if score 红队 tanyu_temp_1 matches 15..17 if predicate kards:random0.04 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4
-execute if score 蓝队 tanyu_temp_1 matches 15..17 if predicate kards:random0.04 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/5
-execute if score 红队 tanyu_temp_1 matches 18.. if predicate kards:random0.08 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/4
-execute if score 蓝队 tanyu_temp_1 matches 18.. if predicate kards:random0.08 at @r positioned ~ ~-10 ~ summon armor_stand run function kards:game/yongpaiku/yansheng/tanyumohe/5
 #reset
 scoreboard players enable @a[scores={reset=0}] reset
 execute as @a if score @s reset matches 1 run function kards:game/end/reset

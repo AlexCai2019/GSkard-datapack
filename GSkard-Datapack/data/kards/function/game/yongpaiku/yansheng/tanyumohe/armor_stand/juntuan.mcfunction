@@ -1,0 +1,25 @@
+execute store result score @s temp run random value 0..23
+execute if score @s temp matches 0 run item replace entity @s weapon.offhand from block 0 -59 -48 container.0
+execute if score @s temp matches 1 run item replace entity @s weapon.offhand from block 0 -59 -48 container.1
+execute if score @s temp matches 2 run item replace entity @s weapon.offhand from block 0 -59 -48 container.2
+execute if score @s temp matches 3 run item replace entity @s weapon.offhand from block 0 -59 -48 container.3
+execute if score @s temp matches 4 run item replace entity @s weapon.offhand from block 0 -59 -48 container.4
+execute if score @s temp matches 5 run item replace entity @s weapon.offhand from block 0 -59 -48 container.5
+execute if score @s temp matches 6 run item replace entity @s weapon.offhand from block 0 -59 -48 container.6
+execute if score @s temp matches 7 run item replace entity @s weapon.offhand from block 0 -59 -48 container.7
+execute if score @s temp matches 8 run item replace entity @s weapon.offhand from block 0 -59 -48 container.8
+execute if score @s temp matches 9 run item replace entity @s weapon.offhand from block 0 -59 -48 container.9
+execute if score @s temp matches 10 run item replace entity @s weapon.offhand from block 0 -59 -48 container.10
+execute if score @s temp matches 11 run item replace entity @s weapon.offhand from block 0 -59 -48 container.11
+execute if score @s temp matches 12 run item replace entity @s weapon.offhand from block 0 -59 -48 container.12
+execute if score @s temp matches 13 run item replace entity @s weapon.offhand from block 0 -59 -48 container.13
+execute if score @s temp matches 14 run item replace entity @s weapon.offhand from block 0 -59 -48 container.14
+execute if score @s temp matches 15 run item replace entity @s weapon.offhand from block 0 -59 -48 container.15
+execute if score @s temp matches 16 run item replace entity @s weapon.offhand from block 0 -59 -48 container.16
+execute if score @s temp matches 17 run item replace entity @s weapon.offhand from block 0 -59 -48 container.17
+execute if score @s temp matches 18 run item replace entity @s weapon.offhand from block 0 -59 -48 container.18
+execute if score @s temp matches 19 run item replace entity @s weapon.offhand from block 0 -59 -48 container.19
+execute if score @s temp matches 20 run item replace entity @s weapon.offhand from block 0 -59 -48 container.20
+execute if score @s temp matches 21 run item replace entity @s weapon.offhand from block 0 -59 -48 container.21
+execute if score @s temp matches 22 run item replace entity @s weapon.offhand from block 0 -59 -48 container.22
+execute if score @s temp matches 23 run item replace entity @s weapon.offhand from block 0 -59 -48 container.23

@@ -23,6 +23,10 @@ scoreboard players operation @s Use_K_Game += @s Use_K_temp
 scoreboard players operation @s Use_Kmax_Round += @s Use_Kmax_temp
 scoreboard players operation @s Use_Kmax_Game += @s Use_Kmax_temp
 
+#贪欲魔盒
+execute as @s[team=red,type=player] if score 蓝队 tanyu_zuiezhi matches 3.. at @s run function kards:game/yongpaiku/yansheng/tanyumohe/armor_stand/
+execute as @s[team=blue,type=player] if score 红队 tanyu_zuiezhi matches 3.. at @s run function kards:game/yongpaiku/yansheng/tanyumohe/armor_stand/
+
 execute if items entity @s weapon.offhand music_disc_mall run function kards:game/player/use_kard/use_general/type/jiben
 execute if items entity @s weapon.offhand music_disc_13 run function kards:game/player/use_kard/use_general/type/zhuangbei
 execute if items entity @s weapon.offhand music_disc_cat run function kards:game/player/use_kard/use_general/type/juntuan

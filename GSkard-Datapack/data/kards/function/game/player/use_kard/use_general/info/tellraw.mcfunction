@@ -1,4 +1,4 @@
-execute unless entity @s[type=player] run return fail
+#execute unless entity @s[type=player] run return fail
 
 data remove storage temp kard_info
 data modify storage temp kard_info.lore append from entity @s equipment.offhand.components."minecraft:lore".[]

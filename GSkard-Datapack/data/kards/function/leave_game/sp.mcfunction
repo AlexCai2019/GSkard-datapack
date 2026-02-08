@@ -21,7 +21,7 @@ attribute @s minecraft:max_health modifier remove 0-0-9
 attribute @s minecraft:max_health modifier remove 0-0-10
 attribute @s minecraft:max_health modifier remove 0-0-12
 attribute @s minecraft:max_health modifier remove 0-0-13
-attribute @s minecraft:max_health modifier remove 1-0-1
+attribute @s minecraft:max_health modifier remove tanyu
 attribute @s minecraft:max_health base set 20
 attribute @s minecraft:jump_strength modifier remove 0-0-1
 attribute @s minecraft:jump_strength modifier remove 0-0-2
