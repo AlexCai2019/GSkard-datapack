@@ -15,5 +15,5 @@ execute store result score @s Entry_pastor run random value 0..100
 execute store result score @s Entry_lost_memories run random value 0..100
 execute store result score @s Entry_twilight_of_the_gods run random value 0..100
 
-function kards:game/ingame/entry/re_int
+function entry:re_int
 data modify entity @s NoAI set value 1b

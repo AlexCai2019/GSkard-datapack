@@ -4,7 +4,7 @@ function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/fashujiance
 
 execute if entity @s[type=player] unless items entity @s weapon.offhand * run return fail
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 
 execute as @s[team=red] unless entity @a[team=blue,tag=!zuzhouhujia,tag=!spectator,tag=!Talent_shouhuzhe,tag=!Talent_huafanweijian] run tellraw @a [{text:"滚木",color:blue},{text:"穿戴上了",color:"gold"},{text:"<诅咒护甲>",color:"light_purple"}]
 

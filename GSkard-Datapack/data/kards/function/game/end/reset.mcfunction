@@ -76,12 +76,17 @@ tag @a remove Surrenderer
 tag @a remove linghunshouge
 tag @a remove jinzijue
 tag @a remove zuzhouhujia
+tag @a[tag=Ingames] remove Ingames
 scoreboard players reset jiangshuzhe
 
+kill @e[type=block_display]
 kill @e[tag=JiangShuZhe_YeHuo]
 kill @e[tag=JiangShuZhe_yiming_Marker]
 
 tag @e remove JiangShuZhe_yiming_rided
+#寄生粘液
+execute as @a run function kards:game/yongpaiku/shenji/wangzhibaoku/jishengnianye/bossbar/remove_
+
 #重置陷阱
 scoreboard players reset 红队
 scoreboard players reset 蓝队
@@ -99,7 +104,7 @@ scoreboard players reset blue
 scoreboard players reset @a
 
 # Bossbar
-execute as @a run function kards:game/end/bossbar_reset/1
+execute as @a run function custom_buff:bossbar_reset/1
 # 天赋
 execute as @a run function kards:game/player/talent/reset
 

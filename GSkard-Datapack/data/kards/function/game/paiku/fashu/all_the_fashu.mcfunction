@@ -40,8 +40,9 @@ function kards:game/paiku/fashu/yinnicangku
 function kards:game/paiku/fashu/yizhiqusheng
 function kards:game/paiku/fashu/youchangjiedai
 function kards:game/paiku/fashu/yuyanzaihuo
-function kards:game/paiku/fashu/zaijijinhou
+function kards:game/paiku/fashu/zaijijinghou
 function kards:game/paiku/fashu/zhanshishengchan
 function kards:game/paiku/fashu/zhengxiu
 function kards:game/paiku/fashu/zhouranyingbao
 function kards:game/paiku/fashu/zuzhouhujia
+function kards:game/paiku/fashu/yinxianzhadan

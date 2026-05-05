@@ -1,0 +1,7 @@
+execute on attacker run tag @s add Attacker_temp
+execute unless entity @e[tag=Attacker_temp] run return fail
+execute summon marker run function entry:entry/teleport/particle/1
+
+execute at @n[tag=Attacker_temp] run spreadplayers ~ ~ 0 3 false @s
+execute on attacker store result storage entry:enchantment Y double 1 run data get entity @s Pos[1]
+function entry:entry/teleport/_ with storage entry:enchantment

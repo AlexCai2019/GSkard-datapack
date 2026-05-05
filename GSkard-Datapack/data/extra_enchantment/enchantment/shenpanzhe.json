@@ -1,0 +1,76 @@
+{
+  "description": "审判者",
+  "supported_items": "#kards:armor/head",
+  "weight": 1,
+  "max_level": 5,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "head"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "extra_enchantment:enchantments/shenpanzhe/attacker"
+        },
+        "enchanted": "victim",
+        "affected": "attacker",
+        "requirements": [
+          {
+            "condition": "inverted",
+            "term": {
+              "condition": "entity_scores",
+              "entity": "this",
+              "scores": {
+                "extra_enchantment.shenpanzhe_temp": {
+                  "max": 100,
+                  "min": 1
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "extra_enchantment:enchantments/shenpanzhe/victim"
+        },
+        "enchanted": "victim",
+        "affected": "victim",
+        "requirements": [
+          {
+            "condition": "inverted",
+            "term": {
+              "condition": "entity_scores",
+              "entity": "this",
+              "scores": {
+                "extra_enchantment.shenpanzhe_temp": {
+                  "max": 100,
+                  "min": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "minecraft:tick": [
+      {
+        "effect": {
+          "type": "run_function",
+          "function": "extra_enchantment:enchantments/shenpanzhe/tick"
+        }
+      }
+    ]
+  }
+}

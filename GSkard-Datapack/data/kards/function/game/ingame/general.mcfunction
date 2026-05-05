@@ -16,8 +16,12 @@ scoreboard players add @a kardCount 0
 scoreboard players add @a jinziqifeng 0
 #图腾
 execute if entity @e[tag=tuteng,distance=0.01..] as @e[tag=tuteng] run function kards:game/ingame/tuteng/general
-#玩家使用物品冷却
-scoreboard players remove @a[scores={Use_Cooldown=1..}] Use_Cooldown 1
+
+#地图Map_Marker检测
+execute store result score #system Map_Marker_Count if entity @e[tag=Map_Marker,distance=0.01..]
+execute unless score #system Map_Marker_Count matches 32 run function kards:lobby/setting/map/reset
+
+
 #神器
 function kards:game/yongpaiku/shenji/wangzhibaoku/general
 #PVP
@@ -26,36 +30,11 @@ execute positioned -219 -65 -173 as @a[dx=19,dz=18,dy=25,gamemode=adventure] run
 execute as @a positioned -219 -65 -173 unless entity @s[dx=19,dz=18,dy=25,gamemode=adventure] run attribute @s minecraft:safe_fall_distance modifier remove 0-0-1
 #装备
 function kards:game/yongpaiku/zhuangbei/general
-#永寒
-execute if entity @e[scores={YongHan=0..}] run function kards:game/ingame/custom_buff/yonghan/1
-#冻结
-execute if entity @e[scores={DongJie=0..}] run function kards:game/ingame/custom_buff/dongjie/1
-execute as @e[tag=iceblock,scores={lifetime=1..}] at @s run function kards:game/ingame/custom_buff/dongjie/bossbar/block_remove
-#重伤
-function kards:game/ingame/custom_buff/zhongshang/1
-#回血
-execute if entity @e[scores={HealBack=0..}] run function kards:game/ingame/custom_buff/healback/1
-#破甲
-execute if entity @e[scores={PoJia=0..}] run function kards:game/ingame/custom_buff/pojia/1
-#眩晕
-execute if entity @e[scores={XuanYun=0..}] run function kards:game/ingame/custom_buff/xuanyun/1
-#旋转
-execute if entity @e[scores={XuanZhuan=0..}] run function kards:game/ingame/custom_buff/xuanzhuan/1
-#断腿
-execute if entity @e[scores={DuanTui=0..}] run function kards:game/ingame/custom_buff/duantui/1
-#火焰
-execute if entity @e[scores={RanShao=0..}] run function kards:game/ingame/custom_buff/huoyan/1
-#沉默
-execute if entity @a[scores={ChengMo=0..}] run function kards:game/ingame/custom_buff/chengmo/1
-#背叛
-execute if entity @a[scores={BeiPan=0..}] run function kards:game/ingame/custom_buff/beipan/1
 
-#附魔伤害累计
-execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:yuezhan"}]] run scoreboard players set @s enchantment_yuezhan_damage 0
-execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:liansuo"}]] run scoreboard players set @s enchantment_liansuo_damage 0
-execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:feishenghufu/fu"}]] run scoreboard players set @s enchantment_feishenghufu_fu_damage 0
 #场景效果
 execute if score #system GameStatus matches 1..2 run function kards:game/ingame/map_buff
+#附魔伤害累计
+execute as @a unless items entity @s weapon.mainhand *[enchantments~[{enchantments:"kards:feishenghufu/fu"}]] run scoreboard players set @s enchantment_feishenghufu_fu_damage 0
 
 #> 不死图腾
 #-生命图腾-#
@@ -86,9 +65,7 @@ execute store result bossbar minecraft:warden_3 value run data get entity @e[tag
 #虚空回响
 execute as @a if score @s jiben matches 1.. if score @s xukonghuixiang matches 1 run scoreboard players add @s cishu 1
 execute as @a if score @s jiben matches 1.. if score @s xukonghuixiang matches 1 run scoreboard players remove @s jiben 1
-#给苦力怕 末影螨速度1
-effect give @e[type=creeper] speed 1 0 false
-effect give @e[type=endermite] speed 1 0 false
+
 #贪欲魔盒
 execute as @a[scores={tanyumohe=1}] store result score @s tanyu_zuzhou run clear @s minecraft:music_disc_stal
 execute as @a[scores={tanyumohe=1}] store result score @s tanyu_fashu run clear @s minecraft:music_disc_mellohi
@@ -104,9 +81,6 @@ scoreboard players set @a[scores={tanyumohe=1}] tanyu_zhuangbei 0
 
 execute as @a[scores={tanyumohe=1}] if score @s tanyu matches 1.. run function kards:game/paiku/yansheng/tanyu
 #墓园狂欢
-execute as @e[tag=kuanghuan_1] unless data entity @s {NoAI:1b} run scoreboard players add @s Mob_Skill_Time 1
-execute as @e[tag=kuanghuan_1,scores={Mob_Skill_Time=100}] at @s run function kards:game/yongpaiku/yansheng/kuanghuanzombie/4
-
 scoreboard players add @a[scores={muyuankuanghuan=1}] muyuankuanghuan1 0
 scoreboard players add @a[scores={muyuankuanghuan=1}] muyuankuanghuan2 0
 scoreboard players add @a[scores={muyuankuanghuan=1}] muyuankuanghuan3 0
@@ -172,10 +146,9 @@ effect give @a[scores={jinzijue=6..}] regeneration infinite 1 false
 effect clear @a[scores={jinzijue=6..}] levitation
 effect give @a[scores={jinzijue=7..}] regeneration infinite 2 false
 effect give @a[scores={jinzijue=8..}] resistance 1 3 false
-effect give @a[scores={jinzijue=10..}] regeneration infinite 4 false
+effect give @a[scores={jinzijue=10..}] regeneration infinite 3 false
 effect give @a[scores={jinzijue=10..}] strength 1 4 false
 effect give @a[scores={jinzijue=10..}] speed 1 4 false
-effect give @a[scores={jinzijue=10..}] resistance 1 4 false
 scoreboard players add @a[scores={jinzijue=6..}] jinzijue_1 1
 effect give @a[scores={jinzijue_1=600..}] absorption 30 9 false
 scoreboard players set @a[scores={jinzijue_1=600..}] jinzijue_1 0
@@ -217,4 +190,7 @@ scoreboard players enable @a[scores={reset=0}] reset
 execute as @a if score @s reset matches 1 run function kards:game/end/reset
 #---生物相关---#
 execute as @e[type=#kards:mob] run function kards:game/ingame/mob/general
-function kards:game/ingame/entry/general
+
+scoreboard players add #system Check_NoAI 1
+execute as @e[type=#kards:mob,limit=10,tag=!Check_NoAI] run function kards:game/ingame/mob/check_noai
+execute if score #system Check_NoAI matches 10 run tag @e[tag=Check_NoAI,type=#kards:mob] remove Check_NoAI

@@ -1,5 +1,6 @@
 # Scoreboard
 scoreboard players set #system GameStatus 1
+scoreboard players add #system GameSession 1
 scoreboard players set #system Talent_Random_Mode 1
 scoreboard players set #system Relax_Round 0
 scoreboard players reset 红队

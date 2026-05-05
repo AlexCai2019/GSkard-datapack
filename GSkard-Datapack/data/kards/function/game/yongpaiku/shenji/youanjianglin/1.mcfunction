@@ -25,4 +25,4 @@ tag @e[type=minecraft:warden,tag=] add warden_1
 
 schedule function kards:game/yongpaiku/shenji/youanjianglin/2 2t
 
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}

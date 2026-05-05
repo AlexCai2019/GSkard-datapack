@@ -34,14 +34,10 @@ effect give @a[tag=tianshenshibanjia,scores={tianshenshibanjia_xiansheng=36..47}
 effect give @a[tag=tianshenshibanjia,scores={tianshenshibanjia_xiansheng=48..59}] resistance 1 3 false
 effect give @a[tag=tianshenshibanjia,scores={tianshenshibanjia_xiansheng=60..}] resistance 1 4 false
 
-execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_xiansheng=1..},team=red] at @s if entity @e[tag=!spectator,team=blue,distance=..4] run scoreboard players add @s tianshenshibanjia_attack_time 1
-execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_xiansheng=1..},team=blue] at @s if entity @e[tag=!spectator,team=red,distance=..4] run scoreboard players add @s tianshenshibanjia_attack_time 1
-execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] run scoreboard players set @s tianshenshibanjia_damage 8
-execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] if items entity @s armor.chest golden_chestplate[custom_data~{kards:'天神石板甲',feishenghufu:"绝唱"}] run scoreboard players set @s tianshenshibanjia_damage 10
-execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] run scoreboard players remove @s tianshenshibanjia_xiansheng 1
+execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_xiansheng=1..},team=red] at @s if entity @e[tag=!spectator,team=blue,distance=..4,tag=!NoAI] run scoreboard players add @s tianshenshibanjia_attack_time 1
+execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_xiansheng=1..},team=blue] at @s if entity @e[tag=!spectator,team=red,distance=..4,tag=!NoAI] run scoreboard players add @s tianshenshibanjia_attack_time 1
+
 execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] at @s run function kards:game/yongpaiku/shenji/wangzhibaoku/tianshenshibanjia/damage
-execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] at @s summon marker run function kards:game/yongpaiku/shenji/wangzhibaoku/tianshenshibanjia/particle/1
-execute as @a[tag=tianshenshibanjia,scores={tianshenshibanjia_attack_time=20}] run scoreboard players set @s tianshenshibanjia_attack_time 0
 
 execute as @a[tag=tianshenshibanjia] unless items entity @s armor.chest golden_chestplate[custom_data~{kards:'天神石板甲'}] run tag @s remove tianshenshibanjia
 #凛冬之铠
@@ -110,29 +106,20 @@ execute as @a[tag=feishenhufu] unless items entity @s container.* *[custom_data~
 execute as @e[tag=enchantment_feishenghufu_shizhongjian_marker] at @s run function kards:enchantment/feishenghufu/shizhongjian/3
 execute as @a if items entity @s container.* *[custom_data~{feishenghufu:'绝唱'}] run effect give @s strength 1 1 false
 execute as @a if items entity @s weapon.* *[custom_data~{feishenghufu:'绝唱'}] run effect give @s strength 1 1 false
+execute if entity @e[tag=trident_juechang] as @e[tag=trident_juechang] at @s run function kards:enchantment/feishenghufu/trident/2
+
+
 #讲述者
 execute as @a if items entity @s container.* nether_star[custom_data~{kards:'讲述者'}] run tag @s add jiangshuzhe
 function kards:game/yongpaiku/shenji/wangzhibaoku/jiangshuzhe/event/general
 execute as @a[tag=jiangshuzhe] unless items entity @s container.* nether_star[custom_data~{kards:'讲述者'}] run tag @s remove jiangshuzhe
 #寄生粘液
-execute as @a[tag=jishengnianye] run scoreboard players set @s jinzijue 0
-execute as @a[tag=jishengnianye] if score @s health matches 101.. run effect give @s strength 1 4 false
-execute as @a[tag=jishengnianye] if score @s health matches 101.. run effect give @s wither 1 1 false
-execute as @a[tag=jishengnianye] if score @s health matches 30..100 run effect give @s strength 1 3 false
-execute as @a[tag=jishengnianye] if score @s health matches 30..100 run effect give @s resistance 1 0 false
-execute as @a[tag=jishengnianye] if score @s health matches 30..100 run effect give @s slowness 1 1 false
-execute as @a[tag=jishengnianye] if score @s health matches ..29 run scoreboard players add @s jishengnianyeHealback 1
-execute as @a[tag=jishengnianye] if score @s jishengnianyeHealback matches 7.. run scoreboard players add @s HealBack 1
-execute as @a[tag=jishengnianye] if score @s jishengnianyeHealback matches 7.. run scoreboard players remove @s jishengnianyeHealback 7
 
-execute as @a[tag=jishengnianye] if score @s health matches ..29 run effect give @s minecraft:speed 1 1 false
-execute as @a[tag=jishengnianye] if score @s health matches ..29 run attribute @s minecraft:entity_interaction_range modifier add 0-0-2 -1 add_multiplied_total
-execute as @a[tag=jishengnianye] unless score @s health matches ..29 run attribute @s minecraft:entity_interaction_range modifier remove 0-0-2
-execute as @a[tag=jishengnianye] if score @s death matches 1.. run attribute @s max_health base set 20
-execute as @a[tag=jishengnianye] if score @s death matches 1.. run attribute @s entity_interaction_range modifier remove 0-0-2
-execute as @a[tag=jishengnianye] if score @s death matches 1.. run tag @s remove jishengnianye
+execute as @a[tag=jishengnianye] at @s run function kards:game/yongpaiku/shenji/wangzhibaoku/jishengnianye/
+
 #无休之火
-execute as @a if items entity @s container.* *[custom_data~{kards:'无休之火'}] run tag @s add wuxiuzhihuo
+execute as @a if items entity @s container.* lantern[custom_data~{kards:"无休之火"}] run tag @s add wuxiuzhihuo
+execute as @a if items entity @s weapon.offhand lantern[custom_data~{kards:"无休之火"}] run tag @s add wuxiuzhihuo
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_jiben 0
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_juntuan 0
 scoreboard players set @a[tag=!wuxiuzhihuo] wuxiuzhihuo_fashu 0
@@ -160,25 +147,17 @@ execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if scor
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_tuteng matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/tuteng
 execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_rongzhu matches 1 if score @s wuxiuzhihuo_shenji matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/shenji
 
-execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo_throw matches 1.. run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/throw
+execute as @a[tag=wuxiuzhihuo,scores={wuxiuzhihuo_throw=1..}] run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/throw
 
-execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 1..45 run title @s actionbar [{text: "初窥  ",color:"aqua"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
-execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 46..90 run title @s actionbar [{text: "开窍  ",color:"blue"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
-execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 91..135 run title @s actionbar [{text: "焱智  ",color:"yellow"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
-execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 136..180 run title @s actionbar [{text: "合一  ",color:"gold"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
-execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 181..350 run title @s actionbar [{text: "天察  ",color:"red"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
-execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}] if score @s wuxiuzhihuo_shengji matches 351.. run title @s actionbar [{text: "无休  ",color:"dark_red"},{score:{objective:"wuxiuzhihuo_shengji",name:"@s"},color:"green"}]
+scoreboard players remove @a[tag=wuxiuzhihuo,scores={wuxiuzhihuo_xinwang_fire=0..}] wuxiuzhihuo_xinwang_fire 1
+scoreboard players set @a[tag=wuxiuzhihuo,scores={wuxiuzhihuo_xinwang_fire=0}] wuxiuzhihuo_xinwang_fire_ 101
+scoreboard players reset @a[tag=wuxiuzhihuo,scores={wuxiuzhihuo_xinwang_fire=1..}] wuxiuzhihuo_xinwang_fire_
+scoreboard players remove @a[tag=wuxiuzhihuo,scores={wuxiuzhihuo_xinwang_fire_=1..}] wuxiuzhihuo_xinwang_fire_ 1
+execute as @a[tag=wuxiuzhihuo,scores={wuxiuzhihuo_xinwang_fire_=0}] run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/use/xinwangzuzhou
 
-execute as @a if items entity @s weapon.offhand lantern[custom_data~{kards:'无休之火'}] run scoreboard players set @s RanShao 200
+execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:"无休之火"}] run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/actionbar
 
-execute as @a[tag=wuxiuzhihuo] if items entity @s weapon.mainhand lantern[custom_data~{kards:'无休之火'}]
-
-execute as @a[tag=wuxiuzhihuo] unless items entity @s container.* *[custom_data~{kards:'无休之火'}] run scoreboard players set @s wuxiuzhihuo_shengji 0
-execute as @a[tag=wuxiuzhihuo] unless items entity @s container.* *[custom_data~{kards:'无休之火'}] run scoreboard players set @s wuxiuzhihuo 0
-execute as @a[tag=wuxiuzhihuo] unless items entity @s container.* *[custom_data~{kards:'无休之火'}] run tag @s remove wuxiuzhihuo
-#轻灵之语
-execute as @e[type=arrow,distance=0.01..,tag=enchantment_fengzhiyin_arrow] at @s run function kards:enchantment/fengzhiyin/2
-execute as @e[type=arrow,distance=0.01..,tag=enchantment_xufeng_arrow] at @s run function kards:enchantment/xufeng/4
+execute as @a[tag=wuxiuzhihuo] unless items entity @s container.* lantern[custom_data~{kards:"无休之火"}] unless items entity @s weapon.offhand lantern[custom_data~{kards:"无休之火"}] run tag @s remove wuxiuzhihuo
 
 #石中剑
 execute as @a if items entity @s weapon.mainhand stone_sword[custom_data~{kards:'石中剑'}] run tag @s add shizhongjian
@@ -211,7 +190,7 @@ execute as @a[tag=fengbaozhanchui_xunengzhongji] unless score @s fengbaozhanchui
 #死神之镰
 execute as @a if items entity @s weapon.mainhand netherite_hoe[custom_data~{kards:'死神之镰'}] run tag @s add sishenzhilian
 
-scoreboard players remove @a[scores={enchantment_linghundaji_damage_Time=1..}] enchantment_linghundaji_damage_Time 1
+scoreboard players remove @a[scores={extra_enchantment.linghundaji_damage_Time=1..}] extra_enchantment.linghundaji_damage_Time 1
 
 execute as @a[tag=sishenzhilian] if score @s used_sishenzhilian matches 2.. run scoreboard players add @s HealBack 1
 execute as @a[tag=sishenzhilian] if score @s used_sishenzhilian matches 2.. run scoreboard players set @s used_sishenzhilian 0

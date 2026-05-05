@@ -19,3 +19,7 @@ effect give @a[scores={foodSaturationLevel=3..}] hunger infinite 255 true
 effect clear @a[scores={foodSaturationLevel=2}] hunger
 
 #
+execute as @a[scores={Leave_Game=1..}] run function kards:game/player/leave_games/
+
+#
+execute as @a if items entity @s container.* echo_shard[custom_data~{item:"level"}] run function kards:game/player/item_level/

@@ -34,4 +34,5 @@ attribute @s safe_fall_distance base reset
 attribute @s attack_speed modifier remove talent
 attribute @s attack_damage base reset
 attribute @s attack_damage modifier remove feishenghufu-2
+attribute @s armor_toughness modifier remove talent-8
 attribute @s armor base reset

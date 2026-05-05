@@ -1,8 +1,8 @@
 
 #燃己为光
 execute as @a[tag=Talent_ranjiweiguang,gamemode=spectator] run function kards:game/player/talent/enable/ranjiweiguang/bossbar/1
-execute as @a[tag=Talent_ranjiweiguang,gamemode=spectator] store result score @s Spectator_Pos.Y run data get entity @s Pos[1]
-execute as @a[tag=Talent_ranjiweiguang,gamemode=spectator] unless score @s Spectator_Pos.Y matches 5..12 at @s run tp @s ~ 9 ~ ~ ~
+#execute as @a[tag=Talent_ranjiweiguang,gamemode=spectator] store result score @s Spectator_Pos.Y run data get entity @s Pos[1]
+#execute as @a[tag=Talent_ranjiweiguang,gamemode=spectator] unless score @s Spectator_Pos.Y matches 5..12 at @s run tp @s ~ 9 ~ ~ ~
 scoreboard players add @a[tag=Talent_ranjiweiguang,gamemode=spectator] Talent_ranjiweiguang_Attack_Time 1
 execute as @a[tag=Talent_ranjiweiguang,scores={Talent_ranjiweiguang_Attack_Time=100..}] at @s run function kards:game/player/talent/enable/ranjiweiguang/2
 scoreboard players add @e[tag=Talent_ranjiweiguang,gamemode=spectator] lifetime 1
@@ -31,9 +31,19 @@ execute as @a[scores={Talent_bianfeiweibao_drop_tuteng=1..}] at @s run function 
 execute as @a[scores={Talent_bianfeiweibao_drop_xianjing=1..}] at @s run function kards:game/player/talent/enable/bianfeiweibao/drop/xianjing
 execute as @a[scores={Talent_bianfeiweibao_drop_zuzhou=1..}] at @s run function kards:game/player/talent/enable/bianfeiweibao/drop/zuzhou
 execute as @a[scores={Talent_bianfeiweibao_drop_shenji=1..}] at @s run function kards:game/player/talent/enable/bianfeiweibao/drop/shenji
+execute as @a[scores={Talent_bianfeiweibao_drop_=5..},tag=Talent_bianfeiweibao] run function kards:game/player/talent/enable/bianfeiweibao/drop/
 
 #图腾战士
 execute if entity @e[tag=tuteng] as @a[tag=Talent_tutengzhanshi] run function kards:game/player/talent/enable/tutengzhanshi/
 
 #守护者
 scoreboard players set @a[tag=Talent_shouhuzhe,gamemode=adventure] ZhongShang_Round 1
+
+#化繁为简
+execute as @a[tag=Talent_huafanweijian] if items entity @s weapon.mainhand golden_carrot run effect give @s strength 1 2
+
+#守护者
+execute as @a store result score @s Talent_shouhuzhe if items entity @s armor.* *[minecraft:custom_data~{kards:'守护者'}]
+effect give @a[scores={Talent_shouhuzhe=2}] resistance 1 0 false
+effect give @a[scores={Talent_shouhuzhe=3}] resistance 1 1 false
+effect give @a[scores={Talent_shouhuzhe=4}] resistance 1 2 false

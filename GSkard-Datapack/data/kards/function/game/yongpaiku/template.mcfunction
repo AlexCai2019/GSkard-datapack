@@ -5,16 +5,12 @@
 
 # 基本
 
-
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 scoreboard players add @s jiben 1
 # 军团
 
-
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/player/use_kard/use_general/talent
 tag @e[tag=Mob_Start] remove Mob_Start
 # 神迹
 
@@ -33,5 +29,5 @@ execute if entity @s[team=blue] if score @s pingbi matches 0 run tellraw @a[team
 
 
 # 清除
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 # scoreboard players remove @s kardCount xx

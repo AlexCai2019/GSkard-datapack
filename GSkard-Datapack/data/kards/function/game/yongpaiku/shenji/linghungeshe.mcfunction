@@ -6,4 +6,5 @@ function kards:game/yongpaiku/xianjing/jiance/shenjijiance
 execute if entity @s[team=red] run kill @a[team=blue,scores={health=..50},gamemode=adventure,tag=!jinzijue]
 
 execute if entity @s[team=blue] run kill @a[team=red,scores={health=..50},gamemode=adventure,tag=!jinzijue]
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
+

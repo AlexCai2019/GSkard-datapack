@@ -15,3 +15,7 @@ execute as @a[gamemode=adventure] run function kards:dialog/talent/show
 execute as @e[type=#kards:mob,tag=!tuteng] run data modify entity @s NoAI set value 1b
 execute as @e[type=#kards:mob,tag=!tuteng] run data modify entity @s Invulnerable set value 1b
 execute as @e[type=#kards:mob,tag=!tuteng] run data modify entity @s Silent set value 1b
+
+#Tag NoAI 
+execute as @e[type=#kards:mob] if data entity @s {NoAI:1b} run tag @s add NoAI
+execute as @e[type=#kards:mob] unless data entity @s {NoAI:1b} run tag @s remove NoAI

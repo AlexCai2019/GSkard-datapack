@@ -1,6 +1,6 @@
 function kards:game/player/use_kard/use_general/kard_general
 
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 
 execute as @s[team=red] run scoreboard players set @a[team=blue] BeiPan 400
 execute as @s[team=blue] run scoreboard players set @a[team=red] BeiPan 400

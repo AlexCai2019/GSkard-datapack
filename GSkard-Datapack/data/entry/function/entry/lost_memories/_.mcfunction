@@ -1,0 +1,2 @@
+execute store result storage entry:enchantment chance int 5 run data get entity @s equipment.body.components."minecraft:enchantments".entry:lost_memories
+function entry:entry/lost_memories/__ with storage entry:enchantment

@@ -2,7 +2,7 @@
   {
     "function": "minecraft:set_enchantments",
     "enchantments": {
-      "kards:fire_protection": {
+      "extra_enchantment:fire_protection": {
         "min": 1,
         "max": 1
       }

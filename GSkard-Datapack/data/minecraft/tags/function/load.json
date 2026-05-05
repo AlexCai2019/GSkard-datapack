@@ -2,6 +2,9 @@
     "values": [
         "kards:load",
         "kards-dlc:load",
+        "entry:load",
+        "extra_enchantment:load",
+        "custom_buff:load",
         {
             "id": "kards-dlc:svc/init",
             "required": false

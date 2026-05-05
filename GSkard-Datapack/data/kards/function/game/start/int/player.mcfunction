@@ -6,7 +6,8 @@ gamemode spectator @a[tag=Un_Ready]
 scoreboard players reset @a
 scoreboard players set @a[tag=Ready] kardCountmax 10
 scoreboard players add @a lairichanghuan_times 0
-execute as @a[gamemode=adventure] run scoreboard players operation @s shenqicishu = #system shenqicishu
+scoreboard players operation @a[gamemode=adventure] shenqicishu = #system shenqicishu
+scoreboard players operation @a GameSession = #system GameSession
 
 # Attribute
 execute as @a run function kards:game/player/reset_attribute
@@ -32,14 +33,18 @@ item replace entity @a[team=blue] armor.feet from block 7 -60 -48 container.3
 
 # Tag
 tag @a remove jishengnianye
+tag @a[tag=Ready] add Ingames
 
 # Effect
 effect clear @a
 effect give @a[tag=Ready] instant_health 1 200 false
 
 # Bossbar
-execute as @a run function kards:game/end/bossbar_reset/1
+execute as @a run function custom_buff:bossbar_reset/1
 
 # Talent
 execute as @a[gamemode=adventure] run function kards:game/player/talent/roll_value
 execute as @a[gamemode=adventure] run function kards:dialog/talent/show
+
+# Other
+execute as @a run function kards:game/yongpaiku/shenji/wangzhibaoku/jishengnianye/bossbar/remove_

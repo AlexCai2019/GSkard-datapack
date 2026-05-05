@@ -1,2 +1,0 @@
-execute on attacker store result storage kards:entry enchantment.layer int 5 run data get entity @s equipment.body.components."minecraft:enchantments".kards:entry/extreme_cold
-function kards:enchantment/entry/extreme_cold/_ with storage kards:entry enchantment

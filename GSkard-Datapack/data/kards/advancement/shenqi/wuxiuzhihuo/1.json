@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/1"
+        "function": "kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/use/"
     }
 }

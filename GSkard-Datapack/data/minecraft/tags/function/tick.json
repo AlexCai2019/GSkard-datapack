@@ -1,6 +1,9 @@
 {
     "values": [
         "kards:tick",
-        "kards-dlc:tick"
+        "kards-dlc:tick",
+        "entry:tick",
+        "extra_enchantment:tick",
+        "custom_buff:tick"
     ]
 }

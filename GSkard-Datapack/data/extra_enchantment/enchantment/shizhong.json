@@ -1,0 +1,33 @@
+{
+  "anvil_cost": 12,
+  "supported_items": "#kards:armor/foot",
+  "description": {"text":"失重","color":"white"},
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:gravity",
+        "id": "extra_enchantment",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": -0.15,
+          "per_level_above_first": -0.15
+        },
+        "operation": "add_multiplied_base"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 15
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 10
+  },
+  "primary_items": "#minecraft:enchantable/foot_armor",
+  "slots": [
+    "feet"
+  ],
+  "weight": 2
+}

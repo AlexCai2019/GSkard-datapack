@@ -16,4 +16,4 @@ scoreboard players reset @s lairichanghuan_damage_temp2
 
 execute if score @s lairichanghuan_all matches 1.. run function kards:game/yongpaiku/shenji/lairichanghuan/2
 
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}

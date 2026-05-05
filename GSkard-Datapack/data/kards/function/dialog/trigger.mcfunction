@@ -12,6 +12,9 @@ execute if score @s dialog matches 117 run return run function kards:game/xp/sho
 execute if score @s dialog matches 118 run return run function kards:game/xp/shop/enchantment/zhicaizhe
 execute if score @s dialog matches 119 run return run function kards:game/xp/shop/enchantment/shenpanzhe
 execute if score @s dialog matches 120 run return run function kards:game/xp/shop/enchantment/liansuo
+execute if score @s dialog matches 121 run return run function kards:game/xp/shop/enchantment/yuesheng
+execute if score @s dialog matches 122 run return run function kards:game/xp/shop/enchantment/shizhong
+execute if score @s dialog matches 123 run return run function kards:game/xp/shop/enchantment/baoliezhe
 
 execute if score @s dialog matches 201 run return run function kards:lobby/setting/random_gamerule/event/baokuxianshi
 execute if score @s dialog matches 202 run return run function kards:lobby/setting/random_gamerule/event/cangbaoku
@@ -63,10 +66,18 @@ execute if score @s dialog matches 416 at @s run return run playsound kards:capi
 execute if score @s dialog matches 417 at @s run return run playsound kards:capixie_zhengchang player @a ~ ~ ~ 100 1 0.5
 execute if score @s dialog matches 418 run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:" 我跟你换!我跟你换"}]
 execute if score @s dialog matches 418 at @s run return run playsound kards:wogennihuan player @a ~ ~ ~ 100 1 0.5
+execute if score @s dialog matches 419 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE014",font:"minecraft:gif"}]
+execute if score @s dialog matches 420 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE015",font:"minecraft:gif"}]
+execute if score @s dialog matches 421 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE016",font:"minecraft:gif"}]
+execute if score @s dialog matches 422 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE017",font:"minecraft:gif"}]
+execute if score @s dialog matches 423 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE018",font:"minecraft:gif"}]
+execute if score @s dialog matches 424 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE019",font:"minecraft:gif"}]
+execute if score @s dialog matches 425 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE020",font:"minecraft:gif"}]
+execute if score @s dialog matches 426 run return run tellraw @a [{text:"<",color:white},{selector:"@s"},{text:">",color:white},{text:"\n\n\n\n\uE021",font:"minecraft:gif"}]
 
 #execute if score @s dialog matches 1000 run return run function kards:dialog/talent/show
-execute if score @s dialog matches 1001..1030 run tag @s remove talent_dialog_show
-execute if score @s dialog matches 1001..1030 run dialog clear @s
+execute if score @s dialog matches 1001..1032 run tag @s remove talent_dialog_show
+execute if score @s dialog matches 1001..1032 run dialog clear @s
 execute if score @s dialog matches 1001 run return run function kards:game/player/talent/set/xukongcunzhe
 execute if score @s dialog matches 1002 run return run function kards:game/player/talent/set/bujingtanyu
 execute if score @s dialog matches 1003 run return run function kards:game/player/talent/set/muyuankuanghuan
@@ -97,3 +108,5 @@ execute if score @s dialog matches 1027 run return run function kards:game/playe
 execute if score @s dialog matches 1028 run return run function kards:game/player/talent/set/jixieganran
 execute if score @s dialog matches 1029 run return run function kards:game/player/talent/set/huayiweiren
 execute if score @s dialog matches 1030 run return run function kards:game/player/talent/set/tutengzhanshi
+execute if score @s dialog matches 1031 run return run function kards:game/player/talent/set/xukongxingtai
+execute if score @s dialog matches 1032 run return run function kards:game/player/talent/set/huixiangxingtai

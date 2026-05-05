@@ -1,5 +1,5 @@
-execute as @s[type=bat] unless data entity @s Passengers run kill @s
-execute as @s[type=shulker] at @s unless entity @e[type=bat,distance=..1] run kill @s
+execute as @s[type=bat] unless function kards:game/ingame/mob/execute_passengers run kill @s
+execute as @s[type=shulker] unless function kards:game/ingame/mob/execute_vehicle run kill @s
 
 execute as @s[type=bat] at @s unless block ^ ^ ^0.75 air run tp @s ^ ^ ^-0.75
 execute as @s[type=bat] at @s unless block ~ ~0.5 ~ air run tp @s ~ ~-0.5 ~

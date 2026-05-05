@@ -208,6 +208,104 @@
     },
     {
       "label": {
+        "text": "\uE014",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "(咬牙)"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 419"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE015",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "我没急哭"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 420"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE016",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "你已急哭"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 421"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE017",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "有点强"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 422"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE018",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "这么强？！"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 423"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE019",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "已无言"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 424"
+      },
+      "width": 50
+    },
+    {
+      "label": {
+        "text": "\uE020",
+        "font": "gif_small"
+      },
+      "tooltip": {
+        "text": "这么弱.."
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger dialog set 425"
+      },
+      "width": 50
+    },
+    {
+      "label": {
         "text": "我要烟牌(混响)"
       },
       "tooltip": {

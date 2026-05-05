@@ -1,0 +1,2 @@
+execute store result score @s enchantment_chance_temp run random value 1..100
+$execute if score @s enchantment_chance_temp matches 1..$(chance) at @s run function extra_enchantment:enchantments/shenpanzhe/2 with storage temp enchantment_temp

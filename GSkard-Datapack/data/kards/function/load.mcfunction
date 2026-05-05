@@ -13,27 +13,7 @@ data modify storage kards:setting kard_count set value \
 }
 
 # 虚拟实体
-scoreboard players set 0 temp 0
-scoreboard players set 1 temp 1
-scoreboard players set 2 temp 2
-scoreboard players set 3 temp 3
-scoreboard players set 4 temp 4
-scoreboard players set 5 temp 5
-scoreboard players set 6 temp 6
-scoreboard players set 7 temp 7
-scoreboard players set 8 temp 8
-scoreboard players set 9 temp 9
-scoreboard players set 10 temp 10
-scoreboard players set 11 temp 11
-scoreboard players set 12 temp 12
-scoreboard players set 13 temp 13
-scoreboard players set 14 temp 14
-scoreboard players set 15 temp 15
-scoreboard players set 16 temp 16
-scoreboard players set 17 temp 17
-scoreboard players set 18 temp 18
-scoreboard players set 19 temp 19
-scoreboard players set 20 temp 20
+function kards:temp_load
 
 #Load
 forceload add 0 0
@@ -61,6 +41,8 @@ bossbar add minecraft:pvp_start_countdown {text:"等待开放",color:"green"}
 bossbar set minecraft:roundtime color white
 bossbar set minecraft:pvp_start_countdown color green
 #注册计分项目
+scoreboard objectives add Check_NoAI dummy
+scoreboard objectives add Map_Marker_Count dummy
 scoreboard objectives add foodLevel dummy
 scoreboard objectives add foodSaturationLevel dummy
 scoreboard objectives add Saturation dummy
@@ -88,8 +70,6 @@ scoreboard objectives add Entry_twilight_of_the_gods dummy
 
 scoreboard objectives add Mob_Levels dummy
 scoreboard objectives add Health_Max_Add dummy
-scoreboard objectives add BeiPan dummy
-scoreboard objectives add BeiPan_time dummy
 
 scoreboard objectives add GIF trigger
 scoreboard objectives add GIF_Cooldown dummy
@@ -141,10 +121,6 @@ scoreboard objectives add text_damage custom:damage_dealt
 scoreboard objectives add feishenghufu_sishenzhilian_soul dummy
 scoreboard objectives add enchantment_feishenghufu_shizhongjian dummy
 scoreboard objectives add enchantment_feishenghufu_fu_damage custom:damage_dealt
-scoreboard objectives add enchantment_yuezhan_damage custom:damage_dealt
-scoreboard objectives add enchantment_liansuo_damage custom:damage_dealt
-scoreboard objectives add enchantment_liansuo dummy
-scoreboard objectives add enchantment_shenpanzhe_particle dummy
 
 scoreboard objectives add Check_UnReady trigger
 scoreboard objectives add touxiang trigger [{text:"我投降辣🏳",color:"white"}]
@@ -172,6 +148,7 @@ scoreboard objectives add Talent_yongyuanzhongcheng_Temp dummy
 scoreboard objectives add Talent_yongyuanzhongcheng_ dummy
 scoreboard objectives add Talent_yongyuanzhongcheng dummy
 scoreboard objectives add Talent_zhongyanzhixing dummy
+scoreboard objectives add Talent_zhongyanzhixing_useTimes dummy
 scoreboard objectives add Talent_zhongyanzhixing_temp1 dummy
 scoreboard objectives add Talent_zhongyanzhixing_temp2 dummy
 scoreboard objectives add Talent_libingmoma_ dummy
@@ -180,6 +157,7 @@ scoreboard objectives add Talent_gongsheng_damage dummy
 scoreboard objectives add Talent_gongsheng_healback dummy
 scoreboard objectives add Talent_gongsheng dummy
 scoreboard objectives add Talent_ranjiweiguang_Ball_DeathTime dummy
+scoreboard objectives add Talent_shouhuzhe dummy
 scoreboard objectives add lifetime dummy
 scoreboard objectives add MoveTime dummy
 scoreboard objectives add Talent_ranjiweiguang_Attack_Time dummy
@@ -191,11 +169,7 @@ scoreboard objectives add Talent_Enable_1 dummy
 scoreboard objectives add Talent_Enable_2 dummy
 scoreboard objectives add Talent_dengshenchangjie dummy
 scoreboard objectives add Talent_dengshenchangjie_tellraw dummy
-scoreboard objectives add Talent_qiongbingduwu_KardCount dummy
-scoreboard objectives add Talent_qiongbingduwu_KardCountMax dummy
-scoreboard objectives add Talent_qiongbingduwu_Damage dummy
-scoreboard objectives add Talent_qiongbingduwu_Damage_temp1 dummy
-scoreboard objectives add Talent_qiongbingduwu_Damage_temp2 dummy
+scoreboard objectives add Talent_qiongbingduwu_useTimes dummy
 scoreboard objectives add Talent_zhanshudaji dummy
 scoreboard objectives add Talent_zhazhashi minecraft.custom:damage_taken
 scoreboard objectives add Talent_jinjizhishi_round dummy
@@ -207,8 +181,12 @@ scoreboard objectives add Talent_bianfeiweibao_drop_zhuangbei minecraft.dropped:
 scoreboard objectives add Talent_bianfeiweibao_drop_tuteng minecraft.dropped:minecraft.music_disc_blocks
 scoreboard objectives add Talent_bianfeiweibao_drop_zuzhou minecraft.dropped:minecraft.music_disc_stal
 scoreboard objectives add Talent_bianfeiweibao_drop_shenji minecraft.dropped:minecraft.music_disc_strad
+scoreboard objectives add Talent_bianfeiweibao_drop_ dummy
 scoreboard objectives add Talent_jixieganran dummy
 scoreboard objectives add Talent_tutengzhanshi dummy
+scoreboard objectives add Talent_xukongxingtai dummy
+scoreboard objectives add Talent_huixiangxingtai dummy
+scoreboard objectives add Talent_huixiangxingtai_round dummy
 
 scoreboard objectives add Crossbow_RS dummy
 scoreboard objectives add Talent_Random_Mode dummy
@@ -232,10 +210,8 @@ scoreboard objectives add G36K_Use used:carrot_on_a_stick
 scoreboard objectives add G36K_Ray dummy
 scoreboard objectives add use_kard_xp dummy
 scoreboard objectives add zombie_enhance_2 dummy
-scoreboard objectives add GameCount dummy
-scoreboard objectives add enchantment_yuezhan_temp dummy
-scoreboard objectives add enchantment_fengxingzhe_temp dummy
-scoreboard objectives add enchantment_dadishenyou_temp dummy
+scoreboard objectives add GameSession dummy
+
 scoreboard objectives add open_wiki dropped:bookshelf
 scoreboard objectives add UseItem.Crossbow minecraft.used:minecraft.crossbow
 scoreboard objectives add Xp_Temp1 dummy
@@ -287,12 +263,7 @@ scoreboard objectives add zombie_enhance dummy
 scoreboard objectives add temp dummy
 scoreboard objectives add temp_2 dummy
 scoreboard objectives add hurt_by_mafeng dummy
-scoreboard objectives add YongHan_DongJie_liushi dummy
-scoreboard objectives add YongHan_liushi dummy
 scoreboard objectives add lindongzhikai_lingyu dummy
-scoreboard objectives add YongHan dummy
-scoreboard objectives add ZhongShang_Tick dummy
-scoreboard objectives add ZhongShang_Round dummy
 scoreboard objectives add tanyumohe_cishu dummy
 scoreboard objectives add tanyu_cishu dummy
 scoreboard objectives add tanyu_zuiezhi dummy
@@ -303,7 +274,7 @@ scoreboard objectives add tanyu_zhuangbei dummy
 scoreboard objectives add tanyumohe dummy
 scoreboard objectives add tanyu dummy
 scoreboard objectives add newzombie dummy
-scoreboard objectives add ChengMo dummy
+
 scoreboard objectives add muyuankuanghuan dummy
 scoreboard objectives add yinnicangku dummy
 scoreboard objectives add langqunzhanshu dummy
@@ -313,13 +284,10 @@ scoreboard objectives add shengmingtuteng dummy
 scoreboard objectives add shengmingtuteng_Healback dummy
 scoreboard objectives add random_hunluantuteng dummy
 scoreboard objectives add random_busituteng dummy
-scoreboard objectives add DongJie_damage dummy
 scoreboard objectives add suanlawugujizhua dummy
 scoreboard objectives add random_suanlawugujizhua dummy
-scoreboard objectives add enchantment_linghundaji_maxhealth dummy
-scoreboard objectives add enchantment_linghundaji_damage_Time dummy
 scoreboard objectives add diaolingtaidao_damage_add dummy
-scoreboard objectives add RanShao_wait dummy
+scoreboard objectives add Fire_wait dummy
 scoreboard objectives add yanyangdajian_fenshaozhiyu_damage dummy
 scoreboard objectives add yanyangdajian_fenshaozhiyu dummy
 scoreboard objectives add yanyangdajian_fenshaozhiyu_healback dummy
@@ -333,12 +301,10 @@ scoreboard objectives add diaolingtaidao_tujing dummy
 scoreboard objectives add diaolingtaidao_damage dummy
 scoreboard objectives add diaolingtaidao dummy
 scoreboard objectives add diaolingtaidao_Time dummy
-scoreboard objectives add PoJia dummy
 scoreboard objectives add shizhongjian_template_1 dummy
 scoreboard objectives add shizhongjian_template_2 dummy
 scoreboard objectives add shizhongjian_template_3 dummy
-scoreboard objectives add enchantment_zhiming_UUID dummy
-scoreboard objectives add enchantment_zhiming_cishu dummy
+
 scoreboard objectives add fengbaozhanchui_replace_main dummy
 scoreboard objectives add fengbaozhanchui_replace_off dummy
 scoreboard objectives add fengbaozhanchui_xuneng_Time dummy
@@ -351,7 +317,6 @@ scoreboard objectives add HealBack_haigui_Wait dummy
 scoreboard objectives add HealBack_Wait dummy
 scoreboard objectives add MaxHealth dummy
 scoreboard objectives add Health health
-scoreboard objectives add XuanZhuan dummy
 scoreboard objectives add sanrenchengzhong dummy
 scoreboard objectives add kutongzhuanhua_Time dummy
 scoreboard objectives add damage_kutongzhuanhua_zhenshi dummy
@@ -377,12 +342,20 @@ scoreboard objectives add lifetime dummy
 scoreboard objectives add level_zhongchui dummy
 scoreboard objectives add shengji_zhongchui dummy
 scoreboard objectives add killed_entity dummy
-scoreboard objectives add jishengnianyeHealback dummy
-scoreboard objectives add enchantment_chance_huanman dummy
-scoreboard objectives add enchantment_chance_xuruo dummy
-scoreboard objectives add enchantment_level dummy
-scoreboard objectives add enchantment_chance_temp dummy
-
+scoreboard objectives add jishengnianye_nianyefuceng dummy
+scoreboard objectives add jishengnianye_nianyefuceng_max dummy
+scoreboard objectives add jishengnianye_damage_from_running custom:minecraft.sprint_one_cm
+scoreboard objectives add jishengnianye_damage_from_running_statistics dummy
+scoreboard objectives add jishengnianye_damage_from_ordinary_damage_statistics dummy
+scoreboard objectives add jishengnianye_damage_from_unordinary_damage_statistics dummy
+scoreboard objectives add jishengnianye_damage_from_attack_damage custom:minecraft.damage_dealt
+scoreboard objectives add jishengnianye_damage_from_attack_damage_statistics dummy
+scoreboard objectives add jishengnianye_ungrade_times dummy
+scoreboard objectives add jishengnianye_ungrade_running_times dummy
+scoreboard objectives add jishengnianye_ungrade_attack_times dummy
+scoreboard objectives add jishengnianye_ungrade_ordinary_times dummy
+scoreboard objectives add jishengnianye_ungrade_unordinary_times dummy
+scoreboard objectives add jishengnianye_ungrading_time dummy
 scoreboard objectives add huijinyu dummy
 scoreboard objectives add huijinyu_particle dummy
 scoreboard objectives add huijinyu_ dummy
@@ -453,9 +426,7 @@ scoreboard objectives add zuzhoucishu dummy
 scoreboard objectives add tutengcishu dummy
 scoreboard objectives add shenqicishu dummy
 scoreboard objectives add xiajiehejinhujia dummy
-scoreboard objectives add XuanYun dummy
-scoreboard objectives add DuanTui dummy
-scoreboard objectives add DongJie dummy
+
 scoreboard objectives add kapaishuliang dummy
 scoreboard objectives add random_shijiao1 dummy
 scoreboard objectives add random_shijiao2 dummy
@@ -497,7 +468,6 @@ scoreboard objectives add zhengyichangji_Time dummy
 scoreboard objectives add qinglingzhiyu_xufeng dummy
 scoreboard objectives add qinglingzhiyu_Time dummy
 scoreboard objectives add shengchanling dummy
-scoreboard objectives add random_enchantments dummy
 scoreboard objectives add qinglvqianmou dummy
 scoreboard objectives add use_kard dummy
 scoreboard objectives add use_kard_fashu dummy
@@ -510,8 +480,14 @@ scoreboard objectives add wiki_count dummy
 scoreboard objectives add wait_start dummy
 scoreboard objectives add fashu_duming dummy
 scoreboard objectives add wuxiuzhihuo dummy
+scoreboard objectives add wuxiuzhihuo_replace_main dummy
+scoreboard objectives add wuxiuzhihuo_replace_off dummy
+scoreboard objectives add wuxiuzhihuo_slot dummy
+scoreboard objectives add wuxiuzhihuo_xinwang_fire dummy
+scoreboard objectives add wuxiuzhihuo_xinwang_fire_ dummy
+scoreboard objectives add wuxiuzhihuo_xinzhi dummy
+scoreboard objectives add wuxiuzhihuo_ranshi dummy
 scoreboard objectives add wuxiuzhihuo_rongzhu dummy
-scoreboard objectives add wuxiuzhihuo_shengji dummy
 scoreboard objectives add wuxiuzhihuo_random dummy
 scoreboard objectives add wuxiuzhihuo_throw minecraft.dropped:minecraft.lantern
 scoreboard objectives add wuxiuzhihuo_jiben minecraft.dropped:minecraft.music_disc_mall
@@ -553,7 +529,6 @@ scoreboard objectives add jinziqifeng dummy
 scoreboard objectives add wuwangchuchang dummy
 scoreboard objectives add in_wuwangjiangshi dummy
 scoreboard objectives add wait_spawn dummy
-scoreboard objectives add HealBack dummy
 scoreboard objectives add MapCount dummy
 scoreboard objectives add senlinzhihu_HealBack dummy
 scoreboard objectives add GameMode dummy
@@ -576,8 +551,8 @@ scoreboard objectives add UUID.0 dummy
 scoreboard objectives add UUID.1 dummy
 scoreboard objectives add UUID.2 dummy
 scoreboard objectives add UUID.3 dummy
-scoreboard objectives add RanShao dummy
-scoreboard objectives add RanShao_take_damage dummy
+scoreboard objectives add Fire dummy
+scoreboard objectives add Fire_take_damage dummy
 scoreboard objectives add Scale trigger
 scoreboard objectives add xixue_lx_temp1 dummy
 scoreboard objectives add xixue_lx_temp2 dummy

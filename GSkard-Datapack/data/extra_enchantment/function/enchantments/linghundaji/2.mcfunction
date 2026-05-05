@@ -1,0 +1,1 @@
+$damage @s $(damage) extra_enchantment:chujue by @p[tag=enchantment_linghundaji_attacker]

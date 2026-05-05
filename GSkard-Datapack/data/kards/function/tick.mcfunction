@@ -11,7 +11,6 @@ execute positioned 299.5 -59 307.00 run tp @a[dx=2,dy=4,dz=0] 59 226 -26 -90 0
 function kards:lobby/general
 function kards:game/general
 #检测人数
-execute as @a if score @s Leave_Game matches 1.. run function kards:leave_game/all
 execute store result score #红队 Team_number if entity @a[team=red]
 execute store result score #蓝队 Team_number if entity @a[team=blue]
 execute store result score #红队 Team_alive if entity @a[team=red,gamemode=adventure]
@@ -54,3 +53,7 @@ execute as @a if score @s G36K_Ex_Use matches 1.. run function kards:guns/ex_g36
 
 #测试用
 #function kards:ceshi/1
+#kill @e[type=marker,tag=red_Mob_StartPoint]
+#kill @e[type=marker,tag=blue_Mob_StartPoint]
+
+#execute at Hart_GS run kill @e[type=!player,distance=..20]

@@ -41,6 +41,8 @@ tag @s remove Talent_bianfeiweibao
 tag @s remove Talent_jixieganran
 tag @s remove Talent_huayiweiren
 tag @s remove Talent_tutengzhanshi
+tag @s remove Talent_xukongxingtai
+tag @s remove Talent_huixiangxingtai
 ## Bossbar
 execute store result storage temp UUID int 1 run data get entity @s UUID.[0]
 function kards:game/player/talent/enable/ranjiweiguang/bossbar/4 with storage temp

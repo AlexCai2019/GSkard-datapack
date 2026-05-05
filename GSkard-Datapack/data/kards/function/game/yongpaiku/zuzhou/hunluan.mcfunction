@@ -8,4 +8,4 @@ execute as @s[team=blue] run scoreboard players set #红队 FriendlyFire 1
 execute as @s[team=red] if score #蓝队 Team_alive matches 1 run scoreboard players add @a[team=blue,gamemode=adventure] XuanZhuan 25
 execute as @s[team=blue] if score #红队 Team_alive matches 1 run scoreboard players add @a[team=red,gamemode=adventure] XuanZhuan 25
 
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}

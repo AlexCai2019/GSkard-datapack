@@ -9,5 +9,5 @@ execute if entity @s[team=blue] as @a[gamemode=adventure,team=red] run damage @s
 execute if entity @s[team=blue] run scoreboard players set @a[gamemode=adventure,team=red] ZhongShang_Round 2
 
 tag @s remove zhongshang_damage
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 

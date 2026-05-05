@@ -5,5 +5,4 @@ execute unless score #system GameStatus matches 0 if score #system random_gameru
 function kards:game/ingame/general
 function kards:game/player/shield/general
 function kards:game/xp/general
-function kards:enchantment/general
 function kards:game/player/general

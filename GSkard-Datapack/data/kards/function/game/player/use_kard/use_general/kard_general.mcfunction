@@ -8,10 +8,6 @@ execute if score #system random_gamerule_start matches 1 if score #system random
 
 scoreboard players set @s pingbi 0
 scoreboard players add @s use_kard 1
-scoreboard players add @s[tag=Talent_libingmoma] Talent_libingmoma 1
-execute if score @s Talent_libingmoma matches 5 run function kards:game/player/talent/enable/libingmoma/1
-
-execute as @s[tag=Talent_haorenliaoliao] if predicate {condition:"random_chance",chance:0.2} run function kards:game/player/talent/enable/haorenliaoliao/1
 
 scoreboard players remove @s[scores={kujie=1..}] kardCount 1
 scoreboard players add @s[scores={ChaoPin=1}] kardCount 1
@@ -23,6 +19,8 @@ scoreboard players operation @s Use_K_Game += @s Use_K_temp
 scoreboard players operation @s Use_Kmax_Round += @s Use_Kmax_temp
 scoreboard players operation @s Use_Kmax_Game += @s Use_Kmax_temp
 
+#天赋
+function kards:game/player/use_kard/use_general/talent
 #贪欲魔盒
 execute as @s[team=red,type=player] if score 蓝队 tanyu_zuiezhi matches 3.. at @s run function kards:game/yongpaiku/yansheng/tanyumohe/armor_stand/
 execute as @s[team=blue,type=player] if score 红队 tanyu_zuiezhi matches 3.. at @s run function kards:game/yongpaiku/yansheng/tanyumohe/armor_stand/

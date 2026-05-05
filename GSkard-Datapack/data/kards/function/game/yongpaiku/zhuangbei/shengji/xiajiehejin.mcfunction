@@ -18,4 +18,4 @@ execute if entity @s[team=blue] if score #蓝队 xiajiehejinhujia matches 4 run 
 execute if entity @s[team=red] if score #红队 xiajiehejinhujia matches 4 run scoreboard players set #红队 xiajiehejinhujia 0
 execute if entity @s[team=blue] if score #蓝队 xiajiehejinhujia matches 4 run scoreboard players set #蓝队 xiajiehejinhujia 0
 
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}

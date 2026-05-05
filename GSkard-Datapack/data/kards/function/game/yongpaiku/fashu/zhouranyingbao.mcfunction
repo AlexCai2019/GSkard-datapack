@@ -4,7 +4,7 @@ function kards:game/yongpaiku/xianjing/jiance/fashujiance
 
 
 execute if entity @s[type=player] unless items entity @s weapon.offhand * run return fail
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 
 execute if entity @s[team=red] at @e[tag=blue_marker_7,limit=1] run summon creeper ~ 1 ~ {Team:red,ExplosionRadius:4,Fuse:10,attributes:[{id:"follow_range",base:100},{id:"max_health",base:30.0d}],Health:30.0f}
 

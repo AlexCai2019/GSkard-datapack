@@ -1,6 +1,6 @@
 {
   "description": ["",{"color":"gold","bold":true,"text":"「绝唱」"}],
-  "supported_items": "#kards:armor",
+  "supported_items": "#kards:armor/any",
   "weight": 1,
   "max_level": 1,
   "min_cost": {

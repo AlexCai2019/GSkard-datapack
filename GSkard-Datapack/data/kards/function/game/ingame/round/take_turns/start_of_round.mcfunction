@@ -27,10 +27,15 @@ tag @e remove JiangShuZhe_yiming_rided
 #终焉之行
 execute as @a[tag=Talent_zhongyanzhixing,scores={CanuseKard=1}] run function kards:game/player/talent/enable/zhongyanzhixing/1
 #穷兵黩武
-execute as @a[tag=Talent_qiongbingduwu] run function kards:game/player/talent/enable/qiongbingduwu/1
+execute as @a[tag=Talent_qiongbingduwu] run function kards:game/player/talent/enable/qiongbingduwu/
 #禁忌之始
 scoreboard players add @a[tag=Talent_jinjizhishi] Talent_jinjizhishi_round 1
-execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=5}] run function kards:game/paiku/fashu/jinziqifeng
-execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=10}] run function kards:game/paiku/fashu/jinziqifeng
-
-
+execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=4}] run function kards:game/paiku/fashu/jinziqifeng
+execute as @a[tag=Talent_jinjizhishi,scores={Talent_jinjizhishi_round=8}] run function kards:game/paiku/fashu/jinziqifeng
+#虚空形态
+scoreboard players set @a[tag=Talent_xukongxingtai] Talent_xukongxingtai 2
+#回响形态
+scoreboard players add @a[tag=Talent_huixiangxingtai] Talent_huixiangxingtai_round 1
+scoreboard players set @a[tag=Talent_huixiangxingtai,scores={Talent_huixiangxingtai_round=2..}] Talent_huixiangxingtai 1
+tellraw @a[tag=Talent_huixiangxingtai,scores={Talent_huixiangxingtai_round=2..}] ["",{color:"dark_purple",text:"[回响形态] "},{color:"gold",text:"本回合可用"}]
+scoreboard players set @a[tag=Talent_huixiangxingtai,scores={Talent_huixiangxingtai_round=2..}] Talent_huixiangxingtai_round 0

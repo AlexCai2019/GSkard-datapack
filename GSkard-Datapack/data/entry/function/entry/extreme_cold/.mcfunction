@@ -1,0 +1,2 @@
+execute on attacker store result storage entry:enchantment layer int 5 run data get entity @s equipment.body.components."minecraft:enchantments".entry:extreme_cold
+function entry:entry/extreme_cold/_ with storage entry:enchantment

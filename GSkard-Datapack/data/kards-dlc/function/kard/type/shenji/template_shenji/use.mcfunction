@@ -6,5 +6,5 @@ function kards:game/yongpaiku/xianjing/jiance/shenjijiance
     execute if entity @s[team=blue] if score #蓝队 Team_alive matches ..2 run scoreboard players add @a[team=blue,gamemode=adventure] kardCount 10
     execute if entity @s[team=red] if score #红队 Team_alive matches ..2 run scoreboard players add @a[team=red,gamemode=adventure] kardCount 10
 scoreboard players set @s ChaoPin 1
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 scoreboard players operation @s kardCount -= #kard_template_shenji kardCount

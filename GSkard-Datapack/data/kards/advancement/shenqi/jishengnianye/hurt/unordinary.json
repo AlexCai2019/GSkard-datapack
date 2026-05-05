@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "test":{
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "expected": true,
+                                "id": "bypasses_armor"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "kards:game/yongpaiku/shenji/wangzhibaoku/jishengnianye/damage/unordinary"
+    }
+}

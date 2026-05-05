@@ -1,0 +1,11 @@
+$bossbar remove kards:nianyefuceng_$(UUID)
+tag @s remove bossbar_max_jishengnianye_nianyefuceng
+scoreboard players reset @s jishengnianye_damage_from_running_statistics
+scoreboard players reset @s jishengnianye_damage_from_ordinary_damage_statistics
+scoreboard players reset @s jishengnianye_damage_from_unordinary_damage_statistics
+scoreboard players reset @s jishengnianye_damage_from_attack_damage_statistics
+
+scoreboard players reset @s jishengnianye_damage_from_attack_damage
+scoreboard players reset @s jishengnianye_damage_from_running
+
+data remove storage kards:temp UUID

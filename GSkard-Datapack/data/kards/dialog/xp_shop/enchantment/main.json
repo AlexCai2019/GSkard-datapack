@@ -120,7 +120,7 @@
         ]
       },
       "tooltip": {
-        "text": "消耗70级\n\n",
+        "text": "消耗80级\n\n",
         "extra": [
           [{"color":"gray","text":"当你"},{"color":"gold","text":"处于地面上"},{"color":"gray","text":"时 获得以下两个效果\n"},{"color":"gray","text":"获得","extra":[{"underlined":true,"text":"随时间增加而提升"},"但",{"underlined":true,"text":"最大不超过附魔等级"},"的"]},{"color":"gold","text":"抗性提升"},{"color":"gray","text":"效果\n"},{"color":"gray","text":"魔咒等级为"},{"color":"dark_purple","text":"2级/4级"},{"color":"gray","text":"时 使你每隔一段时间回复"},{"color":"green","text":"0.5♥/1♥"},{"color":"gray","text":"生命值\n\n"}],
           {
@@ -276,7 +276,7 @@
             "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          [{"text":"跳跃后获得","color":"gray"},{"text":"(1级*附魔等级)","color":"dark_aqua"},{"text":"力量效果2s\n","color":"gold"}],{"text":"处于该附魔获得的力量效果下攻击时\n","color":"gray"},[{"text":"对目标","color":"gray"},{"text":"(2.5*附魔等级)","color":"dark_aqua"},{"text":"格内的最近的同阵营","color":"gray"},{"text":"(3*附魔等级-1)","color":"dark_aqua"},{"text":"个目标造成","color":"gray"},{"text":"等同于这次伤害35%的物理伤害\n\n","color":"gold"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"3\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"近战武器","color":"gray"}
+          ["",{"color":"gray","text":"攻击时 若在空中\n"},{"color":"blue","text":"+[4*魔咒等级] 攻击伤害\n"},{"color":"gray","text":"对攻击目标"},{"color":"dark_aqua","text":"(2.5*魔咒等级)"},{"color":"gray","text":"格内的最近的同阵营的"},{"color":"dark_aqua","text":"(3*魔咒等级-1)"},{"color":"gray","text":"个目标\n"},{"color":"gold","text":"造成等同于这次伤害35%的物理伤害\n\n"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"3\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"近战武器","color":"gray"}
         ],
         "color": "gray"
       },
@@ -388,7 +388,7 @@
             "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          [{"color":"gray","text":"","extra":[{"underlined":true,"text":"受击时"},"有"]},{"color":"dark_aqua","text":"(15%*附魔等级)"},{"color":"gray","text":"的概率使","extra":[{"underlined":true,"text":"攻击者"},"受到"]},{"color":"red","text":"雷击"},{"color":"gray","text":"并"},{"color":"red","text":"眩晕"},{"color":"dark_aqua","text":"(0.35*附魔等级)"},{"color":"gray","text":"秒\n\n"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"5\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"头盔","color":"gray"}
+          ["",{"color":"gray","text":"","extra":[{"underlined":true,"text":"受击时"},"有"]},{"color":"dark_aqua","text":"(15%*附魔等级)"},{"color":"gray","text":"的概率使","extra":[{"underlined":true,"text":"攻击者"},"受到"]},{"color":"red","text":"雷击"},{"color":"gray","text":"并"},{"color":"red","text":"眩晕"},{"color":"dark_aqua","text":"(0.5*附魔等级)"},{"color":"gray","text":"秒\n这个效果有5sCD\n\n"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"5\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"头盔","color":"gray"}
         ],
         "color": "gray"
       },
@@ -410,20 +410,101 @@
         ]
       },
       "tooltip": {
-        "text": "消耗120级",
+        "text": "消耗100级",
         "extra": [
           {
             "text": "\n\n附魔后:\n",
             "color": "gray"
           },
-          [{"text":"攻击目标时对目标最近的","color":"gray"},{"text":"另一个目标同阵营的目标","color":"gold"},{"text":"造成","color":"gray"},{"text":"等同于此次伤害25%的物理伤害\n","color":"gold"}],[{"text":"连锁目标数量随附魔等级提升\n","color":"gray"}],{"text":"等级生效上限:\n","color":"gray"},{"text":"10\n\n","color":"gray"},{"text":"适用于:\n","color":"gray"},{"text":"近战武器","color":"gray"}
-        ],
+          [{"color":"white","text":""},{"color":"gray","text":"在对生物造成伤害后\n"}],[{"color":"white","text":""},{"color":"gray","text":"对其最近的敌方生物造成一次"},{"color":"dark_aqua","text":"[魔咒等级+此次造成伤害的40%]"},{"color":"gray","text":"点"},{"color":"gold","text":"物理伤害\n"}],[{"color":"white","text":""},{"color":"gray","text":"每级都会使该效果"},{"color":"gold","text":"额外攻击1个生物\n\n"}],[{"color":"white","text":""}],[{"color":"white","text":""},{"color":"gray","text":"等级生效上限:\n"}],[{"color":"white","text":""},{"color":"gray","text":"不限\n\n"}],[{"color":"white","text":""}],[{"color":"white","text":""},{"color":"gray","text":"适用于:\n"}],[{"color":"white","text":""},{"color":"gray","text":"近战武器"}]],
         "color": "gray"
       },
       "width": 75,
       "action": {
         "type": "run_command",
         "command": "/trigger dialog set 120"
+      }
+    },
+    {
+      "label": {
+        "text": "跃升",
+        "color": "aqua",
+        "extra": [
+          {
+            "text": " I",
+            "color": "gray"
+          }
+        ]
+      },
+      "tooltip": {
+        "text": "消耗40级",
+        "extra": [
+          {
+            "text": "\n\n附魔后:\n",
+            "color": "gray"
+          },
+          ["",{"color":"gray","text":"每级增加"},{"color":"gold","text":"2格安全摔落高度"},{"color":"gray","text":"与"},{"color":"gold","text":"20%跳跃力度\n\n"}],[{"color":"white","text":""}],[{"color":"white","text":""},{"color":"gray","text":"等级生效上限:\n"}],[{"color":"white","text":""},{"color":"gray","text":"3\n\n"}],[{"color":"white","text":""}],[{"color":"white","text":""},{"color":"gray","text":"适用于:\n"}],[{"color":"white","text":""},{"color":"gray","text":"护腿"}]],
+        "color": "gray"
+      },
+      "width": 75,
+      "action": {
+        "type": "run_command",
+        "command": "/trigger dialog set 121"
+      }
+    },
+    {
+      "label": {
+        "text": "失重",
+        "color": "white",
+        "extra": [
+          {
+            "text": " I",
+            "color": "gray"
+          }
+        ]
+      },
+      "tooltip": {
+        "text": "消耗40级",
+        "extra": [
+          {
+            "text": "\n\n附魔后:\n",
+            "color": "gray"
+          },
+          ["",{"color":"gray","text":"每级减少"},{"color":"gold","text":"15%重力\n\n"}],[{"color":"white","text":""}],[{"color":"white","text":""},{"color":"gray","text":"等级生效上限:\n"}],[{"color":"white","text":""},{"color":"gray","text":"3\n\n"}],[{"color":"white","text":""}],[{"color":"white","text":""},{"color":"gray","text":"适用于:\n"}],[{"color":"white","text":""},{"color":"gray","text":"鞋子"}]],
+        "color": "gray"
+      },
+      "width": 75,
+      "action": {
+        "type": "run_command",
+        "command": "/trigger dialog set 122"
+      }
+    },
+    {
+      "label": {
+        "text": "爆裂者",
+        "color": "dark_red",
+        "extra": [
+          {
+            "text": " I",
+            "color": "gray"
+          }
+        ]
+      },
+      "tooltip": {
+        "text": "消耗90级",
+        "extra": [
+          {
+            "text": "\n\n附魔后:\n",
+            "color": "gray"
+          },
+          ["",{"color":"gray","text":"使你的弩获得增强 命中生物或方块"},{"color":"gold","text":"爆炸\n"},{"color":"gray","text":"爆炸范围为"},{"color":"dark_aqua","text":"(附魔等级*0.65+3)\n"},{"color":"gray","text":"爆炸伤害为"},{"color":"dark_aqua","text":"(附魔等级*1.2+6)\n"},{"color":"gold","text":"当魔咒等级为3时 还会使爆炸范围内的敌人燃烧5s\n\n"}],{"text":"","color":"gray"},{"text":"等级生效上限:\n","color":"gray"},{"text":"3\n\n","color":"gray"},{"text":""},{"text":"适用于:\n","color":"gray"},{"text":"弩","color":"gray"}
+        ],
+        "color": "gray"
+      },
+      "width": 75,
+      "action": {
+        "type": "run_command",
+        "command": "/trigger dialog set 123"
       }
     }
   ]

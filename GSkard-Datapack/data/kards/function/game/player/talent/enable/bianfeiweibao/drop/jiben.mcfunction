@@ -2,6 +2,9 @@ scoreboard players set @s Talent_bianfeiweibao_drop_jiben 0
 execute unless entity @s[tag=Talent_bianfeiweibao] run return fail
 execute unless predicate kards:sneak run return fail
 
+scoreboard players add @s Talent_bianfeiweibao_drop_ 1
+tellraw @s[scores={Talent_bianfeiweibao_drop_=1..4}] ["",{color:"aqua",text:"[变废为宝] "},{color:"gray",text:"额外抽牌进度: "},{color:"green",score:{name:"@s",objective:"Talent_bianfeiweibao_drop_"}},{color:"gray",text:"/"},{color:"white",text:"5"}]
+tellraw @s[scores={Talent_bianfeiweibao_drop_=5}] ["",{color:"aqua",text:"[变废为宝] "},{color:"gray",text:"额外抽牌"},{color:"white",text:"触发 "},{color:"gold",text:"抽2张牌"}]
 kill @n[type=item,nbt={Item:{id:"minecraft:music_disc_mall"}}]
 execute store result score @s random run random value 1..100
 execute if score @s random matches 1..35 run scoreboard players add @s jibencishu 1

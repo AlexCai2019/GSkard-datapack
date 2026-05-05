@@ -15,4 +15,4 @@ scoreboard players operation @s Entry_pastor = Entry Entry_pastor
 scoreboard players operation @s Entry_lost_memories = Entry Entry_lost_memories
 scoreboard players operation @s Entry_twilight_of_the_gods = Entry Entry_twilight_of_the_gods
 
-function kards:game/ingame/entry/int/
+function entry:int/

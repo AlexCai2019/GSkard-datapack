@@ -1,6 +1,6 @@
 scoreboard players remove @s[scores={shenqicishu=1..}] shenqicishu 1
 
-execute store result score @s random run random value 1..15
+execute store result score @s random run random value 1..16
 execute if score @s random matches 1 run function kards:game/yongpaiku/shenji/wangzhibaoku/fengbaozhanchui/give
 execute if score @s random matches 2 run function kards:game/yongpaiku/shenji/wangzhibaoku/kunanyaolan/give
 execute if score @s random matches 3 run function kards:game/yongpaiku/shenji/wangzhibaoku/senlinzhihu/give
@@ -16,6 +16,7 @@ execute if score @s random matches 12 run function kards:game/yongpaiku/shenji/w
 execute if score @s random matches 13 run function kards:game/yongpaiku/shenji/wangzhibaoku/jishengnianye/give
 execute if score @s random matches 14 run function kards:game/yongpaiku/shenji/wangzhibaoku/yanyangdajian/give
 execute if score @s random matches 15 run function kards:game/yongpaiku/shenji/wangzhibaoku/diaolingtaidao/give
+execute if score @s random matches 16 run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/give
 
 scoreboard players set @s random 0
 

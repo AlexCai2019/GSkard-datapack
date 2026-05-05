@@ -1,0 +1,1 @@
+execute as @e[scores={YongHan=0..}] run function custom_buff:yonghan/bossbar/1

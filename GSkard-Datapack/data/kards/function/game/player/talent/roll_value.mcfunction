@@ -1,9 +1,9 @@
-execute store result score @s Talent_Random_1 run random value 1..30
-execute store result score @s Talent_Random_2 run random value 1..30
-execute store result score @s Talent_Random_3 run random value 1..30
-execute store result score @s Talent_Random_4 run random value 1..30
-execute store result score @s Talent_Random_5 run random value 1..30
-execute store result score @s Talent_Random_6 run random value 1..30
+execute store result score @s Talent_Random_1 run random value 1..32
+execute store result score @s Talent_Random_2 run random value 1..32
+execute store result score @s Talent_Random_3 run random value 1..32
+execute store result score @s Talent_Random_4 run random value 1..32
+execute store result score @s Talent_Random_5 run random value 1..32
+execute store result score @s Talent_Random_6 run random value 1..32
 
 #scoreboard players add @s temp 1
 

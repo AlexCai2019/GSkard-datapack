@@ -8,16 +8,15 @@
         "kards:baomao",
         "kards:qinglvqianmou",
         "kards:silie",
-        "kards:chujue",
+        "extra_enchantment:chujue",
         "kards:junlintianxia",
         "kards:move_or_die",
-        "kards:yonghan",
+        "custom_buff:yonghan",
         "kards:zhongshang",
         "kards:duming",
         "kards:flend",
         "kards:zhongyanzhixing",
         "kards:xixuegui",
-        "kards:qiongbingduwu",
         "kards:pojia_damage"
     ]
 }

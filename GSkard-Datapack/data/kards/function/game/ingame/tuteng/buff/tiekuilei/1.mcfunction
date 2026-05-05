@@ -1,5 +1,5 @@
-execute as @s[team=red] if entity @e[tag=tuteng,team=red,type=villager] if entity @e[type=#kards:mob,tag=!tuteng,team=blue,distance=..4.5] run scoreboard players add @s Mob_Attack_Time 1
-execute as @s[team=blue] if entity @e[tag=tuteng,team=blue,type=villager] if entity @e[type=#kards:mob,tag=!tuteng,team=red,distance=..4.5] run scoreboard players add @s Mob_Attack_Time 1
+execute as @s[team=red] if entity @e[tag=tuteng,team=red,type=villager] if entity @e[type=#kards:mob,tag=!tuteng,team=blue,distance=..4.5,tag=!NoAI] run scoreboard players add @s Mob_Attack_Time 1
+execute as @s[team=blue] if entity @e[tag=tuteng,team=blue,type=villager] if entity @e[type=#kards:mob,tag=!tuteng,team=red,distance=..4.5,tag=!NoAI] run scoreboard players add @s Mob_Attack_Time 1
 tag @s add temp
 # 1级
 execute as @s[team=red,scores={Mob_Levels=1}] run effect give @e[type=#kards:mob,tag=!tuteng,team=blue,distance=..4.5] weakness 1 1 false

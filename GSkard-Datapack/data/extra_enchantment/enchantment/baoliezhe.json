@@ -1,0 +1,56 @@
+{
+    "description": {
+        "text": "爆裂者","color": "dark_red"
+    },
+    "anvil_cost": 4,
+    "max_level": 3,
+    "weight": 10,
+    "min_cost": {
+        "base": 15,
+        "per_level_above_first": 10
+    },
+    "max_cost": {
+        "base": 60,
+        "per_level_above_first": 10
+    },
+    "supported_items": "crossbow",
+    "slots": [
+        "mainhand"
+    ],
+    "effects": {
+        "projectile_spawned": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "extra_enchantment:enchantments/baoliezhe/arrow"
+                }
+            }
+        ],
+        "post_attack": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "extra_enchantment:enchantments/baoliezhe/1"
+                },
+                "enchanted": "attacker",
+                "affected": "damaging_entity",
+                "requirements": [
+                    {
+                        "condition": "damage_source_properties",
+                        "predicate": {
+                            "is_direct": false
+                        }
+                    }
+                ]
+            }
+        ],
+        "hit_block": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "extra_enchantment:enchantments/baoliezhe/1"
+                }
+            }
+        ]
+    }
+}

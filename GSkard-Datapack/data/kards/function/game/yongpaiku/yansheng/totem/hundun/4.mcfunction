@@ -7,5 +7,5 @@ execute if entity @s[team=blue] run scoreboard players add @e[distance=..6,team=
 
 execute at @s run playsound minecraft:entity.player.hurt_freeze player @a[distance=..20] ~ ~ ~ 100 0
 #点燃
-execute if entity @s[team=red] run scoreboard players add @e[distance=..6,tag=!tuteng,team=blue,gamemode=!spectator] RanShao 150
-execute if entity @s[team=blue] run scoreboard players add @e[distance=..6,tag=!tuteng,team=red,gamemode=!spectator] RanShao 150
+execute if entity @s[team=red] run scoreboard players add @e[distance=..6,tag=!tuteng,team=blue,gamemode=!spectator] Fire 150
+execute if entity @s[team=blue] run scoreboard players add @e[distance=..6,tag=!tuteng,team=red,gamemode=!spectator] Fire 150

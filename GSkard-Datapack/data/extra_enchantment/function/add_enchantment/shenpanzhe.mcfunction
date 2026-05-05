@@ -1,0 +1,5 @@
+item modify entity @s armor.head {function:"set_enchantments",enchantments:{"extra_enchantment:shenpanzhe":1},add:true}
+execute store result score @s mainhand_enchantment_levels run data get entity @s equipment.head.components."minecraft:enchantments".extra_enchantment:shenpanzhe
+tellraw @s [{text:"成功为头盔添加附魔",color:"green"},{text:"审判者 I",color:"gold"},{text:"\n当前物品",color:"gray"},{text:"审判者",color:"gold"},{text:"等级为",color:"gray"},{score:{name:"@s",objective:"mainhand_enchantment_levels"},color:"green"}]
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
+execute at @s run playsound block.enchantment_table.use player @s ~ ~ ~ 100 1

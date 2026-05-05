@@ -1,0 +1,16 @@
+scoreboard objectives add enchantment_level dummy
+scoreboard objectives add extra_enchantment.temp dummy
+scoreboard objectives add enchantment_chance_temp dummy
+
+scoreboard objectives add extra_enchantment.yuezhan_temp dummy
+scoreboard objectives add extra_enchantment.fengxingzhe_temp dummy
+scoreboard objectives add extra_enchantment.dadishenyou_temp dummy
+scoreboard objectives add extra_enchantment.linghundaji_maxhealth dummy
+scoreboard objectives add extra_enchantment.linghundaji_damage_Time dummy
+scoreboard objectives add extra_enchantment.zhiming_UUID dummy
+scoreboard objectives add extra_enchantment.zhiming_cishu dummy
+scoreboard objectives add extra_enchantment.yuezhan_damage custom:damage_dealt
+scoreboard objectives add extra_enchantment.liansuo_damage custom:damage_dealt
+#scoreboard objectives add extra_enchantment.liansuodaji dummy
+scoreboard objectives add extra_enchantment.shenpanzhe_particle dummy
+scoreboard objectives add extra_enchantment.shenpanzhe_temp dummy

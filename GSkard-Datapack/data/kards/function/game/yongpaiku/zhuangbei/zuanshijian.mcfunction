@@ -3,4 +3,4 @@ function kards:game/player/use_kard/use_general/kard_general
 
 
 give @s minecraft:diamond_sword[minecraft:custom_name={italic:false,text: "钻石剑",color:"aqua"},lore=[{text: "锋芒初露",color:"dark_gray",italic:true},{text: ""},{text: "在主手时：",color:"gray",italic:false},{text: " 8.5 攻击伤害",color:"dark_green",italic:false},{text: " 1.6 攻击速度",color:"dark_green",italic:false}],minecraft:attribute_modifiers=[{type:"attack_damage",amount:7.5,id:"1",operation:"add_value",slot:"mainhand"},{type:"attack_speed",amount:-2.4,slot:"mainhand",operation:"add_value",id:"1"}],custom_data={kards:'钻石剑'},minecraft:unbreakable={},tooltip_display={hidden_components:["attribute_modifiers","unbreakable"]},enchantments={sweeping_edge:10}]
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}

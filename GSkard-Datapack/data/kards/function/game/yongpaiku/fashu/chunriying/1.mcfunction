@@ -1,7 +1,7 @@
 function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/fashujiance
 execute as @s[type=player] unless items entity @s weapon.offhand * run return fail
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 
 execute as @s[team=red] if score #system GameRound matches 1 run function kards:game/yongpaiku/fashu/chunriying/2
 execute as @s[team=red] if score #system GameRound matches 0 run function kards:game/yongpaiku/fashu/chunriying/3

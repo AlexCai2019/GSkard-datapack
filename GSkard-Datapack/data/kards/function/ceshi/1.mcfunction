@@ -1,0 +1,1 @@
+give @p fishing_rod[enchantments={fortune:100},unbreakable={}]

@@ -6,6 +6,13 @@ GSkard-DLC 是 GSkard 数据包的扩展系统，允许玩家创建和使用自�
 
 GSkard-DLC 提供了一个完整的卡牌扩展框架，支持创建各种类型的自定义卡牌，包括基本牌、军团牌、装备牌、法术牌、神迹牌、图腾牌、诅咒牌和陷阱牌。
 
+## 卡牌牌库编辑注意事项
+
+# 这是一个给予 基本牌 北极熊 的牌
+# 需要注意的是 custom_data部分 这里存储了卡牌的调用路径 和费用
+
+give @s music_disc_mall[item_name=[{text: "3K",color:"aqua"},{text:" "},{text: "北极熊",color:"blue"}],lore=[{text: "基本牌",color:"blue",italic:false},[{text: "召唤一只",color:"gray",italic:false},{text: "北极熊",color:"gold",italic:false}],[{italic:false,color:"white",text:""},{color:"gray",text:"并为至多5只友方怪物增加词条"},{color:"aqua",text:"[极寒]"}]],tooltip_display={hidden_components:["jukebox_playable"]},custom_data={function:"jiben/beijixiong",K:3},tooltip_style="kards:kard/common"]
+
 ## DLC 文件夹结构
 
 ```
@@ -86,14 +93,18 @@ kards-dlc/
 
 ```mcfunction
 function kards:game/player/use_kard/use_general/kard_general
-execute if entity @s[team=red] at @e[tag=blue_marker_7,limit=1] run summon wither_skeleton ~ 0 ~ {Team:red,equipment:{mainhand:{id:"minecraft:stone_sword"}},attributes:[{id:"follow_range",base:100}]}
-execute if entity @s[team=blue] at @e[tag=red_marker_7,limit=1] run summon wither_skeleton ~ 0 ~ {Team:blue,equipment:{mainhand:{id:"minecraft:stone_sword"}},attributes:[{id:"follow_range",base:100}]}
+
+execute if entity @s[team=red] at @e[tag=blue_marker_7,limit=1] run summon wither_skeleton ~ 0 ~ {Team:red,equipment:{mainhand:{id:"minecraft:stone_sword"}},attributes:[{id:"follow_range",base:100}],Tags:["Mob_Start"]}
+execute if entity @s[team=blue] at @e[tag=red_marker_7,limit=1] run summon wither_skeleton ~ 0 ~ {Team:blue,equipment:{mainhand:{id:"minecraft:stone_sword"}},attributes:[{id:"follow_range",base:100}],Tags:["Mob_Start"]}
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/player/use_kard/use_general/talent
-function kards:game/player/use_kard/use_general/attribute/__
 tag @e[tag=Mob_Start] remove Mob_Start
-item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_diaolingkulou kardCount
+
+execute as @s[team=red] run scoreboard players add @e[type=#skeletons,tag=!tuteng,team=red,limit=5] Entry_wither 1
+execute as @s[team=blue] run scoreboard players add @e[type=#skeletons,tag=!tuteng,team=blue,limit=5] Entry_wither 1
+execute as @e[type=#skeletons,tag=!tuteng] at @s run function entry:int/re_int
+
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
+
 ```
 
 ### 军团牌 (juntuan)
@@ -106,25 +117,24 @@ scoreboard players operation @s kardCount -= #kard_diaolingkulou kardCount
 
 ```mcfunction
 function kards:game/player/use_kard/use_general/kard_general
-    execute if entity @s[team=red] at @e[tag=blue_marker_4] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
-    execute if entity @s[team=red] at @e[tag=blue_marker_6] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
-    execute if entity @s[team=red] at @e[tag=blue_marker_8] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
-    execute if entity @s[team=red] at @e[tag=blue_marker_10] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
 
-    execute if entity @s[team=blue] at @e[tag=red_marker_4] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
-    execute if entity @s[team=blue] at @e[tag=red_marker_6] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
-    execute if entity @s[team=blue] at @e[tag=red_marker_8] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
-    execute if entity @s[team=blue] at @e[tag=red_marker_10] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
+execute if entity @s[team=red] at @e[tag=blue_marker_4,limit=1] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
+execute if entity @s[team=red] at @e[tag=blue_marker_6,limit=1] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
+execute if entity @s[team=red] at @e[tag=blue_marker_8,limit=1] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
+execute if entity @s[team=red] at @e[tag=blue_marker_10,limit=1] run summon bee ~ 5 ~ {Team:red,Tags:["Mob_Start"]}
 
-    execute if entity @s[team=red] if entity @e[tag=!Mob_Start,type=bee] as @e[tag=Mob_Start] run tp @s @e[tag=!Mob_Start,type=bee,limit=1,team=red]
-    execute if entity @s[team=blue] if entity @e[tag=!Mob_Start,type=bee] as @e[tag=Mob_Start] run tp @s @e[tag=!Mob_Start,type=bee,limit=1,team=blue]
-    
+execute if entity @s[team=blue] at @e[tag=red_marker_4,limit=1] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
+execute if entity @s[team=blue] at @e[tag=red_marker_6,limit=1] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
+execute if entity @s[team=blue] at @e[tag=red_marker_8,limit=1] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
+execute if entity @s[team=blue] at @e[tag=red_marker_10,limit=1] run summon bee ~ 5 ~ {Team:blue,Tags:["Mob_Start"]}
+
+execute if entity @s[team=red] if entity @e[tag=!Mob_Start,type=bee] as @e[tag=Mob_Start] run tp @s @e[tag=!Mob_Start,type=bee,limit=1,team=red] 
+execute if entity @s[team=blue] if entity @e[tag=!Mob_Start,type=bee] as @e[tag=Mob_Start] run tp @s @e[tag=!Mob_Start,type=bee,limit=1,team=blue] 
+
 function kards:game/yongpaiku/xianjing/jiance/mobjiance
-function kards:game/player/use_kard/use_general/talent
-function kards:game/player/use_kard/use_general/attribute/__
 tag @e[tag=Mob_Start] remove Mob_Start
-item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_template_juntuan kardCount
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
+
 ```
 
 ### 装备牌 (zhuangbei)
@@ -138,8 +148,8 @@ scoreboard players operation @s kardCount -= #kard_template_juntuan kardCount
 ```mcfunction
 function kards:game/player/use_kard/use_general/kard_general
     give @s minecraft:crossbow[minecraft:custom_name={italic:false,text: "弩",color:"gold"},lore=[{text: "新时代战斗工具!",color:"gray",italic:false}],custom_data={kards:'弩'},tooltip_display={hidden_components:["attribute_modifiers","unbreakable"]},charged_projectiles=[{id:"minecraft:arrow",count:1b}]]
-item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_template_zhuangbei kardCount
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
+
 ```
 
 ### 饰品牌 (shipin)
@@ -153,8 +163,8 @@ scoreboard players operation @s kardCount -= #kard_template_zhuangbei kardCount
 ```mcfunction
 function kards:game/player/use_kard/use_general/kard_general
     give @s minecraft:turtle_scute[custom_name={italic:false,text: "海龟鳞甲",color:"gold"},lore=[[{text: "放在背包最右侧一列佩戴 同个配件只生效一个",color:"gray",italic:false}],[{text: "",color:"gray",italic:false}],[{text: "佩戴时：",color:"gray",italic:false}],[{text: "+5 护甲值",color:"blue",italic:false}],[{text: "+1 盔甲韧性",color:"blue",italic:false}]],max_stack_size=1,custom_data={kards:'海龟鳞甲'}]
-item replace entity @s weapon.offhand with air
-scoreboard players operation @s kardCount -= #kard_template_shipin kardCount
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
+
 ```
 
 ### 法术牌 (fashu)
@@ -170,7 +180,7 @@ function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/fashujiance
 scoreboard players operation @s kardCount -= #kard_shenshengzhiguang kardCount
 execute if entity @s[type=player] unless items entity @s weapon.offhand * run return fail
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 
 scoreboard players add @s HealBack 32
 ```
@@ -192,7 +202,7 @@ function kards:game/yongpaiku/xianjing/jiance/shenjijiance
     execute if entity @s[team=blue] if score #蓝队 Team_alive matches ..2 run scoreboard players add @a[team=blue,gamemode=adventure] kardCount 10
     execute if entity @s[team=red] if score #红队 Team_alive matches ..2 run scoreboard players add @a[team=red,gamemode=adventure] kardCount 10
 scoreboard players set @s ChaoPin 1
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 scoreboard players operation @s kardCount -= #kard_template_shenji kardCount
 ```
 
@@ -208,7 +218,7 @@ scoreboard players operation @s kardCount -= #kard_template_shenji kardCount
 function kards:game/player/use_kard/use_general/kard_general
     execute if entity @s[team=red] at @e[tag=r_tuteng,limit=1] run summon sheep ~ 0 ~ {Team:red,Tags:["tuteng","tuteng.template"],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20.0f,Color:14b,Age:0,Silent:1b}
     execute if entity @s[team=blue] at @e[tag=b_tuteng,limit=1] run summon sheep ~ 0 ~ {Team:blue,Tags:["tuteng","tuteng.template"],attributes:[{id:"minecraft:max_health",base:20.0d}],Health:20.0f,Color:11b,Age:0,Silent:1b}
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 scoreboard players operation @s kardCount -= #kard_template_tuteng kardCount
 ```
 
@@ -224,7 +234,7 @@ scoreboard players operation @s kardCount -= #kard_template_tuteng kardCount
 function kards:game/player/use_kard/use_general/kard_general
     execute if entity @s[team=red] as @a[team=blue,gamemode=adventure] run function kards-dlc:kard/type/zuzhou/template_zuzhou/use2
     execute if entity @s[team=blue] as @a[team=red,gamemode=adventure] run function kards-dlc:kard/type/zuzhou/template_zuzhou/use2
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 scoreboard players operation @s kardCount -= #kard_template_zuzhou kardCount
 ```
 

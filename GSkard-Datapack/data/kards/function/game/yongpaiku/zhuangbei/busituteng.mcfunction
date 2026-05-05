@@ -10,5 +10,5 @@ execute if score @s random_busituteng matches 4 run function kards:game/paiku/ya
 execute if score @s random_busituteng matches 5 run function kards:game/paiku/yansheng/busituteng/hundun
 execute if score @s random_busituteng matches 6 run function kards:game/paiku/yansheng/busituteng/huoyan
 scoreboard players set @s random_busituteng 0
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 

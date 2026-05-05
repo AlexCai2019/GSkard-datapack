@@ -1,4 +1,4 @@
-execute if entity @a[tag=talent_dialog_show] run return fail
+execute as @s[tag=talent_dialog_show,gamemode=adventure] run return fail
 
 execute as @s[tag=Talent_mofashuku] store result score @s random run random value 1..100
 execute as @s[tag=Talent_mofashuku] if score @s random matches 1..30 run return run function kards:game/player/talent/enable/mofashuku/choupai

@@ -1,0 +1,3 @@
+#execute if items entity @s weapon.offhand crossbow[enchantments~[{enchantments:"extra_enchantment:baoliezhe"}]] run return run item modify entity @s weapon.offhand {function:"set_damage",add:true,damage:0.015}
+$execute if items entity @s weapon.offhand crossbow run item modify entity @s weapon.offhand {function:"set_damage",add:true,damage:$(speed)}
+execute if items entity @s weapon.offhand crossbow[custom_data~{feishenghufu:"绝唱"}] run item modify entity @s weapon.offhand {function:"set_damage",add:true,damage:0.009}

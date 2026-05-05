@@ -1,1 +1,0 @@
-scoreboard players reset @s enchantment_fengxingzhe_temp

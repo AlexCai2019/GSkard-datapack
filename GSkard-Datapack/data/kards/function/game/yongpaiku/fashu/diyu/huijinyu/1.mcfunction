@@ -1,7 +1,7 @@
 execute as @s[team=red] if score 蓝队 manshui matches 1.. run scoreboard players set 蓝队 manshui 0
 execute as @s[team=blue] if score 红队 manshui matches 1.. run scoreboard players set 红队 manshui 0
-execute as @s[team=red] run scoreboard players set 蓝队 huijinyu 2
-execute as @s[team=blue] run scoreboard players set 红队 huijinyu 2
+execute as @s[team=red] run scoreboard players add 蓝队 huijinyu 2
+execute as @s[team=blue] run scoreboard players add 红队 huijinyu 2
 
 execute at @e[limit=1,tag=r_dw,distance=0.01..] align xz run summon marker ~ ~ ~ {Tags:["r_changdi","changdi"]}
 execute at @e[limit=1,tag=b_dw,distance=0.01..] align xz run summon marker ~ ~ ~ {Tags:["b_changdi","changdi"]}

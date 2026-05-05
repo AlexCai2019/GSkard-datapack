@@ -1,2 +1,0 @@
-execute store result storage kards:entry enchantment.chance int 5 run data get entity @s equipment.body.components."minecraft:enchantments".kards:entry/lost_memories
-function kards:enchantment/entry/lost_memories/__ with storage kards:entry enchantment

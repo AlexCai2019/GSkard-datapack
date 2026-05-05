@@ -1,2 +1,2 @@
-execute as @s[team=red] run effect give @e[team=red,limit=5,sort=random] speed 1 1 true
-execute as @s[team=blue] run effect give @e[team=blue,limit=5,sort=random] speed 1 1 true
+execute as @s[team=red] as @e[team=red,limit=2,sort=random,tag=!tuteng,type=#kards:mob] run function kards:game/player/talent/enable/shanjizhanfa/2
+execute as @s[team=blue] as @e[team=blue,limit=2,sort=random,tag=!tuteng,type=#kards:mob] run function kards:game/player/talent/enable/shanjizhanfa/2

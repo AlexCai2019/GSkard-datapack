@@ -1,0 +1,43 @@
+{
+  "anvil_cost": 12,
+  "supported_items": "#kards:armor/leg",
+  "description": {"text":"跃升","color":"aqua"},
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:safe_fall_distance",
+        "id": "extra_enchantment",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 2,
+          "per_level_above_first": 2
+        },
+        "operation": "add_value"
+      },
+      {
+        "attribute": "jump_strength",
+        "id": "extra_enchantment",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.2,
+          "per_level_above_first": 0.2
+        },
+        "operation": "add_multiplied_base"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 15
+  },
+  "max_level": 5,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 10
+  },
+  "primary_items": "#minecraft:enchantable/leg_armor",
+  "slots": [
+    "legs"
+  ],
+  "weight": 2
+}

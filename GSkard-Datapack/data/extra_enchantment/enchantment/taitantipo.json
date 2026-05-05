@@ -1,0 +1,49 @@
+{
+  "anvil_cost": 12,
+  "supported_items": "#kards:armor/chest",
+  "description": {"text":"泰坦体魄","color":"green"},
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:max_health",
+        "id": "extra_enchantment",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 20,
+          "per_level_above_first": 20
+        },
+        "operation": "add_value"
+      },
+      {
+        "attribute": "minecraft:knockback_resistance",
+        "id": "extra_enchantment",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.1,
+          "per_level_above_first": 0.1
+        },
+        "operation": "add_value"
+      },
+      {
+        "attribute": "minecraft:scale",
+        "id": "extra_enchantment",
+        "amount": 0.20,
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 15
+  },
+  "max_level": 30,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 10
+  },
+  "primary_items": "#minecraft:enchantable/chest_armor",
+  "slots": [
+    "chest"
+  ],
+  "weight": 2
+}

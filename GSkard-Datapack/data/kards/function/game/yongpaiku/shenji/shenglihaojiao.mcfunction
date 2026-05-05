@@ -1,11 +1,9 @@
 function kards:game/player/use_kard/use_general/kard_general
-
-
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
-    
-    execute if entity @s[team=blue] run effect give @e[type=!player,type=!iron_golem,team=blue] speed 3 3 false
-    execute if entity @s[team=blue] run effect give @e[type=!player,type=!iron_golem,team=blue] strength 3 3 false
-    
-    execute if entity @s[team=red] run effect give @e[type=!player,type=!iron_golem,team=red] speed 3 3 false
-    execute if entity @s[team=red] run effect give @e[type=!player,type=!iron_golem,team=red] strength 3 3 false
-item replace entity @s weapon.offhand with air
+
+execute as @s[team=red] run scoreboard players add @e[type=#kards:mob,tag=!tuteng,team=red] Entry_speed 1
+execute as @s[team=blue] run scoreboard players add @e[type=#kards:mob,tag=!tuteng,team=blue] Entry_speed 1
+execute as @s[team=red] run scoreboard players add @e[type=#kards:mob,tag=!tuteng,team=red] Entry_strength 3
+execute as @s[team=blue] run scoreboard players add @e[type=#kards:mob,tag=!tuteng,team=blue] Entry_strength 3
+execute as @e[type=#kards:mob,tag=!tuteng] at @s run function entry:int/re_int
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}

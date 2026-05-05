@@ -1,5 +1,0 @@
-item modify entity @s armor.feet {function:"set_enchantments",enchantments:{"kards:dadishenyou":1},add:true}
-execute store result score @s mainhand_enchantment_levels run data get entity @s equipment.feet.components."minecraft:enchantments".kards:dadishenyou
-tellraw @s [{text:"成功为靴子添加附魔",color:"green"},{text:"大地神佑 I",color:"gold"},{text:"\n当前物品",color:"gray"},{text:"大地神佑",color:"gold"},{text:"等级为",color:"gray"},{score:{name:"@s",objective:"mainhand_enchantment_levels"},color:"green"}]
-item replace entity @s weapon.offhand with air
-execute at @s run playsound block.enchantment_table.use player @s ~ ~ ~ 100 1

@@ -7,4 +7,4 @@ execute as @s[team=red] as @a[team=blue,gamemode=adventure] run damage @s 6 magi
 execute as @s[team=blue] as @a[team=red,gamemode=adventure] run damage @s 6 magic by @p[tag=temp]
 tag @s remove temp
 
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}

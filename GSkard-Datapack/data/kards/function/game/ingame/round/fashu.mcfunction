@@ -15,7 +15,6 @@ execute as @e[tag=b_changdi,type=marker,distance=0.01..] at @s store result stor
 execute as @e[tag=b_changdi,type=marker,distance=0.01..] at @s store result storage changdidaxiao b_posdz int 1 run data get entity @s Pos[2]
 
 kill @e[tag=changdi]
-
 execute unless score 红队 diyu matches -2147483648..2147483647 run scoreboard players remove 红队 diyu 0
 execute unless score 蓝队 diyu matches -2147483648..2147483647 run scoreboard players remove 蓝队 diyu 0
 execute unless score 红队 manshui matches -2147483648..2147483647 run scoreboard players remove 红队 manshui 0

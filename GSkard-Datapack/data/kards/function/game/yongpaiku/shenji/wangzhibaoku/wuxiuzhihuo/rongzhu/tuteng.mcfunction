@@ -1,6 +1,7 @@
-
-scoreboard players add @s wuxiuzhihuo_shengji 4
+execute store result score @s wuxiuzhihuo_ranshi run function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/use/ranshi/get
+scoreboard players add @s wuxiuzhihuo_ranshi 4
+function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/use/ranshi/storage
 scoreboard players set @s wuxiuzhihuo_rongzhu 0
-tellraw @s {text: "无休之火熔铸了1张图腾牌 成长点数+4",color:"gray"}
+tellraw @s ["",{color:"red",text:"[图腾牌]"},{color:"gray",text:"落入火中 "},{color:"gold",text:"[燃时]"},{color:"green",text:"+4"}]
 execute at @s run kill @n[type=item,nbt={Item:{id:"minecraft:music_disc_blocks"},Age:0s}]
 function kards:game/yongpaiku/shenji/wangzhibaoku/wuxiuzhihuo/rongzhu/all

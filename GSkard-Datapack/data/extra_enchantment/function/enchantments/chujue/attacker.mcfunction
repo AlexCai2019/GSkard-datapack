@@ -1,0 +1,2 @@
+tag @s add chujue_attacker
+execute store result storage extra_enchantment:temp enchantment_level int 10 run data get entity @s SelectedItem.components."minecraft:enchantments"."extra_enchantment:chujue"

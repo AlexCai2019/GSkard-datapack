@@ -1,0 +1,1 @@
+scoreboard players remove @s Talent_xukongxingtai 1

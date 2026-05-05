@@ -1,5 +1,5 @@
 function kards:game/player/use_kard/use_general/info/tellraw
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 
 advancement grant @s only kards:advancement/jinzijue/first_use
 function kards:game/yongpaiku/yansheng/jinzijue/2

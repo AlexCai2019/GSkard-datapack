@@ -1,0 +1,29 @@
+{
+    "anvil_cost": 8,
+    "description": "风之引",
+    "effects": {
+        "minecraft:projectile_spawned": [
+            {
+                "effect":  {
+                    "type": "run_function",
+                    "function": "extra_enchantment:enchantments/fengzhiyin/1"
+                }
+            }
+    ]
+    },
+    "max_cost": {
+        "base": 15,
+        "per_level_above_first": 8
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 8,
+        "per_level_above_first": 5
+    },
+    "primary_items": "#minecraft:enchantable/bow",
+    "slots": [
+        "hand"
+    ],
+    "supported_items": "bow",
+    "weight": 4
+}

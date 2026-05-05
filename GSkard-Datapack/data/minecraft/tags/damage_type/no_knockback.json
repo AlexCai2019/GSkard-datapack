@@ -1,19 +1,19 @@
 {
     "values": [
-        "kards:huoyan",
+        "custom_buff:fire",
         "kards:kunanyaolan",
         "kards:kunanyaolan_wuli",
         "kards:qinglvqianmou",
         "kards:silie",
-        "kards:chujue",
+        "extra_enchantment:chujue",
         "kards:move_or_die",
         "kards:peiyangshi",
         "kards:zhongshang",
-        "kards:yonghan",
+        "custom_buff:yonghan",
         "kards:duming",
         "kards:flend",
         "kards:gongsheng",
         "kards:xixuegui",
-        "kards:qiongbingduwu"
+        "#kards:magic"
     ]
 }

@@ -1,0 +1,38 @@
+{
+    "description": "§b连锁打击",
+    "supported_items": "#kards:melee_weapon",
+    "weight": 1,
+    "max_level": 10,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+        "mainhand"
+    ],
+    "effects": {
+        "minecraft:post_attack": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "extra_enchantment:enchantments/liansuodaji/attacker/"
+                },
+                "enchanted": "attacker",
+                "affected": "attacker"
+            },
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "extra_enchantment:enchantments/liansuodaji/victim/"
+                },
+                "enchanted": "attacker",
+                "affected": "victim"
+            }
+        ]
+    }
+}

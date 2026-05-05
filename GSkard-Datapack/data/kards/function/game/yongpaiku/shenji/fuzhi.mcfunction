@@ -1,6 +1,6 @@
 function kards:game/player/use_kard/use_general/kard_general
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 summon item ~ ~ ~ {Item:{id:"music_disc_11"},PickupDelay:-1,Tags:["copy"]}
 data modify entity @n[tag=copy,type=item,tag=!copy_end] Item set from entity @s Inventory.[{Slot:0b}]
 kill @e[nbt={Item:{id:"minecraft:music_disc_11"}}]

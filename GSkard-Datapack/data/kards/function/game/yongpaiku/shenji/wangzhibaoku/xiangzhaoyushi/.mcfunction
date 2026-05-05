@@ -5,7 +5,7 @@ scoreboard players set @s[scores={XuanYun=1..}] XuanYun 0
 scoreboard players set @s[scores={YongHan=1..}] YongHan 0
 scoreboard players set @s[scores={DongJie=1..}] DongJie 0
 scoreboard players set @s[scores={XuanZhuan=1..}] XuanZhuan 0
-scoreboard players set @s[scores={RanShao=1..}] RanShao 0
+scoreboard players set @s[scores={Fire=1..}] Fire 0
 scoreboard players set @s[scores={ChengMo=1..}] ChengMo 0
 scoreboard players set @s[scores={DuanTui=1..}] DuanTui 0
 scoreboard players set @s[scores={ZhongShang_Round=1..}] ZhongShang_Round 0

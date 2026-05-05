@@ -1,7 +1,7 @@
 #回合轮换之前生效
 function kards:game/ingame/round/take_turns/start_of_round
 #检测pvp
-execute if score 回合数 GameRound = #system RoundCount run return run function kards:game/ingame/round/pvpround/waitstart
+execute if score 回合数 GameRound >= #system RoundCount unless score #system infinite_round matches 1 run return run function kards:game/ingame/round/pvpround/waitstart
 #回合轮换
 scoreboard players add 回合数 GameRound 1
 scoreboard players add 回合数 Entry_Round_1 1

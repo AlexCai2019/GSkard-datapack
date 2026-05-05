@@ -35,13 +35,16 @@ execute if score #红队 Team_dead matches 4 run scoreboard players add @a[team=
 execute if score #红队 Team_dead matches 5.. run scoreboard players add @a[team=red,scores={CanuseKard=1}] kardCount 20
 execute if score #红队 Team_dead matches 5.. run scoreboard players add @a[team=red,scores={CanuseKard=1}] cishu 5
 
+#回合移除卡牌
+clear @a *[custom_data~{RoundRemove:1b}]
+execute as @e[type=item] if data entity @s Item.components."minecraft:custom_data".RoundRemove run kill @s
+
 execute as @a[tag=Talent_yaoyezhuhuo] run function kards:game/player/talent/enable/yaoyezhuhuo/1
+execute as @a[tag=Talent_gongsheng] run function kards:game/player/talent/enable/gongsheng/healback
 #天赋
 execute as @a[scores={CanuseKard=1},tag=Talent_muyuankuanghuan] run function kards:game/player/talent/enable/muyuankuanghuan/1
 execute as @a[scores={CanuseKard=1},tag=Talent_emoqiyue] run function kards:game/player/talent/enable/emoqiyue/1
 execute as @a[scores={CanuseKard=1},tag=Talent_duichongjijin] run function kards:game/player/talent/enable/duichongjijin/1
-execute as @a[scores={CanuseKard=1},tag=Talent_dianbiaodaozhuan] run function kards:game/player/talent/enable/dianbiaodaozhuan/1
-execute as @a[scores={CanuseKard=1},tag=Talent_gongsheng] run function kards:game/player/talent/enable/gongsheng/healback
 execute as @a[scores={CanuseKard=1},tag=Talent_xukongcunzhe] run function kards:game/player/talent/enable/xukongcunzhe/1
 
 #来日偿还

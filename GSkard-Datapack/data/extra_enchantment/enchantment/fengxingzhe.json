@@ -1,0 +1,71 @@
+{
+    "anvil_cost": 8,
+    "description": "风佑者",
+    "effects": {
+        "minecraft:tick": [
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "extra_enchantment:enchantments/fengxingzhe/true"
+                },
+                "requirements": {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "flags": {
+                            "is_sprinting": true
+                        }
+                    }
+                }
+            },
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "extra_enchantment:enchantments/fengxingzhe/false"
+                },
+                "requirements": {
+                    "condition": "entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "flags": {
+                            "is_sprinting": false
+                        }
+                    }
+                }
+            }
+        ],
+        "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "extra_enchantment:enchantments/fengxingzhe/attacker"
+        },
+        "enchanted": "victim",
+        "affected": "attacker"
+      }
+    ],
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:safe_fall_distance",
+        "id": "extra_enchantment",
+        "amount": 2.5,
+        "operation": "add_value"
+      }
+    ]
+    },
+    "max_cost": {
+        "base": 15,
+        "per_level_above_first": 8
+    },
+    "max_level": 1,
+    "min_cost": {
+        "base": 8,
+        "per_level_above_first": 5
+    },
+    "primary_items": "#minecraft:enchantable/armor",
+    "slots": [
+        "feet"
+    ],
+    "supported_items": "#kards:armor/foot",
+    "weight": 4
+}

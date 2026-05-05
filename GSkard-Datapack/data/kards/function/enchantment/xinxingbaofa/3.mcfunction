@@ -1,1 +1,0 @@
-execute unless score @s RanShao matches 60.. run scoreboard players set @s RanShao 60

@@ -16,6 +16,9 @@ run data modify entity @s Brain.memories."minecraft:angry_at".value set from ent
 execute as @s[type=#kards:brain_angry_mobs,team=!red,team=!blue] unless data entity @s Brain.memories."minecraft:angry_at".value at @s \
 run data modify entity @s Brain.memories."minecraft:angry_at".value set from entity @p[team=!red,team=!blue,gamemode=adventure] UUID
 
+# 词条隐形
+execute as @s[tag=Invisibility_Entry] on passengers as @s[tag=Entry_text] run kill @s
+
 #蜜蜂
 execute as @s[type=bee] run data modify entity @s HasStung set value 0b
 #末影人
@@ -49,3 +52,11 @@ execute as @e[tag=morilailing,limit=1,type=item_display,sort=random] run functio
 execute as @s[tag=wanglingdajun] run function kards:game/ingame/mob/wanglingdajun
 #小鬼当家
 execute as @e[tag=xiaoguidangjia,type=!zombie,limit=1,sort=random] run function kards:game/ingame/mob/xiaoguidangjia
+#狂欢僵尸
+execute as @s[tag=kuanghuan_1,tag=!NoAI] run scoreboard players add @s Mob_Skill_Time 1
+execute as @s[tag=kuanghuan_1,scores={Mob_Skill_Time=100}] at @s run function kards:game/yongpaiku/yansheng/kuanghuanzombie/4
+#给苦力怕 末影螨速度1
+effect give @s[type=creeper] speed 1 0 false
+effect give @s[type=endermite] speed 1 0 false
+#引线炸弹
+execute as @s[tag=Lead_wire] run function kards:game/ingame/mob/yinxianzhadan

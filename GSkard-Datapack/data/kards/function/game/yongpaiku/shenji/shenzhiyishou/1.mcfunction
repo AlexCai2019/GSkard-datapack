@@ -2,7 +2,7 @@ function kards:game/player/use_kard/use_general/kard_general
 
 
 function kards:game/yongpaiku/xianjing/jiance/shenjijiance
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 tag @e[tag=User] remove User
 tag @s add User
 tag @a[tag=shenzhiyishou_end] remove shenzhiyishou_end

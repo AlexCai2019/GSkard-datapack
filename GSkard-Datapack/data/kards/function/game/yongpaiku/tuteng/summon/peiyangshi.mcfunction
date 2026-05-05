@@ -20,6 +20,6 @@ execute as @e[tag=Mob_Start] store result score @s Mob_Health_last run data get 
 execute as @e[tag=tuteng] unless score @s Mob_Levels matches -2147483648..2147483647 run scoreboard players set @s Mob_Levels 1
 tag @e[tag=Mob_Start] remove Mob_Start
 
-item replace entity @s weapon.offhand with air
+item modify entity @s weapon.offhand {function:"set_count",add:true,count:-1}
 
 

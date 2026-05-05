@@ -1,1 +1,0 @@
-execute as @e[scores={YongHan=0..}] run function kards:game/ingame/custom_buff/yonghan/bossbar/1

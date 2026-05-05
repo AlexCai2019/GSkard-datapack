@@ -1,0 +1,17 @@
+scoreboard objectives add ChengMo dummy
+scoreboard objectives add BeiPan dummy
+scoreboard objectives add BeiPan_time dummy
+scoreboard objectives add DongJie dummy
+scoreboard objectives add DongJie_damage dummy
+scoreboard objectives add DuanTui dummy
+scoreboard objectives add HealBack dummy
+scoreboard objectives add Fire dummy
+scoreboard objectives add Fire_take_damage dummy
+scoreboard objectives add PoJia dummy
+scoreboard objectives add XuanYun dummy
+scoreboard objectives add XuanZhuan dummy
+scoreboard objectives add YongHan dummy
+scoreboard objectives add YongHan_DongJie_liushi dummy
+scoreboard objectives add YongHan_liushi dummy
+scoreboard objectives add ZhongShang_Round dummy
+scoreboard objectives add ZhongShang_Tick dummy

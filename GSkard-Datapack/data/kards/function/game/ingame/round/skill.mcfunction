@@ -1,6 +1,2 @@
 #讲述者
 execute as @a[tag=jiangshuzhe] run function kards:game/yongpaiku/shenji/wangzhibaoku/jiangshuzhe/event/random
-#无休之火
-execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo matches 5 run tag @s add fire
-execute as @a[tag=wuxiuzhihuo] if score @s wuxiuzhihuo matches 5 run scoreboard players add @s RanShao 100
-scoreboard players set @a[tag=wuxiuzhihuo] wuxiuzhihuo 5
