@@ -1,7 +1,6 @@
 scoreboard players set @s death 0
 
 tag @s remove XuanYun
-tag @s remove jishengnianye
 
 scoreboard players reset @s Fire
 scoreboard players reset @s DongJie
@@ -14,9 +13,12 @@ function custom_buff:bossbar_reset/1
 
 execute as @s[tag=Talent_fushengzuzhou,tag=!Talent_fushengzuzhou_end] run return run function kards:game/player/talent/enable/fushengzuzhou/1
 
+scoreboard players set @s DeadMan 1
+
 #寄生粘液
 execute store result storage kards:temp UUID int 1 run data get entity @s UUID.[0]
 function kards:game/yongpaiku/shenji/wangzhibaoku/jishengnianye/bossbar/remove with storage kards:temp
+tag @s remove jishengnianye
 
 function kards:game/player/death/item/1
 gamemode spectator @s

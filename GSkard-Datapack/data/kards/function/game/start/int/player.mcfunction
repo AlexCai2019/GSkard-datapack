@@ -48,3 +48,5 @@ execute as @a[gamemode=adventure] run function kards:dialog/talent/show
 
 # Other
 execute as @a run function kards:game/yongpaiku/shenji/wangzhibaoku/jishengnianye/bossbar/remove_
+xp set @a 0 levels
+xp set @a 0 points

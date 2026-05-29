@@ -41,6 +41,7 @@ bossbar add minecraft:pvp_start_countdown {text:"等待开放",color:"green"}
 bossbar set minecraft:roundtime color white
 bossbar set minecraft:pvp_start_countdown color green
 #注册计分项目
+scoreboard objectives add DeadMan dummy
 scoreboard objectives add Check_NoAI dummy
 scoreboard objectives add Map_Marker_Count dummy
 scoreboard objectives add foodLevel dummy
@@ -562,5 +563,5 @@ scoreboard objectives add shiyi_item_1 dummy
 scoreboard objectives add shiyi_counter dummy
 
 
-# GSkard-1.63
-tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.63"},"\n=========================="]
+# GSkard-1.7
+tellraw @a ["==========================\n",{color:"#2a17fd",text:"         "},{color:"#f19013",text:"G"},{color:"#ed7d19",text:"S"},{color:"#ea6a1f",text:"k"},{color:"#e75725",text:"a"},{color:"#e3442b",text:"r"},{color:"#e03131",text:"d"},{color:"gold",text:"已经加载！"},"\n",{color:"aqua",text:"             版本："},{color:"green",text:"1.7"},"\n=========================="]
