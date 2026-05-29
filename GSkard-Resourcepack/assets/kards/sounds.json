@@ -280,5 +280,60 @@
             }
         ],
         "subtitle": "臭猫叫"
+    },
+    "capixie_hunxiang": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "kards:custom/dushen/capixie_hunxiang",
+                "stream": true,
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "给我擦皮鞋(混响)"
+    },
+    "capixie_zhengchang": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "kards:custom/dushen/capixie_zhengchang",
+                "stream": true,
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "给我擦皮鞋(正常)"
+    },
+    "yanpai_hunxiang": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "kards:custom/dushen/yanpai_hunxiang",
+                "stream": true,
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "我要烟牌(混响)"
+    },
+    "yanpai_zhengchang": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "kards:custom/dushen/yanpai_zhengchang",
+                "stream": true,
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "我要烟牌(正常)"
+    },
+    "wogennihuan": {
+        "replace": true,
+        "sounds": [
+            {
+                "name": "kards:custom/wogennihuan",
+                "stream": true,
+                "volume": 0.5
+            }
+        ],
+        "subtitle": "我跟你换!我跟你换!我跟你换!"
     }
 }

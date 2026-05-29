@@ -1,0 +1,184 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/weishuxieyi/shock.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE001"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/weishuxieyi/happy.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE002"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/weishuxieyi/love.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE003"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/weishuxieyi/pray.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE004"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/weishuxieyi/thinking.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE005"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/weishuxieyi/skip.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE006"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/ganma.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE007"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/huangdouren/wugu.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE008"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/laoziliwojingni.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE009"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/huangdouren/fear.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE010"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/cehuangyi_lie.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE011"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/cehuangyi_truth.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE012"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/huangdouren/shiwang.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE013"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/huangdouren/gun.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE014"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/ji/meijiku.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE015"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/ji/jiku.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE016"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/zimin/youdianqiang.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE017"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/zimin/zhemeqiang.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE018"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/zimin/yiwuyan.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE019"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kards:font/gif/zimin/zhemeruo.png",
+            "ascent": 24,
+            "height": 24,
+            "chars": [
+                "\uE020"
+            ]
+        }
+    ]
+}
